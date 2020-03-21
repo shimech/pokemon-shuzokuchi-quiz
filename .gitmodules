@@ -1,0 +1,3 @@
+[submodule "app/pokemon-db-maker"]
+	path = app/pokemon-db-maker
+	url = https://github.com/shimech/pokemon-db-maker.git
