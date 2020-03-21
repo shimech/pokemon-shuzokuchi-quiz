@@ -1,0 +1,76 @@
+.Quiz .title {
+  font-size: 30px;
+  color: rgba(230, 230, 230, 1);
+  background-color: rgba(104, 59, 255, 1);
+  text-align: center;
+}
+
+.Quiz .title h1 {
+  margin-block-start: 0em;
+  height: 14.5vh;
+  padding-top: 0.5vh;
+}
+
+.StatusRadar {
+  float: left;
+  width: 45vw;
+  margin-left: 3vw;
+  margin-right: 2vw;
+}
+
+.content {
+  float: right;
+  text-align: center;
+  width: 45vw;
+  height: 500px;
+  margin-left: 2vw;
+  margin-right: 3vw;
+}
+
+.hint-button-type {
+  float: left;
+  width: 50%;
+  height: 200px;
+}
+
+.hint-button-ability {
+  float: right;
+  width: 50%;
+  height: 200px;
+}
+
+.HintButton {
+  width: 90%;
+  height: 100%;
+  font-size: 20px;
+}
+
+.AnswerForm {
+  clear: both;
+  padding-top: 3%;
+  padding-left: 3%;
+  width: 100%;
+  text-align: left;
+}
+
+.AnswerForm p {
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.AnswerForm input.input-form {
+  height: 30px;
+  width: 80%;
+  font-size: 15px;
+}
+
+.AnswerForm button.submit-button {
+  margin-left: 4%;
+  height: 35px;
+  width: 10%;
+  font-size: 15px;
+}
+
+.AnswerForm a {
+  text-decoration: none;
+}

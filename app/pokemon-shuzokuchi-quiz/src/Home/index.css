@@ -1,0 +1,17 @@
+.Home .title {
+  font-size: 40px;
+  color: rgba(104, 59, 255, 1);
+  text-align: center;
+}
+
+.start-quiz-button {
+  text-align: center;
+}
+
+.start-quiz-button button {
+  height: 60px;
+  width: 30%;
+  font-size: 20px;
+  color: rgba(230, 230, 230, 1);
+  background-color: rgba(104, 59, 255, 1);
+}
