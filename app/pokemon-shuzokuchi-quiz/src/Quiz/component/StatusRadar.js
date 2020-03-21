@@ -35,12 +35,12 @@ const radarSize = {
 const generateData = pokemon => {
   return {
     labels: [
-      `HP: ${pokemon.hitpoints}`,
-      `こうげき: ${pokemon.attack}`,
-      `ぼうぎょ: ${pokemon.block}`,
-      `すばやさ: ${pokemon.speed}`,
-      `とくぼう: ${pokemon.defense}`,
-      `とくこう: ${pokemon.contact}`
+      `HP: ${pokemon.status.hitpoint}`,
+      `こうげき: ${pokemon.status.attack}`,
+      `ぼうぎょ: ${pokemon.status.block}`,
+      `すばやさ: ${pokemon.status.speed}`,
+      `とくぼう: ${pokemon.status.defense}`,
+      `とくこう: ${pokemon.status.contact}`
     ],
     datasets: [
       {
@@ -48,12 +48,12 @@ const generateData = pokemon => {
         borderColor: "rgba(104, 59, 255, 1)",
         pointRadius: 0,
         data: [
-          pokemon.hitpoints,
-          pokemon.attack,
-          pokemon.block,
-          pokemon.speed,
-          pokemon.defense,
-          pokemon.contact
+          pokemon.status.hitpoint,
+          pokemon.status.attack,
+          pokemon.status.block,
+          pokemon.status.speed,
+          pokemon.status.defense,
+          pokemon.status.contact
         ]
       }
     ]

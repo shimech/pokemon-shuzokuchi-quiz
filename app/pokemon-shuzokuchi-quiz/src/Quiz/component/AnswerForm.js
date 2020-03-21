@@ -3,7 +3,7 @@ import React from "react";
 const validateAnswer = (pokemon, nextId) => {
   const answer = document.getElementById("answer").value;
   var message;
-  if (answer === pokemon.name) {
+  if (answer !== "" && pokemon.name.match(answer)) {
     message = "正解！！";
   } else {
     message = "不正解...";

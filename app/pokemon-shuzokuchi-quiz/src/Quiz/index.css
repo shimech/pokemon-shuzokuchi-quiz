@@ -71,6 +71,19 @@
     width: 10%;
     font-size: 15px;
   }
+
+  .back-to-home {
+    text-align: right;
+  }
+
+  .back-to-home button {
+    height: 8vh;
+    width: 30%;
+    color: rgba(230, 230, 230, 1);
+    background-color: rgba(104, 59, 255, 1);
+    margin-top: 17vh;
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -129,5 +142,14 @@
     height: 30px;
     width: 20%;
     font-size: 12px;
+  }
+
+  .back-to-home button {
+    height: 20px;
+    width: 30%;
+    color: rgba(230, 230, 230, 1);
+    background-color: rgba(104, 59, 255, 1);
+    margin-top: 10px;
+    font-size: 8px;
   }
 }

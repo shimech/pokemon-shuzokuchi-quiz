@@ -1,11 +1,11 @@
 import React from "react";
 import "./index.css";
-import { generateRandomId } from "../Utils.js";
+import { pokemonInformation, generateRandomId } from "../Utils.js";
 
 const startQuiz = quizId => (document.location.href = `/quiz/${quizId}`);
 class Home extends React.Component {
   render() {
-    const quizId = generateRandomId();
+    const quizId = generateRandomId(pokemonInformation);
 
     return (
       <div className="Home">

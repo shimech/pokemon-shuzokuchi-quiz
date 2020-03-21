@@ -12,15 +12,15 @@ const generateHintButtonTexts = (pokemon, hintType) => {
   var hintText;
   if (hintType === "type") {
     labelText += "タイプ";
-    hintText = `${pokemon.type1} ${pokemon.type2}`;
+    hintText = `${pokemon.type[0]} ${pokemon.type[1]}`;
   } else if (hintType === "ability") {
     labelText += "とくせい";
     hintText =
-      `${pokemon.ability1}` +
+      `${pokemon.ability.normal[0]}` +
       "\n" +
-      `${replaceEmptyString(pokemon.ability2, "-")}` +
+      `${replaceEmptyString(pokemon.ability.normal[1], "-")}` +
       "\n" +
-      `${replaceEmptyString(pokemon.special_ability, "-")}`;
+      `${replaceEmptyString(pokemon.ability.special, "-")}`;
   }
 
   return {
@@ -32,7 +32,7 @@ class Quiz extends React.Component {
   render() {
     const id = this.props.match.params.id;
     const pokemon = pokemonInformation[id];
-    const nextId = generateRandomId();
+    const nextId = generateRandomId(pokemonInformation);
 
     return (
       <div className="Quiz">
@@ -52,6 +52,11 @@ class Quiz extends React.Component {
             </div>
           </div>
           <AnswerForm pokemon={pokemon} nextId={nextId} />
+          <div className="back-to-home">
+            <a href="/">
+              <button>ホームへ戻る</button>
+            </a>
+          </div>
         </div>
       </div>
     );
