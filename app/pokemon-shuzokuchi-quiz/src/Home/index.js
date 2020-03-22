@@ -9,7 +9,7 @@ class Home extends React.Component {
 
     return (
       <div className="Home">
-        <div className="title">
+        <div className="home-title">
           <h1>ポケモン種族値クイズ</h1>
         </div>
         <div className="start-quiz-button">
