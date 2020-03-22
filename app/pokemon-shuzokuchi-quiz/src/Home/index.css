@@ -12,21 +12,24 @@
 }
 
 .start-quiz-button button {
-  height: 4vw;
-  width: 30vw;
-  font-size: 2vw;
   color: rgb(255, 255, 255);
   background-color: rgb(104, 59, 255);
 }
 
 @media screen and (min-width: 1024px) {
   .start-quiz-button button {
+    height: 4vw;
+    width: 30vw;
+    font-size: 2vw;
     border-radius: 10px;
   }
 }
 
 @media screen and (max-width: 1023px) {
   .start-quiz-button button {
+    height: 9vw;
+    width: 60vw;
+    font-size: 3vw;
     border-radius: 4px;
   }
 }
