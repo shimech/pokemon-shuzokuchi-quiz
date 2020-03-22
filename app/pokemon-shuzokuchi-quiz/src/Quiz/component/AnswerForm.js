@@ -1,9 +1,11 @@
 import React from "react";
+import AutoSuggestPokemon from "./AutoSuggestPokemon.js";
 
-const validateAnswer = (pokemon, nextId) => {
-  const answer = document.getElementById("answer").value;
+const validateAnswer = pokemon => {
+  const answer = document.getElementsByClassName("react-autosuggest__input")[0]
+    .value;
   var message;
-  if (answer !== "" && pokemon.name.match(answer)) {
+  if (answer === pokemon.name) {
     message = "正解！！";
   } else {
     message = "不正解...";
@@ -11,7 +13,6 @@ const validateAnswer = (pokemon, nextId) => {
     message += `(答え: ${pokemon.name})`;
   }
 
-  document.location.href = `/quiz/${nextId}`;
   alert(message);
 };
 
@@ -19,16 +20,16 @@ class AnswerForm extends React.Component {
   render() {
     return (
       <div className="AnswerForm">
-        <div className="AnswerFormLabel">
-          <p>あなたの答え</p>
-        </div>
-        <input id="answer" className="input-form" type="text"></input>
-        <button
-          className="submit-button"
-          onClick={() => validateAnswer(this.props.pokemon, this.props.nextId)}
-        >
-          解答
-        </button>
+        <div className="AnswerFormLabel">あなたの答え</div>
+        <form action={`/quiz/${this.props.nextId}`} method="get">
+          <AutoSuggestPokemon />
+          <button
+            className="submit-button"
+            onClick={() => validateAnswer(this.props.pokemon)}
+          >
+            解答
+          </button>
+        </form>
       </div>
     );
   }

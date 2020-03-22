@@ -3,16 +3,16 @@ import "./index.css";
 import { pokemonInformation, generateRandomId } from "../Utils.js";
 import StatusRadar from "./component/StatusRadar.js";
 import HintButton from "./component/HintButton.js";
-import AnswerForm from "./component/AnswerForm";
+import AnswerForm from "./component/AnswerForm.js";
 
 const replaceEmptyString = (str, subStr) => (str === "" ? subStr : str);
 
 const generateHintButtonTexts = (pokemon, hintType) => {
-  var labelText = "ヒント: ";
+  var labelText = "ヒント" + "\n";
   var hintText;
   if (hintType === "type") {
     labelText += "タイプ";
-    hintText = `${pokemon.type[0]} ${pokemon.type[1]}`;
+    hintText = `${pokemon.type[0]}` + "\n" + `${pokemon.type[1]}`;
   } else if (hintType === "ability") {
     labelText += "とくせい";
     hintText =
@@ -21,6 +21,9 @@ const generateHintButtonTexts = (pokemon, hintType) => {
       `${replaceEmptyString(pokemon.ability.normal[1], "-")}` +
       "\n" +
       `${replaceEmptyString(pokemon.ability.special, "-")}`;
+  } else if (hintType === "region") {
+    labelText += "地方";
+    hintText = pokemon.region;
   }
 
   return {
@@ -36,7 +39,7 @@ class Quiz extends React.Component {
 
     return (
       <div className="Quiz">
-        <div className="title">
+        <div className="quiz-title">
           <h1>このポケモンだ〜れだ？</h1>
         </div>
         <StatusRadar id={id} />
@@ -48,6 +51,11 @@ class Quiz extends React.Component {
             <div className="hint-button-ability">
               <HintButton
                 textObj={generateHintButtonTexts(pokemon, "ability")}
+              />
+            </div>
+            <div className="hint-button-region">
+              <HintButton
+                textObj={generateHintButtonTexts(pokemon, "region")}
               />
             </div>
           </div>
