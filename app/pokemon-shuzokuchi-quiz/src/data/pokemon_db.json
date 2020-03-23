@@ -68,17 +68,17 @@
     "name": "メガフシギバナ",
     "type": ["くさ", "どく"],
     "ability": {
-      "normal": ["しんりょく", ""],
-      "special": "ようりょくそ"
+      "normal": ["あついしぼう", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 80,
-      "attack": 82,
-      "block": 83,
-      "contact": 100,
-      "defense": 100,
+      "attack": 100,
+      "block": 123,
+      "contact": 122,
+      "defense": 120,
       "speed": 80,
-      "total": 525
+      "total": 625
     },
     "isFinal": true,
     "region": "カントー"
@@ -129,19 +129,19 @@
     "id": 6,
     "no": 6,
     "name": "メガリザードンX",
-    "type": ["ほのお", "ひこう"],
+    "type": ["ほのお", "ドラゴン"],
     "ability": {
-      "normal": ["もうか", ""],
-      "special": "サンパワー"
+      "normal": ["かたいツメ", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 78,
-      "attack": 84,
-      "block": 78,
-      "contact": 109,
+      "attack": 130,
+      "block": 111,
+      "contact": 130,
       "defense": 85,
       "speed": 100,
-      "total": 534
+      "total": 634
     },
     "isFinal": true,
     "region": "カントー"
@@ -152,17 +152,17 @@
     "name": "メガリザードンY",
     "type": ["ほのお", "ひこう"],
     "ability": {
-      "normal": ["もうか", ""],
-      "special": "サンパワー"
+      "normal": ["ひでり", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 78,
-      "attack": 84,
+      "attack": 104,
       "block": 78,
-      "contact": 109,
-      "defense": 85,
+      "contact": 159,
+      "defense": 115,
       "speed": 100,
-      "total": 534
+      "total": 634
     },
     "isFinal": true,
     "region": "カントー"
@@ -257,17 +257,17 @@
     "name": "メガカメックス",
     "type": ["みず", ""],
     "ability": {
-      "normal": ["げきりゅう", ""],
-      "special": "あめうけざら"
+      "normal": ["メガランチャー", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 79,
-      "attack": 83,
-      "block": 100,
-      "contact": 85,
-      "defense": 105,
+      "attack": 103,
+      "block": 120,
+      "contact": 135,
+      "defense": 115,
       "speed": 78,
-      "total": 530
+      "total": 630
     },
     "isFinal": true,
     "region": "カントー"
@@ -404,17 +404,17 @@
     "name": "メガスピアー",
     "type": ["むし", "どく"],
     "ability": {
-      "normal": ["むしのしらせ", ""],
-      "special": "スナイパー"
+      "normal": ["てきおうりょく", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 65,
-      "attack": 90,
+      "attack": 150,
       "block": 40,
-      "contact": 45,
+      "contact": 15,
       "defense": 80,
-      "speed": 75,
-      "total": 395
+      "speed": 145,
+      "total": 495
     },
     "isFinal": true,
     "region": "カントー"
@@ -488,17 +488,17 @@
     "name": "メガピジョット",
     "type": ["ノーマル", "ひこう"],
     "ability": {
-      "normal": ["するどいめ", "ちどりあし"],
-      "special": "はとむね"
+      "normal": ["ノーガード", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 83,
       "attack": 80,
-      "block": 75,
-      "contact": 70,
-      "defense": 70,
-      "speed": 101,
-      "total": 479
+      "block": 80,
+      "contact": 135,
+      "defense": 80,
+      "speed": 121,
+      "total": 579
     },
     "isFinal": true,
     "region": "カントー"
@@ -522,7 +522,7 @@
       "total": 253
     },
     "isFinal": false,
-    "region": "カントー"
+    "region": "アローラ"
   },
   {
     "id": 25,
@@ -564,7 +564,7 @@
       "total": 413
     },
     "isFinal": true,
-    "region": "カントー"
+    "region": "アローラ"
   },
   {
     "id": 27,
@@ -711,7 +711,7 @@
       "total": 485
     },
     "isFinal": true,
-    "region": "カントー"
+    "region": "アローラ"
   },
   {
     "id": 34,
@@ -753,7 +753,7 @@
       "total": 300
     },
     "isFinal": false,
-    "region": "カントー"
+    "region": "アローラ"
   },
   {
     "id": 36,
@@ -795,7 +795,7 @@
       "total": 450
     },
     "isFinal": true,
-    "region": "カントー"
+    "region": "アローラ"
   },
   {
     "id": 38,
@@ -1005,7 +1005,7 @@
       "total": 299
     },
     "isFinal": false,
-    "region": "カントー"
+    "region": "アローラ"
   },
   {
     "id": 48,
@@ -1047,7 +1047,7 @@
       "total": 505
     },
     "isFinal": true,
-    "region": "カントー"
+    "region": "アローラ"
   },
   {
     "id": 50,
@@ -1320,7 +1320,7 @@
       "total": 265
     },
     "isFinal": false,
-    "region": "カントー"
+    "region": "アローラ"
   },
   {
     "id": 63,
@@ -1362,7 +1362,7 @@
       "total": 425
     },
     "isFinal": true,
-    "region": "カントー"
+    "region": "アローラ"
   },
   {
     "id": 65,
@@ -1404,7 +1404,7 @@
       "total": 290
     },
     "isFinal": false,
-    "region": "カントー"
+    "region": "アローラ"
   },
   {
     "id": 67,
@@ -1425,7 +1425,7 @@
       "total": 290
     },
     "isFinal": false,
-    "region": "カントー"
+    "region": "ガラル"
   },
   {
     "id": 68,
@@ -1467,7 +1467,7 @@
       "total": 440
     },
     "isFinal": true,
-    "region": "カントー"
+    "region": "アローラ"
   },
   {
     "id": 70,
@@ -1748,17 +1748,17 @@
     "name": "メガフーディン",
     "type": ["エスパー", ""],
     "ability": {
-      "normal": ["シンクロ", "せいしんりょく"],
-      "special": "マジックガード"
+      "normal": ["トレース", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 55,
       "attack": 50,
-      "block": 45,
-      "contact": 135,
-      "defense": 95,
-      "speed": 120,
-      "total": 500
+      "block": 65,
+      "contact": 175,
+      "defense": 105,
+      "speed": 150,
+      "total": 600
     },
     "isFinal": true,
     "region": "カントー"
@@ -1950,7 +1950,7 @@
       "total": 300
     },
     "isFinal": false,
-    "region": "カントー"
+    "region": "アローラ"
   },
   {
     "id": 93,
@@ -1992,7 +1992,7 @@
       "total": 390
     },
     "isFinal": false,
-    "region": "カントー"
+    "region": "アローラ"
   },
   {
     "id": 95,
@@ -2034,7 +2034,7 @@
       "total": 495
     },
     "isFinal": true,
-    "region": "カントー"
+    "region": "アローラ"
   },
   {
     "id": 97,
@@ -2076,7 +2076,7 @@
       "total": 410
     },
     "isFinal": false,
-    "region": "カントー"
+    "region": "ガラル"
   },
   {
     "id": 99,
@@ -2118,7 +2118,7 @@
       "total": 500
     },
     "isFinal": true,
-    "region": "カントー"
+    "region": "ガラル"
   },
   {
     "id": 101,
@@ -2160,7 +2160,7 @@
       "total": 315
     },
     "isFinal": false,
-    "region": "カントー"
+    "region": "ガラル"
   },
   {
     "id": 103,
@@ -2189,17 +2189,17 @@
     "name": "メガヤドラン",
     "type": ["みず", "エスパー"],
     "ability": {
-      "normal": ["どんかん", "マイペース"],
-      "special": "さいせいりょく"
+      "normal": ["シェルアーマー", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 95,
       "attack": 75,
-      "block": 110,
-      "contact": 100,
+      "block": 180,
+      "contact": 130,
       "defense": 80,
       "speed": 30,
-      "total": 490
+      "total": 590
     },
     "isFinal": true,
     "region": "カントー"
@@ -2286,7 +2286,7 @@
       "total": 377
     },
     "isFinal": false,
-    "region": "カントー"
+    "region": "ガラル"
   },
   {
     "id": 109,
@@ -2412,7 +2412,7 @@
       "total": 325
     },
     "isFinal": false,
-    "region": "カントー"
+    "region": "アローラ"
   },
   {
     "id": 115,
@@ -2454,7 +2454,7 @@
       "total": 500
     },
     "isFinal": true,
-    "region": "カントー"
+    "region": "アローラ"
   },
   {
     "id": 117,
@@ -2588,17 +2588,17 @@
     "name": "メガゲンガー",
     "type": ["ゴースト", "どく"],
     "ability": {
-      "normal": ["のろわれボディ", ""],
+      "normal": ["かげふみ", ""],
       "special": ""
     },
     "status": {
       "hitpoint": 60,
       "attack": 65,
-      "block": 60,
-      "contact": 130,
-      "defense": 75,
-      "speed": 110,
-      "total": 500
+      "block": 80,
+      "contact": 170,
+      "defense": 95,
+      "speed": 130,
+      "total": 600
     },
     "isFinal": true,
     "region": "カントー"
@@ -2790,7 +2790,7 @@
       "total": 530
     },
     "isFinal": true,
-    "region": "カントー"
+    "region": "アローラ"
   },
   {
     "id": 133,
@@ -2853,7 +2853,7 @@
       "total": 425
     },
     "isFinal": true,
-    "region": "カントー"
+    "region": "アローラ"
   },
   {
     "id": 136,
@@ -2979,7 +2979,7 @@
       "total": 490
     },
     "isFinal": true,
-    "region": "カントー"
+    "region": "ガラル"
   },
   {
     "id": 142,
@@ -3113,17 +3113,17 @@
     "name": "メガガルーラ",
     "type": ["ノーマル", ""],
     "ability": {
-      "normal": ["はやおき", "きもったま"],
-      "special": "せいしんりょく"
+      "normal": ["おやこあい", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 105,
-      "attack": 95,
-      "block": 80,
-      "contact": 40,
-      "defense": 80,
-      "speed": 90,
-      "total": 490
+      "attack": 125,
+      "block": 100,
+      "contact": 60,
+      "defense": 100,
+      "speed": 100,
+      "total": 590
     },
     "isFinal": true,
     "region": "カントー"
@@ -3273,7 +3273,7 @@
       "total": 460
     },
     "isFinal": false,
-    "region": "カントー"
+    "region": "ガラル"
   },
   {
     "id": 156,
@@ -3405,19 +3405,19 @@
     "id": 162,
     "no": 127,
     "name": "メガカイロス",
-    "type": ["むし", ""],
+    "type": ["むし", "ひこう"],
     "ability": {
-      "normal": ["かいりきバサミ", "かたやぶり"],
-      "special": "じしんかじょう"
+      "normal": ["スカイスキン", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 65,
-      "attack": 125,
-      "block": 100,
-      "contact": 55,
-      "defense": 70,
-      "speed": 85,
-      "total": 500
+      "attack": 155,
+      "block": 120,
+      "contact": 65,
+      "defense": 90,
+      "speed": 105,
+      "total": 600
     },
     "isFinal": true,
     "region": "カントー"
@@ -3489,19 +3489,19 @@
     "id": 166,
     "no": 130,
     "name": "メガギャラドス",
-    "type": ["みず", "ひこう"],
+    "type": ["みず", "あく"],
     "ability": {
-      "normal": ["いかく", ""],
-      "special": "じしんかじょう"
+      "normal": ["かたやぶり", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 95,
-      "attack": 125,
-      "block": 79,
-      "contact": 60,
-      "defense": 100,
+      "attack": 155,
+      "block": 109,
+      "contact": 70,
+      "defense": 130,
       "speed": 81,
-      "total": 540
+      "total": 640
     },
     "isFinal": true,
     "region": "カントー"
@@ -3764,17 +3764,17 @@
     "name": "メガプテラ",
     "type": ["いわ", "ひこう"],
     "ability": {
-      "normal": ["いしあたま", "プレッシャー"],
-      "special": "きんちょうかん"
+      "normal": ["かたいツメ", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 80,
-      "attack": 105,
-      "block": 65,
-      "contact": 60,
-      "defense": 75,
-      "speed": 130,
-      "total": 515
+      "attack": 135,
+      "block": 85,
+      "contact": 70,
+      "defense": 95,
+      "speed": 150,
+      "total": 615
     },
     "isFinal": true,
     "region": "カントー"
@@ -3974,17 +3974,17 @@
     "name": "メガミュウツーY",
     "type": ["エスパー", ""],
     "ability": {
-      "normal": ["プレッシャー", ""],
-      "special": "きんちょうかん"
+      "normal": ["ふみん", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 106,
-      "attack": 110,
-      "block": 90,
-      "contact": 154,
-      "defense": 90,
-      "speed": 130,
-      "total": 680
+      "attack": 150,
+      "block": 70,
+      "contact": 194,
+      "defense": 120,
+      "speed": 140,
+      "total": 780
     },
     "isFinal": true,
     "region": "カントー"
@@ -4644,19 +4644,19 @@
     "id": 221,
     "no": 181,
     "name": "メガデンリュウ",
-    "type": ["でんき", ""],
+    "type": ["でんき", "ドラゴン"],
     "ability": {
-      "normal": ["せいでんき", ""],
-      "special": "プラス"
+      "normal": ["かたやぶり", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 90,
-      "attack": 75,
-      "block": 85,
-      "contact": 115,
-      "defense": 90,
-      "speed": 55,
-      "total": 510
+      "attack": 95,
+      "block": 105,
+      "contact": 165,
+      "defense": 110,
+      "speed": 45,
+      "total": 610
     },
     "isFinal": true,
     "region": "ジョウト"
@@ -5234,17 +5234,17 @@
     "name": "メガハガネール",
     "type": ["はがね", "じめん"],
     "ability": {
-      "normal": ["いしあたま", "がんじょう"],
-      "special": "ちからずく"
+      "normal": ["すなのちから", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 75,
-      "attack": 85,
-      "block": 200,
+      "attack": 125,
+      "block": 230,
       "contact": 55,
-      "defense": 65,
+      "defense": 95,
       "speed": 30,
-      "total": 510
+      "total": 610
     },
     "isFinal": true,
     "region": "ジョウト"
@@ -5339,17 +5339,17 @@
     "name": "メガハッサム",
     "type": ["むし", "はがね"],
     "ability": {
-      "normal": ["むしのしらせ", "テクニシャン"],
-      "special": "ライトメタル"
+      "normal": ["テクニシャン", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 70,
-      "attack": 130,
-      "block": 100,
-      "contact": 55,
-      "defense": 80,
-      "speed": 65,
-      "total": 500
+      "attack": 150,
+      "block": 140,
+      "contact": 65,
+      "defense": 100,
+      "speed": 75,
+      "total": 600
     },
     "isFinal": true,
     "region": "ジョウト"
@@ -5402,17 +5402,17 @@
     "name": "メガヘラクロス",
     "type": ["むし", "かくとう"],
     "ability": {
-      "normal": ["むしのしらせ", "こんじょう"],
-      "special": "じしんかじょう"
+      "normal": ["スキルリンク", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 80,
-      "attack": 125,
-      "block": 75,
+      "attack": 185,
+      "block": 115,
       "contact": 40,
-      "defense": 95,
-      "speed": 85,
-      "total": 500
+      "defense": 105,
+      "speed": 75,
+      "total": 600
     },
     "isFinal": true,
     "region": "ジョウト"
@@ -5583,7 +5583,7 @@
       "total": 410
     },
     "isFinal": false,
-    "region": "ジョウト"
+    "region": "ガラル"
   },
   {
     "id": 266,
@@ -5759,17 +5759,17 @@
     "name": "メガヘルガー",
     "type": ["あく", "ほのお"],
     "ability": {
-      "normal": ["はやおき", "もらいび"],
-      "special": "きんちょうかん"
+      "normal": ["サンパワー", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 75,
       "attack": 90,
-      "block": 50,
-      "contact": 110,
-      "defense": 80,
-      "speed": 95,
-      "total": 500
+      "block": 90,
+      "contact": 140,
+      "defense": 90,
+      "speed": 115,
+      "total": 600
     },
     "isFinal": true,
     "region": "ジョウト"
@@ -6180,16 +6180,16 @@
     "type": ["いわ", "あく"],
     "ability": {
       "normal": ["すなおこし", ""],
-      "special": "きんちょうかん"
+      "special": ""
     },
     "status": {
       "hitpoint": 100,
-      "attack": 134,
-      "block": 110,
+      "attack": 164,
+      "block": 150,
       "contact": 95,
-      "defense": 100,
-      "speed": 61,
-      "total": 600
+      "defense": 120,
+      "speed": 71,
+      "total": 700
     },
     "isFinal": true,
     "region": "ジョウト"
@@ -6324,19 +6324,19 @@
     "id": 301,
     "no": 254,
     "name": "メガジュカイン",
-    "type": ["くさ", ""],
+    "type": ["くさ", "ドラゴン"],
     "ability": {
-      "normal": ["しんりょく", ""],
-      "special": "かるわざ"
+      "normal": ["ひらいしん", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 70,
-      "attack": 85,
-      "block": 65,
-      "contact": 105,
+      "attack": 110,
+      "block": 75,
+      "contact": 145,
       "defense": 85,
-      "speed": 120,
-      "total": 530
+      "speed": 145,
+      "total": 630
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -6410,17 +6410,17 @@
     "name": "メガバシャーモ",
     "type": ["ほのお", "かくとう"],
     "ability": {
-      "normal": ["もうか", ""],
-      "special": "かそく"
+      "normal": ["かそく", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 80,
-      "attack": 120,
-      "block": 70,
-      "contact": 110,
-      "defense": 70,
-      "speed": 80,
-      "total": 530
+      "attack": 160,
+      "block": 80,
+      "contact": 130,
+      "defense": 80,
+      "speed": 100,
+      "total": 630
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -6473,17 +6473,17 @@
     "name": "メガラグラージ",
     "type": ["みず", "じめん"],
     "ability": {
-      "normal": ["げきりゅう", ""],
-      "special": "しめりけ"
+      "normal": ["すいすい", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 100,
-      "attack": 110,
-      "block": 90,
-      "contact": 85,
-      "defense": 90,
-      "speed": 60,
-      "total": 535
+      "attack": 150,
+      "block": 110,
+      "contact": 95,
+      "defense": 110,
+      "speed": 70,
+      "total": 635
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -6570,7 +6570,7 @@
       "total": 240
     },
     "isFinal": false,
-    "region": "ホウエン"
+    "region": "ガラル"
   },
   {
     "id": 313,
@@ -6612,7 +6612,7 @@
       "total": 420
     },
     "isFinal": false,
-    "region": "ホウエン"
+    "region": "ガラル"
   },
   {
     "id": 315,
@@ -7019,17 +7019,17 @@
     "name": "メガサーナイト",
     "type": ["エスパー", "フェアリー"],
     "ability": {
-      "normal": ["シンクロ", "トレース"],
-      "special": "テレパシー"
+      "normal": ["フェアリースキン", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 68,
-      "attack": 65,
+      "attack": 85,
       "block": 65,
-      "contact": 125,
-      "defense": 115,
-      "speed": 80,
-      "total": 518
+      "contact": 165,
+      "defense": 135,
+      "speed": 100,
+      "total": 618
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -7439,17 +7439,17 @@
     "name": "メガヤミラミ",
     "type": ["あく", "ゴースト"],
     "ability": {
-      "normal": ["するどいめ", "あとだし"],
-      "special": "いたずらごころ"
+      "normal": ["マジックミラー", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 50,
-      "attack": 75,
-      "block": 75,
-      "contact": 65,
-      "defense": 65,
-      "speed": 50,
-      "total": 380
+      "attack": 85,
+      "block": 125,
+      "contact": 85,
+      "defense": 115,
+      "speed": 20,
+      "total": 480
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -7502,17 +7502,17 @@
     "name": "メガクチート",
     "type": ["はがね", "フェアリー"],
     "ability": {
-      "normal": ["かいりきバサミ", "いかく"],
-      "special": "ちからずく"
+      "normal": ["ちからもち", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 50,
-      "attack": 85,
-      "block": 85,
+      "attack": 105,
+      "block": 125,
       "contact": 55,
-      "defense": 55,
+      "defense": 95,
       "speed": 50,
-      "total": 380
+      "total": 480
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -7584,19 +7584,19 @@
     "id": 361,
     "no": 306,
     "name": "メガボスゴドラ",
-    "type": ["はがね", "いわ"],
+    "type": ["はがね", ""],
     "ability": {
-      "normal": ["がんじょう", "いしあたま"],
-      "special": "ヘヴィメタル"
+      "normal": ["フィルター", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 70,
-      "attack": 110,
-      "block": 180,
+      "attack": 140,
+      "block": 230,
       "contact": 60,
-      "defense": 60,
+      "defense": 80,
       "speed": 50,
-      "total": 530
+      "total": 630
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -7650,16 +7650,16 @@
     "type": ["かくとう", "エスパー"],
     "ability": {
       "normal": ["ヨガパワー", ""],
-      "special": "テレパシー"
+      "special": ""
     },
     "status": {
       "hitpoint": 60,
-      "attack": 60,
-      "block": 75,
-      "contact": 60,
-      "defense": 75,
-      "speed": 80,
-      "total": 410
+      "attack": 100,
+      "block": 85,
+      "contact": 80,
+      "defense": 85,
+      "speed": 100,
+      "total": 510
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -7691,17 +7691,17 @@
     "name": "メガライボルト",
     "type": ["でんき", ""],
     "ability": {
-      "normal": ["せいでんき", "ひらいしん"],
-      "special": "マイナス"
+      "normal": ["いかく", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 70,
       "attack": 75,
-      "block": 60,
-      "contact": 105,
-      "defense": 60,
-      "speed": 105,
-      "total": 475
+      "block": 80,
+      "contact": 135,
+      "defense": 80,
+      "speed": 135,
+      "total": 575
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -7922,17 +7922,17 @@
     "name": "メガサメハダー",
     "type": ["みず", "あく"],
     "ability": {
-      "normal": ["さめはだ", ""],
-      "special": "かそく"
+      "normal": ["がんじょうあご", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 70,
-      "attack": 120,
-      "block": 40,
-      "contact": 95,
-      "defense": 40,
-      "speed": 95,
-      "total": 460
+      "attack": 140,
+      "block": 70,
+      "contact": 110,
+      "defense": 65,
+      "speed": 105,
+      "total": 560
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -8027,17 +8027,17 @@
     "name": "メガバクーダ",
     "type": ["ほのお", "じめん"],
     "ability": {
-      "normal": ["マグマのよろい", "ハードロック"],
-      "special": "いかりのつぼ"
+      "normal": ["ちからずく", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 70,
-      "attack": 100,
-      "block": 70,
-      "contact": 105,
-      "defense": 75,
-      "speed": 40,
-      "total": 460
+      "attack": 120,
+      "block": 100,
+      "contact": 145,
+      "defense": 105,
+      "speed": 20,
+      "total": 560
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -8277,19 +8277,19 @@
     "id": 394,
     "no": 334,
     "name": "メガチルタリス",
-    "type": ["ドラゴン", "ひこう"],
+    "type": ["ドラゴン", "フェアリー"],
     "ability": {
-      "normal": ["しぜんかいふく", ""],
-      "special": "ノーてんき"
+      "normal": ["フェアリースキン", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 75,
-      "attack": 70,
-      "block": 90,
-      "contact": 70,
+      "attack": 110,
+      "block": 110,
+      "contact": 110,
       "defense": 105,
       "speed": 80,
-      "total": 490
+      "total": 590
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -8720,17 +8720,17 @@
     "name": "メガジュペッタ",
     "type": ["ゴースト", ""],
     "ability": {
-      "normal": ["ふみん", "おみとおし"],
-      "special": "のろわれボディ"
+      "normal": ["いたずらごころ", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 64,
-      "attack": 115,
-      "block": 65,
-      "contact": 83,
-      "defense": 63,
-      "speed": 65,
-      "total": 455
+      "attack": 165,
+      "block": 75,
+      "contact": 93,
+      "defense": 83,
+      "speed": 75,
+      "total": 555
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -8846,17 +8846,17 @@
     "name": "メガアブソル",
     "type": ["あく", ""],
     "ability": {
-      "normal": ["プレッシャー", "きょううん"],
-      "special": "せいぎのこころ"
+      "normal": ["マジックミラー", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 65,
-      "attack": 130,
+      "attack": 150,
       "block": 60,
-      "contact": 75,
+      "contact": 115,
       "defense": 60,
-      "speed": 75,
-      "total": 465
+      "speed": 115,
+      "total": 565
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -8930,17 +8930,17 @@
     "name": "メガオニゴーリ",
     "type": ["こおり", ""],
     "ability": {
-      "normal": ["せいしんりょく", "アイスボディ"],
-      "special": "ムラっけ"
+      "normal": ["フリーズスキン", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 80,
-      "attack": 80,
+      "attack": 120,
       "block": 80,
-      "contact": 80,
+      "contact": 120,
       "defense": 80,
-      "speed": 80,
-      "total": 480
+      "speed": 100,
+      "total": 580
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -9182,17 +9182,17 @@
     "name": "メガボーマンダ",
     "type": ["ドラゴン", "ひこう"],
     "ability": {
-      "normal": ["いかく", ""],
-      "special": "じしんかじょう"
+      "normal": ["スカイスキン", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 95,
-      "attack": 135,
-      "block": 80,
-      "contact": 110,
-      "defense": 80,
-      "speed": 100,
-      "total": 600
+      "attack": 145,
+      "block": 130,
+      "contact": 120,
+      "defense": 90,
+      "speed": 120,
+      "total": 700
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -9245,17 +9245,17 @@
     "name": "メガメタグロス",
     "type": ["はがね", "エスパー"],
     "ability": {
-      "normal": ["クリアボディ", ""],
-      "special": "ライトメタル"
+      "normal": ["かたいツメ", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 80,
-      "attack": 135,
-      "block": 130,
-      "contact": 95,
-      "defense": 90,
-      "speed": 70,
-      "total": 600
+      "attack": 145,
+      "block": 150,
+      "contact": 105,
+      "defense": 110,
+      "speed": 110,
+      "total": 700
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -9355,12 +9355,12 @@
     },
     "status": {
       "hitpoint": 80,
-      "attack": 80,
-      "block": 90,
-      "contact": 110,
-      "defense": 130,
+      "attack": 100,
+      "block": 120,
+      "contact": 140,
+      "defense": 150,
       "speed": 110,
-      "total": 600
+      "total": 700
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -9397,12 +9397,12 @@
     },
     "status": {
       "hitpoint": 80,
-      "attack": 90,
-      "block": 80,
-      "contact": 130,
-      "defense": 110,
+      "attack": 130,
+      "block": 100,
+      "contact": 160,
+      "defense": 120,
       "speed": 110,
-      "total": 600
+      "total": 700
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -9455,17 +9455,17 @@
     "name": "ゲンシカイオーガ",
     "type": ["みず", ""],
     "ability": {
-      "normal": ["あめふらし", ""],
+      "normal": ["はじまりのうみ", ""],
       "special": ""
     },
     "status": {
       "hitpoint": 100,
-      "attack": 100,
+      "attack": 150,
       "block": 90,
-      "contact": 150,
-      "defense": 140,
+      "contact": 180,
+      "defense": 160,
       "speed": 90,
-      "total": 670
+      "total": 770
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -9495,19 +9495,19 @@
     "id": 452,
     "no": 383,
     "name": "ゲンシグラードン",
-    "type": ["じめん", ""],
+    "type": ["じめん", "ほのお"],
     "ability": {
-      "normal": ["ひでり", ""],
+      "normal": ["おわりのだいち", ""],
       "special": ""
     },
     "status": {
       "hitpoint": 100,
-      "attack": 150,
-      "block": 140,
-      "contact": 100,
+      "attack": 180,
+      "block": 160,
+      "contact": 150,
       "defense": 90,
       "speed": 90,
-      "total": 670
+      "total": 770
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -9518,17 +9518,17 @@
     "name": "メガレックウザ",
     "type": ["ドラゴン", "ひこう"],
     "ability": {
-      "normal": ["エアロック", ""],
+      "normal": ["デルタストリーム", ""],
       "special": ""
     },
     "status": {
       "hitpoint": 105,
-      "attack": 150,
-      "block": 90,
-      "contact": 150,
-      "defense": 90,
-      "speed": 95,
-      "total": 680
+      "attack": 180,
+      "block": 100,
+      "contact": 180,
+      "defense": 100,
+      "speed": 115,
+      "total": 780
     },
     "isFinal": true,
     "region": "ホウエン"
@@ -10587,19 +10587,19 @@
     "id": 504,
     "no": 428,
     "name": "メガミミロップ",
-    "type": ["ノーマル", ""],
+    "type": ["ノーマル", "かくとう"],
     "ability": {
-      "normal": ["メロメロボディ", "ぶきよう"],
-      "special": "じゅうなん"
+      "normal": ["きもったま", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 65,
-      "attack": 76,
-      "block": 84,
+      "attack": 136,
+      "block": 94,
       "contact": 54,
       "defense": 96,
-      "speed": 105,
-      "total": 480
+      "speed": 135,
+      "total": 580
     },
     "isFinal": true,
     "region": "シンオウ"
@@ -10967,17 +10967,17 @@
     "name": "メガガブリアス",
     "type": ["ドラゴン", "じめん"],
     "ability": {
-      "normal": ["すながくれ", ""],
-      "special": "さめはだ"
+      "normal": ["すなのちから", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 108,
-      "attack": 130,
-      "block": 95,
-      "contact": 80,
-      "defense": 85,
-      "speed": 102,
-      "total": 600
+      "attack": 170,
+      "block": 115,
+      "contact": 120,
+      "defense": 95,
+      "speed": 92,
+      "total": 700
     },
     "isFinal": true,
     "region": "シンオウ"
@@ -11030,17 +11030,17 @@
     "name": "メガルカリオ",
     "type": ["かくとう", "はがね"],
     "ability": {
-      "normal": ["ふくつのこころ", "せいしんりょく"],
-      "special": "せいぎのこころ"
+      "normal": ["てきおうりょく", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 70,
-      "attack": 110,
-      "block": 70,
-      "contact": 115,
+      "attack": 145,
+      "block": 88,
+      "contact": 140,
       "defense": 70,
-      "speed": 90,
-      "total": 525
+      "speed": 112,
+      "total": 625
     },
     "isFinal": true,
     "region": "シンオウ"
@@ -11304,16 +11304,16 @@
     "type": ["くさ", "こおり"],
     "ability": {
       "normal": ["ゆきふらし", ""],
-      "special": "ぼうおん"
+      "special": ""
     },
     "status": {
       "hitpoint": 90,
-      "attack": 92,
-      "block": 75,
-      "contact": 92,
-      "defense": 85,
-      "speed": 60,
-      "total": 494
+      "attack": 132,
+      "block": 105,
+      "contact": 132,
+      "defense": 105,
+      "speed": 30,
+      "total": 594
     },
     "isFinal": true,
     "region": "シンオウ"
@@ -11660,17 +11660,17 @@
     "name": "メガエルレイド",
     "type": ["エスパー", "かくとう"],
     "ability": {
-      "normal": ["ふくつのこころ", ""],
-      "special": "せいぎのこころ"
+      "normal": ["せいしんりょく", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 68,
-      "attack": 125,
-      "block": 65,
+      "attack": 165,
+      "block": 95,
       "contact": 65,
       "defense": 115,
-      "speed": 80,
-      "total": 518
+      "speed": 110,
+      "total": 618
     },
     "isFinal": true,
     "region": "シンオウ"
@@ -13002,19 +13002,19 @@
     "id": 619,
     "no": 531,
     "name": "メガタブンネ",
-    "type": ["ノーマル", ""],
+    "type": ["ノーマル", "フェアリー"],
     "ability": {
-      "normal": ["いやしのこころ", "さいせいりょく"],
-      "special": "ぶきよう"
+      "normal": ["いやしのこころ", ""],
+      "special": ""
     },
     "status": {
       "hitpoint": 103,
       "attack": 60,
-      "block": 86,
-      "contact": 60,
-      "defense": 86,
+      "block": 126,
+      "contact": 80,
+      "defense": 126,
       "speed": 50,
-      "total": 445
+      "total": 545
     },
     "isFinal": true,
     "region": "イッシュ"
@@ -13521,7 +13521,7 @@
       "total": 315
     },
     "isFinal": false,
-    "region": "イッシュ"
+    "region": "ガラル"
   },
   {
     "id": 644,
@@ -13563,7 +13563,7 @@
       "total": 480
     },
     "isFinal": true,
-    "region": "イッシュ"
+    "region": "ガラル"
   },
   {
     "id": 646,
@@ -13584,7 +13584,7 @@
       "total": 540
     },
     "isFinal": true,
-    "region": "イッシュ"
+    "region": "ガラル"
   },
   {
     "id": 647,
@@ -13773,7 +13773,7 @@
       "total": 303
     },
     "isFinal": false,
-    "region": "イッシュ"
+    "region": "ガラル"
   },
   {
     "id": 656,
@@ -14970,7 +14970,7 @@
       "total": 471
     },
     "isFinal": true,
-    "region": "イッシュ"
+    "region": "ガラル"
   },
   {
     "id": 713,
@@ -17498,17 +17498,17 @@
     "name": "メガディアンシー",
     "type": ["いわ", "フェアリー"],
     "ability": {
-      "normal": ["クリアボディ", ""],
+      "normal": ["マジックミラー", ""],
       "special": ""
     },
     "status": {
       "hitpoint": 50,
-      "attack": 100,
-      "block": 150,
-      "contact": 100,
-      "defense": 150,
-      "speed": 50,
-      "total": 600
+      "attack": 160,
+      "block": 110,
+      "contact": 160,
+      "defense": 110,
+      "speed": 110,
+      "total": 700
     },
     "isFinal": true,
     "region": "カロス"
