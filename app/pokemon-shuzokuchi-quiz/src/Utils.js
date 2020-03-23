@@ -1,5 +1,22 @@
 import * as data from "./data/pokemon_db.json";
 
+export const getQueryString = url => {
+  let urlParamStr = url.search;
+  var params = {};
+
+  if (urlParamStr) {
+    urlParamStr = urlParamStr.substring(1);
+    urlParamStr.split("&").forEach(param => {
+      const nameAndValue = param.split("=");
+      params = {
+        ...params,
+        [nameAndValue[0]]: nameAndValue[1]
+      };
+    });
+  }
+  return params;
+};
+
 export const pokemonInformation = data.default;
 
 export const filterByRegion = (pokemonInformation, regions) =>

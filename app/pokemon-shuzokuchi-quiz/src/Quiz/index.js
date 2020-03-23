@@ -1,6 +1,10 @@
 import React from "react";
 import "./index.css";
-import { pokemonInformation, generateRandomId } from "../Utils.js";
+import {
+  getQueryString,
+  pokemonInformation,
+  generateRandomId
+} from "../Utils.js";
 import StatusRadar from "./component/StatusRadar.js";
 import HintButton from "./component/HintButton.js";
 import AnswerForm from "./component/AnswerForm.js";
@@ -32,6 +36,14 @@ const generateHintButtonTexts = (pokemon, hintType) => {
   };
 };
 class Quiz extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      num: getQueryString(window.location).num
+    };
+    this.state.num = this.state.num ? parseInt(this.state.num) : 0;
+  }
+
   render() {
     const id = this.props.match.params.id;
     const pokemon = pokemonInformation[id];
@@ -59,7 +71,11 @@ class Quiz extends React.Component {
               />
             </div>
           </div>
-          <AnswerForm pokemon={pokemon} nextId={nextId} />
+          <AnswerForm
+            pokemon={pokemon}
+            nextId={nextId}
+            nextNum={this.state.num + 1}
+          />
           <div className="back-to-home">
             <a href="/">
               <button>ホームへ戻る</button>

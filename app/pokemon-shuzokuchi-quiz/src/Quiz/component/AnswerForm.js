@@ -22,6 +22,7 @@ class AnswerForm extends React.Component {
       <div className="AnswerForm">
         <div className="AnswerFormLabel">あなたの答え</div>
         <form action={`/quiz/${this.props.nextId}`} method="get">
+          <input type="hidden" name="num" value={this.props.nextNum}></input>
           <AutoSuggestPokemon />
           <button
             className="submit-button"
