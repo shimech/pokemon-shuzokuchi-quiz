@@ -1,5 +1,7 @@
 import * as data from "./data/pokemon_db.json";
 
+export const maxNumQue = 10;
+
 export const getQueryString = url => {
   let urlParamStr = url.search;
   var params = {};

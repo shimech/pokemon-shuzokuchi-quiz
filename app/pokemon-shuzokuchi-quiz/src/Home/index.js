@@ -12,7 +12,7 @@ class Home extends React.Component {
           <h1>ポケモン種族値クイズ</h1>
         </div>
         <div className="start-quiz-button">
-          <a href={`/quiz/${quizId}?num=0`}>
+          <a href={`/quiz/${quizId}?num_que=0&num_ans=0`}>
             <button>クイズを始める</button>
           </a>
         </div>

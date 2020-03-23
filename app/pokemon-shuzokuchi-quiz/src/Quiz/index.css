@@ -12,12 +12,7 @@
 }
 
 .quiz-title h1 {
-  font-size: 8vmin;
-}
-
-.back-to-home button {
-  color: rgb(255, 255, 255);
-  background-color: rgb(104, 59, 255);
+  font-size: 6vmin;
 }
 
 @media screen and (min-width: 1024px) {
@@ -166,17 +161,6 @@
     font-size: 16px;
     background-color: rgb(135, 206, 250);
   }
-
-  .back-to-home {
-    text-align: right;
-  }
-
-  .back-to-home button {
-    height: 48px;
-    width: 30%;
-    font-size: 16px;
-    border-radius: 8px;
-  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -309,17 +293,5 @@
     border-radius: 4px;
     font-size: 16px;
     background-color: rgb(135, 206, 250);
-  }
-
-  .back-to-home {
-    text-align: right;
-    margin-bottom: 10vh;
-  }
-
-  .back-to-home button {
-    height: 48px;
-    width: 100%;
-    font-size: 16px;
-    border-radius: 4px;
   }
 }

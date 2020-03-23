@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 import {
+  maxNumQue,
   getQueryString,
   pokemonInformation,
   generateRandomId
@@ -39,9 +40,26 @@ class Quiz extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      num: getQueryString(window.location).num
+      numQue: parseInt(getQueryString(window.location).num_que),
+      numAns: parseInt(getQueryString(window.location).num_ans)
     };
-    this.state.num = this.state.num ? parseInt(this.state.num) : 0;
+
+    if (!this.isCorrectUrl()) {
+      this.props.history.push("/error");
+    } else if (this.state.numQue === maxNumQue) {
+      this.props.history.push(
+        `/result?num_que=${this.state.numQue}&num_ans=${this.state.numAns}`
+      );
+    }
+  }
+
+  isCorrectUrl() {
+    return (
+      this.state.numQue >= 0 &&
+      this.state.numAns >= 0 &&
+      this.state.numQue >= this.state.numAns &&
+      this.state.numQue <= maxNumQue
+    );
   }
 
   render() {
@@ -52,7 +70,9 @@ class Quiz extends React.Component {
     return (
       <div className="Quiz">
         <div className="quiz-title">
-          <h1>このポケモンだ〜れだ？</h1>
+          <h1>
+            このポケモンだ〜れだ？ ({this.state.numQue + 1} / {maxNumQue})
+          </h1>
         </div>
         <StatusRadar id={id} />
         <div className="content">
@@ -74,13 +94,9 @@ class Quiz extends React.Component {
           <AnswerForm
             pokemon={pokemon}
             nextId={nextId}
-            nextNum={this.state.num + 1}
+            numQue={this.state.numQue}
+            numAns={this.state.numAns}
           />
-          <div className="back-to-home">
-            <a href="/">
-              <button>ホームへ戻る</button>
-            </a>
-          </div>
         </div>
       </div>
     );
