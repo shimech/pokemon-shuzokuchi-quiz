@@ -162,7 +162,7 @@
     height: 38px;
     width: 20%;
     margin-left: 5%;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 16px;
     background-color: rgb(135, 206, 250);
   }
@@ -175,7 +175,7 @@
     height: 48px;
     width: 30%;
     font-size: 16px;
-    border-radius: 4px;
+    border-radius: 8px;
   }
 }
 
