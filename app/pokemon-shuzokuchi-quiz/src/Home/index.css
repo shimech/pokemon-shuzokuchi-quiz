@@ -26,6 +26,10 @@
 }
 
 @media screen and (max-width: 1023px) {
+  .home-title {
+    font-size: 4vw;
+  }
+
   .start-quiz-button button {
     height: 9vw;
     width: 60vw;
