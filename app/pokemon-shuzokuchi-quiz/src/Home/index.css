@@ -14,6 +14,11 @@
 .start-quiz-button button {
   color: rgb(255, 255, 255);
   background-color: rgb(104, 59, 255);
+  border: none;
+}
+
+.start-quiz-button button:hover {
+  background-color: rgba(104, 59, 255, 0.8);
 }
 
 @media screen and (min-width: 1024px) {
