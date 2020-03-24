@@ -15,6 +15,7 @@
   color: rgb(255, 255, 255);
   background-color: rgb(104, 59, 255);
   border: none;
+  cursor: pointer;
 }
 
 .start-quiz-button button:hover {

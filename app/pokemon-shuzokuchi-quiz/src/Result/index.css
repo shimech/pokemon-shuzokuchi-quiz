@@ -14,6 +14,7 @@
 .back-to-home button {
   color: rgb(255, 255, 255);
   background-color: rgb(104, 59, 255);
+  cursor: pointer;
 }
 
 .back-to-home button:hover {

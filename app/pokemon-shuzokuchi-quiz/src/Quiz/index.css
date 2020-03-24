@@ -17,11 +17,13 @@
 
 .HintButton {
   border: none;
+  cursor: pointer;
 }
 
 .submit-button {
   background-color: rgb(135, 206, 250);
   border: none;
+  cursor: pointer;
 }
 
 .submit-button:hover {
