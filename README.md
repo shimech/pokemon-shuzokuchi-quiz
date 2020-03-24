@@ -5,5 +5,5 @@
 ```sh
 $ cd app/pokemon-shuzokuchi-quiz/
 $ firebase login
-$ yarn deploy
+$ yarn run deploy
 ```
