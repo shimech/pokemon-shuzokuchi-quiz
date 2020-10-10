@@ -1833,7 +1833,7 @@
       "total": 290
     },
     "isFinal": false,
-    "region": "カントー"
+    "region": "ガラル"
   },
   {
     "id": 68,
@@ -2670,7 +2670,7 @@
       "total": 410
     },
     "isFinal": false,
-    "region": "カントー"
+    "region": "ガラル"
   },
   {
     "id": 99,
@@ -2724,7 +2724,7 @@
       "total": 500
     },
     "isFinal": true,
-    "region": "カントー"
+    "region": "ガラル"
   },
   {
     "id": 101,
@@ -2778,7 +2778,7 @@
       "total": 315
     },
     "isFinal": false,
-    "region": "カントー"
+    "region": "ガラル"
   },
   {
     "id": 103,
@@ -2967,7 +2967,7 @@
       "total": 377
     },
     "isFinal": false,
-    "region": "カントー"
+    "region": "ガラル"
   },
   {
     "id": 110,
@@ -3858,7 +3858,7 @@
       "total": 490
     },
     "isFinal": true,
-    "region": "カントー"
+    "region": "ガラル"
   },
   {
     "id": 143,
@@ -4236,7 +4236,7 @@
       "total": 460
     },
     "isFinal": false,
-    "region": "カントー"
+    "region": "ガラル"
   },
   {
     "id": 157,
@@ -7206,7 +7206,7 @@
       "total": 410
     },
     "isFinal": false,
-    "region": "ジョウト"
+    "region": "ガラル"
   },
   {
     "id": 267,
@@ -8475,7 +8475,7 @@
       "total": 240
     },
     "isFinal": false,
-    "region": "ホウエン"
+    "region": "ガラル"
   },
   {
     "id": 314,
@@ -8529,7 +8529,7 @@
       "total": 420
     },
     "isFinal": false,
-    "region": "ホウエン"
+    "region": "ガラル"
   },
   {
     "id": 316,
@@ -17547,7 +17547,7 @@
       "total": 315
     },
     "isFinal": false,
-    "region": "イッシュ"
+    "region": "ガラル"
   },
   {
     "id": 650,
@@ -17601,7 +17601,7 @@
       "total": 480
     },
     "isFinal": true,
-    "region": "イッシュ"
+    "region": "ガラル"
   },
   {
     "id": 652,
@@ -17628,7 +17628,7 @@
       "total": 540
     },
     "isFinal": true,
-    "region": "イッシュ"
+    "region": "ガラル"
   },
   {
     "id": 653,
@@ -17871,7 +17871,7 @@
       "total": 303
     },
     "isFinal": false,
-    "region": "イッシュ"
+    "region": "ガラル"
   },
   {
     "id": 662,
@@ -19410,7 +19410,7 @@
       "total": 471
     },
     "isFinal": true,
-    "region": "イッシュ"
+    "region": "ガラル"
   },
   {
     "id": 719,
