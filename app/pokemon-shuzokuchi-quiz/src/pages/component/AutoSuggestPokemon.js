@@ -1,39 +1,40 @@
 import React from "react";
 import Autosuggest from "react-autosuggest";
-import { pokemonInformation } from "../../Utils.js";
+import { pokemonInformation } from "../../utils.js";
 
-const pokemonNames = pokemonInformation.map(item => item.name);
+const pokemonNames = pokemonInformation.map((item) => item.name);
 
-const getSuggestions = value => pokemonNames.filter(name => name.match(value));
+const getSuggestions = (value) =>
+  pokemonNames.filter((name) => name.match(value));
 
-const getSuggestionValue = suggestion => suggestion;
+const getSuggestionValue = (suggestion) => suggestion;
 
-const renderSuggestion = suggestion => <div>{suggestion}</div>;
+const renderSuggestion = (suggestion) => <div>{suggestion}</div>;
 
 class AutoSuggestPokemon extends React.Component {
   constructor() {
     super();
     this.state = {
       value: "",
-      suggestions: []
+      suggestions: [],
     };
   }
 
   onChange = (event, { newValue }) => {
     this.setState({
-      value: newValue
+      value: newValue,
     });
   };
 
   onSuggestionsFetchRequested = ({ value }) => {
     this.setState({
-      suggestions: getSuggestions(value)
+      suggestions: getSuggestions(value),
     });
   };
 
   onSuggestionsClearRequested = () => {
     this.setState({
-      suggestions: []
+      suggestions: [],
     });
   };
 
@@ -43,7 +44,7 @@ class AutoSuggestPokemon extends React.Component {
     const inputProps = {
       placeholder: "ポケモンを入力",
       value,
-      onChange: this.onChange
+      onChange: this.onChange,
     };
 
     return (

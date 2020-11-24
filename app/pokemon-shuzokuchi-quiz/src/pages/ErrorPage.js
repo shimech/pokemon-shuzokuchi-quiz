@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.css";
 
 const maxTime = 3000;
 const interval = 1000;
@@ -9,7 +8,7 @@ class ErrorPage extends React.Component {
     super(props);
 
     this.state = {
-      time: Math.floor(maxTime / interval)
+      time: Math.floor(maxTime / interval),
     };
 
     this.countDown = this.countDown.bind(this);
@@ -19,7 +18,7 @@ class ErrorPage extends React.Component {
   }
 
   countDown() {
-    this.setState(state => ({ time: state.time - 1 }));
+    this.setState((state) => ({ time: state.time - 1 }));
   }
 
   backToHome() {

@@ -1,13 +1,12 @@
 import React from "react";
-import "./index.css";
-import { maxNumQue, getQueryString } from "../Utils.js";
+import { maxNumQue, getQueryString } from "../utils.js";
 
 class Result extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       numQue: parseInt(getQueryString(window.location).num_que),
-      numAns: parseInt(getQueryString(window.location).num_ans)
+      numAns: parseInt(getQueryString(window.location).num_ans),
     };
 
     if (!this.isCorrectUrl()) {

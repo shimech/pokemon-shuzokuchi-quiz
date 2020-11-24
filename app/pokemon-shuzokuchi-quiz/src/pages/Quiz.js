@@ -1,11 +1,10 @@
 import React from "react";
-import "./index.css";
 import {
   maxNumQue,
   getQueryString,
   pokemonInformation,
-  generateRandomId
-} from "../Utils.js";
+  generateRandomId,
+} from "../utils.js";
 import StatusRadar from "./component/StatusRadar.js";
 import HintButton from "./component/HintButton.js";
 import AnswerForm from "./component/AnswerForm.js";
@@ -33,7 +32,7 @@ const generateHintButtonTexts = (pokemon, hintType) => {
 
   return {
     label: labelText,
-    hint: hintText
+    hint: hintText,
   };
 };
 class Quiz extends React.Component {
@@ -41,7 +40,7 @@ class Quiz extends React.Component {
     super(props);
     this.state = {
       numQue: parseInt(getQueryString(window.location).num_que),
-      numAns: parseInt(getQueryString(window.location).num_ans)
+      numAns: parseInt(getQueryString(window.location).num_ans),
     };
 
     if (!this.isCorrectUrl()) {
