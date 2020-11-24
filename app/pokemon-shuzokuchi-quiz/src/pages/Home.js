@@ -20,27 +20,30 @@ const regionList = Object.keys(regionName);
 const Title = styled.h1`
   color: #683bff;
   ${sp`
-    font-size: 7vw;
+  font-size: 7vw;
   `}
   ${tab`
-    font-size: 7vw;
+  font-size: 7vw;
   `}
   ${pc`
-    margin: 60px 0;
-    font-size: min(6vw, 100px);
+  margin: 60px 0;
+  font-size: min(6vw, 100px);
   `}
 `;
 
 const RuleTitle = styled.p`
   color: #808080;
-  margin: 0 0 12px 0;
   ${sp`
-    font-size: 16px;
+  font-size: 16px;
+  margin: 0 0 8px 0;
   `}
   ${tab`
+  font-size: 24px;
+  margin: 0 0 8px 0;
   `}
   ${pc`
-    font-size: 32px;
+  font-size: 32px;
+  margin: 0 0 12px 0;
   `}
 `;
 
@@ -63,24 +66,25 @@ const Button = styled.button`
     color: #683bff;
   }
   ${sp`
-    margin-top: 16px;
-    height: 24px;
-    width: 200px;
-    font-size: 8px;
-    border-radius: 12px;
+  margin-top: 28px;
+  height: 32px;
+  width: 312px;
+  font-size: 16px;
+  border-radius: 16px;
   `}
   ${tab`
-    height: 70px;
-    width: 450px;
-    font-size: 24px;
-    border-radius: 35px;
+  margin-top: 36px;
+  height: 48px;
+  width: 448px;
+  font-size: 24px;
+  border-radius: 24px;
   `}
   ${pc`
-    margin-top: 8vh;
-    height: 64px;
-    width: 648px;
-    font-size: 32px;
-    border-radius: 32px;
+  margin-top: 8vh;
+  height: 64px;
+  width: 648px;
+  font-size: 32px;
+  border-radius: 32px;
   `}
 `;
 

@@ -9,8 +9,18 @@ const Button = styled.button`
     opacity: 0.7;
   }
   ${sp`
+  font-size: 8px;
+  height: 24px;
+  width: ${(props) => (props.isRegion ? "72px" : "312px")};
+  margin: 4px;
+  border-radius: 4px;
   `}
   ${tab`
+  font-size: 14px;
+  height: 28px;
+  width: ${(props) => (props.isRegion ? "100px" : "448px")};
+  margin: 8px;
+  border-radius: 4px;
   `}
   ${pc`
   font-size: 20px;
