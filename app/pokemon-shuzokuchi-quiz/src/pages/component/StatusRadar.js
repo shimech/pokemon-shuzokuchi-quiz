@@ -1,6 +1,5 @@
 import React from "react";
 import { Radar } from "react-chartjs-2";
-import { pokemonInformation } from "../../utils.js";
 
 const radarOption = {
   responsive: true,
@@ -62,12 +61,10 @@ const generateData = (pokemon) => {
 
 class StatusRadar extends React.Component {
   render() {
-    const pokemon = pokemonInformation[this.props.id];
-
     return (
       <div className="StatusRadar">
         <Radar
-          data={generateData(pokemon)}
+          data={generateData(this.props.pokemon)}
           options={radarOption}
           width={radarSize.width}
           height={radarSize.height}

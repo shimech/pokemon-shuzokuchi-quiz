@@ -21,12 +21,14 @@ const Title = styled.h1`
   color: #683bff;
   ${sp`
   font-size: 7vw;
+  margin: 3vh;
   `}
   ${tab`
   font-size: 7vw;
+  margin: 3vh;
   `}
   ${pc`
-  margin: 60px 0;
+  margin: 60px;
   font-size: min(6vw, 100px);
   `}
 `;
@@ -135,6 +137,10 @@ class Home extends React.Component {
       this.state.isRemoveSameStatus
     );
     console.log(pokemonList);
+    this.props.history.push({
+      pathname: "/quiz",
+      state: { pokemonList: pokemonList, numQuestion: 0 },
+    });
   }
 
   render() {

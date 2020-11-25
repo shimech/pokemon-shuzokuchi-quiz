@@ -1,22 +1,17 @@
 import React from "react";
-import {
-  maxNumQue,
-  getQueryString,
-  pokemonInformation,
-  generateRandomId,
-} from "../utils.js";
+import { maxNumQue } from "../utils.js";
 import StatusRadar from "./component/StatusRadar.js";
 import HintButton from "./component/HintButton.js";
 import AnswerForm from "./component/AnswerForm.js";
 
 const replaceEmptyString = (str, subStr) => (str === "" ? subStr : str);
 
-const generateHintButtonTexts = (pokemon, hintType) => {
-  var labelText = "ヒント" + "\n";
-  var hintText;
+const generateHintButtonText = (pokemon, hintType) => {
+  let labelText = "ヒント\n";
+  let hintText;
   if (hintType === "type") {
     labelText += "タイプ";
-    hintText = `${pokemon.type[0]}` + "\n" + `${pokemon.type[1]}`;
+    hintText = `${pokemon.type[0]}\n${pokemon.type[1]}`;
   } else if (hintType === "ability") {
     labelText += "とくせい";
     hintText =
@@ -35,66 +30,93 @@ const generateHintButtonTexts = (pokemon, hintType) => {
     hint: hintText,
   };
 };
+
 class Quiz extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      numQue: parseInt(getQueryString(window.location).num_que),
-      numAns: parseInt(getQueryString(window.location).num_ans),
-    };
 
-    if (!this.isCorrectUrl()) {
-      this.props.history.push("/error");
-    } else if (this.state.numQue === maxNumQue) {
-      this.props.history.push(
-        `/result?num_que=${this.state.numQue}&num_ans=${this.state.numAns}`
-      );
+    const numQuestion = props.location.state.numQuestion;
+
+    this.state = {
+      numQuestion: numQuestion,
+      numCorrect: 0,
+      pokemonList: props.location.state.pokemonList,
+      pokemon: props.location.state.pokemonList[numQuestion],
+      hintType: false,
+      hintAbility: false,
+      hintRegion: false,
+    };
+  }
+
+  openHint(hintKind) {
+    const newState = this.state;
+    newState[hintKind] = true;
+    this.setState(newState);
+  }
+
+  incrementNumCorrect() {
+    this.setState({
+      numCorrect: this.state.numCorrect + 1,
+    });
+  }
+
+  nextQuiz() {
+    if (this.state.numQuestion < maxNumQue - 1) {
+      const numQuestion = this.state.numQuestion + 1;
+      const newState = {
+        numQuestion: numQuestion,
+        pokemon: this.state.pokemonList[numQuestion],
+        hintType: false,
+        hintAbility: false,
+        hintRegion: false,
+      };
+      this.setState(newState);
+    } else {
+      const numCorrect = this.state.numCorrect;
+      this.props.history.push({
+        pathname: "/result",
+        state: { numCorrect },
+      });
     }
   }
 
-  isCorrectUrl() {
-    return (
-      this.state.numQue >= 0 &&
-      this.state.numAns >= 0 &&
-      this.state.numQue >= this.state.numAns &&
-      this.state.numQue <= maxNumQue
-    );
-  }
-
   render() {
-    const id = this.props.match.params.id;
-    const pokemon = pokemonInformation[id];
-    const nextId = generateRandomId(pokemonInformation);
-
     return (
       <div className="Quiz">
         <div className="quiz-title">
           <h1>
-            このポケモンだ〜れだ？ ({this.state.numQue + 1} / {maxNumQue})
+            このポケモンだ〜れだ？ ({this.state.numQuestion + 1} / {maxNumQue})
           </h1>
         </div>
-        <StatusRadar id={id} />
+        <StatusRadar pokemon={this.state.pokemon} />
         <div className="content">
           <div className="hint-button">
             <div className="hint-button-type">
-              <HintButton textObj={generateHintButtonTexts(pokemon, "type")} />
+              <HintButton
+                text={generateHintButtonText(this.state.pokemon, "type")}
+                opened={this.state.hintType}
+                openHint={() => this.openHint("hintType")}
+              />
             </div>
             <div className="hint-button-ability">
               <HintButton
-                textObj={generateHintButtonTexts(pokemon, "ability")}
+                text={generateHintButtonText(this.state.pokemon, "ability")}
+                opened={this.state.hintAbility}
+                openHint={() => this.openHint("hintAbility")}
               />
             </div>
             <div className="hint-button-region">
               <HintButton
-                textObj={generateHintButtonTexts(pokemon, "region")}
+                text={generateHintButtonText(this.state.pokemon, "region")}
+                opened={this.state.hintRegion}
+                openHint={() => this.openHint("hintRegion")}
               />
             </div>
           </div>
           <AnswerForm
-            pokemon={pokemon}
-            nextId={nextId}
-            numQue={this.state.numQue}
-            numAns={this.state.numAns}
+            pokemon={this.state.pokemon}
+            incrementNumCorrect={() => this.incrementNumCorrect()}
+            nextQuiz={() => this.nextQuiz()}
           />
         </div>
       </div>

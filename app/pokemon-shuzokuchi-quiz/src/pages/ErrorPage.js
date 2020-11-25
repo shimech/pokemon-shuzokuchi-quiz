@@ -7,18 +7,26 @@ class ErrorPage extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      time: Math.floor(maxTime / interval),
-    };
-
     this.countDown = this.countDown.bind(this);
     this.backToHome = this.backToHome.bind(this);
-    setInterval(this.countDown, interval);
+
+    this.state = {
+      time: Math.floor(maxTime / interval),
+      timer: setInterval(this.countDown, interval),
+    };
+
     setTimeout(this.backToHome, maxTime);
   }
 
   countDown() {
-    this.setState((state) => ({ time: state.time - 1 }));
+    this.setState(
+      (state) => ({ time: state.time - 1 }),
+      () => {
+        if (this.state.time <= 1) {
+          clearInterval(this.state.timer);
+        }
+      }
+    );
   }
 
   backToHome() {

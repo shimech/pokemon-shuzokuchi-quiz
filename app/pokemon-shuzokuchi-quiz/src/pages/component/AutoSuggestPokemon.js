@@ -12,8 +12,8 @@ const getSuggestionValue = (suggestion) => suggestion;
 const renderSuggestion = (suggestion) => <div>{suggestion}</div>;
 
 class AutoSuggestPokemon extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       value: "",
       suggestions: [],
@@ -24,6 +24,7 @@ class AutoSuggestPokemon extends React.Component {
     this.setState({
       value: newValue,
     });
+    this.props.updateAnswer(newValue);
   };
 
   onSuggestionsFetchRequested = ({ value }) => {
@@ -37,6 +38,12 @@ class AutoSuggestPokemon extends React.Component {
       suggestions: [],
     });
   };
+
+  clearInputValue() {
+    this.setState({
+      value: "",
+    });
+  }
 
   render() {
     const { value, suggestions } = this.state;

@@ -1,72 +1,36 @@
 import React from "react";
 
-const buttonColorObj = {
-  before: "rgb(104, 59, 255)",
-  after: "rgb(200, 200, 200)"
-};
-
-const textColorObj = {
-  before: "rgb(255, 255, 255)",
-  after: "rgb(0, 0, 0)"
-};
-
 class HintButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      text: this.props.textObj.label,
-      backgroundColor: buttonColorObj.before,
-      textColor: textColorObj.before,
-      isHover: false,
-      isDisabled: false
-    };
-
-    this.onClickEvent = this.onClickEvent.bind(this);
-    this.onMouseEvent = this.onMouseEvent.bind(this);
+  text() {
+    const text = this.props.opened
+      ? this.props.text.hint
+      : this.props.text.label;
+    const textList = text.split("\n");
+    return textList.map((text, i) => <p key={i}>{text}</p>);
   }
 
-  onClickEvent() {
-    this.setState({
-      text: this.props.textObj.hint,
-      backgroundColor: buttonColorObj.after,
-      textColor: textColorObj.after,
-      isDisabled: true
-    });
+  backgroundColor() {
+    return this.props.opened ? "#dcdcdc" : "#683bff";
   }
 
-  onMouseEvent() {
-    this.setState(
-      {
-        isHover: !this.state.isHover
-      },
-      () => {
-        if (!this.state.isDisabled) {
-          this.setState({
-            backgroundColor: this.state.isHover
-              ? "rgba(104, 59, 255, 0.8)"
-              : buttonColorObj.before
-          });
-        }
-      }
-    );
+  textColor() {
+    return this.props.opened ? "#000000" : "#ffffff";
   }
 
   render() {
+    const textDom = this.text();
+
     return (
       <button
         className="HintButton"
         style={{
-          backgroundColor: this.state.backgroundColor,
-          color: this.state.textColor
+          backgroundColor: this.backgroundColor(),
+          color: this.textColor(),
         }}
-        onClick={this.onClickEvent}
-        onMouseEnter={this.onMouseEvent}
-        onMouseLeave={this.onMouseEvent}
-        disabled={this.state.isDisabled}
+        disabled={this.props.opened}
+        onClick={this.props.openHint}
       >
-        {this.state.text.split("\n").map(str => (
-          <p>{str}</p>
-        ))}
+        {textDom}
       </button>
     );
   }
