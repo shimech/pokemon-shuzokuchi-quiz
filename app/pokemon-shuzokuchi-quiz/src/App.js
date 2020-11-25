@@ -1,9 +1,10 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "./Home";
-import Quiz from "./Quiz";
-import Result from "./Result";
-import ErrorPage from "./ErrorPage";
+import "./App.css";
+import Home from "./pages/Home.js";
+import Quiz from "./pages/Quiz.js";
+import Result from "./pages/Result.js";
+import ErrorPage from "./pages/ErrorPage.js";
 
 class App extends React.Component {
   render() {
@@ -12,9 +13,10 @@ class App extends React.Component {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/quiz/:id" component={Quiz} />
-            <Route path="/result" component={Result} />
-            <Route path="/error" component={ErrorPage} />
+            <Route exact path="/quiz" component={Quiz} />
+            <Route exact path="/result" component={Result} />
+            <Route exact path="/error" component={ErrorPage} />
+            <Route component={ErrorPage} />
           </Switch>
         </BrowserRouter>
       </div>

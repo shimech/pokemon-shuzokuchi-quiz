@@ -1,38 +1,37 @@
 import React from "react";
 import { Radar } from "react-chartjs-2";
-import { pokemonInformation } from "../../Utils.js";
 
 const radarOption = {
   responsive: true,
   maintainAspectRatio: false,
   legend: {
-    display: false
+    display: false,
   },
   scale: {
     angleLines: {
-      color: "rgba(150, 150, 150, 0.5)"
+      color: "rgba(150, 150, 150, 0.5)",
     },
     gridLines: {
-      color: "rgba(150, 150, 150, 0.5)"
+      color: "rgba(150, 150, 150, 0.5)",
     },
     pointLabels: {
-      fontSize: 20
+      fontSize: 20,
     },
     ticks: {
       beginAtZero: true,
       stepSize: 50,
       max: 150,
-      fontSize: 10
-    }
-  }
+      fontSize: 10,
+    },
+  },
 };
 
 const radarSize = {
   width: 500,
-  height: 500
+  height: 500,
 };
 
-const generateData = pokemon => {
+const generateData = (pokemon) => {
   return {
     labels: [
       `HP: ${pokemon.status.hitpoint}`,
@@ -40,7 +39,7 @@ const generateData = pokemon => {
       `ぼうぎょ: ${pokemon.status.block}`,
       `すばやさ: ${pokemon.status.speed}`,
       `とくぼう: ${pokemon.status.defense}`,
-      `とくこう: ${pokemon.status.contact}`
+      `とくこう: ${pokemon.status.contact}`,
     ],
     datasets: [
       {
@@ -53,21 +52,19 @@ const generateData = pokemon => {
           pokemon.status.block,
           pokemon.status.speed,
           pokemon.status.defense,
-          pokemon.status.contact
-        ]
-      }
-    ]
+          pokemon.status.contact,
+        ],
+      },
+    ],
   };
 };
 
 class StatusRadar extends React.Component {
   render() {
-    const pokemon = pokemonInformation[this.props.id];
-
     return (
       <div className="StatusRadar">
         <Radar
-          data={generateData(pokemon)}
+          data={generateData(this.props.pokemon)}
           options={radarOption}
           width={radarSize.width}
           height={radarSize.height}
