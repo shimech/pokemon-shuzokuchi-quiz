@@ -20,20 +20,26 @@ class AnswerForm extends React.Component {
 
   validateAnswer() {
     let message;
+    let isCorrect;
     if (this.state.answer === this.props.pokemon.name) {
       message = "正解！！";
-      this.props.incrementNumCorrect();
+      isCorrect = true;
     } else {
       message = "不正解...";
       message += "\n";
       message += `(答え: ${this.props.pokemon.name})`;
+      isCorrect = false;
     }
 
     alert(message);
 
     this.clearInputValue();
 
-    this.props.nextQuiz();
+    if (isCorrect) {
+      this.props.incrementNumCorrect(this.props.nextQuiz);
+    } else {
+      this.props.nextQuiz();
+    }
   }
 
   clearInputValue() {

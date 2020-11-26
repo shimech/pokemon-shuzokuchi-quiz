@@ -54,10 +54,13 @@ class Quiz extends React.Component {
     this.setState(newState);
   }
 
-  incrementNumCorrect() {
-    this.setState({
-      numCorrect: this.state.numCorrect + 1,
-    });
+  incrementNumCorrect(callback) {
+    this.setState(
+      (state, props) => ({
+        numCorrect: state.numCorrect + 1,
+      }),
+      () => callback()
+    );
   }
 
   nextQuiz() {
@@ -115,7 +118,9 @@ class Quiz extends React.Component {
           </div>
           <AnswerForm
             pokemon={this.state.pokemon}
-            incrementNumCorrect={() => this.incrementNumCorrect()}
+            incrementNumCorrect={(callback) =>
+              this.incrementNumCorrect(callback)
+            }
             nextQuiz={() => this.nextQuiz()}
           />
         </div>
