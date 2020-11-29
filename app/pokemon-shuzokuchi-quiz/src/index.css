@@ -22,7 +22,8 @@ button {
   cursor: pointer;
 }
 
-.Home {
+.Home,
+.Result {
   text-align: center;
 }
 
@@ -391,4 +392,16 @@ button {
   color: rgb(255, 0, 0);
   text-align: center;
   margin-top: 10vh;
+}
+
+svg {
+  width: 80px;
+  height: 80px;
+}
+
+@media screen and (max-width: 1023px) {
+  svg {
+    width: 40px;
+    height: 40px;
+  }
 }
