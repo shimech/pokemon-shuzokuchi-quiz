@@ -17,6 +17,11 @@ class HintButton extends React.Component {
     return this.props.opened ? "#000000" : "#ffffff";
   }
 
+  onClick() {
+    this.props.openHint();
+    this.props.incrementNumHint();
+  }
+
   render() {
     const textDom = this.text();
 
@@ -28,7 +33,7 @@ class HintButton extends React.Component {
           color: this.textColor(),
         }}
         disabled={this.props.opened}
-        onClick={this.props.openHint}
+        onClick={() => this.onClick()}
       >
         {textDom}
       </button>

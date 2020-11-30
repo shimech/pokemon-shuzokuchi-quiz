@@ -124,7 +124,7 @@ button {
 
   .AnswerForm {
     clear: both;
-    height: 30%;
+    height: 100px;
     width: 100%;
     margin-bottom: 5%;
   }
@@ -256,9 +256,10 @@ button {
 
   .AnswerForm {
     clear: both;
-    height: 30%;
+    height: 80px;
     width: 100%;
-    margin-bottom: 10%;
+    margin-bottom: 20px;
+    margin-top: 32px;
   }
 
   .AnswerFormLabel {
@@ -377,15 +378,6 @@ button {
   }
 }
 
-@media screen and (max-width: 1023px) {
-  .back-to-home button {
-    height: 36px;
-    width: 70%;
-    font-size: 16px;
-    border-radius: 4px;
-  }
-}
-
 .error-title {
   display: block;
   font-size: 3vw;
@@ -394,13 +386,28 @@ button {
   margin-top: 10vh;
 }
 
-svg {
+.share-button svg {
   width: 80px;
   height: 80px;
 }
 
+.share-quiz svg {
+  position: relative;
+  left: -22vw;
+  width: 60px;
+  height: 60px;
+}
+
+@media screen and (max-width: 960px) {
+  .share-button svg {
+    width: 36px;
+    height: 36px;
+  }
+}
+
 @media screen and (max-width: 1023px) {
-  svg {
+  .share-quiz svg {
+    left: -50vw;
     width: 40px;
     height: 40px;
   }

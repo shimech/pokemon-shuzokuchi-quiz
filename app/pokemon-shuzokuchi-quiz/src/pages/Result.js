@@ -5,6 +5,7 @@ import { maxNumQue } from "../utils.js";
 import { sp, tab, pc } from "../media.js";
 
 const url = "https://pokemon-shuzokuchi-quiz.firebaseapp.com";
+const hashtags = ["ポケモン種族値クイズ"];
 
 const Title = styled.h1`
   color: #683bff;
@@ -54,26 +55,51 @@ const Button = styled.button`
   `}
 `;
 
+const Span = styled.span`
+  display: inline-block;
+  color: #00acee;
+  position: relative;
+  ${sp`
+  font-size: 12px;
+  margin-left: 8px;
+  top: -12px;
+  `}
+  ${tab`
+  font-size: 18px;
+  margin-left: 12px;
+  top: -10px;
+  `}
+  ${pc`
+  font-size: 28px;
+  margin-left: 24px;
+  top: -28px;
+  `};
+`;
+
 class Result extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       score: (props.location.state.numCorrect / maxNumQue) * 100,
+      numHint: props.location.state.numHint,
     };
   }
 
   render() {
+    const tweetContent = `ポケモン種族値クイズで${this.state.score}点を獲得しました！！ (ヒント使用回数: ${this.state.numHint})\n`;
+
     return (
       <div className="Result">
         <Title>あなたの点数は... {this.state.score}点！</Title>
         <div className="share-button">
           <TwitterShareButton
             url={url}
-            hashtags={["ポケモン種族値クイズ"]}
-            title={`ポケモン種族値クイズで${this.state.score}点を獲得しました！！`}
+            hashtags={hashtags}
+            title={tweetContent}
           >
             <TwitterIcon round />
           </TwitterShareButton>
+          <Span>結果をツイートする</Span>
         </div>
         <a href="/">
           <Button>ホームに戻る</Button>

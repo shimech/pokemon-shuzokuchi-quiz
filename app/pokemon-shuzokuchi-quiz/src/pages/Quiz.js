@@ -1,8 +1,35 @@
 import React from "react";
+import styled from "styled-components";
+import { TwitterShareButton, TwitterIcon } from "react-share";
 import { maxNumQue } from "../utils.js";
 import StatusRadar from "./component/StatusRadar.js";
 import HintButton from "./component/HintButton.js";
 import AnswerForm from "./component/AnswerForm.js";
+import { sp, tab, pc } from "../media.js";
+
+const url = "https://pokemon-shuzokuchi-quiz.firebaseapp.com";
+const hashtags = ["ポケモン種族値クイズ"];
+
+const Span = styled.span`
+  display: inline-block;
+  color: #00acee;
+  position: relative;
+  ${sp`
+  font-size: 18px;
+  margin-left: 30vw;
+  top: -36px;
+  `}
+  ${tab`
+  font-size: 24px;
+  margin-left: 25vw;
+  top: -40px;
+  `}
+  ${pc`
+  font-size: 24px;
+  margin-left: 13vw;
+  top: -50px;
+  `};
+`;
 
 const replaceEmptyString = (str, subStr) => (str === "" ? subStr : str);
 
@@ -40,6 +67,7 @@ class Quiz extends React.Component {
     this.state = {
       numQuestion: numQuestion,
       numCorrect: 0,
+      numHint: 0,
       pokemonList: props.location.state.pokemonList,
       pokemon: props.location.state.pokemonList[numQuestion],
       hintType: false,
@@ -63,6 +91,12 @@ class Quiz extends React.Component {
     );
   }
 
+  incrementNumHint() {
+    this.setState((state, props) => ({
+      numHint: state.numHint + 1,
+    }));
+  }
+
   nextQuiz() {
     if (this.state.numQuestion < maxNumQue - 1) {
       const numQuestion = this.state.numQuestion + 1;
@@ -75,15 +109,20 @@ class Quiz extends React.Component {
       };
       this.setState(newState);
     } else {
-      const numCorrect = this.state.numCorrect;
       this.props.history.push({
         pathname: "/result",
-        state: { numCorrect },
+        state: {
+          numCorrect: this.state.numCorrect,
+          numHint: this.state.numHint,
+        },
       });
     }
   }
 
   render() {
+    const status = this.state.pokemon.status;
+    const tweetContent = `このポケモンだ〜れだ？\nH${status.hitpoint} A${status.attack} B${status.block} C${status.contact} D${status.defense} S${status.speed}\n`;
+
     return (
       <div className="Quiz">
         <div className="quiz-title">
@@ -99,6 +138,7 @@ class Quiz extends React.Component {
                 text={generateHintButtonText(this.state.pokemon, "type")}
                 opened={this.state.hintType}
                 openHint={() => this.openHint("hintType")}
+                incrementNumHint={() => this.incrementNumHint()}
               />
             </div>
             <div className="hint-button-ability">
@@ -106,6 +146,7 @@ class Quiz extends React.Component {
                 text={generateHintButtonText(this.state.pokemon, "ability")}
                 opened={this.state.hintAbility}
                 openHint={() => this.openHint("hintAbility")}
+                incrementNumHint={() => this.incrementNumHint()}
               />
             </div>
             <div className="hint-button-region">
@@ -113,6 +154,7 @@ class Quiz extends React.Component {
                 text={generateHintButtonText(this.state.pokemon, "region")}
                 opened={this.state.hintRegion}
                 openHint={() => this.openHint("hintRegion")}
+                incrementNumHint={() => this.incrementNumHint()}
               />
             </div>
           </div>
@@ -123,6 +165,16 @@ class Quiz extends React.Component {
             }
             nextQuiz={() => this.nextQuiz()}
           />
+          <div className="share-quiz">
+            <TwitterShareButton
+              url={url}
+              hashtags={hashtags}
+              title={tweetContent}
+            >
+              <TwitterIcon round />
+            </TwitterShareButton>
+            <Span>この問題をシェアする</Span>
+          </div>
         </div>
       </div>
     );
