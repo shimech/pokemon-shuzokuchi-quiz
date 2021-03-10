@@ -6,8 +6,9 @@ export const pokemonInformation = data.default;
 
 export const generatePokemonList = (
   regionList,
-  isOnlyFinal,
-  isRemoveSameStatus
+  isMegaEvolution,
+  isSameStatus,
+  isBeforeEvolution
 ) => {
   let pokemonList = pokemonInformation;
   if (regionList.length > 0) {
@@ -15,24 +16,29 @@ export const generatePokemonList = (
       regionList.includes(item.region)
     );
   }
-  if (isOnlyFinal) {
-    pokemonList = pokemonList.filter((item) => item.isFinal);
+  if (!isMegaEvolution) {
+    pokemonList = pokemonList.filter((item) => !item.isMegaEvolution);
   }
-  if (isRemoveSameStatus) {
+  if (!isSameStatus) {
     pokemonList = pokemonList.filter((item) => !item.isSameStatus);
+  }
+  if (!isBeforeEvolution) {
+    pokemonList = pokemonList.filter((item) => item.isFinal);
   }
   return pokemonList;
 };
 
 export const randomPokemonList = (
   regionList,
-  isOnlyFinal,
-  isRemoveSameStatus
+  isMegaEvolution,
+  isSameStatus,
+  isBeforeEvolution
 ) => {
   const pokemonList = generatePokemonList(
     regionList,
-    isOnlyFinal,
-    isRemoveSameStatus
+    isMegaEvolution,
+    isSameStatus,
+    isBeforeEvolution
   );
   let randomPokemon = [];
   for (let i = 0; i < maxNumQue; i++) {

@@ -61,7 +61,7 @@ const RuleList = styled.div`
 const Button = styled.button`
   background-color: #683bff;
   color: #ffffff;
-  border: solid #683bff 4px;
+  border: solid #683bff 2px;
   transition: all 0.3s ease-out;
   &:hover {
     background-color: #ffffff;
@@ -102,8 +102,9 @@ class Home extends React.Component {
       kalos: true,
       alola: true,
       galar: true,
-      isOnlyFinal: true,
-      isRemoveSameStatus: true,
+      isMegaEvolution: false,
+      isSameStatus: false,
+      isBeforeEvolution: false,
     };
   }
 
@@ -133,8 +134,9 @@ class Home extends React.Component {
       .filter((item) => item);
     const pokemonList = randomPokemonList(
       regionListSelected,
-      this.state.isOnlyFinal,
-      this.state.isRemoveSameStatus
+      this.state.isMegaEvolution,
+      this.state.isSameStatus,
+      this.state.isBeforeEvolution
     );
     console.log(pokemonList);
     this.props.history.push({
@@ -200,18 +202,24 @@ class Home extends React.Component {
           ></RuleButton>
           <br></br>
           <RuleButton
-            label="同一種族値のポケモンを除く"
-            checked={this.state.isRemoveSameStatus}
-            onClick={() => this.setRuleState("isRemoveSameStatus")}
+            label="メガシンカ・ゲンシカイキを含む"
+            checked={this.state.isMegaEvolution}
+            onClick={() => this.setRuleState("isMegaEvolution")}
           ></RuleButton>
           <br></br>
           <RuleButton
-            label="進化前のポケモンを含める"
-            checked={!this.state.isOnlyFinal}
-            onClick={() => this.setRuleState("isOnlyFinal")}
+            label="同一種族値のポケモンを含む"
+            checked={this.state.isSameStatus}
+            onClick={() => this.setRuleState("isSameStatus")}
+          ></RuleButton>
+          <br></br>
+          <RuleButton
+            label="進化前のポケモンを含む"
+            checked={this.state.isBeforeEvolution}
+            onClick={() => this.setRuleState("isBeforeEvolution")}
           ></RuleButton>
         </RuleList>
-        <Button onClick={() => this.startQuiz()}>クイズを始める</Button>
+        <Button onClick={() => this.startQuiz()}>スタート！</Button>
       </div>
     );
   }

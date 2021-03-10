@@ -26,7 +26,7 @@ const Title = styled.h1`
 const Button = styled.button`
   background-color: #683bff;
   color: #ffffff;
-  border: solid #683bff 4px;
+  border: solid #683bff 2px;
   transition: all 0.3s ease-out;
   &:hover {
     background-color: #ffffff;
