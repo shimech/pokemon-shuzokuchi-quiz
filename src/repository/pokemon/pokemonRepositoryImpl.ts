@@ -7,11 +7,11 @@ export class PokemonRepositoryImpl implements PokemonRepository {
     this.pokemonDriver = pokemonDriver;
   }
 
-  async findAllIds(): Promise<string[]> {
-    return await this.pokemonDriver.findAllIds();
+  findAllIds(): string[] {
+    return this.pokemonDriver.findAllIds();
   }
 
-  async findById(id: string): Promise<Pokemon> {
-    return await this.pokemonDriver.findById(id);
+  findById(id: string): Pokemon {
+    return this.pokemonDriver.findById(id);
   }
 }

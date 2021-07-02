@@ -1,27 +1,18 @@
 import { Pokemon, PokemonDriver } from '@/domain/pokemon';
-import fetch from 'isomorphic-unfetch';
+import pokemons from '@/database/pokemons.json';
 
 export class PokemonDriverImpl implements PokemonDriver {
-  private url: string;
+  private pokemons: Pokemon[];
 
   constructor() {
-    this.url =
-      'https://raw.githubusercontent.com/shimech/pokemon-db-maker/master/output/pokemon_db.json';
+    this.pokemons = pokemons;
   }
 
-  async findAllIds(): Promise<string[]> {
-    const response = await fetch(this.url);
-    const pokemons: Pokemon[] = await response.json();
-    return pokemons.map((pokemon) => pokemon.id);
+  findAllIds(): string[] {
+    return this.pokemons.map((pokemon) => pokemon.id);
   }
 
-  async findById(id: string): Promise<Pokemon> {
-    const response = await fetch(this.url);
-    const pokemons: Pokemon[] = await response.json();
-    const pokemon: Pokemon | undefined = pokemons.find(
-      (pokemon) => pokemon.id === id,
-    );
-
-    return pokemon;
+  findById(id: string): Pokemon {
+    return pokemons.find((pokemon) => pokemon.id === id);
   }
 }

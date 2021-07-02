@@ -7,3 +7,9 @@
 ```shell
 yarn run dev
 ```
+
+データベースのマイグレーション
+
+```shell
+yarn run migrate
+```
