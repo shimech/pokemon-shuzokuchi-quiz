@@ -9,7 +9,7 @@ const pokemonRepository: PokemonRepository = new PokemonRepositoryImpl(
   new PokemonDriverImpl(),
 );
 
-const Quiz = ({ pokemon }: Props): JSX.Element => {
+const QuizPage = ({ pokemon }: Props): JSX.Element => {
   return <>{pokemon.name}</>;
 };
 
@@ -34,4 +34,4 @@ export const getStaticProps: GetStaticProps<Props> = (
   return { props: { pokemon } };
 };
 
-export default Quiz;
+export default QuizPage;

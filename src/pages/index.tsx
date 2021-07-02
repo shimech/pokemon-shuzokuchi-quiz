@@ -1,3 +1,5 @@
-const Top = (): JSX.Element => <>pokemon-shuozkuchi-quiz-neo</>;
+import { Top } from '@/component/template/Top';
 
-export default Top;
+const TopPage = (): JSX.Element => <Top />;
+
+export default TopPage;
