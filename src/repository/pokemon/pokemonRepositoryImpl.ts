@@ -12,10 +12,6 @@ export class PokemonRepositoryImpl implements PokemonRepository {
   }
 
   async findById(id: string): Promise<Pokemon> {
-    try {
-      return await this.pokemonDriver.findById(id);
-    } catch (e) {
-      console.log(e);
-    }
+    return await this.pokemonDriver.findById(id);
   }
 }

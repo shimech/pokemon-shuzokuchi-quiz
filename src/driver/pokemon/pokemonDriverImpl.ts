@@ -22,10 +22,6 @@ export class PokemonDriverImpl implements PokemonDriver {
       (pokemon) => pokemon.id === id,
     );
 
-    if (pokemon === undefined) {
-      throw new Error('そのIDのポケモンは存在しません。');
-    }
-
     return pokemon;
   }
 }
