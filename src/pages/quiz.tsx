@@ -1,4 +1,3 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
 import { Pokemon, PokemonRepository } from '@/domain/pokemon';
 import { PokemonDriverImpl } from '@/driver/pokemon';
 import { PokemonRepositoryImpl } from '@/repository/pokemon';
@@ -13,24 +12,11 @@ const Quiz = ({ pokemon }: Props): JSX.Element => {
   return <>{pokemon.name}</>;
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const ids: string[] = await pokemonRepository.findAllIds();
-  const paths = ids.map((id) => {
-    return {
-      params: { id },
-    };
-  });
-  return {
-    paths,
-    fallback: true,
-  };
-};
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const id: string = context.params?.id as string;
+Quiz.getInitialProps = async (context) => {
+  const id: string = context.query?.id as string;
   const pokemon: Pokemon = await pokemonRepository.findById(id);
 
-  return { props: { pokemon } };
+  return { pokemon };
 };
 
 export default Quiz;
