@@ -7,9 +7,3 @@
 ```shell
 yarn run dev
 ```
-
-データベースの取得
-
-```shell
-yarn run migrate
-```
