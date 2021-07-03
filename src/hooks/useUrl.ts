@@ -15,6 +15,7 @@ export const useUrl = (): string => {
   const [url, setUrl] = useState('');
 
   useEffect(() => {
+    console.log(numQuestion);
     const id: string = quizIds[numQuestion - 1];
     const url: string = isStaging(location.hostname)
       ? `/pokemon-shuzokuchi-quiz-neo/quiz/${id}`
