@@ -1,4 +1,4 @@
 export const isLocal = (host: string): boolean => {
-  const local = /^https?:\/{2,}localhost/;
+  const local = /localhost/;
   return local.test(host);
 };

@@ -29,7 +29,7 @@ export const GameStartButton: React.VFC<Props> = () => {
     const id: string = ids[Math.floor(Math.random() * ids.length)];
 
     const url: string = isStaging(location.hostname)
-      ? `pokemon-shuzokuchi-quiz-neo/quiz/${id}`
+      ? `/pokemon-shuzokuchi-quiz-neo/quiz/${id}`
       : `/quiz/${id}`;
     setUrl(url);
   }, []);
