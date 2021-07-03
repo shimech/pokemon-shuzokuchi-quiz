@@ -5,6 +5,7 @@ import {
   PokemonRepository,
   PokemonUseCase,
 } from '@/domain/pokemon';
+import { Condition } from '@/domain/condition';
 import { PokemonDriverImpl } from '@/driver/pokemon';
 import { PokemonRepositoryImpl } from '@/repository/pokemon';
 import { PokemonUseCaseImpl } from '@/useCase/pokemon';
@@ -25,9 +26,23 @@ export const GameStartButton: React.VFC<Props> = () => {
   const [url, setUrl] = React.useState('');
 
   React.useEffect(() => {
-    const ids: string[] = pokemonUseCase.getAllIds();
-    const id: string = ids[Math.floor(Math.random() * ids.length)];
-
+    const condition: Condition = {
+      includeRegion: {
+        kanto: true,
+        johto: true,
+        hoenn: true,
+        sinnoh: true,
+        unova: true,
+        kalos: true,
+        alola: true,
+        galar: true,
+      },
+      includeMegaEvolution: true,
+      includeSameStatus: true,
+      includeBeforeEvolution: true,
+    };
+    const quizIds = pokemonUseCase.selectQuizIds(condition);
+    const id: string = quizIds[0];
     const url: string = isStaging(location.hostname)
       ? `/pokemon-shuzokuchi-quiz-neo/quiz/${id}`
       : `/quiz/${id}`;
