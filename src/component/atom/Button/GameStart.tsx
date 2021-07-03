@@ -8,6 +8,7 @@ import {
 import { PokemonDriverImpl } from '@/driver/pokemon';
 import { PokemonRepositoryImpl } from '@/repository/pokemon';
 import { PokemonUseCaseImpl } from '@/useCase/pokemon';
+import { isStaging } from '@/utils';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 type Props = {};
@@ -21,16 +22,20 @@ export const GameStartButton: React.VFC<Props> = () => {
     pokemonRepository,
   );
 
-  const [id, setId] = React.useState('');
+  const [url, setUrl] = React.useState('');
 
   React.useEffect(() => {
     const ids: string[] = pokemonUseCase.getAllIds();
     const id: string = ids[Math.floor(Math.random() * ids.length)];
-    setId(id);
+
+    const url: string = isStaging(location.hostname)
+      ? `pokemon-shuzokuchi-quiz-neo/quiz/${id}`
+      : `/quiz/${id}`;
+    setUrl(url);
   }, []);
 
   return (
-    <Link href={`/quiz/${id}`}>
+    <Link href={url}>
       <a>
         <button>ゲームスタート！</button>
       </a>
