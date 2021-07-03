@@ -1,4 +1,4 @@
 export const isStaging = (host: string): boolean => {
-  const stg = /shimech.github.io/;
+  const stg = /pokemon-shuzokuchi-quiz-stg.firebaseapp.com/;
   return stg.test(host);
 };

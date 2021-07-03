@@ -5,7 +5,6 @@ import { useUrl } from '@/hooks/useUrl';
 
 import { Pokemon } from '@/domain/pokemon';
 
-// eslint-disable-next-line @typescript-eslint/ban-types
 type Props = { pokemon: Pokemon };
 
 export const Quiz: React.VFC<Props> = (props) => {
