@@ -1,4 +1,7 @@
+import { Quiz } from '@/component/template/Quiz';
+
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
+
 import {
   Pokemon,
   PokemonDriver,
@@ -19,10 +22,6 @@ const pokemonUseCase: PokemonUseCase = new PokemonUseCaseImpl(
   pokemonRepository,
 );
 
-const QuizPage = ({ pokemon }: Props): JSX.Element => {
-  return <>{pokemon.name}</>;
-};
-
 export const getStaticPaths: GetStaticPaths = () => {
   const ids: string[] = pokemonUseCase.getAllIds();
   const paths: { params: { id: string } }[] = ids.map((id) => {
@@ -42,6 +41,10 @@ export const getStaticProps: GetStaticProps<Props> = (
   const id: string = context.params?.id as string;
   const pokemon: Pokemon = pokemonRepository.findById(id);
   return { props: { pokemon } };
+};
+
+const QuizPage = ({ pokemon }: Props): JSX.Element => {
+  return <Quiz pokemon={pokemon} />;
 };
 
 export default QuizPage;
