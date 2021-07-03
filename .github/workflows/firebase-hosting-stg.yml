@@ -25,6 +25,7 @@ jobs:
           yarn run build
           yarn run export
       - name: Deploy to STG
-        run: yarn run deploy:stg
+        run: |
+          firebase deploy --token $FIREBASE_TOKEN
         env:
-          FIREBASE_SERVICE_ACCOUNT_POKEMON_SHUZOKUCHI_QUIZ_STG: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_SHUZOKUCHI_QUIZ_STG }}
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_SHUZOKUCHI_QUIZ_STG }}

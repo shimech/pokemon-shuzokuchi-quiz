@@ -11,8 +11,7 @@
     "prepare": "husky install",
     "lint": "eslint ./src/**/*.{ts,tsx}",
     "lint:fix": "eslint ./src/**/*.{ts,tsx} --fix",
-    "format": "prettier --write \"./src/**/*.ts\" \"./src/**/*.tsx\"",
-    "deploy:stg": "firebase deploy --only hosting --token ${FIREBASE_SERVICE_ACCOUNT_POKEMON_SHUZOKUCHI_QUIZ_STG}"
+    "format": "prettier --write \"./src/**/*.ts\" \"./src/**/*.tsx\""
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.0",
