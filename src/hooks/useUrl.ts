@@ -3,14 +3,11 @@ import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/store';
 
-import { useQuizIds } from '@/hooks/useQuizIds';
-
 import { isStaging } from '@/utils';
 
 export const useUrl = (): string => {
+  const { quizIds } = useSelector((state: RootState) => state.quizIds);
   const { numQuestion } = useSelector((state: RootState) => state.result);
-
-  const quizIds = useQuizIds();
 
   const [url, setUrl] = useState('');
 
