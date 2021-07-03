@@ -1,5 +1,7 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
+import { useDispatch } from 'react-redux';
+import { setQuizIds } from '@/store/quizIds';
 import {
   PokemonDriver,
   PokemonRepository,
@@ -15,6 +17,8 @@ import { isStaging } from '@/utils';
 type Props = {};
 
 export const GameStartButton: React.VFC<Props> = () => {
+  const dispatch = useDispatch();
+
   const pokemonDriver: PokemonDriver = new PokemonDriverImpl();
   const pokemonRepository: PokemonRepository = new PokemonRepositoryImpl(
     pokemonDriver,
@@ -25,7 +29,7 @@ export const GameStartButton: React.VFC<Props> = () => {
 
   const [url, setUrl] = React.useState('');
 
-  React.useEffect(() => {
+  useEffect(() => {
     const condition: Condition = {
       includeRegion: {
         kanto: true,
@@ -41,7 +45,9 @@ export const GameStartButton: React.VFC<Props> = () => {
       includeSameStatus: true,
       includeBeforeEvolution: true,
     };
-    const quizIds = pokemonUseCase.selectQuizIds(condition);
+    const quizIds: string[] = pokemonUseCase.selectQuizIds(condition);
+    dispatch(setQuizIds(quizIds));
+
     const id: string = quizIds[0];
     const url: string = isStaging(location.hostname)
       ? `/pokemon-shuzokuchi-quiz-neo/quiz/${id}`

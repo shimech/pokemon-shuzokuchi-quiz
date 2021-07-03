@@ -1,6 +1,6 @@
-import { NUM_QUIZ } from '@/constant/numQuiz';
 import { Pokemon, PokemonRepository, PokemonUseCase } from '@/domain/pokemon';
 import { Condition } from '@/domain/condition';
+import { NUM_QUIZ } from '@/constant/numQuiz';
 import { REGION } from '@/constant/region';
 
 export class PokemonUseCaseImpl implements PokemonUseCase {
