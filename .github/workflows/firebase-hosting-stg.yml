@@ -1,0 +1,30 @@
+name: Deploy to Firebase Hosting (STG)
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build_and_deploy:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [16.0.0]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install packages
+        run: yarn install
+      - name: Build and Export
+        run: |
+          yarn run build
+          yarn run export
+      - name: Deploy to STG
+        run: yarn run deploy:stg
+        env:
+          FIREBASE_SERVICE_ACCOUNT_POKEMON_SHUZOKUCHI_QUIZ_STG: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_SHUZOKUCHI_QUIZ_STG }}
