@@ -1,6 +1,6 @@
 import { Pokemon } from './pokemon';
 
 export type PokemonRepository = {
-  findAllIds: () => string[];
+  findAll: () => Pokemon[];
   findById: (id: string) => Pokemon;
 };

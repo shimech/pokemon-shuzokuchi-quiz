@@ -1,6 +1,6 @@
 import { Pokemon } from './pokemon';
 
 export type PokemonDriver = {
-  findAllIds: () => string[];
+  findAll: () => Pokemon[];
   findById: (id: string) => Pokemon;
 };

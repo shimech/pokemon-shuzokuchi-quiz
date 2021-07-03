@@ -7,8 +7,8 @@ export class PokemonRepositoryImpl implements PokemonRepository {
     this.pokemonDriver = pokemonDriver;
   }
 
-  findAllIds(): string[] {
-    return this.pokemonDriver.findAllIds();
+  findAll(): Pokemon[] {
+    return this.pokemonDriver.findAll();
   }
 
   findById(id: string): Pokemon {

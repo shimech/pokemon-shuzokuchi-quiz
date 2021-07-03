@@ -1,12 +1,22 @@
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
-import { Pokemon, PokemonRepository } from '@/domain/pokemon';
+import {
+  Pokemon,
+  PokemonDriver,
+  PokemonRepository,
+  PokemonUseCase,
+} from '@/domain/pokemon';
 import { PokemonDriverImpl } from '@/driver/pokemon';
 import { PokemonRepositoryImpl } from '@/repository/pokemon';
+import { PokemonUseCaseImpl } from '@/useCase/pokemon';
 
 type Props = { pokemon: Pokemon };
 
+const pokemonDriver: PokemonDriver = new PokemonDriverImpl();
 const pokemonRepository: PokemonRepository = new PokemonRepositoryImpl(
-  new PokemonDriverImpl(),
+  pokemonDriver,
+);
+const pokemonUseCase: PokemonUseCase = new PokemonUseCaseImpl(
+  pokemonRepository,
 );
 
 const QuizPage = ({ pokemon }: Props): JSX.Element => {
@@ -14,7 +24,7 @@ const QuizPage = ({ pokemon }: Props): JSX.Element => {
 };
 
 export const getStaticPaths: GetStaticPaths = () => {
-  const ids: string[] = pokemonRepository.findAllIds();
+  const ids: string[] = pokemonUseCase.getAllIds();
   const paths: { params: { id: string } }[] = ids.map((id) => {
     return {
       params: { id },

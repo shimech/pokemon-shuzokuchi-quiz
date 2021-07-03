@@ -8,8 +8,8 @@ export class PokemonDriverImpl implements PokemonDriver {
     this.pokemons = pokemons;
   }
 
-  findAllIds(): string[] {
-    return this.pokemons.map((pokemon) => pokemon.id);
+  findAll(): Pokemon[] {
+    return this.pokemons;
   }
 
   findById(id: string): Pokemon {
