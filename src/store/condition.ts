@@ -42,6 +42,10 @@ const conditionSlice = createSlice({
     changeIncludeRegion: (state, action: PayloadAction<RegionName>) => {
       const newState = !state.includeRegion[action.payload];
       state.includeRegion[action.payload] = newState;
+
+      if (Object.values(state.includeRegion).every((item) => !item)) {
+        state.includeRegion = initialState.includeRegion;
+      }
     },
     changeOther: (state, action: PayloadAction<Other>) => {
       const newState = !state[action.payload];

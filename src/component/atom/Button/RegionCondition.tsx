@@ -1,7 +1,11 @@
 import * as React from 'react';
-import { useDispatch } from 'react-redux';
-import { RegionName } from '@/store/condition';
-import { changeIncludeRegion } from '@/store/condition';
+import { css } from '@emotion/css';
+
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from '@/store';
+import { RegionName, changeIncludeRegion } from '@/store/condition';
+
+import { BLACK, WHITE, GRAY, DARK_GRAY } from '@/constant/color';
 import { REGION } from '@/constant/region';
 
 type Props = { region: RegionName };
@@ -9,11 +13,22 @@ type Props = { region: RegionName };
 export const RegionCondition: React.VFC<Props> = (props) => {
   const { region } = props;
   const regionName: string = REGION[region];
+
+  const { includeRegion } = useSelector((state: RootState) => state.condition);
   const dispatch = useDispatch();
+
+  const style = css`
+    color: ${includeRegion[region] ? WHITE : DARK_GRAY};
+    background-color: ${includeRegion[region] ? BLACK : GRAY};
+  `;
 
   const handleClick = () => {
     dispatch(changeIncludeRegion(region));
   };
 
-  return <button onClick={handleClick}>{regionName}</button>;
+  return (
+    <button className={style} onClick={handleClick}>
+      {regionName}
+    </button>
+  );
 };
