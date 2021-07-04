@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { GameStartButton } from '@/component/atom/Button';
+import { RegionConditionPanel } from '@/component/molecule/RegionConditionPanel';
 
 import { useUrl } from '@/hooks/useUrl';
 import { useQuizIds } from '@/hooks/useQuizIds';
@@ -19,6 +20,7 @@ export const Top: React.VFC<Props> = () => {
           <br />
         </div>
       ))}
+      <RegionConditionPanel />
       <GameStartButton url={url} />
     </>
   );
