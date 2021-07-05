@@ -4,6 +4,7 @@ body {
   margin: 0;
   background-color: #fefae0;
   min-width: 1080px;
+  font-family: 'Noto Sans JP';
 }
 
 button {
