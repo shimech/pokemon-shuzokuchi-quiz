@@ -2,7 +2,7 @@ import * as React from 'react';
 import Link from 'next/link';
 import { css } from '@emotion/css';
 
-import { BLACK, BLUE, WHITE } from '@/constant/color';
+import { BLACK, BLUE, WHITE } from '@/constants/color';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 type Props = {};

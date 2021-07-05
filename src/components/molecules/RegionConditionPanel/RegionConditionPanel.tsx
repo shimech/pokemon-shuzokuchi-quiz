@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { RegionCondition } from '@/component/atom/Button';
-import { REGION } from '@/constant/region';
+import { RegionCondition } from '@/components/atoms/Button';
+import { REGION } from '@/constants/region';
 import { RegionName } from '@/store/condition';
 
 // eslint-disable-next-line @typescript-eslint/ban-types

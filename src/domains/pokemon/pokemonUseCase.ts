@@ -1,4 +1,4 @@
-import { Condition } from '@/domain/condition';
+import { Condition } from '@/domains/condition';
 
 export type PokemonUseCase = {
   getAllIds: () => string[];

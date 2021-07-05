@@ -1,4 +1,4 @@
-import { Pokemon, PokemonDriver, PokemonRepository } from '@/domain/pokemon';
+import { Pokemon, PokemonDriver, PokemonRepository } from '@/domains/pokemon';
 
 export class PokemonRepositoryImpl implements PokemonRepository {
   private pokemonDriver: PokemonDriver;

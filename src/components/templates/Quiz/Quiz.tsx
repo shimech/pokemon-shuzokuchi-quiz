@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { GameStartButton } from '@/component/atom/Button';
+import { GameStartButton } from '@/components/atoms/Button';
 
 import { useUrl } from '@/hooks/useUrl';
 
-import { Pokemon } from '@/domain/pokemon';
+import { Pokemon } from '@/domains/pokemon';
 
 type Props = { pokemon: Pokemon };
 

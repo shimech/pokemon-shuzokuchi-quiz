@@ -5,8 +5,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '@/store';
 import { RegionName, changeIncludeRegion } from '@/store/condition';
 
-import { BLACK, WHITE, GRAY, DARK_GRAY } from '@/constant/color';
-import { REGION } from '@/constant/region';
+import { BLACK, WHITE, GRAY, DARK_GRAY } from '@/constants/color';
+import { REGION } from '@/constants/region';
 
 type Props = { region: RegionName };
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { GameStartButton } from '@/component/atom/Button';
-import { RegionConditionPanel } from '@/component/molecule/RegionConditionPanel';
+import { GameStartButton } from '@/components/atoms/Button';
+import { RegionConditionPanel } from '@/components/molecules/RegionConditionPanel';
 
 import { useUrl } from '@/hooks/useUrl';
 import { useQuizIds } from '@/hooks/useQuizIds';

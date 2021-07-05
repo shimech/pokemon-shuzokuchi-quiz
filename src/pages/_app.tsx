@@ -3,7 +3,7 @@ import '../styles/pokemon-font.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import { Header } from '@/component/atom/Header';
+import { Header } from '@/components/atoms/Header';
 
 import { Provider } from 'react-redux';
 import store from '@/store';

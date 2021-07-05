@@ -1,4 +1,4 @@
-import { Quiz } from '@/component/template/Quiz';
+import { Quiz } from '@/components/templates/Quiz';
 
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 
@@ -7,10 +7,10 @@ import {
   PokemonDriver,
   PokemonRepository,
   PokemonUseCase,
-} from '@/domain/pokemon';
-import { PokemonDriverImpl } from '@/driver/pokemon';
-import { PokemonRepositoryImpl } from '@/repository/pokemon';
-import { PokemonUseCaseImpl } from '@/useCase/pokemon';
+} from '@/domains/pokemon';
+import { PokemonDriverImpl } from '@/drivers/pokemon';
+import { PokemonRepositoryImpl } from '@/repositories/pokemon';
+import { PokemonUseCaseImpl } from '@/useCases/pokemon';
 
 type Props = { pokemon: Pokemon };
 

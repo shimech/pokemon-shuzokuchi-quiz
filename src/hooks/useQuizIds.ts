@@ -8,10 +8,10 @@ import {
   PokemonDriver,
   PokemonRepository,
   PokemonUseCase,
-} from '@/domain/pokemon';
-import { PokemonDriverImpl } from '@/driver/pokemon';
-import { PokemonRepositoryImpl } from '@/repository/pokemon';
-import { PokemonUseCaseImpl } from '@/useCase/pokemon';
+} from '@/domains/pokemon';
+import { PokemonDriverImpl } from '@/drivers/pokemon';
+import { PokemonRepositoryImpl } from '@/repositories/pokemon';
+import { PokemonUseCaseImpl } from '@/useCases/pokemon';
 
 export const useQuizIds = (): string[] => {
   const { quizIds } = useSelector((state: RootState) => state.quizIds);

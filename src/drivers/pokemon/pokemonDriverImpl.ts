@@ -1,4 +1,4 @@
-import { Pokemon, PokemonDriver } from '@/domain/pokemon';
+import { Pokemon, PokemonDriver } from '@/domains/pokemon';
 import pokemons from '@/database/pokemons.json';
 
 export class PokemonDriverImpl implements PokemonDriver {
