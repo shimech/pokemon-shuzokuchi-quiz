@@ -43,8 +43,8 @@ export const getStaticProps: GetStaticProps<Props> = (
   return { props: { pokemon } };
 };
 
-const QuizPage = ({ pokemon }: Props): JSX.Element => {
-  return <Quiz pokemon={pokemon} />;
-};
+const QuizPage = ({ pokemon }: Props): JSX.Element => (
+  <Quiz pokemon={pokemon} />
+);
 
 export default QuizPage;
