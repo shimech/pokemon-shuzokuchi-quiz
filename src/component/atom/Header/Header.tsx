@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { css } from '@emotion/css';
 
@@ -19,6 +18,8 @@ const headerStyle = css`
 const imageStyle = css`
   display: inline-block;
   margin: 9px 0 0 24px;
+  width: 40px;
+  height: 40px;
 `;
 
 const titleStyle = css`
@@ -53,14 +54,11 @@ const buttonStyle = css`
 export const Header: React.VFC<Props> = () => {
   return (
     <header className={headerStyle}>
-      <div className={imageStyle}>
-        <Image
-          src="/img/monster-ball.png"
-          alt="Monster Ball Icon"
-          width={40}
-          height={40}
-        />
-      </div>
+      <img
+        className={imageStyle}
+        src="/images/monster-ball.png"
+        alt="Monster Ball Icon"
+      />
       <p className={titleStyle}>Pokémon Shuzokuchi Quiz</p>
       <Link href="/">
         <button className={buttonStyle}>HOME</button>
