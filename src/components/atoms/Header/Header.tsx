@@ -52,18 +52,16 @@ const buttonStyle = css`
   }
 `;
 
-export const Header: React.VFC<Props> = () => {
-  return (
-    <header className={headerStyle}>
-      <img
-        className={imageStyle}
-        src="/images/monster-ball.png"
-        alt="Monster Ball Icon"
-      />
-      <p className={titleStyle}>Pokémon Shuzokuchi Quiz</p>
-      <Link href="/">
-        <button className={buttonStyle}>HOME</button>
-      </Link>
-    </header>
-  );
-};
+export const Header: React.VFC<Props> = () => (
+  <header className={headerStyle}>
+    <img
+      className={imageStyle}
+      src="/images/monster-ball.png"
+      alt="Monster Ball Icon"
+    />
+    <p className={titleStyle}>Pokémon Shuzokuchi Quiz</p>
+    <Link href="/">
+      <button className={buttonStyle}>HOME</button>
+    </Link>
+  </header>
+);
