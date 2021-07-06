@@ -11,13 +11,13 @@ const headerStyle = css`
   background-color: ${BLACK};
   width: 100vw;
   min-width: 1080px;
-  height: 60px;
+  height: 72px;
   position: relative;
 `;
 
 const imageStyle = css`
   display: inline-block;
-  margin: 9px 0 0 24px;
+  margin: 16px 0 0 24px;
   width: 40px;
   height: 40px;
 `;
@@ -28,7 +28,7 @@ const titleStyle = css`
   font-family: 'pokemon-font';
   font-weight: bold;
   font-size: 24px;
-  line-height: 60px;
+  line-height: 72px;
   margin: 0 0 0 24px;
   position: absolute;
   top: -4px;
@@ -36,18 +36,19 @@ const titleStyle = css`
 
 const buttonStyle = css`
   float: right;
-  height: 60px;
-  width: 120px;
+  height: 72px;
+  width: 144px;
   font-family: 'pokemon-font';
   font-size: 24px;
+  text-align: center;
   position: absolute;
   right: 36px;
   color: ${WHITE};
-  background-color: ${BLUE};
+  background-color: ${BLACK};
   transition: all 0.5s;
   &:hover {
-    color: ${BLACK};
-    background-color: ${WHITE};
+    color: ${WHITE};
+    background-color: ${BLUE};
   }
 `;
 
