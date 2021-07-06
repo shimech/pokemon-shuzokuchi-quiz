@@ -51,8 +51,10 @@ const conditionSlice = createSlice({
       const newState = !state[action.payload];
       state[action.payload] = newState;
     },
+    reset: () => initialState,
   },
 });
 
-export const { changeIncludeRegion, changeOther } = conditionSlice.actions;
+export const { changeIncludeRegion, changeOther, reset } =
+  conditionSlice.actions;
 export default conditionSlice.reducer;

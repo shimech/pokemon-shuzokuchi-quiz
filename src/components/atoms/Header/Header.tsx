@@ -2,6 +2,10 @@ import * as React from 'react';
 import Link from 'next/link';
 import { css } from '@emotion/css';
 
+import { useDispatch } from 'react-redux';
+import { reset as resetCondition } from '@/store/condition';
+import { reset as resetResult } from '@/store/result';
+
 import { BLACK, BLUE, WHITE } from '@/constants/color';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
@@ -52,16 +56,27 @@ const buttonStyle = css`
   }
 `;
 
-export const Header: React.VFC<Props> = () => (
-  <header className={headerStyle}>
-    <img
-      className={imageStyle}
-      src="/images/monster-ball.png"
-      alt="Monster Ball Icon"
-    />
-    <p className={titleStyle}>Pokémon Shuzokuchi Quiz</p>
-    <Link href="/">
-      <button className={buttonStyle}>HOME</button>
-    </Link>
-  </header>
-);
+export const Header: React.VFC<Props> = () => {
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(resetCondition());
+    dispatch(resetResult());
+  };
+
+  return (
+    <header className={headerStyle}>
+      <img
+        className={imageStyle}
+        src="/images/monster-ball.png"
+        alt="Monster Ball Icon"
+      />
+      <p className={titleStyle}>Pokémon Shuzokuchi Quiz</p>
+      <Link href="/">
+        <button className={buttonStyle} onClick={handleClick}>
+          HOME
+        </button>
+      </Link>
+    </header>
+  );
+};

@@ -36,11 +36,11 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
       <meta name="twitter:site" content="@poke_kiyomaro" />
     </Head>
     <div className={style}>
-      <Header />
       <Provider store={store}>
+        <Header />
         <Component {...pageProps} />
+        <Footer />
       </Provider>
-      <Footer />
     </div>
   </>
 );

@@ -31,8 +31,9 @@ const resultSlice = createSlice({
           break;
       }
     },
+    reset: () => initialState,
   },
 });
 
-export const { increment } = resultSlice.actions;
+export const { increment, reset } = resultSlice.actions;
 export default resultSlice.reducer;
