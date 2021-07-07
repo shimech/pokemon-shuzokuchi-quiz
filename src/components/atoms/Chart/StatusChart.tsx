@@ -52,22 +52,19 @@ export const StatusChart: React.VFC<Props> = (props) => {
 
   //   return <>{pokemon.name}</>;
   return (
-    <RadarChart
-      cx={'50%'}
-      outerRadius={150}
-      width={500}
-      height={500}
-      data={data}
-    >
-      <PolarGrid />
-      <PolarAngleAxis dataKey="name" />
-      <PolarRadiusAxis angle={90} domain={[0, 150]} tickCount={4} />
-      <Radar
-        name={pokemon.name}
-        dataKey="value"
-        fill={BLUE}
-        fillOpacity={0.8}
-      />
-    </RadarChart>
+    <>
+      <p>合計: {pokemon.status.total}</p>
+      <RadarChart outerRadius={150} width={500} height={500} data={data}>
+        <PolarGrid />
+        <PolarAngleAxis dataKey="name" />
+        <PolarRadiusAxis angle={90} domain={[0, 150]} tickCount={4} />
+        <Radar
+          name={pokemon.name}
+          dataKey="value"
+          fill={BLUE}
+          fillOpacity={0.8}
+        />
+      </RadarChart>
+    </>
   );
 };
