@@ -7,7 +7,7 @@ import { useUrl } from '@/hooks/useUrl';
 import { useDispatch } from 'react-redux';
 import { increment } from '@/store/result';
 
-import { BLACK } from '@/constants/color';
+import { BLACK, WHITE, BLUE } from '@/constants/color';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 type Props = {};
@@ -27,7 +27,19 @@ export const GameStartButton: React.VFC<Props> = () => {
   };
 
   const style = css`
+    font-family: 'Kosugi Maru';
+    height: 40px;
+    width: 516px;
+    margin-top: 24px;
+    border-radius: 20px;
+    background-color: ${BLACK};
+    color: ${WHITE};
+    transition: all 0.5s;
+    &:hover {
+      background-color: ${BLUE};
+    }
     &:disabled {
+      opacity: 0.5;
       background-color: ${BLACK};
       cursor: not-allowed;
     }

@@ -22,6 +22,14 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
     <Head>
       <title>ポケモン種族値クイズ</title>
       <link rel="shortcut icon" href="/favicon.ico" />
+      <link
+        href="https://fonts.googleapis.com/css?family=Kosugi+Maru"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css?family=Otomanopee+One"
+        rel="stylesheet"
+      />
       <meta name="description" content="ポケモン種族値クイズに挑戦しよう！" />
       <meta property="og:title" content="ポケモン種族値クイズ" />
       <meta
