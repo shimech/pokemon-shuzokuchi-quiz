@@ -12,7 +12,7 @@ export const useUrl = (): string => {
   const [url, setUrl] = useState('');
 
   useEffect(() => {
-    const id: string = quizIds[numQuestion - 1];
+    const id: string = quizIds[numQuestion];
     const url = `/quiz/${id}`;
     setUrl(url);
   }, [quizIds, numQuestion]);

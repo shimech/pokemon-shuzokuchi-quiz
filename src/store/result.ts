@@ -9,7 +9,7 @@ export type ResultState = {
 export type IncrementAction = 'question' | 'correct' | 'hint';
 
 const initialState: ResultState = {
-  numQuestion: 1,
+  numQuestion: 0,
   numCorrect: 0,
   numHint: 0,
 };

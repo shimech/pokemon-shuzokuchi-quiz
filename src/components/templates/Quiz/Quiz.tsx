@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { GameStartButton } from '@/components/atoms/Button';
+import { NumQuestion } from '@/components/atoms/Card';
 
 import { Pokemon } from '@/domains/pokemon';
 
@@ -10,8 +10,8 @@ export const Quiz: React.VFC<Props> = (props) => {
 
   return (
     <>
+      <NumQuestion />
       <h1>{pokemon.name}</h1>
-      <GameStartButton />
     </>
   );
 };
