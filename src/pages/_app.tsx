@@ -13,7 +13,7 @@ import store from '@/store';
 const style = css`
   min-height: 100vh;
   position: relative;
-  padding-bottom: 60px;
+  padding-bottom: 120px;
   box-sizing: border-box;
 `;
 

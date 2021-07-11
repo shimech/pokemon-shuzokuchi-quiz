@@ -12,6 +12,7 @@ const footerStyle = css`
   font-size: 16px;
   height: 36px;
   width: 100vw;
+  min-width: 1080px;
   padding-top: 12px;
   position: absolute;
   bottom: 0;
