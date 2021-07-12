@@ -61,6 +61,7 @@ export const StatusChart: React.VFC<Props> = (props) => {
         <Radar
           name={pokemon.name}
           dataKey="value"
+          stroke={BLUE}
           fill={BLUE}
           fillOpacity={0.6}
         />
