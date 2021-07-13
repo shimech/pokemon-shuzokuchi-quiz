@@ -19,7 +19,9 @@ const divStyle = css`
   border-radius: 12px;
   transition: all 0.5s;
   box-shadow: 4px 4px 8px ${BLACK};
-  margin: 24px;
+  position: relative;
+  top: 24px;
+  left: 24px;
   &:hover {
     box-shadow: 8px 8px 8px ${BLACK};
   }
@@ -27,6 +29,7 @@ const divStyle = css`
 
 const spanStyle = css`
   font-size: 48px;
+  color: ${WHITE};
 `;
 
 export const NumQuestion: React.VFC = () => {

@@ -6,12 +6,24 @@ import {
   PolarAngleAxis,
   PolarRadiusAxis,
 } from 'recharts';
+import { css } from '@emotion/css';
 
 import { Pokemon } from '@/domains/pokemon';
 
 import { BLUE } from '@/constants/color';
 
 type Props = { pokemon: Pokemon };
+
+const divStyle = css`
+  margin: 0 auto;
+`;
+
+const spanStyle = css`
+  position: relative;
+  top: 60px;
+  left: 180px;
+  font-size: 32px;
+`;
 
 export const StatusChart: React.VFC<Props> = (props) => {
   const { pokemon } = props;
@@ -50,10 +62,9 @@ export const StatusChart: React.VFC<Props> = (props) => {
     },
   ];
 
-  //   return <>{pokemon.name}</>;
   return (
-    <>
-      <p>合計: {pokemon.status.total}</p>
+    <div className={divStyle}>
+      <span className={spanStyle}>合計: {pokemon.status.total}</span>
       <RadarChart outerRadius={150} width={500} height={500} data={data}>
         <PolarGrid />
         <PolarAngleAxis dataKey="name" />
@@ -66,6 +77,6 @@ export const StatusChart: React.VFC<Props> = (props) => {
           fillOpacity={0.6}
         />
       </RadarChart>
-    </>
+    </div>
   );
 };
