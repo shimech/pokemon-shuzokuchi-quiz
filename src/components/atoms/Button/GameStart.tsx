@@ -1,6 +1,6 @@
 import * as React from 'react';
+import Link from 'next/link';
 import { css } from '@emotion/css';
-import { useRouter } from 'next/router';
 
 import { useUrl } from '@/hooks/useUrl';
 
@@ -15,7 +15,6 @@ type Props = {};
 export const GameStartButton: React.VFC<Props> = () => {
   const url = useUrl();
   const dispatch = useDispatch();
-  const router = useRouter();
 
   const incrementNumQuestion = () => {
     dispatch(increment('question'));
@@ -23,7 +22,6 @@ export const GameStartButton: React.VFC<Props> = () => {
 
   const handleClick = () => {
     incrementNumQuestion();
-    router.push(url);
   };
 
   const style = css`
@@ -46,12 +44,14 @@ export const GameStartButton: React.VFC<Props> = () => {
   `;
 
   return (
-    <button
-      className={style}
-      onClick={handleClick}
-      disabled={url.includes('undefined')}
-    >
-      ゲームスタート！
-    </button>
+    <Link href={url}>
+      <button
+        className={style}
+        onClick={handleClick}
+        disabled={url.includes('undefined')}
+      >
+        ゲームスタート！
+      </button>
+    </Link>
   );
 };

@@ -13,7 +13,7 @@ const footerStyle = css`
   height: 36px;
   width: 100vw;
   min-width: 1080px;
-  padding-top: 12px;
+  padding-top: 8px;
   position: absolute;
   bottom: 0;
 `;
