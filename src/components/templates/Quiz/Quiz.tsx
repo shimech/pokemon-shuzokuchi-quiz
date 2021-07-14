@@ -3,6 +3,7 @@ import { css } from '@emotion/css';
 import { NumQuestion } from '@/components/atoms/Card';
 import { StatusChart } from '@/components/atoms/Chart/StatusChart';
 import { HintPanel } from '@/components/molecules/HintPanel';
+import { AnswerForm } from '@/components/molecules/Form';
 
 import { Pokemon } from '@/domains/pokemon';
 
@@ -28,6 +29,7 @@ export const Quiz: React.VFC<Props> = (props) => {
         <StatusChart pokemon={pokemon} />
         <div className={rightStyle}>
           <HintPanel pokemon={pokemon} />
+          <AnswerForm />
         </div>
       </div>
     </>
