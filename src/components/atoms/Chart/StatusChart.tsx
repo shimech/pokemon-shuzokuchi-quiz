@@ -26,7 +26,6 @@ const spanStyle = css`
 
 const chartStyle = css`
   position: relative;
-  top: -60px;
 `;
 
 export const StatusChart: React.VFC<Props> = (props) => {
@@ -70,7 +69,7 @@ export const StatusChart: React.VFC<Props> = (props) => {
     <div className={divStyle}>
       <span className={spanStyle}>合計: {pokemon.status.total}</span>
       <div className={chartStyle}>
-        <RadarChart outerRadius={150} width={500} height={500} data={data}>
+        <RadarChart width={500} height={420} data={data}>
           <PolarGrid />
           <PolarAngleAxis dataKey="name" />
           <PolarRadiusAxis angle={90} domain={[0, 150]} tickCount={4} />
