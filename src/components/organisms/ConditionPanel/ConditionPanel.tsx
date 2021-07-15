@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { css } from '@emotion/css';
 import { OtherCondition } from '@/components/atoms/Button';
 import { RegionConditionPanel } from '@/components/molecules/RegionConditionPanel';

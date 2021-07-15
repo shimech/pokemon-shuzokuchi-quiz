@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { css } from '@emotion/css';
 import { GameStartButton } from '@/components/atoms/Button';
 import { ConditionPanel } from '@/components/organisms/ConditionPanel';

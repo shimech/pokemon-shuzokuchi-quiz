@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { css } from '@emotion/css';
 import { NumQuestion } from '@/components/atoms/Card';
 import { StatusChart } from '@/components/atoms/Chart/StatusChart';
@@ -9,13 +9,13 @@ import { Pokemon } from '@/domains/pokemon';
 
 type Props = { pokemon: Pokemon };
 
-const divStyle = css`
+const mainStyle = css`
   display: grid;
   grid-template-columns: 50% 50%;
   margin-top: 20px;
 `;
 
-const rightStyle = css`
+const rightBoxStyle = css`
   width: 100%;
 `;
 
@@ -25,9 +25,9 @@ export const Quiz: React.VFC<Props> = (props) => {
   return (
     <>
       <NumQuestion />
-      <div className={divStyle}>
+      <div className={mainStyle}>
         <StatusChart pokemon={pokemon} />
-        <div className={rightStyle}>
+        <div className={rightBoxStyle}>
           <HintPanel pokemon={pokemon} />
           <AnswerForm />
         </div>
