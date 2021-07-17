@@ -29,7 +29,7 @@ export const Quiz: React.VFC<Props> = (props) => {
         <StatusChart pokemon={pokemon} />
         <div className={rightBoxStyle}>
           <HintPanel pokemon={pokemon} />
-          <AnswerForm />
+          <AnswerForm pokemon={pokemon} />
         </div>
       </div>
     </>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ChangeEvent, Dispatch, SetStateAction } from 'react';
 import { css } from '@emotion/css';
 
 import { DARK_GRAY, BLACK, BLUE } from '@/constants/color';
@@ -21,6 +21,21 @@ const style = css`
   }
 `;
 
-export const AnswerInput: React.VFC = () => (
-  <input type="text" placeholder="ポケモンのなまえ" className={style} />
-);
+type Props = { setAnswer: Dispatch<SetStateAction<string>> };
+
+export const AnswerInput: React.VFC<Props> = (props) => {
+  const { setAnswer } = props;
+
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setAnswer(e.target.value);
+  };
+
+  return (
+    <input
+      type="text"
+      placeholder="ポケモンのなまえ"
+      className={style}
+      onChange={onChange}
+    />
+  );
+};
