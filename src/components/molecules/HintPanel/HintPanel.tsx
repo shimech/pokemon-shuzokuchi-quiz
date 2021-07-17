@@ -1,10 +1,9 @@
 import React from 'react';
-import { HintButton } from '@/components/atoms/Button';
 import { css } from '@emotion/css';
+import { HintButton } from '@/components/atoms/Button';
 
 import { Pokemon } from '@/domains/pokemon';
 
-// eslint-disable-next-line @typescript-eslint/ban-types
 type Props = { pokemon: Pokemon };
 
 const wrapperStyle = css`

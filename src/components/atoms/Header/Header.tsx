@@ -8,9 +8,6 @@ import { reset as resetResult } from '@/store/result';
 
 import { BLACK, BLUE, WHITE } from '@/constants/color';
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-type Props = {};
-
 const headerStyle = css`
   background-color: ${BLACK};
   width: 100vw;
@@ -56,7 +53,7 @@ const buttonStyle = css`
   }
 `;
 
-export const Header: React.VFC<Props> = () => {
+export const Header: React.VFC = () => {
   const dispatch = useDispatch();
 
   const handleClick = () => {

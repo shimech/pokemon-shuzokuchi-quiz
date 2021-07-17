@@ -1,9 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/css';
-import { DARK_GRAY, BLACK, BLUE } from '@/constants/color';
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-type Props = {};
+import { DARK_GRAY, BLACK, BLUE } from '@/constants/color';
 
 const style = css`
   width: 380px;
@@ -23,6 +21,6 @@ const style = css`
   }
 `;
 
-export const AnswerInput: React.VFC<Props> = () => (
+export const AnswerInput: React.VFC = () => (
   <input type="text" placeholder="ポケモンのなまえ" className={style} />
 );

@@ -9,10 +9,7 @@ import { increment } from '@/store/result';
 
 import { BLACK, WHITE, BLUE } from '@/constants/color';
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-type Props = {};
-
-export const GameStartButton: React.VFC<Props> = () => {
+export const GameStartButton: React.VFC = () => {
   const url = useUrl();
   const dispatch = useDispatch();
 

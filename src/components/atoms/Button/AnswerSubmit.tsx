@@ -1,9 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/css';
-import { BLUE, WHITE } from '@/constants/color';
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-type Props = {};
+import { BLUE, WHITE } from '@/constants/color';
 
 const style = css`
   min-width: 80px;
@@ -22,6 +20,6 @@ const style = css`
   }
 `;
 
-export const AnswerSubmit: React.VFC<Props> = () => (
+export const AnswerSubmit: React.VFC = () => (
   <button className={style}>解答</button>
 );

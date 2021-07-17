@@ -1,9 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/css';
-import { BLACK, WHITE, BLUE } from '@/constants/color';
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-type Props = {};
+import { BLACK, WHITE, BLUE } from '@/constants/color';
 
 const footerStyle = css`
   background-color: ${BLACK};
@@ -29,7 +27,7 @@ const aStyle = css`
 
 const year: number = new Date().getFullYear();
 
-export const Footer: React.VFC<Props> = () => (
+export const Footer: React.VFC = () => (
   <footer className={footerStyle}>
     ©︎ {year}
     <a className={aStyle} href="https://twitter.com/poke_kiyomaro">

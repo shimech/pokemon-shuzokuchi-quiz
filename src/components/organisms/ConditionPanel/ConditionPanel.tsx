@@ -5,9 +5,6 @@ import { RegionConditionPanel } from '@/components/molecules/RegionConditionPane
 
 import { BLACK } from '@/constants/color';
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-type Props = {};
-
 const divStyle = css`
   text-align: center;
 `;
@@ -24,7 +21,7 @@ const pStyle = css`
   margin: 36px auto;
 `;
 
-export const ConditionPanel: React.VFC<Props> = () => (
+export const ConditionPanel: React.VFC = () => (
   <div className={divStyle}>
     <p className={pStyle}>出題範囲</p>
     <div>

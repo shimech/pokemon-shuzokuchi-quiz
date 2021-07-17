@@ -1,11 +1,10 @@
 import React from 'react';
 import { css } from '@emotion/css';
 import { RegionCondition } from '@/components/atoms/Button';
-import { REGION } from '@/constants/region';
+
 import { RegionName } from '@/store/condition';
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-type Props = {};
+import { REGION } from '@/constants/region';
 
 const wrapperStyle = css`
   display: flex;
@@ -20,7 +19,7 @@ const gridStyle = css`
   grid-template-columns: 120px 120px 120px 120px;
 `;
 
-export const RegionConditionPanel: React.VFC<Props> = () => (
+export const RegionConditionPanel: React.VFC = () => (
   <div className={wrapperStyle}>
     <div className={gridStyle}>
       {Object.keys(REGION).map((region) => (

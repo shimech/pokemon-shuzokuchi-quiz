@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { css } from '@emotion/css';
 import '../styles/globals.css';
 import '../styles/pokemon-font.css';
-
 import { Header } from '@/components/atoms/Header';
 import { Footer } from '@/components/atoms/Footer';
 
