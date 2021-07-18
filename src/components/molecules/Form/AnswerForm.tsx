@@ -1,5 +1,6 @@
 import React from 'react';
-import { AnswerInput, AnswerSubmit } from '@/components/atoms/Input';
+import { AnswerInput } from '@/components/atoms/Input';
+import { AnswerSubmit } from '@/components/atoms/Button';
 import { css } from '@emotion/css';
 
 // eslint-disable-next-line @typescript-eslint/ban-types

@@ -9,6 +9,7 @@ const style = css`
   min-width: 80px;
   height: 42px;
   font-size: 20px;
+  font-family: 'Kosugi Maru';
   padding: 0;
   color: ${WHITE};
   background-color: ${BLUE};
@@ -22,5 +23,5 @@ const style = css`
 `;
 
 export const AnswerSubmit: React.VFC<Props> = () => (
-  <input type="submit" className={style} />
+  <button className={style}>解答</button>
 );

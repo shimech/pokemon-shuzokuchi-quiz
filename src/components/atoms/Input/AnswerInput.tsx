@@ -12,6 +12,7 @@ const style = css`
   padding: 0;
   padding-left: 12px;
   font-size: 20px;
+  font-family: 'Kosugi Maru';
   border: solid ${BLACK} 1px;
   border-radius: 4px;
   &::placeholder {
