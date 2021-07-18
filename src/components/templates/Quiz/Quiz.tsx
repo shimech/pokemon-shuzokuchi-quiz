@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { css } from '@emotion/css';
 import { NumQuestion } from '@/components/atoms/Card';
 import { StatusChart } from '@/components/atoms/Chart/StatusChart';
+import { ResultModal } from '@/components/atoms/Modal';
 import { HintPanel } from '@/components/molecules/HintPanel';
 import { AnswerForm } from '@/components/molecules/Form';
 
@@ -21,6 +22,7 @@ const rightBoxStyle = css`
 
 export const Quiz: React.VFC<Props> = (props) => {
   const { pokemon } = props;
+  const [isDisplay, setIsDisplay] = useState(false);
 
   return (
     <>
@@ -29,9 +31,10 @@ export const Quiz: React.VFC<Props> = (props) => {
         <StatusChart pokemon={pokemon} />
         <div className={rightBoxStyle}>
           <HintPanel pokemon={pokemon} />
-          <AnswerForm pokemon={pokemon} />
+          <AnswerForm pokemon={pokemon} setIsDisplay={setIsDisplay} />
         </div>
       </div>
+      <ResultModal isDisplay={isDisplay} pokemon={pokemon} />
     </>
   );
 };
