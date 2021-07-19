@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/css';
 import { NumQuestion } from '@/components/atoms/Card';
-import { StatusChart } from '@/components/atoms/Chart/StatusChart';
+import { StatusChart } from '@/components/atoms/Chart';
 import { ResultModal } from '@/components/atoms/Modal';
 import { HintPanel } from '@/components/molecules/HintPanel';
 import { AnswerForm } from '@/components/molecules/Form';
