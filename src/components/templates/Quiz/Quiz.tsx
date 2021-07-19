@@ -22,7 +22,8 @@ const rightBoxStyle = css`
 
 export const Quiz: React.VFC<Props> = (props) => {
   const { pokemon } = props;
-  const [isDisplay, setIsDisplay] = useState(false);
+  const [isDisplayModal, setIsDisplayModal] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(false);
 
   return (
     <>
@@ -31,10 +32,19 @@ export const Quiz: React.VFC<Props> = (props) => {
         <StatusChart pokemon={pokemon} />
         <div className={rightBoxStyle}>
           <HintPanel pokemon={pokemon} />
-          <AnswerForm pokemon={pokemon} setIsDisplay={setIsDisplay} />
+          <AnswerForm
+            pokemon={pokemon}
+            setIsDisplayModal={setIsDisplayModal}
+            setIsCorrect={setIsCorrect}
+          />
         </div>
       </div>
-      <ResultModal isDisplay={isDisplay} pokemon={pokemon} />
+      <ResultModal
+        pokemon={pokemon}
+        isDisplay={isDisplayModal}
+        setIsDisplay={setIsDisplayModal}
+        isCorrect={isCorrect}
+      />
     </>
   );
 };

@@ -13,7 +13,7 @@ export const useUrl = (): string => {
 
   useEffect(() => {
     const id: string = quizIds[numQuestion];
-    const url = `/quiz/${id}`;
+    const url = id ? `/quiz/${id}` : '/result';
     setUrl(url);
   }, [quizIds, numQuestion]);
 

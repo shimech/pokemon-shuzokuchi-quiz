@@ -5,6 +5,7 @@ import { css } from '@emotion/css';
 import { useDispatch } from 'react-redux';
 import { reset as resetCondition } from '@/store/condition';
 import { reset as resetResult } from '@/store/result';
+import { reset as resetOpenedHint } from '@/store/openedHint';
 
 import { BLACK, BLUE, WHITE } from '@/constants/color';
 
@@ -59,6 +60,7 @@ export const Header: React.VFC = () => {
   const handleClick = () => {
     dispatch(resetCondition());
     dispatch(resetResult());
+    dispatch(resetOpenedHint());
   };
 
   return (

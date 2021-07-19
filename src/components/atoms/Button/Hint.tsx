@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { css } from '@emotion/css';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/store';
+import { openHint, Hint } from '@/store/openedHint';
 
 import { Pokemon } from '@/domains/pokemon';
 
 import { WHITE, BLUE, BLACK, GRAY, DARK_GRAY } from '@/constants/color';
-
-type Hint = 'type' | 'ability' | 'region';
 
 type Props = {
   pokemon: Pokemon;
@@ -20,7 +22,9 @@ const defaultText = {
 
 export const HintButton: React.VFC<Props> = (props) => {
   const { pokemon, hint } = props;
-  const [isOpened, setIsOpened] = useState(false);
+  const openedHint = useSelector((state: RootState) => state.openedHint);
+  const opened = openedHint[hint];
+  const dispatch = useDispatch();
 
   const openedText = (): JSX.Element => {
     switch (hint) {
@@ -46,10 +50,10 @@ export const HintButton: React.VFC<Props> = (props) => {
     }
   };
 
-  const text = isOpened ? openedText() : <p>{defaultText[hint]}</p>;
+  const text = opened ? openedText() : <p>{defaultText[hint]}</p>;
 
   const handleClick = () => {
-    setIsOpened(true);
+    dispatch(openHint(hint));
   };
 
   const style = css`
@@ -76,7 +80,7 @@ export const HintButton: React.VFC<Props> = (props) => {
   `;
 
   return (
-    <button onClick={handleClick} disabled={isOpened} className={style}>
+    <button onClick={handleClick} disabled={opened} className={style}>
       {text}
     </button>
   );

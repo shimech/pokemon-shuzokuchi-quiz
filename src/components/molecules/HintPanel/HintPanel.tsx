@@ -4,7 +4,9 @@ import { HintButton } from '@/components/atoms/Button';
 
 import { Pokemon } from '@/domains/pokemon';
 
-type Props = { pokemon: Pokemon };
+type Props = {
+  pokemon: Pokemon;
+};
 
 const wrapperStyle = css`
   display: grid;

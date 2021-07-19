@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import Link from 'next/link';
 import { css } from '@emotion/css';
 
@@ -6,10 +6,14 @@ import { useUrl } from '@/hooks/useUrl';
 
 import { useDispatch } from 'react-redux';
 import { increment } from '@/store/result';
+import { reset as resetOpenedHint } from '@/store/openedHint';
 
 import { BLACK, WHITE, BLUE } from '@/constants/color';
 
-export const GameStartButton: React.VFC = () => {
+type Props = { setIsDisplay: Dispatch<SetStateAction<boolean>> };
+
+export const NextQuizButton: React.VFC<Props> = (props) => {
+  const { setIsDisplay } = props;
   const url = useUrl();
   const dispatch = useDispatch();
 
@@ -19,12 +23,14 @@ export const GameStartButton: React.VFC = () => {
 
   const handleClick = () => {
     incrementNumQuestion();
+    dispatch(resetOpenedHint());
+    setIsDisplay(false);
   };
 
   const buttonStyle = css`
     font-family: 'Kosugi Maru';
     height: 40px;
-    width: 516px;
+    width: 300px;
     margin-top: 24px;
     border-radius: 20px;
     background-color: ${BLACK};
@@ -47,7 +53,7 @@ export const GameStartButton: React.VFC = () => {
         onClick={handleClick}
         disabled={url.includes('undefined')}
       >
-        ゲームスタート！
+        次へ
       </button>
     </Link>
   );

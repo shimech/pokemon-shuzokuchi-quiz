@@ -21,10 +21,10 @@ const style = css`
   }
 `;
 
-type Props = { setAnswer: Dispatch<SetStateAction<string>> };
+type Props = { answer: string; setAnswer: Dispatch<SetStateAction<string>> };
 
 export const AnswerInput: React.VFC<Props> = (props) => {
-  const { setAnswer } = props;
+  const { answer, setAnswer } = props;
 
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     setAnswer(e.target.value);
@@ -36,6 +36,7 @@ export const AnswerInput: React.VFC<Props> = (props) => {
       placeholder="ポケモンのなまえ"
       className={style}
       onChange={onChange}
+      value={answer}
     />
   );
 };

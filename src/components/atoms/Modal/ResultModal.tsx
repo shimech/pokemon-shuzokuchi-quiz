@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import { css } from '@emotion/css';
+import { NextQuizButton } from '../Button';
 
 import { Pokemon } from '@/domains/pokemon';
 
-type Props = { isDisplay: boolean; pokemon: Pokemon };
+type Props = {
+  pokemon: Pokemon;
+  isDisplay: boolean;
+  setIsDisplay: Dispatch<SetStateAction<boolean>>;
+  isCorrect: boolean;
+};
 
 export const ResultModal: React.VFC<Props> = (props) => {
-  const { isDisplay, pokemon } = props;
+  const { pokemon, isDisplay, setIsDisplay, isCorrect } = props;
 
   const wrapperStyle = css`
     display: ${isDisplay ? 'block' : 'none'};
@@ -25,11 +31,11 @@ export const ResultModal: React.VFC<Props> = (props) => {
 
   const modalStyle = css`
     width: 400px;
-    height: 300px;
+    height: 400px;
     background-color: #ffffff;
     z-index: 2;
     position: fixed;
-    top: calc((100vh - 300px) / 2);
+    top: calc((100vh - 400px) / 2);
     left: calc((100vw - 400px) / 2);
     border-radius: 24px;
     text-align: center;
@@ -38,7 +44,11 @@ export const ResultModal: React.VFC<Props> = (props) => {
   return (
     <div className={wrapperStyle}>
       <div className={overlayStyle}></div>
-      <div className={modalStyle}>{pokemon.name}</div>
+      <div className={modalStyle}>
+        <p>{pokemon.name}</p>
+        <p>{isCorrect}</p>
+        <NextQuizButton setIsDisplay={setIsDisplay} />
+      </div>
     </div>
   );
 };

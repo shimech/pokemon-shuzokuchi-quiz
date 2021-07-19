@@ -12,24 +12,26 @@ const formStyle = css`
 
 type Props = {
   pokemon: Pokemon;
-  setIsDisplay: Dispatch<SetStateAction<boolean>>;
+  setIsDisplayModal: Dispatch<SetStateAction<boolean>>;
+  setIsCorrect: Dispatch<SetStateAction<boolean>>;
 };
 
 export const AnswerForm: React.VFC<Props> = (props) => {
-  const { pokemon, setIsDisplay } = props;
+  const { pokemon, setIsDisplayModal, setIsCorrect } = props;
   const [answer, setAnswer] = useState('');
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    console.log(answer === pokemon.name);
-    setIsDisplay(true);
+    setIsCorrect(answer === pokemon.name);
+    setAnswer('');
+    setIsDisplayModal(true);
   };
 
   return (
     <>
       <form className={formStyle} onSubmit={onSubmit}>
-        <AnswerInput setAnswer={setAnswer} />
+        <AnswerInput answer={answer} setAnswer={setAnswer} />
         <AnswerSubmit />
       </form>
     </>
