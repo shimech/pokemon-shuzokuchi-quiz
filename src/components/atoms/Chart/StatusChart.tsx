@@ -72,7 +72,14 @@ export const StatusChart: React.VFC<Props> = (props) => {
         <RadarChart width={500} height={420} data={data}>
           <PolarGrid />
           <PolarAngleAxis dataKey="name" />
-          <PolarRadiusAxis angle={90} domain={[0, 150]} tickCount={4} />
+          <PolarRadiusAxis
+            type="number"
+            angle={90}
+            domain={[0, 150]}
+            tickCount={4}
+            scale="linear"
+            orientation="middle"
+          />
           <Radar
             name={pokemon.name}
             dataKey="value"
