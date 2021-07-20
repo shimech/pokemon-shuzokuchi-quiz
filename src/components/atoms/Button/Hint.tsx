@@ -3,6 +3,7 @@ import { css } from '@emotion/css';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/store';
+import { increment } from '@/store/result';
 import { openHint, Hint } from '@/store/openedHint';
 
 import { Pokemon } from '@/domains/pokemon';
@@ -53,6 +54,7 @@ export const HintButton: React.VFC<Props> = (props) => {
   const text = opened ? openedText() : <p>{defaultText[hint]}</p>;
 
   const handleClick = () => {
+    dispatch(increment('hint'));
     dispatch(openHint(hint));
   };
 
