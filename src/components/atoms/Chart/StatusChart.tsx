@@ -30,38 +30,31 @@ const chartStyle = css`
 
 export const StatusChart: React.VFC<Props> = (props) => {
   const { pokemon } = props;
-  const FULL_MARK = 150;
 
   const data = [
     {
       name: `HP: ${pokemon.status.hitpoint}`,
       value: pokemon.status.hitpoint,
-      fullMark: FULL_MARK,
     },
     {
       name: `こうげき: ${pokemon.status.attack}`,
       value: pokemon.status.attack,
-      fullMark: FULL_MARK,
     },
     {
       name: `ぼうぎょ: ${pokemon.status.block}`,
       value: pokemon.status.block,
-      fullMark: FULL_MARK,
     },
     {
       name: `すばやさ: ${pokemon.status.speed}`,
       value: pokemon.status.speed,
-      fullMark: FULL_MARK,
     },
     {
       name: `とくぼう: ${pokemon.status.defense}`,
       value: pokemon.status.defense,
-      fullMark: FULL_MARK,
     },
     {
       name: `とくこう: ${pokemon.status.contact}`,
       value: pokemon.status.contact,
-      fullMark: FULL_MARK,
     },
   ];
 
