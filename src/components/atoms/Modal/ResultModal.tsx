@@ -14,6 +14,8 @@ type Props = {
 export const ResultModal: React.VFC<Props> = (props) => {
   const { pokemon, isDisplay, setIsDisplay, isCorrect } = props;
 
+  const image = isCorrect ? '/images/correct.png' : '/images/incorrect.png';
+
   const wrapperStyle = css`
     display: ${isDisplay ? 'block' : 'none'};
   `;
@@ -39,6 +41,19 @@ export const ResultModal: React.VFC<Props> = (props) => {
     left: calc((100vw - 400px) / 2);
     border-radius: 24px;
     text-align: center;
+    &::before {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-image: url(${image});
+      background-repeat: no-repeat;
+      background-size: 256px;
+      background-position: center center;
+      opacity: 0.5;
+      z-index: -1;
+    }
   `;
 
   return (
@@ -46,7 +61,6 @@ export const ResultModal: React.VFC<Props> = (props) => {
       <div className={overlayStyle}></div>
       <div className={modalStyle}>
         <p>{pokemon.name}</p>
-        <p>{isCorrect}</p>
         <NextQuizButton setIsDisplay={setIsDisplay} />
       </div>
     </div>
