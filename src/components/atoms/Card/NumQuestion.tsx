@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { css } from '@emotion/css';
+import { useRouter } from 'next/dist/client/router';
 
 import { useSelector } from 'react-redux';
 import { RootState } from '@/store';
@@ -34,6 +35,14 @@ const spanStyle = css`
 
 export const NumQuestion: React.VFC = () => {
   const { numQuestion } = useSelector((state: RootState) => state.result);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (numQuestion < 1 || numQuestion > 10) {
+      router.push('/error');
+    }
+  }, []);
+
   return (
     <div className={divStyle}>
       <span className={spanStyle}>{numQuestion}</span> / {NUM_QUIZ}
