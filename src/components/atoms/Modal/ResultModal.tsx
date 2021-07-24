@@ -56,11 +56,20 @@ export const ResultModal: React.VFC<Props> = (props) => {
     }
   `;
 
+  const nameStyle = css`
+    font-size: 36px;
+  `;
+
+  const marginStyle = css`
+    height: 180px;
+  `;
+
   return (
     <div className={wrapperStyle}>
       <div className={overlayStyle}></div>
       <div className={modalStyle}>
-        <p>{pokemon.name}</p>
+        <p className={nameStyle}>{pokemon.name}</p>
+        <div className={marginStyle}></div>
         <NextQuizButton setIsDisplay={setIsDisplay} />
       </div>
     </div>
