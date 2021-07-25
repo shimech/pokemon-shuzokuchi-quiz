@@ -57,11 +57,11 @@ export const ResultModal: React.VFC<Props> = (props) => {
   `;
 
   const nameStyle = css`
-    font-size: 36px;
+    font-size: 28px;
   `;
 
   const marginStyle = css`
-    height: 180px;
+    height: 200px;
   `;
 
   return (
