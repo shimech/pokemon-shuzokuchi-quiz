@@ -1,13 +1,10 @@
 import React from 'react';
-import { css } from '@emotion/css';
-
+import { css } from '@emotion/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/store';
 import { increment } from '@/store/result';
 import { openHint, Hint } from '@/store/openedHint';
-
 import { Pokemon } from '@/domains/pokemon';
-
 import { WHITE, BLUE, BLACK, GRAY, DARK_GRAY } from '@/constants/color';
 
 type Props = {
@@ -58,31 +55,33 @@ export const HintButton: React.VFC<Props> = (props) => {
     dispatch(openHint(hint));
   };
 
-  const style = css`
-    background-color: ${BLACK};
-    width: 80%;
-    min-width: 150px;
-    height: 200px;
-    justify-self: center;
-    & p {
-      color: ${WHITE};
-      font-size: 20px;
-    }
-    &:hover {
-      transition: background-color 0.5s;
-      background-color: ${BLUE};
-    }
-    &:disabled {
-      background-color: ${GRAY};
-      cursor: default;
-    }
-    &:disabled p {
-      color: ${DARK_GRAY};
-    }
-  `;
-
   return (
-    <button onClick={handleClick} disabled={opened} className={style}>
+    <button
+      css={css`
+        background-color: ${BLACK};
+        width: 80%;
+        min-width: 150px;
+        height: 200px;
+        justify-self: center;
+        & p {
+          color: ${WHITE};
+          font-size: 20px;
+        }
+        &:hover {
+          transition: background-color 0.5s;
+          background-color: ${BLUE};
+        }
+        &:disabled {
+          background-color: ${GRAY};
+          cursor: default;
+        }
+        &:disabled p {
+          color: ${DARK_GRAY};
+        }
+      `}
+      onClick={handleClick}
+      disabled={opened}
+    >
       {text}
     </button>
   );

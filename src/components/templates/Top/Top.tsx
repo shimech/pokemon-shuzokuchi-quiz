@@ -1,14 +1,14 @@
 import React from 'react';
-import { css } from '@emotion/css';
+import { css } from '@emotion/react';
 import { GameStartButton } from '@/components/atoms/Button';
 import { ConditionPanel } from '@/components/organisms/ConditionPanel';
 
-const style = css`
-  text-align: center;
-`;
-
 export const Top: React.VFC = () => (
-  <div className={style}>
+  <div
+    css={css`
+      text-align: center;
+    `}
+  >
     <ConditionPanel />
     <GameStartButton />
   </div>

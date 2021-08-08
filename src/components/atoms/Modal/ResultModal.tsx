@@ -1,7 +1,6 @@
 import React, { Dispatch, SetStateAction } from 'react';
-import { css } from '@emotion/css';
+import { css } from '@emotion/react';
 import { NextQuizButton } from '../Button';
-
 import { Pokemon } from '@/domains/pokemon';
 
 type Props = {
@@ -16,60 +15,62 @@ export const ResultModal: React.VFC<Props> = (props) => {
 
   const image = isCorrect ? '/images/correct.png' : '/images/incorrect.png';
 
-  const wrapperStyle = css`
-    display: ${isDisplay ? 'block' : 'none'};
-  `;
-
-  const overlayStyle = css`
-    width: 100vw;
-    height: 100vh;
-    background-color: #000000;
-    z-index: 1;
-    opacity: 0.7;
-    position: fixed;
-    top: 0;
-    left: 0;
-  `;
-
-  const modalStyle = css`
-    width: 400px;
-    height: 400px;
-    background-color: #ffffff;
-    z-index: 2;
-    position: fixed;
-    top: calc((100vh - 400px) / 2);
-    left: calc((100vw - 400px) / 2);
-    border-radius: 24px;
-    text-align: center;
-    &::before {
-      display: block;
-      content: '';
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      background-image: url(${image});
-      background-repeat: no-repeat;
-      background-size: 256px;
-      background-position: center center;
-      opacity: 0.5;
-      z-index: -1;
-    }
-  `;
-
-  const nameStyle = css`
-    font-size: 28px;
-  `;
-
-  const marginStyle = css`
-    height: 200px;
-  `;
-
   return (
-    <div className={wrapperStyle}>
-      <div className={overlayStyle}></div>
-      <div className={modalStyle}>
-        <p className={nameStyle}>{pokemon.name}</p>
-        <div className={marginStyle}></div>
+    <div
+      css={css`
+        display: ${isDisplay ? 'block' : 'none'};
+      `}
+    >
+      <div
+        css={css`
+          width: 100vw;
+          height: 100vh;
+          background-color: #000000;
+          z-index: 1;
+          opacity: 0.7;
+          position: fixed;
+          top: 0;
+          left: 0;
+        `}
+      ></div>
+      <div
+        css={css`
+          width: 400px;
+          height: 400px;
+          background-color: #ffffff;
+          z-index: 2;
+          position: fixed;
+          top: calc((100vh - 400px) / 2);
+          left: calc((100vw - 400px) / 2);
+          border-radius: 24px;
+          text-align: center;
+          &::before {
+            display: block;
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image: url(${image});
+            background-repeat: no-repeat;
+            background-size: 256px;
+            background-position: center center;
+            opacity: 0.5;
+            z-index: -1;
+          }
+        `}
+      >
+        <p
+          css={css`
+            font-size: 28px;
+          `}
+        >
+          {pokemon.name}
+        </p>
+        <div
+          css={css`
+            height: 200px;
+          `}
+        ></div>
         <NextQuizButton setIsDisplay={setIsDisplay} />
       </div>
     </div>

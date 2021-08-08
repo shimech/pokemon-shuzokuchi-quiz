@@ -29,6 +29,7 @@
     "redux-logger": "^3.0.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.0",
     "@emotion/babel-preset-css-prop": "^11.2.0",
     "@types/node": "^15.14.0",
     "@types/react": "^17.0.13",
@@ -49,9 +50,9 @@
   },
   "lint-staged": {
     "*.@(ts|tsx)": [
-      "yarn lint",
-      "yarn format",
-      "yarn lint:fix"
+      "yarn run lint",
+      "yarn run format",
+      "yarn run lint:fix"
     ]
   }
 }

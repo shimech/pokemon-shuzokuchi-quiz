@@ -1,20 +1,13 @@
+import React from 'react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { css } from '@emotion/css';
+import { css } from '@emotion/react';
 import '../styles/globals.css';
 import '../styles/pokemon-font.css';
 import { Header } from '@/components/atoms/Header';
 import { Footer } from '@/components/atoms/Footer';
-
 import { Provider } from 'react-redux';
 import store from '@/store';
-
-const style = css`
-  min-height: 100vh;
-  position: relative;
-  padding-bottom: 120px;
-  box-sizing: border-box;
-`;
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
   <>
@@ -42,7 +35,14 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
       />
       <meta name="twitter:site" content="@poke_kiyomaro" />
     </Head>
-    <div className={style}>
+    <div
+      css={css`
+        min-height: 100vh;
+        position: relative;
+        padding-bottom: 120px;
+        box-sizing: border-box;
+      `}
+    >
       <Provider store={store}>
         <Header />
         <Component {...pageProps} />

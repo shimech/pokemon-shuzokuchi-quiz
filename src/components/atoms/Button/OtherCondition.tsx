@@ -1,6 +1,5 @@
 import React from 'react';
-import { css } from '@emotion/css';
-
+import { css } from '@emotion/react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '@/store';
 import { Other, changeOther } from '@/store/condition';
@@ -18,24 +17,25 @@ export const OtherCondition: React.VFC<Props> = (props) => {
   const isValid = condition[conditionName];
   const dispatch = useDispatch();
 
-  const style = css`
-    color: ${isValid ? WHITE : DARK_GRAY};
-    background-color: ${isValid ? BLACK : GRAY};
-    height: 40px;
-    width: 516px;
-    font-family: 'Kosugi Maru';
-    margin-bottom: 12px;
-    &:hover {
-      border: solid 4px ${RED};
-    }
-  `;
-
   const handleClick = () => {
     dispatch(changeOther(conditionName));
   };
 
   return (
-    <button className={style} onClick={handleClick}>
+    <button
+      css={css`
+        color: ${isValid ? WHITE : DARK_GRAY};
+        background-color: ${isValid ? BLACK : GRAY};
+        height: 40px;
+        width: 516px;
+        font-family: 'Kosugi Maru';
+        margin-bottom: 12px;
+        &:hover {
+          border: solid 4px ${RED};
+        }
+      `}
+      onClick={handleClick}
+    >
       {text}
     </button>
   );

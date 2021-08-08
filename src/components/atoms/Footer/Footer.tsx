@@ -1,36 +1,36 @@
 import React from 'react';
-import { css } from '@emotion/css';
-
+import { css } from '@emotion/react';
 import { BLACK, WHITE, BLUE } from '@/constants/color';
-
-const footerStyle = css`
-  background-color: ${BLACK};
-  color: ${WHITE};
-  text-align: center;
-  font-size: 16px;
-  height: 36px;
-  width: 100vw;
-  min-width: 1080px;
-  padding-top: 8px;
-  position: absolute;
-  bottom: 0;
-`;
-
-const aStyle = css`
-  margin-left: 12px;
-  color: ${WHITE};
-  transition: all 0.5s;
-  &:hover {
-    color: ${BLUE};
-  }
-`;
 
 const year: number = new Date().getFullYear();
 
 export const Footer: React.VFC = () => (
-  <footer className={footerStyle}>
+  <footer
+    css={css`
+      background-color: ${BLACK};
+      color: ${WHITE};
+      text-align: center;
+      font-size: 16px;
+      height: 36px;
+      width: 100vw;
+      min-width: 1080px;
+      padding-top: 8px;
+      position: absolute;
+      bottom: 0;
+    `}
+  >
     ©︎ {year}
-    <a className={aStyle} href="https://twitter.com/poke_kiyomaro">
+    <a
+      css={css`
+        margin-left: 12px;
+        color: ${WHITE};
+        transition: all 0.5s;
+        &:hover {
+          color: ${BLUE};
+        }
+      `}
+      href="https://twitter.com/poke_kiyomaro"
+    >
       @poke_kiyomaro
     </a>
   </footer>
