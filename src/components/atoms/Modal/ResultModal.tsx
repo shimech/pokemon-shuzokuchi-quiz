@@ -13,7 +13,7 @@ type Props = {
 export const ResultModal: React.VFC<Props> = (props) => {
   const { pokemon, isDisplay, setIsDisplay, isCorrect } = props;
 
-  const image = isCorrect ? '/images/correct.png' : '/images/incorrect.png';
+  const image = isCorrect ? '/images/correct.svg' : '/images/incorrect.svg';
 
   return (
     <div
@@ -50,10 +50,11 @@ export const ResultModal: React.VFC<Props> = (props) => {
             width: 100%;
             height: 100%;
             position: absolute;
+            top: 64px;
+            left: 64px;
             background-image: url(${image});
             background-repeat: no-repeat;
-            background-size: 256px;
-            background-position: center center;
+            background-size: 400px;
             opacity: 0.5;
             z-index: -1;
           }
