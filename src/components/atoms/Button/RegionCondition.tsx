@@ -1,10 +1,10 @@
-import React from 'react';
 import { css } from '@emotion/react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '@/store';
-import { RegionName, changeIncludeRegion } from '@/store/condition';
 import { BLACK, WHITE, GRAY, DARK_GRAY, RED } from '@/constants/color';
 import { REGION } from '@/constants/region';
+import { RootState } from '@/store';
+import { RegionName, changeIncludeRegion } from '@/store/condition';
 
 type Props = { region: RegionName };
 
@@ -22,8 +22,8 @@ export const RegionCondition: React.VFC<Props> = (props) => {
   return (
     <button
       css={css`
-        color: ${includeRegion[region] ? WHITE : DARK_GRAY};
         background-color: ${includeRegion[region] ? BLACK : GRAY};
+        color: ${includeRegion[region] ? WHITE : DARK_GRAY};
         font-family: 'Kosugi Maru';
         &:hover {
           border: solid 4px ${RED};

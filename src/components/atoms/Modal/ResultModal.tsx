@@ -1,5 +1,5 @@
-import React, { Dispatch, SetStateAction } from 'react';
 import { css } from '@emotion/react';
+import React, { Dispatch, SetStateAction } from 'react';
 import { NextQuizButton } from '../Button';
 import { Pokemon } from '@/domains/pokemon';
 
@@ -23,39 +23,39 @@ export const ResultModal: React.VFC<Props> = (props) => {
     >
       <div
         css={css`
-          width: 100vw;
-          height: 100vh;
           background-color: #000000;
-          z-index: 1;
+          height: 100vh;
+          left: 0;
           opacity: 0.7;
           position: fixed;
           top: 0;
-          left: 0;
+          width: 100vw;
+          z-index: 1;
         `}
       ></div>
       <div
         css={css`
-          width: 400px;
-          height: 400px;
           background-color: #ffffff;
-          z-index: 2;
-          position: fixed;
-          top: calc((100vh - 400px) / 2);
-          left: calc((100vw - 400px) / 2);
           border-radius: 24px;
+          height: 400px;
+          left: calc((100vw - 400px) / 2);
+          position: fixed;
           text-align: center;
+          top: calc((100vh - 400px) / 2);
+          width: 400px;
+          z-index: 2;
           &::before {
-            display: block;
-            content: '';
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 64px;
-            left: 64px;
             background-image: url(${image});
             background-repeat: no-repeat;
             background-size: 400px;
+            content: '';
+            display: block;
+            height: 100%;
+            left: 64px;
             opacity: 0.5;
+            position: absolute;
+            top: 64px;
+            width: 100%;
             z-index: -1;
           }
         `}

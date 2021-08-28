@@ -1,11 +1,11 @@
-import React from 'react';
 import { css } from '@emotion/react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '@/store';
-import { increment } from '@/store/result';
-import { openHint, Hint } from '@/store/openedHint';
-import { Pokemon } from '@/domains/pokemon';
 import { WHITE, BLUE, BLACK, GRAY, DARK_GRAY } from '@/constants/color';
+import { Pokemon } from '@/domains/pokemon';
+import { RootState } from '@/store';
+import { openHint, Hint } from '@/store/openedHint';
+import { increment } from '@/store/result';
 
 type Props = {
   pokemon: Pokemon;
@@ -59,17 +59,17 @@ export const HintButton: React.VFC<Props> = (props) => {
     <button
       css={css`
         background-color: ${BLACK};
-        width: 80%;
-        min-width: 150px;
         height: 200px;
         justify-self: center;
-        & p {
+        min-width: 150px;
+        width: 80%;
+        p {
           color: ${WHITE};
           font-size: 20px;
         }
         &:hover {
-          transition: background-color 0.5s;
           background-color: ${BLUE};
+          transition: background-color 0.5s;
         }
         &:disabled {
           background-color: ${GRAY};

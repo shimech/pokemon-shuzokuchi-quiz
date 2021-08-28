@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import React from 'react';
 import {
   Radar,
@@ -6,9 +7,8 @@ import {
   PolarAngleAxis,
   PolarRadiusAxis,
 } from 'recharts';
-import { css } from '@emotion/react';
-import { Pokemon } from '@/domains/pokemon';
 import { BLUE } from '@/constants/color';
+import { Pokemon } from '@/domains/pokemon';
 
 type Props = { pokemon: Pokemon };
 
@@ -50,9 +50,9 @@ export const StatusChart: React.VFC<Props> = (props) => {
     >
       <span
         css={css`
-          position: relative;
-          left: 175px;
           font-size: 32px;
+          left: 175px;
+          position: relative;
         `}
       >
         合計: {pokemon.status.total}

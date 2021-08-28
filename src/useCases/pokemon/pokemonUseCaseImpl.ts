@@ -1,7 +1,7 @@
-import { Pokemon, PokemonRepository, PokemonUseCase } from '@/domains/pokemon';
-import { Condition } from '@/domains/condition';
 import { NUM_QUIZ } from '@/constants/numQuiz';
 import { REGION } from '@/constants/region';
+import { Condition } from '@/domains/condition';
+import { Pokemon, PokemonRepository, PokemonUseCase } from '@/domains/pokemon';
 
 export class PokemonUseCaseImpl implements PokemonUseCase {
   private pokemonRepository: PokemonRepository;

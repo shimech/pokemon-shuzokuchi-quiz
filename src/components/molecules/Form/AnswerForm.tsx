@@ -1,7 +1,7 @@
-import React, { useState, FormEvent, Dispatch, SetStateAction } from 'react';
 import { css } from '@emotion/react';
-import { AnswerInput } from '@/components/atoms/Input';
+import React, { useState, FormEvent, Dispatch, SetStateAction } from 'react';
 import { AnswerSubmit } from '@/components/atoms/Button';
+import { AnswerInput } from '@/components/atoms/Input';
 
 import { Pokemon } from '@/domains/pokemon';
 
@@ -27,8 +27,8 @@ export const AnswerForm: React.VFC<Props> = (props) => {
     <>
       <form
         css={css`
-          text-align: center;
           margin: 48px 0;
+          text-align: center;
         `}
         onSubmit={handleSubmit}
       >

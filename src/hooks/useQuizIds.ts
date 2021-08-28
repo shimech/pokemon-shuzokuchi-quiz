@@ -1,9 +1,5 @@
 import { useEffect } from 'react';
-
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '@/store';
-import { setQuizIds } from '@/store/quizIds';
-
 import {
   PokemonDriver,
   PokemonRepository,
@@ -11,6 +7,8 @@ import {
 } from '@/domains/pokemon';
 import { PokemonDriverImpl } from '@/drivers/pokemon';
 import { PokemonRepositoryImpl } from '@/repositories/pokemon';
+import { RootState } from '@/store';
+import { setQuizIds } from '@/store/quizIds';
 import { PokemonUseCaseImpl } from '@/useCases/pokemon';
 
 export const useQuizIds = (): string[] => {

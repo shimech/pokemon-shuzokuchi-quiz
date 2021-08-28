@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
 import { css } from '@emotion/react';
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
 import { RED } from '@/constants/color';
 
 const MAX_COUNT = 3;
@@ -26,22 +26,22 @@ export const ErrorComponent: React.VFC = () => {
     <>
       <p
         css={css`
-          text-align: center;
           color: ${RED};
           font-family: 'Kosugi Mono';
           font-size: 32px;
           font-weight: bold;
+          text-align: center;
         `}
       >
         エラーが発生しました。
       </p>
       <p
         css={css`
-          text-align: center;
           color: ${RED};
           font-family: 'Kosugi Mono';
           font-size: 32px;
           font-weight: bold;
+          text-align: center;
         `}
       >
         {count}秒後にホームに戻ります。

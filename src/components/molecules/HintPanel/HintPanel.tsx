@@ -1,5 +1,5 @@
-import React from 'react';
 import { css } from '@emotion/react';
+import React from 'react';
 import { HintButton } from '@/components/atoms/Button';
 import { Pokemon } from '@/domains/pokemon';
 
@@ -15,9 +15,8 @@ export const HintPanel: React.VFC<Props> = (props) => {
       <p
         css={css`
           font-size: 32px;
-          text-align: center;
-          margin: 0;
           margin-bottom: 24px;
+          text-align: center;
         `}
       >
         ヒント

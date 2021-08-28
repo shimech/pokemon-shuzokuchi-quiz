@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
 import { Condition } from '@/domains/condition';
 
 export type ConditionType = Condition;

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
 import { css } from '@emotion/react';
+import React, { useState } from 'react';
 import { NumQuestion } from '@/components/atoms/Card';
 import { StatusChart } from '@/components/atoms/Chart';
 import { ResultModal } from '@/components/atoms/Modal';
-import { HintPanel } from '@/components/molecules/HintPanel';
 import { AnswerForm } from '@/components/molecules/Form';
+import { HintPanel } from '@/components/molecules/HintPanel';
 import { Pokemon } from '@/domains/pokemon';
 
 type Props = { pokemon: Pokemon };

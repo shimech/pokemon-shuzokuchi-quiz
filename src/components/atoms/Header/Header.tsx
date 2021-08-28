@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
 import { css } from '@emotion/react';
+import Link from 'next/link';
+import React from 'react';
 import { useDispatch } from 'react-redux';
-import { reset as resetCondition } from '@/store/condition';
-import { reset as resetResult } from '@/store/result';
-import { reset as resetOpenedHint } from '@/store/openedHint';
 import { BLACK, BLUE, WHITE } from '@/constants/color';
+import { reset as resetCondition } from '@/store/condition';
+import { reset as resetOpenedHint } from '@/store/openedHint';
+import { reset as resetResult } from '@/store/result';
 
 export const Header: React.VFC = () => {
   const dispatch = useDispatch();
@@ -20,29 +20,29 @@ export const Header: React.VFC = () => {
     <header
       css={css`
         background-color: ${BLACK};
-        width: 100vw;
-        min-width: 1080px;
         height: 72px;
+        min-width: 1080px;
         position: relative;
+        width: 100vw;
       `}
     >
       <img
         css={css`
           display: inline-block;
+          height: 40px;
           margin: 16px 0 0 24px;
           width: 40px;
-          height: 40px;
         `}
         src="/images/monster-ball.png"
         alt="Monster Ball Icon"
       />
       <p
         css={css`
-          display: inline-block;
           color: ${WHITE};
+          display: inline-block;
           font-family: 'pokemon-font';
-          font-weight: bold;
           font-size: 24px;
+          font-weight: bold;
           line-height: 72px;
           margin: 0 0 0 24px;
           position: absolute;
@@ -54,20 +54,20 @@ export const Header: React.VFC = () => {
       <Link href="/">
         <button
           css={css`
+            background-color: ${BLACK};
+            color: ${WHITE};
             float: right;
-            height: 72px;
-            width: 144px;
             font-family: 'pokemon-font';
             font-size: 24px;
-            text-align: center;
+            height: 72px;
             position: absolute;
             right: 36px;
-            color: ${WHITE};
-            background-color: ${BLACK};
+            text-align: center;
             transition: all 0.5s;
+            width: 144px;
             &:hover {
-              color: ${WHITE};
               background-color: ${BLUE};
+              color: ${WHITE};
             }
           `}
           onClick={handleClick}

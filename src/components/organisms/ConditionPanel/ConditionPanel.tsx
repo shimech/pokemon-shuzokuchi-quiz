@@ -1,5 +1,5 @@
-import React from 'react';
 import { css } from '@emotion/react';
+import React from 'react';
 import { OtherCondition } from '@/components/atoms/Button';
 import { RegionConditionPanel } from '@/components/molecules/RegionConditionPanel';
 import { BLACK } from '@/constants/color';
@@ -12,15 +12,15 @@ export const ConditionPanel: React.VFC = () => (
   >
     <p
       css={css`
-        color: ${BLACK};
-        font-size: 32px;
-        font-weight: bold;
-        font-family: 'Kosugi Maru';
-        line-height: 40px;
         border-left: solid 4px ${BLACK};
         border-right: solid 4px ${BLACK};
-        width: 180px;
+        color: ${BLACK};
+        font-family: 'Kosugi Maru';
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 40px;
         margin: 36px auto;
+        width: 180px;
       `}
     >
       出題範囲

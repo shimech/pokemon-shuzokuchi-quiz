@@ -1,9 +1,9 @@
-import React from 'react';
 import { css } from '@emotion/react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { BLACK, DARK_GRAY, GRAY, RED, WHITE } from '@/constants/color';
 import { RootState } from '@/store';
 import { Other, changeOther } from '@/store/condition';
-import { BLACK, DARK_GRAY, GRAY, RED, WHITE } from '@/constants/color';
 
 type Props = {
   conditionName: Other;
@@ -24,12 +24,12 @@ export const OtherCondition: React.VFC<Props> = (props) => {
   return (
     <button
       css={css`
-        color: ${isValid ? WHITE : DARK_GRAY};
         background-color: ${isValid ? BLACK : GRAY};
-        height: 40px;
-        width: 516px;
+        color: ${isValid ? WHITE : DARK_GRAY};
         font-family: 'Kosugi Maru';
+        height: 40px;
         margin-bottom: 12px;
+        width: 516px;
         &:hover {
           border: solid 4px ${RED};
         }

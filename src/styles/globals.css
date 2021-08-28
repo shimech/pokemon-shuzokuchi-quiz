@@ -1,21 +1,22 @@
 * {
-  font-size: 18px;
-  font-family: 'Otomanopee One', 'Kosugi Maru', sans-serif;
+  box-sizing: border-box;
   color: #003049;
+  font-family: 'Otomanopee One', 'Kosugi Maru', sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-  padding: 0;
-  margin: 0;
   background-color: #fefae0;
   min-width: 1080px;
 }
 
 button {
-  cursor: pointer;
   border: none;
   border-radius: 0;
+  cursor: pointer;
 }
 
 a {

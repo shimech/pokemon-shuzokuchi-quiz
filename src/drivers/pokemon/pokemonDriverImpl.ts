@@ -1,5 +1,5 @@
-import { Pokemon, PokemonDriver } from '@/domains/pokemon';
 import pokemons from '@/database/pokemons.json';
+import { Pokemon, PokemonDriver } from '@/domains/pokemon';
 
 export class PokemonDriverImpl implements PokemonDriver {
   private pokemons: Pokemon[];

@@ -1,5 +1,5 @@
-import React from 'react';
 import { css } from '@emotion/react';
+import React from 'react';
 import { BLACK, WHITE, BLUE } from '@/constants/color';
 
 const year: number = new Date().getFullYear();
@@ -8,22 +8,22 @@ export const Footer: React.VFC = () => (
   <footer
     css={css`
       background-color: ${BLACK};
+      bottom: 0;
       color: ${WHITE};
-      text-align: center;
       font-size: 16px;
       height: 36px;
-      width: 100vw;
       min-width: 1080px;
       padding-top: 8px;
       position: absolute;
-      bottom: 0;
+      text-align: center;
+      width: 100vw;
     `}
   >
     ©︎ {year}
     <a
       css={css`
-        margin-left: 12px;
         color: ${WHITE};
+        margin-left: 12px;
         transition: all 0.5s;
         &:hover {
           color: ${BLUE};

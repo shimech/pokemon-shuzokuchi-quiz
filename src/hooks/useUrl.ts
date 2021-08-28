@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
-
-import { useQuizIds } from './useQuizIds';
-
 import { useSelector } from 'react-redux';
+import { useQuizIds } from './useQuizIds';
 import { RootState } from '@/store';
 
 export const useUrl = (): string => {
