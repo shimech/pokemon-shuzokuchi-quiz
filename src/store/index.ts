@@ -1,9 +1,9 @@
-import { combineReducers } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
-import quizIdsReducer from './quizIds';
-import resultReducer from './result';
+import { combineReducers } from 'redux';
 import conditionReducer from './condition';
 import openedHintReducer from './openedHint';
+import quizIdsReducer from './quizIds';
+import resultReducer from './result';
 
 const reducer = combineReducers({
   quizIds: quizIdsReducer,
