@@ -1,14 +1,13 @@
 import { css } from '@emotion/react';
 import React from 'react';
-import { BLUE, WHITE } from '@/constants/color';
 
 export const AnswerSubmit: React.VFC = () => (
   <button
-    css={css`
-      background-color: ${BLUE};
+    css={(theme) => css`
+      background-color: ${theme.colors.blue};
       border: none;
       border-radius: 4px;
-      color: ${WHITE};
+      color: ${theme.colors.white};
       cursor: pointer;
       font-family: 'Kosugi Maru';
       font-size: 20px;

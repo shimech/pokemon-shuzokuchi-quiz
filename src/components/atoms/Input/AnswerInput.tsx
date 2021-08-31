@@ -1,6 +1,5 @@
 import { css } from '@emotion/react';
 import React, { ChangeEvent, Dispatch, SetStateAction } from 'react';
-import { DARK_GRAY, BLACK, BLUE } from '@/constants/color';
 
 type Props = { answer: string; setAnswer: Dispatch<SetStateAction<string>> };
 
@@ -13,8 +12,8 @@ export const AnswerInput: React.VFC<Props> = (props) => {
 
   return (
     <input
-      css={css`
-        border: solid ${BLACK} 1px;
+      css={(theme) => css`
+        border: 1px solid ${theme.colors.black};
         border-radius: 4px;
         font-family: 'Kosugi Maru';
         font-size: 20px;
@@ -24,10 +23,10 @@ export const AnswerInput: React.VFC<Props> = (props) => {
         padding-left: 12px;
         width: 380px;
         &::placeholder {
-          color: ${DARK_GRAY};
+          color: ${theme.colors.darkGray};
         }
         &:focus {
-          border: solid ${BLUE} 1px;
+          border: 1px solid ${theme.colors.blue};
         }
       `}
       type="text"

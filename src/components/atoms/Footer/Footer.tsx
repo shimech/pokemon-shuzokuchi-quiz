@@ -1,15 +1,14 @@
 import { css } from '@emotion/react';
 import React from 'react';
-import { BLACK, WHITE, BLUE } from '@/constants/color';
 
-const year: number = new Date().getFullYear();
+const year = new Date().getFullYear();
 
 export const Footer: React.VFC = () => (
   <footer
-    css={css`
-      background-color: ${BLACK};
+    css={(theme) => css`
+      background-color: ${theme.colors.black};
       bottom: 0;
-      color: ${WHITE};
+      color: ${theme.colors.white};
       font-size: 16px;
       height: 36px;
       min-width: 1080px;
@@ -21,12 +20,12 @@ export const Footer: React.VFC = () => (
   >
     ©︎ {year}
     <a
-      css={css`
-        color: ${WHITE};
+      css={(theme) => css`
+        color: ${theme.colors.white};
         margin-left: 12px;
         transition: all 0.5s;
         &:hover {
-          color: ${BLUE};
+          color: ${theme.colors.blue};
         }
       `}
       href="https://twitter.com/poke_kiyomaro"

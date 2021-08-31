@@ -2,7 +2,6 @@ import { css } from '@emotion/react';
 import Link from 'next/link';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { BLACK, WHITE, BLUE } from '@/constants/color';
 import { useUrl } from '@/hooks/useUrl';
 import { increment } from '@/store/result';
 
@@ -21,20 +20,20 @@ export const GameStartButton: React.VFC = () => {
   return (
     <Link href={url}>
       <button
-        css={css`
-          background-color: ${BLACK};
+        css={(theme) => css`
+          background-color: ${theme.colors.black};
           border-radius: 20px;
-          color: ${WHITE};
+          color: ${theme.colors.white};
           font-family: 'Kosugi Maru';
           height: 40px;
           margin-top: 24px;
           transition: all 0.5s;
           width: 516px;
           &:hover {
-            background-color: ${BLUE};
+            background-color: ${theme.colors.blue};
           }
           &:disabled {
-            background-color: ${BLACK};
+            background-color: ${theme.colors.black};
             cursor: not-allowed;
             opacity: 0.5;
           }

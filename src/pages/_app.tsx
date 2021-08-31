@@ -1,9 +1,10 @@
-import { css } from '@emotion/react';
+import { css, ThemeProvider } from '@emotion/react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import '../styles/globals.css';
 import '../styles/pokemon-font.css';
 import { Provider } from 'react-redux';
+import { theme } from '../styles/theme';
 import { Footer } from '@/components/atoms/Footer';
 import { Header } from '@/components/atoms/Header';
 import store from '@/store';
@@ -42,9 +43,11 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
       `}
     >
       <Provider store={store}>
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
+        <ThemeProvider theme={theme}>
+          <Header />
+          <Component {...pageProps} />
+          <Footer />
+        </ThemeProvider>
       </Provider>
     </div>
   </>

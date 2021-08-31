@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { css, useTheme } from '@emotion/react';
 import React from 'react';
 import {
   Radar,
@@ -7,13 +7,13 @@ import {
   PolarAngleAxis,
   PolarRadiusAxis,
 } from 'recharts';
-import { BLUE } from '@/constants/color';
 import { Pokemon } from '@/domains/pokemon';
 
 type Props = { pokemon: Pokemon };
 
 export const StatusChart: React.VFC<Props> = (props) => {
   const { pokemon } = props;
+  const theme = useTheme();
 
   const data = [
     {
@@ -76,8 +76,8 @@ export const StatusChart: React.VFC<Props> = (props) => {
           <Radar
             name={pokemon.name}
             dataKey="value"
-            stroke={BLUE}
-            fill={BLUE}
+            stroke={theme.colors.blue}
+            fill={theme.colors.blue}
             fillOpacity={0.6}
           />
         </RadarChart>

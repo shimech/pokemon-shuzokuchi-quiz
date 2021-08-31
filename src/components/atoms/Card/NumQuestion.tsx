@@ -2,7 +2,6 @@ import { css } from '@emotion/react';
 import { useRouter } from 'next/dist/client/router';
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { BLACK, BLUE, WHITE } from '@/constants/color';
 import { NUM_QUIZ } from '@/constants/numQuiz';
 import { RootState } from '@/store';
 
@@ -18,11 +17,11 @@ export const NumQuestion: React.VFC = () => {
 
   return (
     <div
-      css={css`
-        background-color: ${BLUE};
+      css={(theme) => css`
+        background-color: ${theme.colors.blue};
         border-radius: 12px;
-        box-shadow: 4px 4px 8px ${BLACK};
-        color: ${WHITE};
+        box-shadow: 4px 4px 8px ${theme.colors.black};
+        color: ${theme.colors.white};
         display: inline-block;
         font-size: 24px;
         height: 72px;
@@ -34,13 +33,13 @@ export const NumQuestion: React.VFC = () => {
         transition: all 0.5s;
         width: 144px;
         &:hover {
-          box-shadow: 8px 8px 8px ${BLACK};
+          box-shadow: 8px 8px 8px ${theme.colors.black};
         }
       `}
     >
       <span
-        css={css`
-          color: ${WHITE};
+        css={(theme) => css`
+          color: ${theme.colors.white};
           font-size: 48px;
         `}
       >

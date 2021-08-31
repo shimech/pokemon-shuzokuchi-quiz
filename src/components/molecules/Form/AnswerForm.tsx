@@ -2,7 +2,6 @@ import { css } from '@emotion/react';
 import React, { useState, FormEvent, Dispatch, SetStateAction } from 'react';
 import { AnswerSubmit } from '@/components/atoms/Button';
 import { AnswerInput } from '@/components/atoms/Input';
-
 import { Pokemon } from '@/domains/pokemon';
 
 type Props = {

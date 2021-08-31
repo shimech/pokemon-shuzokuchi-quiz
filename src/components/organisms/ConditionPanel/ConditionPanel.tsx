@@ -2,7 +2,6 @@ import { css } from '@emotion/react';
 import React from 'react';
 import { OtherCondition } from '@/components/atoms/Button';
 import { RegionConditionPanel } from '@/components/molecules/RegionConditionPanel';
-import { BLACK } from '@/constants/color';
 
 export const ConditionPanel: React.VFC = () => (
   <div
@@ -11,10 +10,10 @@ export const ConditionPanel: React.VFC = () => (
     `}
   >
     <p
-      css={css`
-        border-left: solid 4px ${BLACK};
-        border-right: solid 4px ${BLACK};
-        color: ${BLACK};
+      css={(theme) => css`
+        border-left: 4px solid ${theme.colors.black};
+        border-right: 4px solid ${theme.colors.black};
+        color: ${theme.colors.black};
         font-family: 'Kosugi Maru';
         font-size: 32px;
         font-weight: bold;

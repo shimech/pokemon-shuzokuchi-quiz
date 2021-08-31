@@ -1,7 +1,6 @@
 import { css } from '@emotion/react';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { WHITE, BLUE, BLACK, GRAY, DARK_GRAY } from '@/constants/color';
 import { Pokemon } from '@/domains/pokemon';
 import { RootState } from '@/store';
 import { openHint, Hint } from '@/store/openedHint';
@@ -57,26 +56,26 @@ export const HintButton: React.VFC<Props> = (props) => {
 
   return (
     <button
-      css={css`
-        background-color: ${BLACK};
+      css={(theme) => css`
+        background-color: ${theme.colors.black};
         height: 200px;
         justify-self: center;
         min-width: 150px;
         width: 80%;
         p {
-          color: ${WHITE};
+          color: ${theme.colors.white};
           font-size: 20px;
         }
         &:hover {
-          background-color: ${BLUE};
+          background-color: ${theme.colors.blue};
           transition: background-color 0.5s;
         }
         &:disabled {
-          background-color: ${GRAY};
+          background-color: ${theme.colors.gray};
           cursor: default;
         }
         &:disabled p {
-          color: ${DARK_GRAY};
+          color: ${theme.colors.darkGray};
         }
       `}
       onClick={handleClick}

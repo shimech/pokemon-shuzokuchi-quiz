@@ -1,7 +1,6 @@
 import { css } from '@emotion/react';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import { RED } from '@/constants/color';
 
 const MAX_COUNT = 3;
 const INTERVAL = 1000;
@@ -25,8 +24,8 @@ export const ErrorComponent: React.VFC = () => {
   return (
     <>
       <p
-        css={css`
-          color: ${RED};
+        css={(theme) => css`
+          color: ${theme.colors.red};
           font-family: 'Kosugi Mono';
           font-size: 32px;
           font-weight: bold;
@@ -36,8 +35,8 @@ export const ErrorComponent: React.VFC = () => {
         エラーが発生しました。
       </p>
       <p
-        css={css`
-          color: ${RED};
+        css={(theme) => css`
+          color: ${theme.colors.red};
           font-family: 'Kosugi Mono';
           font-size: 32px;
           font-weight: bold;

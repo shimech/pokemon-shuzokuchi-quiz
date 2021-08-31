@@ -2,7 +2,6 @@ import { css } from '@emotion/react';
 import Link from 'next/link';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { BLACK, BLUE, WHITE } from '@/constants/color';
 import { reset as resetCondition } from '@/store/condition';
 import { reset as resetOpenedHint } from '@/store/openedHint';
 import { reset as resetResult } from '@/store/result';
@@ -18,8 +17,8 @@ export const Header: React.VFC = () => {
 
   return (
     <header
-      css={css`
-        background-color: ${BLACK};
+      css={(theme) => css`
+        background-color: ${theme.colors.black};
         height: 72px;
         min-width: 1080px;
         position: relative;
@@ -37,8 +36,8 @@ export const Header: React.VFC = () => {
         alt="Monster Ball Icon"
       />
       <p
-        css={css`
-          color: ${WHITE};
+        css={(theme) => css`
+          color: ${theme.colors.white};
           display: inline-block;
           font-family: 'pokemon-font';
           font-size: 24px;
@@ -53,9 +52,9 @@ export const Header: React.VFC = () => {
       </p>
       <Link href="/">
         <button
-          css={css`
-            background-color: ${BLACK};
-            color: ${WHITE};
+          css={(theme) => css`
+            background-color: ${theme.colors.black};
+            color: ${theme.colors.white};
             float: right;
             font-family: 'pokemon-font';
             font-size: 24px;
@@ -66,8 +65,8 @@ export const Header: React.VFC = () => {
             transition: all 0.5s;
             width: 144px;
             &:hover {
-              background-color: ${BLUE};
-              color: ${WHITE};
+              background-color: ${theme.colors.blue};
+              color: ${theme.colors.white};
             }
           `}
           onClick={handleClick}
