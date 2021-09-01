@@ -1,11 +1,11 @@
 import { css, ThemeProvider } from '@emotion/react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import '@/styles/globals.css';
-import '@/styles/pokemon-font.css';
 import { Provider } from 'react-redux';
-import { theme } from '../styles/theme';
 import store from '@/store';
+import { theme } from '@/styles/theme';
+import '@/styles/reset.css';
+import '@/styles/pokemon-font.css';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
   <>
@@ -33,19 +33,11 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
       />
       <meta name="twitter:site" content="@poke_kiyomaro" />
     </Head>
-    <div
-      css={css`
-        min-height: 100vh;
-        padding-bottom: 120px;
-        position: relative;
-      `}
-    >
-      <Provider store={store}>
-        <ThemeProvider theme={theme}>
-          <Component {...pageProps} />
-        </ThemeProvider>
-      </Provider>
-    </div>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </Provider>
   </>
 );
 
