@@ -1,4 +1,4 @@
-import { css, ThemeProvider } from '@emotion/react';
+import { ThemeProvider } from '@emotion/react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Provider } from 'react-redux';
