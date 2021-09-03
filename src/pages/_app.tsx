@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import store from '@/store';
 import { theme } from '@/styles/theme';
 import '@/styles/reset.css';
-import '@/styles/pokemon-font.css';
+import '@/styles/pokemon-font/pokemon-font.css';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
   <>
