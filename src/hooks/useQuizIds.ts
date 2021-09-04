@@ -9,7 +9,7 @@ import { PokemonDriverImpl } from '@/drivers/pokemon';
 import { PokemonRepositoryImpl } from '@/repositories/pokemon';
 import { RootState } from '@/store';
 import { setQuizIds } from '@/store/quizIds';
-import { PokemonUseCaseImpl } from '@/useCases/pokemon';
+import { PokemonUseCaseImpl } from '@/usecases/pokemon';
 
 export const useQuizIds = (): string[] => {
   const { quizIds } = useSelector((state: RootState) => state.quizIds);

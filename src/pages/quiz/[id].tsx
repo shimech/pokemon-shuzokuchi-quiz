@@ -8,7 +8,7 @@ import {
 } from '@/domains/pokemon';
 import { PokemonDriverImpl } from '@/drivers/pokemon';
 import { PokemonRepositoryImpl } from '@/repositories/pokemon';
-import { PokemonUseCaseImpl } from '@/useCases/pokemon';
+import { PokemonUseCaseImpl } from '@/usecases/pokemon';
 
 type Props = { pokemon: Pokemon };
 
