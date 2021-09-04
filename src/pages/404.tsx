@@ -1,5 +1,5 @@
-import { ErrorComponent } from '@/components/templates/404';
+import { Error } from '@/components/templates/Error';
 
-const ErrorPage = (): JSX.Element => <ErrorComponent />;
+const ErrorPage = (): JSX.Element => <Error />;
 
 export default ErrorPage;

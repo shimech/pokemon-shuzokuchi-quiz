@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import { Quiz } from '@/components/templates/Quiz';
-
 import {
   Pokemon,
   PokemonDriver,
