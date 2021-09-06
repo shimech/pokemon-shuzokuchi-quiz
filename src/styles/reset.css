@@ -2,15 +2,17 @@
   box-sizing: border-box;
   color: #003049;
   font-family: 'Otomanopee One', 'Kosugi Maru', sans-serif;
-  font-size: 18px;
   margin: 0;
   padding: 0;
 }
 
-html,
-body {
+html {
   background-color: #fefae0;
-  min-width: 1080px;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
 }
 
 button {
