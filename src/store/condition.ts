@@ -1,9 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Condition } from '@/domains/condition';
 
-export type ConditionType = Condition;
-
-export type RegionName =
+type RegionName =
   | 'kanto'
   | 'johto'
   | 'hoenn'
@@ -13,12 +11,7 @@ export type RegionName =
   | 'alola'
   | 'galar';
 
-export type Other =
-  | 'includeMegaEvolution'
-  | 'includeSameStatus'
-  | 'includeBeforeEvolution';
-
-const initialState: ConditionType = {
+const initialState: Condition = {
   includeRegion: {
     kanto: true,
     johto: true,
@@ -39,21 +32,35 @@ const conditionSlice = createSlice({
   initialState,
   reducers: {
     changeIncludeRegion: (state, action: PayloadAction<RegionName>) => {
-      const newState = !state.includeRegion[action.payload];
-      state.includeRegion[action.payload] = newState;
+      state.includeRegion[action.payload] =
+        !state.includeRegion[action.payload];
 
-      if (Object.values(state.includeRegion).every((item) => !item)) {
+      if (
+        Object.values(state.includeRegion).every(
+          (includeThisRegion) => !includeThisRegion,
+        )
+      ) {
         state.includeRegion = initialState.includeRegion;
       }
     },
-    changeOther: (state, action: PayloadAction<Other>) => {
-      const newState = !state[action.payload];
-      state[action.payload] = newState;
+    changeIncludeMegaEvolution: (state) => {
+      state.includeBeforeEvolution = !state.includeBeforeEvolution;
+    },
+    changeIncludeSameStatus: (state) => {
+      state.includeSameStatus = !state.includeSameStatus;
+    },
+    changeIncludeBeforeEvolution: (state) => {
+      state.includeBeforeEvolution = !state.includeBeforeEvolution;
     },
     reset: () => initialState,
   },
 });
 
-export const { changeIncludeRegion, changeOther, reset } =
-  conditionSlice.actions;
+export const {
+  changeIncludeRegion,
+  changeIncludeMegaEvolution,
+  changeIncludeSameStatus,
+  changeIncludeBeforeEvolution,
+  reset,
+} = conditionSlice.actions;
 export default conditionSlice.reducer;

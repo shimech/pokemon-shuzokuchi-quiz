@@ -12,10 +12,11 @@ import { setQuizIds } from '@/store/quizIds';
 import { PokemonUseCaseImpl } from '@/usecases/pokemon';
 
 export const useQuizIds = (): string[] => {
-  const { quizIds } = useSelector((state: RootState) => state.quizIds);
+  const quizIds = useSelector((state: RootState) => state.quizIds);
   const condition = useSelector((state: RootState) => state.condition);
   const dispatch = useDispatch();
 
+  // TODO: DI Container
   const pokemonDriver: PokemonDriver = new PokemonDriverImpl();
   const pokemonRepository: PokemonRepository = new PokemonRepositoryImpl(
     pokemonDriver,

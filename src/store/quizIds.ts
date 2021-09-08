@@ -1,19 +1,15 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-export type QuizIdsState = {
-  quizIds: string[];
-};
+type QuizIds = string[];
 
-const initialState: QuizIdsState = {
-  quizIds: [],
-};
+const initialState: QuizIds = [];
 
 const quizIdsSlice = createSlice({
   name: 'quizIds',
   initialState,
   reducers: {
     setQuizIds: (state, action: PayloadAction<string[]>) => {
-      state.quizIds = action.payload;
+      state = action.payload;
     },
   },
 });

@@ -1,12 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-export type ResultState = {
+type ResultState = {
   numQuestion: number;
   numCorrect: number;
   numHint: number;
 };
 
-export type IncrementAction = 'question' | 'correct' | 'hint';
+type IncrementAction = 'question' | 'correct' | 'hint';
 
 const initialState: ResultState = {
   numQuestion: 0,
