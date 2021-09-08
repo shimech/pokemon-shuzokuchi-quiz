@@ -13,6 +13,6 @@ export class PokemonDriverImpl implements PokemonDriver {
   }
 
   findById(id: string): Pokemon {
-    return pokemons.find((pokemon) => pokemon.id === id);
+    return this.pokemons.find((pokemon) => pokemon.id === id);
   }
 }

@@ -1,4 +1,4 @@
-import { NUM_QUIZ } from '@/constants/numQuiz';
+import { NUM_QUIZ_ALL } from '@/constants/numQuizAll';
 import { REGION } from '@/constants/region';
 import { Condition } from '@/domains/condition';
 import { Pokemon, PokemonRepository, PokemonUseCase } from '@/domains/pokemon';
@@ -19,14 +19,14 @@ export class PokemonUseCaseImpl implements PokemonUseCase {
     let pokemons: Pokemon[] = this.pokemonRepository.findAll();
     const quizIds: string[] = [];
 
-    const regionNames: string[] = [];
+    const includeRegionNames: string[] = [];
     for (const region in REGION) {
       if (condition.includeRegion[region]) {
-        regionNames.push(REGION[region]);
+        includeRegionNames.push(REGION[region]);
       }
     }
     pokemons = pokemons.filter((pokemon) =>
-      regionNames.includes(pokemon.region),
+      includeRegionNames.includes(pokemon.region),
     );
 
     if (!condition.includeMegaEvolution) {
@@ -41,7 +41,7 @@ export class PokemonUseCaseImpl implements PokemonUseCase {
       pokemons = pokemons.filter((pokemon) => pokemon.isFinal);
     }
 
-    for (let i = 0; i < NUM_QUIZ; i++) {
+    for (let i = 0; i < NUM_QUIZ_ALL; i++) {
       const index: number = Math.floor(Math.random() * pokemons.length);
       quizIds.push(pokemons[index].id);
       pokemons.splice(index, 1);
