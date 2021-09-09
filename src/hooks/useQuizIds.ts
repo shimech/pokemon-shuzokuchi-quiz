@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   PokemonDriver,
@@ -11,21 +11,21 @@ import { RootState } from '@/store';
 import { setQuizIds } from '@/store/quizIds';
 import { PokemonUseCaseImpl } from '@/usecases/pokemon';
 
+// TODO: DI Container
+const pokemonDriver: PokemonDriver = new PokemonDriverImpl();
+const pokemonRepository: PokemonRepository = new PokemonRepositoryImpl(
+  pokemonDriver,
+);
+const pokemonUseCase: PokemonUseCase = new PokemonUseCaseImpl(
+  pokemonRepository,
+);
+
 export const useQuizIds = (): string[] => {
   const quizIds = useSelector((state: RootState) => state.quizIds);
   const condition = useSelector((state: RootState) => state.condition);
   const dispatch = useDispatch();
 
-  // TODO: DI Container
-  const pokemonDriver: PokemonDriver = new PokemonDriverImpl();
-  const pokemonRepository: PokemonRepository = new PokemonRepositoryImpl(
-    pokemonDriver,
-  );
-  const pokemonUseCase: PokemonUseCase = new PokemonUseCaseImpl(
-    pokemonRepository,
-  );
-
-  useEffect(() => {
+  React.useEffect(() => {
     const quizIds: string[] = pokemonUseCase.selectQuizIds(condition);
     dispatch(setQuizIds(quizIds));
   }, [condition]);

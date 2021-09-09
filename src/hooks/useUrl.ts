@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import { useQuizIds } from './useQuizIds';
 import { RootState } from '@/store';
@@ -6,10 +6,9 @@ import { RootState } from '@/store';
 export const useUrl = (): string => {
   const quizIds = useQuizIds();
   const { numQuestion } = useSelector((state: RootState) => state.result);
+  const [url, setUrl] = React.useState('');
 
-  const [url, setUrl] = useState('');
-
-  useEffect(() => {
+  React.useEffect(() => {
     const id: string = quizIds[numQuestion];
     const url = id ? `/quiz/${id}` : '/result';
     setUrl(url);
