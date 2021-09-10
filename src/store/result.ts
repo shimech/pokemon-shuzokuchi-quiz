@@ -1,39 +1,52 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Pokemon, PokemonDriver, PokemonRepository } from '@/domains/pokemon';
+import { PokemonDriverImpl } from '@/drivers/pokemon';
+import { PokemonRepositoryImpl } from '@/repositories/pokemon';
 
-type ResultState = {
+type Result = {
+  pokemon?: Pokemon;
+  isCorrect?: boolean;
+  numHintOpen: number;
+};
+
+type PokemonIds = string[];
+
+type UpdatePayload = {
   numQuestion: number;
-  numCorrect: number;
-  numHint: number;
+  isCorrect: boolean;
+  numHintOpen: number;
 };
 
-type IncrementAction = 'question' | 'correct' | 'hint';
+const initialState: Result[] = [];
 
-const initialState: ResultState = {
-  numQuestion: 0,
-  numCorrect: 0,
-  numHint: 0,
-};
+// TODO: DI Container
+const pokemonDriver: PokemonDriver = new PokemonDriverImpl();
+const pokemonRepository: PokemonRepository = new PokemonRepositoryImpl(
+  pokemonDriver,
+);
 
 const resultSlice = createSlice({
   name: 'result',
   initialState,
   reducers: {
-    increment: (state, action: PayloadAction<IncrementAction>) => {
-      switch (action.payload) {
-        case 'question':
-          state.numQuestion++;
-          break;
-        case 'correct':
-          state.numCorrect++;
-          break;
-        case 'hint':
-          state.numHint++;
-          break;
-      }
+    init: (state, action: PayloadAction<PokemonIds>) => {
+      state = action.payload.map((id) => ({
+        pokemon: pokemonRepository.findById(id),
+        isCorrect: null,
+        numHintOpen: 0,
+      }));
+    },
+    update: (state, action: PayloadAction<UpdatePayload>) => {
+      const prevResult = state[action.payload.numQuestion];
+      state[action.payload.numQuestion] = {
+        ...prevResult,
+        isCorrect: action.payload.isCorrect,
+        numHintOpen: action.payload.numHintOpen,
+      };
     },
     reset: () => initialState,
   },
 });
 
-export const { increment, reset } = resultSlice.actions;
+export const { init, reset } = resultSlice.actions;
 export default resultSlice.reducer;
