@@ -1,8 +1,13 @@
 import { css } from '@emotion/react';
 import React from 'react';
 
-export const Main: React.FC = (props) => (
+type MainProps = {
+  className?: string;
+};
+
+export const Main: React.FC<MainProps> = (props) => (
   <main
+    className={props.className}
     css={(theme) =>
       css`
         min-height: calc(
