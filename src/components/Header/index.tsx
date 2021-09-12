@@ -81,7 +81,7 @@ export const Header: React.VFC = () => {
                 min-width: 48px;
                 padding: 0;
                 text-align: center;
-                transition: background-color 500ms;
+                transition: background-color ${theme.transition}ms;
                 width: 100%;
                 &:hover {
                   background-color: ${theme.colors.blue};

@@ -29,7 +29,7 @@ export const Footer: React.VFC = () => (
     <Link passHref href="https://twitter.com/poke_kiyomaro">
       <a
         css={(theme) => css`
-          transition: color 500ms;
+          transition: color ${theme.transition}ms;
           &:hover {
             color: ${theme.colors.blue};
           }
