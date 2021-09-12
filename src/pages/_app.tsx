@@ -1,4 +1,5 @@
 import { ThemeProvider } from '@emotion/react';
+import { StylesProvider } from '@material-ui/styles';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Provider } from 'react-redux';
@@ -36,8 +37,10 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
     </Head>
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        <Header />
-        <Component {...pageProps} />
+        <StylesProvider injectFirst>
+          <Header />
+          <Component {...pageProps} />
+        </StylesProvider>
       </ThemeProvider>
     </Provider>
   </>
