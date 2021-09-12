@@ -1,7 +1,8 @@
 import { css, useTheme } from '@emotion/react';
-import { Button, useMediaQuery } from '@material-ui/core';
+import { useMediaQuery } from '@material-ui/core';
 import Link from 'next/link';
 import React from 'react';
+import { Button } from '@/components/Button';
 
 export const Header: React.VFC = () => {
   const { breakpoint } = useTheme();
