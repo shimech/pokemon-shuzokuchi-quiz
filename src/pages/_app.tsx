@@ -3,6 +3,7 @@ import { StylesProvider } from '@material-ui/styles';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Provider } from 'react-redux';
+import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
 import store from '@/store';
 import { theme } from '@/styles/theme';
@@ -40,6 +41,7 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
         <StylesProvider injectFirst>
           <Header />
           <Component {...pageProps} />
+          <Footer />
         </StylesProvider>
       </ThemeProvider>
     </Provider>
