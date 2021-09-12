@@ -1,6 +1,7 @@
 import { Theme } from '@emotion/react';
 
 export const theme: Theme = {
+  breakpoint: 768,
   colors: {
     black: '#003049',
     white: '#fefae0',
