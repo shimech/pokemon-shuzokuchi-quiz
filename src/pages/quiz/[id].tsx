@@ -1,5 +1,4 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { Quiz } from '@/components/templates/Quiz';
 import {
   Pokemon,
   PokemonDriver,
@@ -8,6 +7,7 @@ import {
 } from '@/domains/pokemon';
 import { PokemonDriverImpl } from '@/drivers/pokemon';
 import { PokemonRepositoryImpl } from '@/repositories/pokemon';
+import { Quiz } from '@/templates/Quiz';
 import { PokemonUseCaseImpl } from '@/usecases/pokemon';
 
 type Props = { pokemon: Pokemon };

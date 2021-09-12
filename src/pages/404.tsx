@@ -1,4 +1,4 @@
-import { Error } from '@/components/templates/Error';
+import { Error } from '@/templates/Error';
 
 const ErrorPage = (): JSX.Element => <Error />;
 

@@ -1,4 +1,4 @@
-import { Result } from '@/components/templates/Result';
+import { Result } from '@/templates/Result';
 
 const ResultPage = (): JSX.Element => <Result />;
 

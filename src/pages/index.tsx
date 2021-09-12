@@ -1,4 +1,4 @@
-import { Top } from '@/components/templates/Top';
+import { Top } from '@/templates/Top';
 
 const TopPage = (): JSX.Element => <Top />;
 
