@@ -10,7 +10,7 @@ export const Footer: React.VFC = () => (
       align-items: center;
       background-color: ${theme.colors.black};
       display: flex;
-      height: 28px;
+      height: ${theme.footer.height}px;
       justify-content: center;
       width: 100vw;
       span,

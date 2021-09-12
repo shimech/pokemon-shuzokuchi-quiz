@@ -12,5 +12,11 @@ declare module '@emotion/react' {
       blue: string;
       purple: string;
     };
+    header: {
+      height: number;
+    };
+    footer: {
+      height: number;
+    };
   }
 }

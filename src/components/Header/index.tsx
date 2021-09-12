@@ -14,7 +14,7 @@ export const Header: React.VFC = () => {
           align-items: center;
           background-color: ${theme.colors.black};
           display: flex;
-          height: 48px;
+          height: ${theme.header.height}px;
           padding: 0 48px;
           width: 100vw;
         `,

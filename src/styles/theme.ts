@@ -11,4 +11,10 @@ export const theme: Theme = {
     blue: '#0077b6',
     purple: '#8338ec',
   },
+  header: {
+    height: 48,
+  },
+  footer: {
+    height: 28,
+  },
 };
