@@ -1,12 +1,11 @@
-import { css, useTheme } from '@emotion/react';
-import { useMediaQuery } from '@material-ui/core';
+import { css } from '@emotion/react';
 import Link from 'next/link';
 import React from 'react';
 import { Button } from '@/components/Button';
+import { useDesktop } from '@/hooks/useDesktop';
 
 export const Header: React.VFC = () => {
-  const { breakpoint } = useTheme();
-  const isDesktop = useMediaQuery(`(min-width:${breakpoint}px)`);
+  const isDesktop = useDesktop();
 
   return (
     <header
