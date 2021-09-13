@@ -1,1 +1,3 @@
-export * from './Result';
+import React from 'react';
+
+export const Result: React.VFC = () => <>Result</>;
