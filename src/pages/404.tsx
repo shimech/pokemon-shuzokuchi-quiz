@@ -1,5 +1,5 @@
-import { Error } from '@/templates/Error';
+import { _404 } from '@/templates/404';
 
-const ErrorPage = (): JSX.Element => <Error />;
+const ErrorPage = (): JSX.Element => <_404 />;
 
 export default ErrorPage;
