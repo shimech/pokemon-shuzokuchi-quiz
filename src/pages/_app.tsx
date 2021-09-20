@@ -2,6 +2,7 @@ import { ThemeProvider } from '@emotion/react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Provider } from 'react-redux';
+import { Header } from '@/components/Header';
 import store from '@/store';
 import { theme } from '@/styles/theme';
 import '@/styles/reset.css';
@@ -11,7 +12,7 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
   <>
     <Head>
       <title>ポケモン種族値クイズ</title>
-      <link rel="shortcut icon" href="/favicon.ico" />
+      <link href="/favicon.ico" rel="shortcut icon" />
       <link
         href="https://fonts.googleapis.com/css?family=Kosugi+Maru"
         rel="stylesheet"
@@ -20,21 +21,22 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
         href="https://fonts.googleapis.com/css?family=Otomanopee+One"
         rel="stylesheet"
       />
-      <meta name="description" content="ポケモン種族値クイズに挑戦しよう！" />
-      <meta property="og:title" content="ポケモン種族値クイズ" />
+      <meta content="ポケモン種族値クイズに挑戦しよう！" name="description" />
+      <meta content="ポケモン種族値クイズ" property="og:title" />
       <meta
-        property="og:description"
         content="ポケモン種族値クイズに挑戦しよう！"
+        property="og:description"
       />
-      <meta name="twitter:card" content="summary" />
+      <meta content="summary" name="twitter:card" />
       <meta
-        name="twitter:image"
         content="https://pokemon-shuzokuchi-quiz.firebaseapp.com/img/thumbnail.png"
+        name="twitter:image"
       />
-      <meta name="twitter:site" content="@poke_kiyomaro" />
+      <meta content="@poke_kiyomaro" name="twitter:site" />
     </Head>
     <Provider store={store}>
       <ThemeProvider theme={theme}>
+        <Header />
         <Component {...pageProps} />
       </ThemeProvider>
     </Provider>
