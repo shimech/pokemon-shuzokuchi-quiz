@@ -43,7 +43,7 @@ export const QuizConditionPanel: React.VoidFunctionComponent = () => {
         <h2
           css={[
             css`
-              font-family: Kosugi Maru;
+              font-family: Kosugi Maru, sans-serif;
               font-size: 3.2rem;
             `,
             !isDesktop &&
