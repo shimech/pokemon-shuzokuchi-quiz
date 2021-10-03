@@ -31,18 +31,13 @@ export const Header: React.VFC = () => {
           width: 32px;
         `}
       >
-        <img
-          alt="モンスターボール アイコン"
-          height={32}
-          src="/images/monster-ball.png"
-          width={32}
-        />
+        <img alt="" height={32} src="/images/monster-ball.png" width={32} />
       </div>
-      <p
+      <h1
         css={[
           (theme) => css`
             color: ${theme.colors.white};
-            font-family: "pokemon-font";
+            font-family: pokemon-font;
             font-size: 2rem;
             margin-right: auto;
           `,
@@ -53,7 +48,7 @@ export const Header: React.VFC = () => {
         ]}
       >
         Pokémon Shuzokuchi Quiz
-      </p>
+      </h1>
       <div
         css={[
           css`
@@ -86,9 +81,9 @@ export const Header: React.VFC = () => {
                 &:hover {
                   background-color: ${theme.colors.blue};
                 }
-                span {
+                & > span {
                   color: ${theme.colors.white};
-                  font-family: "pokemon-font";
+                  font-family: pokemon-font;
                   font-size: 2rem;
                 }
               `}
@@ -97,7 +92,7 @@ export const Header: React.VFC = () => {
                 "HOME"
               ) : (
                 <img
-                  alt="Home"
+                  alt="TOPへ"
                   height={32}
                   src="/images/home.svg"
                   width={32}

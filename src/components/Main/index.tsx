@@ -10,6 +10,8 @@ export const Main: React.FC<MainProps> = (props) => (
     className={props.className}
     css={(theme) =>
       css`
+        display: flex;
+        justify-content: center;
         min-height: calc(
           100vh - ${theme.header.height}px - ${theme.footer.height}px
         );

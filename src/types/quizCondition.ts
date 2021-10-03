@@ -1,13 +1,8 @@
+import type { Region } from "./region";
+
 export type QuizCondition = {
   includeRegion: {
-    kanto: boolean;
-    johto: boolean;
-    hoenn: boolean;
-    sinnoh: boolean;
-    unova: boolean;
-    kalos: boolean;
-    alola: boolean;
-    galar: boolean;
+    [key in Region]: boolean;
   };
   includeMegaEvolution: boolean;
   includeSameStatus: boolean;

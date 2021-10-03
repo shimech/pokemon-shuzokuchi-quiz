@@ -1,22 +1,20 @@
 import { css } from "@emotion/react";
-import { Button as ButtonBase } from "@material-ui/core";
+import {
+  Button as ButtonBase,
+  ButtonProps as ButtonBaseProps,
+} from "@material-ui/core";
 import React from "react";
 
-type ButtonProps = {
-  className?: string;
-};
+type ButtonProps = ButtonBaseProps;
 
 export const Button: React.FC<ButtonProps> = (props) => (
   <ButtonBase
-    className={props.className}
-    css={(theme) => css`
+    {...props}
+    css={css`
       border-radius: 0;
       min-width: 0;
       padding: 0;
       text-align: center;
-      span {
-        color: ${theme.colors.white};
-      }
     `}
   >
     {props.children}
