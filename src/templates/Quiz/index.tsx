@@ -1,6 +1,6 @@
-import React from 'react';
-import { Pokemon } from '@/domains/pokemon';
+import React from "react";
+import type { Pokemon } from "@/types/pokemon";
 
-type Props = { pokemon: Pokemon };
+export type QuizProps = { pokemon: Pokemon };
 
-export const Quiz: React.VFC<Props> = (props) => <>{props.pokemon.name}</>;
+export const Quiz: React.FC<QuizProps> = (props) => <>{props.pokemon.name}</>;

@@ -1,14 +1,12 @@
-import { ThemeProvider } from '@emotion/react';
-import { StylesProvider } from '@material-ui/styles';
-import type { AppProps } from 'next/app';
-import Head from 'next/head';
-import { Provider } from 'react-redux';
-import { Footer } from '@/components/Footer';
-import { Header } from '@/components/Header';
-import store from '@/store';
-import { theme } from '@/styles/theme';
-import '@/styles/reset.css';
-import '@/styles/pokemon-font/pokemon-font.css';
+import { ThemeProvider } from "@emotion/react";
+import { StylesProvider } from "@material-ui/styles";
+import type { AppProps } from "next/app";
+import Head from "next/head";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { theme } from "@/styles/theme";
+import "@/styles/reset.css";
+import "@/styles/pokemon-font/pokemon-font.css";
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
   <>
@@ -36,15 +34,13 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
       />
       <meta content="@poke_kiyomaro" name="twitter:site" />
     </Head>
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <StylesProvider injectFirst>
-          <Header />
-          <Component {...pageProps} />
-          <Footer />
-        </StylesProvider>
-      </ThemeProvider>
-    </Provider>
+    <ThemeProvider theme={theme}>
+      <StylesProvider injectFirst>
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </StylesProvider>
+    </ThemeProvider>
   </>
 );
 

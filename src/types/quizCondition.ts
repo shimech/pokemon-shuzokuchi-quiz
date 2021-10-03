@@ -1,4 +1,4 @@
-export type Condition = {
+export type QuizCondition = {
   includeRegion: {
     kanto: boolean;
     johto: boolean;

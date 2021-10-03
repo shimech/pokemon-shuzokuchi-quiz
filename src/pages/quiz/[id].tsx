@@ -1,41 +1,25 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
-import {
-  Pokemon,
-  PokemonDriver,
-  PokemonRepository,
-  PokemonUseCase,
-} from '@/domains/pokemon';
-import { PokemonDriverImpl } from '@/drivers/pokemon';
-import { PokemonRepositoryImpl } from '@/repositories/pokemon';
-import { Quiz } from '@/templates/Quiz';
-import { PokemonUseCaseImpl } from '@/usecases/pokemon';
+import { GetStaticPaths, GetStaticProps } from "next";
+import { POKEMONS } from "@/constants/pokemons";
+import { Quiz, QuizProps } from "@/templates/Quiz";
 
-type Props = { pokemon: Pokemon };
-
-// TODO: install DI Container
-const pokemonDriver: PokemonDriver = new PokemonDriverImpl();
-const pokemonRepository: PokemonRepository = new PokemonRepositoryImpl(
-  pokemonDriver,
-);
-const pokemonUseCase: PokemonUseCase = new PokemonUseCaseImpl(
-  pokemonRepository,
-);
+type QuizPageProps = QuizProps;
 
 export const getStaticPaths: GetStaticPaths = () => {
-  const ids: string[] = pokemonUseCase.getAllIds();
+  const ids: string[] = POKEMONS.map((pokemon) => pokemon.id);
   const paths: { params: { id: string } }[] = ids.map((id) => ({
     params: { id },
   }));
   return { paths, fallback: false };
 };
 
-export const getStaticProps: GetStaticProps<Props> = ({ params }) => {
-  const id: string = params.id as string;
-  const pokemon: Pokemon = pokemonRepository.findById(id);
+export const getStaticProps: GetStaticProps<QuizPageProps, { id: string }> = ({
+  params: { id },
+}) => {
+  const pokemon = POKEMONS.find((pokemon) => pokemon.id === id);
   return { props: { pokemon } };
 };
 
-const QuizPage = ({ pokemon }: Props): JSX.Element => (
+const QuizPage = ({ pokemon }: QuizPageProps): JSX.Element => (
   <Quiz pokemon={pokemon} />
 );
 

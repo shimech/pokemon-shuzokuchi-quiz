@@ -1,3 +1,3 @@
-import React from 'react';
+import React from "react";
 
-export const _404: React.VFC = () => <>Error</>;
+export const _404: React.FC = () => <>Error</>;

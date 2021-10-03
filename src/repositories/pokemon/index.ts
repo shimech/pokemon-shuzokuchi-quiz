@@ -1,1 +1,0 @@
-export { PokemonRepositoryImpl } from './pokemonRepositoryImpl';

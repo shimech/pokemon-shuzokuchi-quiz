@@ -1,3 +1,3 @@
-import React from 'react';
+import React from "react";
 
-export const Result: React.VFC = () => <>Result</>;
+export const Result: React.FC = () => <>Result</>;
