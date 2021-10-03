@@ -7,7 +7,7 @@ import { QuizConditionContextProvider } from "@/contexts/QuizConditionContextPro
 export const Top: React.FC = () => (
   <Main
     css={css`
-      margin-top: 20px;
+      padding-top: 20px;
     `}
   >
     <QuizConditionContextProvider>
