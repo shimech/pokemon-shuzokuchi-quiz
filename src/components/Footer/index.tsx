@@ -1,6 +1,6 @@
-import { css } from '@emotion/react';
-import Link from 'next/link';
-import React from 'react';
+import { css } from "@emotion/react";
+import Link from "next/link";
+import React from "react";
 
 const year = new Date().getFullYear();
 

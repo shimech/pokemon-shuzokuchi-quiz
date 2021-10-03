@@ -1,8 +1,8 @@
-import { css } from '@emotion/react';
-import Link from 'next/link';
-import React from 'react';
-import { Button } from '@/components/Button';
-import { useDesktop } from '@/hooks/useDesktop';
+import { css } from "@emotion/react";
+import Link from "next/link";
+import React from "react";
+import { Button } from "@/components/Button";
+import { useDesktop } from "@/hooks/useDesktop";
 
 export const Header: React.VFC = () => {
   const isDesktop = useDesktop();
@@ -42,7 +42,7 @@ export const Header: React.VFC = () => {
         css={[
           (theme) => css`
             color: ${theme.colors.white};
-            font-family: 'pokemon-font';
+            font-family: "pokemon-font";
             font-size: 2rem;
             margin-right: auto;
           `,
@@ -88,13 +88,13 @@ export const Header: React.VFC = () => {
                 }
                 span {
                   color: ${theme.colors.white};
-                  font-family: 'pokemon-font';
+                  font-family: "pokemon-font";
                   font-size: 2rem;
                 }
               `}
             >
               {isDesktop ? (
-                'HOME'
+                "HOME"
               ) : (
                 <img
                   alt="Home"

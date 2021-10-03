@@ -1,5 +1,5 @@
-import { css } from '@emotion/react';
-import React from 'react';
+import { css } from "@emotion/react";
+import React from "react";
 
 type MainProps = {
   className?: string;
