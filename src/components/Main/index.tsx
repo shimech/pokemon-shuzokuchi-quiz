@@ -5,7 +5,7 @@ type MainProps = {
   className?: string;
 };
 
-export const Main: React.FC<MainProps> = (props) => (
+export const Main: React.FunctionComponent<MainProps> = (props) => (
   <main
     className={props.className}
     css={(theme) =>

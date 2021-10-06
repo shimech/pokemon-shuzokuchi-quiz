@@ -4,7 +4,7 @@ import { QuizConditionPanel } from "./QuizConditionPanel";
 import { Main } from "@/components/Main";
 import { QuizConditionContextProvider } from "@/contexts/QuizConditionContextProvider";
 
-export const Top: React.FC = () => (
+export const Top: React.VoidFunctionComponent = () => (
   <Main
     css={css`
       padding-top: 20px;

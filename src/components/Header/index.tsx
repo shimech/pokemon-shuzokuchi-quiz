@@ -4,7 +4,7 @@ import React from "react";
 import { Button } from "@/components/Button";
 import { useDesktop } from "@/hooks/useDesktop";
 
-export const Header: React.VFC = () => {
+export const Header: React.VoidFunctionComponent = () => {
   const isDesktop = useDesktop();
 
   return (

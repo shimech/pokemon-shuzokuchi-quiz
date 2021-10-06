@@ -3,9 +3,11 @@ import React from "react";
 import { RegionConditionButton } from "./RegionConditionButton";
 import { REGION } from "@/constants/region";
 import { QuizConditionContext } from "@/contexts/QuizConditionContextProvider";
+import { useDesktop } from "@/hooks/useDesktop";
 import type { Region } from "@/types/region";
 
-export const QuizConditionPanel: React.FC = () => {
+export const QuizConditionPanel: React.VoidFunctionComponent = () => {
+  const isDesktop = useDesktop();
   const quizCondition = React.useContext(QuizConditionContext);
 
   return (
@@ -17,33 +19,53 @@ export const QuizConditionPanel: React.FC = () => {
       `}
     >
       <div
-        css={(theme) => css`
-          align-items: center;
-          background-color: ${theme.colors.gray};
-          display: flex;
-          height: 4.8rem;
-          justify-content: center;
-          margin-bottom: 12px;
-          width: 240px;
-        `}
+        css={(theme) => [
+          css`
+            align-items: center;
+            border-left: 4px solid ${theme.colors.black};
+            border-right: 4px solid ${theme.colors.black};
+            display: flex;
+            height: 4.8rem;
+            justify-content: center;
+            margin-bottom: 20px;
+            width: 220px;
+          `,
+          !isDesktop &&
+            css`
+              border-left: 2px solid ${theme.colors.black};
+              border-right: 2px solid ${theme.colors.black};
+              height: 2.4rem;
+              width: 96px;
+            `,
+        ]}
       >
         <h2
-          css={css`
-            font-family: Kosugi Maru;
-            font-size: 3.2rem;
-          `}
+          css={[
+            css`
+              font-family: Kosugi Maru;
+              font-size: 3.2rem;
+            `,
+            !isDesktop &&
+              css`
+                font-size: 1.6rem;
+              `,
+          ]}
         >
           出題範囲
         </h2>
       </div>
       <div
-        css={css`
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          max-width: 95vw;
-          width: calc(120px * 8 + 10px * 7);
-        `}
+        css={[
+          css`
+            display: grid;
+            grid-gap: 8px;
+            grid-template-columns: 120px 120px 120px 120px;
+          `,
+          !isDesktop &&
+            css`
+              grid-template-columns: 80px 80px 80px 80px;
+            `,
+        ]}
       >
         {Object.keys(REGION).map((region: Region, i) => (
           <RegionConditionButton

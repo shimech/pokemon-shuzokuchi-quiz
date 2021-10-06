@@ -1,3 +1,3 @@
 import React from "react";
 
-export const Result: React.FC = () => <>Result</>;
+export const Result: React.VoidFunctionComponent = () => <>Result</>;

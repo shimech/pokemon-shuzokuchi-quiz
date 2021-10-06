@@ -32,19 +32,31 @@ export const QuizConditionContext = React.createContext<{
   changeIncludeBeforeEvolution: () => {},
 });
 
-export const QuizConditionContextProvider: React.FC = (props) => {
+const noRegionInclude = (includeRegion: { [key in Region]: boolean }) =>
+  Object.values(includeRegion).every((isRegionInclude) => !isRegionInclude);
+
+export const QuizConditionContextProvider: React.FunctionComponent = (
+  props,
+) => {
   const [quizCondition, setQuizCondition] =
     React.useState<QuizCondition>(initialValue);
 
   const changeIncludeRegion = (region: Region) => {
     setQuizCondition((prevState) => {
-      const prevIncludeRegion = prevState.includeRegion[region];
+      const newIncludeRegion = {
+        ...prevState.includeRegion,
+        [region]: !prevState.includeRegion[region],
+      };
+
+      if (noRegionInclude(newIncludeRegion)) {
+        Object.keys(newIncludeRegion).forEach(
+          (region) => (newIncludeRegion[region] = true),
+        );
+      }
+
       return {
         ...prevState,
-        includeRegion: {
-          ...prevState.includeRegion,
-          [region]: !prevIncludeRegion,
-        },
+        includeRegion: newIncludeRegion,
       };
     });
   };
