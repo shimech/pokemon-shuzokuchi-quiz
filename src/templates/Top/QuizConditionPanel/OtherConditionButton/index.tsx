@@ -3,12 +3,12 @@ import React from "react";
 import { Button } from "@/components/Button";
 import { useDesktop } from "@/hooks/useDesktop";
 
-type RegionConditionButtonProps = {
+type OtherConditionButtonProps = {
   include: boolean;
   onClick?: VoidFunction;
 };
 
-export const RegionConditionButton: React.FunctionComponent<RegionConditionButtonProps> =
+export const OtherConditionButton: React.FunctionComponent<OtherConditionButtonProps> =
   (props) => {
     const isDesktop = useDesktop();
 
@@ -18,7 +18,7 @@ export const RegionConditionButton: React.FunctionComponent<RegionConditionButto
           css`
             background-color: ${theme.colors.black};
             height: 4rem;
-            width: 120px;
+            width: 100%;
             &:hover {
               background-color: ${theme.colors.black};
               opacity: 0.8;
@@ -32,7 +32,6 @@ export const RegionConditionButton: React.FunctionComponent<RegionConditionButto
           !isDesktop &&
             css`
               height: 2.8rem;
-              width: 80px;
               & > span {
                 font-size: 1.2rem;
               }

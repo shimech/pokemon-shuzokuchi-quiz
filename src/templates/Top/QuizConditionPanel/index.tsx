@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import React from "react";
+import { OtherConditionButton } from "./OtherConditionButton";
 import { RegionConditionButton } from "./RegionConditionButton";
 import { REGION } from "@/constants/region";
 import { QuizConditionContext } from "@/contexts/QuizConditionContextProvider";
@@ -60,6 +61,7 @@ export const QuizConditionPanel: React.VoidFunctionComponent = () => {
             display: grid;
             grid-gap: 8px;
             grid-template-columns: 120px 120px 120px 120px;
+            margin-bottom: 8px;
           `,
           !isDesktop &&
             css`
@@ -76,6 +78,45 @@ export const QuizConditionPanel: React.VoidFunctionComponent = () => {
             {REGION[region]}
           </RegionConditionButton>
         ))}
+      </div>
+      <div
+        css={css`
+          margin-bottom: 8px;
+          width: 100%;
+        `}
+      >
+        <OtherConditionButton
+          include={quizCondition.value.includeMegaEvolution}
+          onClick={quizCondition.changeIncludeMegaEvolution}
+        >
+          メガシンカ・ゲンシカイキを含む
+        </OtherConditionButton>
+      </div>
+      <div
+        css={css`
+          margin-bottom: 8px;
+          width: 100%;
+        `}
+      >
+        <OtherConditionButton
+          include={quizCondition.value.includeSameStatus}
+          onClick={quizCondition.changeIncludeSameStatus}
+        >
+          同一種族値のポケモンを含む
+        </OtherConditionButton>
+      </div>
+      <div
+        css={css`
+          margin-bottom: 8px;
+          width: 100%;
+        `}
+      >
+        <OtherConditionButton
+          include={quizCondition.value.includeBeforeEvolution}
+          onClick={quizCondition.changeIncludeBeforeEvolution}
+        >
+          進化前のポケモンを含む
+        </OtherConditionButton>
       </div>
     </div>
   );
