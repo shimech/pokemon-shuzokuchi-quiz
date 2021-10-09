@@ -2,10 +2,12 @@ import { css } from "@emotion/react";
 import Link from "next/link";
 import React from "react";
 import { Button } from "@/components/Button";
+import { ResultContext } from "@/contexts/ResultContextProvider";
 import { useDesktop } from "@/hooks/useDesktop";
 
 export const Header: React.VoidFunctionComponent = () => {
   const isDesktop = useDesktop();
+  const result = React.useContext(ResultContext);
 
   return (
     <header
@@ -68,6 +70,9 @@ export const Header: React.VoidFunctionComponent = () => {
               height: 100%;
               width: 100%;
             `}
+            onClick={() => {
+              result.reset();
+            }}
           >
             <Button
               css={(theme) => css`

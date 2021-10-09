@@ -4,9 +4,11 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { theme } from "@/styles/theme";
 import "@/styles/reset.css";
 import "@/styles/pokemon-font/pokemon-font.css";
+import { QuizConditionContextProvider } from "@/contexts/QuizConditionContextProvider";
+import { ResultContextProvider } from "@/contexts/ResultContextProvider";
+import { theme } from "@/styles/theme";
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
   <>
@@ -36,9 +38,13 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
     </Head>
     <ThemeProvider theme={theme}>
       <StylesProvider injectFirst>
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
+        <QuizConditionContextProvider>
+          <ResultContextProvider>
+            <Header />
+            <Component {...pageProps} />
+            <Footer />
+          </ResultContextProvider>
+        </QuizConditionContextProvider>
       </StylesProvider>
     </ThemeProvider>
   </>

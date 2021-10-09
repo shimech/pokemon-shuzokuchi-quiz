@@ -3,7 +3,6 @@ import React from "react";
 import { QuizConditionPanel } from "./QuizConditionPanel";
 import { QuizStartLink } from "./QuizStartLink";
 import { Main } from "@/components/Main";
-import { QuizConditionContextProvider } from "@/contexts/QuizConditionContextProvider";
 
 export const Top: React.VoidFunctionComponent = () => (
   <Main
@@ -17,16 +16,14 @@ export const Top: React.VoidFunctionComponent = () => (
         flex-direction: column;
       `}
     >
-      <QuizConditionContextProvider>
-        <div
-          css={css`
-            margin-bottom: 16px;
-          `}
-        >
-          <QuizConditionPanel />
-        </div>
-        <QuizStartLink />
-      </QuizConditionContextProvider>
+      <div
+        css={css`
+          margin-bottom: 16px;
+        `}
+      >
+        <QuizConditionPanel />
+      </div>
+      <QuizStartLink />
     </div>
   </Main>
 );

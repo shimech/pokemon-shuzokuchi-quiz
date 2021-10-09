@@ -2,10 +2,12 @@ import { css } from "@emotion/react";
 import Link from "next/link";
 import React from "react";
 import { Button } from "../Button";
+import { ResultContext } from "@/contexts/ResultContextProvider";
 import { usePokemons } from "@/hooks/usePokemons";
 
 type NextPageLinkProps = {
   className?: string;
+  onClick?: VoidFunction;
 };
 
 export const NextPageLink: React.FunctionComponent<NextPageLinkProps> = (
@@ -13,20 +15,38 @@ export const NextPageLink: React.FunctionComponent<NextPageLinkProps> = (
 ) => {
   const [url, setUrl] = React.useState("");
   const pokemons = usePokemons();
+  const result = React.useContext(ResultContext);
 
   React.useEffect(() => {
-    if (pokemons.length) {
-      setUrl(`/quiz/${pokemons[0].id}`);
+    if (result.value.numQuiz <= 10) {
+      if (pokemons.length) {
+        setUrl(`/quiz/${pokemons[result.value.numQuiz - 1].id}`);
+      }
+    } else {
+      setUrl("/result");
     }
-  }, [pokemons]);
+  }, [pokemons, result]);
 
   return (
     <Link passHref href={url}>
       <a
         className={props.className}
-        css={css`
-          display: block;
-        `}
+        css={[
+          css`
+            display: block;
+          `,
+          url === "" &&
+            css`
+              pointer-events: none;
+            `,
+        ]}
+        onClick={() => {
+          result.increment("numQuiz");
+          console.log(result.value);
+          if (props.onClick) {
+            props.onClick();
+          }
+        }}
       >
         <Button
           css={(theme) =>
