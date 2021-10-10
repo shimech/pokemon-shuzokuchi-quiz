@@ -2,7 +2,7 @@ import React from "react";
 import type { Result } from "@/types/result";
 
 const initialValue: Result = {
-  numQuiz: 1,
+  numQuiz: 0,
   numCorrect: 0,
   numHint: 0,
 };

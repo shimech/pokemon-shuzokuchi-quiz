@@ -2,8 +2,8 @@ import { css } from "@emotion/react";
 import Link from "next/link";
 import React from "react";
 import { Button } from "../Button";
+import { PokemonsContext } from "@/contexts/PokemonsContextProvider";
 import { ResultContext } from "@/contexts/ResultContextProvider";
-import { usePokemons } from "@/hooks/usePokemons";
 
 type NextPageLinkProps = {
   className?: string;
@@ -14,17 +14,18 @@ export const NextPageLink: React.FunctionComponent<NextPageLinkProps> = (
   props,
 ) => {
   const [url, setUrl] = React.useState("");
-  const pokemons = usePokemons();
+  const pokemons = React.useContext(PokemonsContext);
   const result = React.useContext(ResultContext);
 
   React.useEffect(() => {
-    if (result.value.numQuiz <= 10) {
-      if (pokemons.length) {
-        setUrl(`/quiz/${pokemons[result.value.numQuiz - 1].id}`);
+    if (result.value.numQuiz < 10) {
+      if (pokemons.value.length) {
+        setUrl(`/quiz/${pokemons.value[result.value.numQuiz].id}`);
       }
     } else {
       setUrl("/result");
     }
+    console.log(pokemons.value);
   }, [pokemons, result]);
 
   return (
@@ -42,7 +43,6 @@ export const NextPageLink: React.FunctionComponent<NextPageLinkProps> = (
         ]}
         onClick={() => {
           result.increment("numQuiz");
-          console.log(result.value);
           if (props.onClick) {
             props.onClick();
           }

@@ -24,12 +24,14 @@ export const QuizConditionContext = React.createContext<{
   changeIncludeMegaEvolution: VoidFunction;
   changeIncludeSameStatus: VoidFunction;
   changeIncludeBeforeEvolution: VoidFunction;
+  reset: VoidFunction;
 }>({
   value: initialValue,
   changeIncludeRegion: () => {},
   changeIncludeMegaEvolution: () => {},
   changeIncludeSameStatus: () => {},
   changeIncludeBeforeEvolution: () => {},
+  reset: () => {},
 });
 
 const noRegionInclude = (includeRegion: { [key in Region]: boolean }) =>
@@ -94,6 +96,7 @@ export const QuizConditionContextProvider: React.FunctionComponent = (
     changeIncludeMegaEvolution,
     changeIncludeSameStatus,
     changeIncludeBeforeEvolution,
+    reset: () => setQuizCondition(initialValue),
   };
 
   return (

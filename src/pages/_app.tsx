@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import "@/styles/reset.css";
 import "@/styles/pokemon-font/pokemon-font.css";
+import { PokemonsContextProvider } from "@/contexts/PokemonsContextProvider";
 import { QuizConditionContextProvider } from "@/contexts/QuizConditionContextProvider";
 import { ResultContextProvider } from "@/contexts/ResultContextProvider";
 import { theme } from "@/styles/theme";
@@ -39,11 +40,13 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
     <ThemeProvider theme={theme}>
       <StylesProvider injectFirst>
         <QuizConditionContextProvider>
-          <ResultContextProvider>
-            <Header />
-            <Component {...pageProps} />
+          <PokemonsContextProvider>
+            <ResultContextProvider>
+              <Header />
+              <Component {...pageProps} />
+            </ResultContextProvider>
             <Footer />
-          </ResultContextProvider>
+          </PokemonsContextProvider>
         </QuizConditionContextProvider>
       </StylesProvider>
     </ThemeProvider>
