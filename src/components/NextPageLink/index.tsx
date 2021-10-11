@@ -25,7 +25,6 @@ export const NextPageLink: React.FunctionComponent<NextPageLinkProps> = (
     } else {
       setUrl("/result");
     }
-    console.log(pokemons.value);
   }, [pokemons, result]);
 
   return (
