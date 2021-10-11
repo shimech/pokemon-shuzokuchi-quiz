@@ -52,7 +52,6 @@ export const useQuiz = (quizCondition: QuizCondition): Quiz => {
 
   React.useEffect(() => {
     const quiz = selectRandomQuiz(pokemons, quizCondition);
-    console.log(quiz);
     setQuiz(quiz);
   }, [pokemons, quizCondition]);
 
