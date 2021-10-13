@@ -3,7 +3,7 @@ import type { Pokemon } from "@/types/pokemon";
 
 export const fetchPokemons = async (): Promise<Pokemon[]> => {
   const response = await fetch(
-    "https://raw.githubusercontent.com/shimech/pokemon-db-maker/master/output/pokemon_db.json",
+    "https://raw.githubusercontent.com/shimech/pokemon-shuzokuchi-quiz-neo/main/public/api/pokemons.json",
   );
   const pokemons: Pokemon[] = await response.json();
   return pokemons;
