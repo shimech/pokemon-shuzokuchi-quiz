@@ -34,7 +34,7 @@ export const useQuizCondition = (): Return => {
   const [quizCondition, setQuizCondition] =
     React.useState<QuizCondition>(initialValue);
 
-  const changeIncludeRegion = (region: Region) => {
+  const changeIncludeRegion = (region: Region) =>
     setQuizCondition((prevState) => {
       const newIncludeRegion = {
         ...prevState.includeRegion,
@@ -52,7 +52,6 @@ export const useQuizCondition = (): Return => {
         includeRegion: newIncludeRegion,
       };
     });
-  };
 
   const changeIncludeMegaEvolution = () =>
     setQuizCondition((prevState) => {
