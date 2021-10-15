@@ -2,16 +2,14 @@ import { css } from "@emotion/react";
 import Link from "next/link";
 import React from "react";
 import { Button } from "@/components/Button";
-import { PokemonsContext } from "@/contexts/PokemonsContextProvider";
-import { QuizConditionContext } from "@/contexts/QuizConditionContextProvider";
-import { ResultContext } from "@/contexts/ResultContextProvider";
+import { SetQuizConditionContext } from "@/contexts/QuizConditionContextProvider";
+import { SetResultContext } from "@/contexts/ResultContextProvider";
 import { useDesktop } from "@/hooks/useDesktop";
 
 export const Header: React.VoidFunctionComponent = () => {
   const isDesktop = useDesktop();
-  const quizCondition = React.useContext(QuizConditionContext);
-  const pokemons = React.useContext(PokemonsContext);
-  const result = React.useContext(ResultContext);
+  const setQuizCondition = React.useContext(SetQuizConditionContext);
+  const setResult = React.useContext(SetResultContext);
 
   return (
     <header
@@ -75,9 +73,8 @@ export const Header: React.VoidFunctionComponent = () => {
               width: 100%;
             `}
             onClick={() => {
-              quizCondition.reset();
-              pokemons.shuffle();
-              result.reset();
+              setQuizCondition.reset();
+              setResult.reset();
             }}
           >
             <Button

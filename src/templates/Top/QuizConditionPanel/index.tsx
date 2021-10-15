@@ -3,13 +3,17 @@ import React from "react";
 import { OtherConditionButton } from "./OtherConditionButton";
 import { RegionConditionButton } from "./RegionConditionButton";
 import { REGION } from "@/constants/region";
-import { QuizConditionContext } from "@/contexts/QuizConditionContextProvider";
+import {
+  QuizConditionContext,
+  SetQuizConditionContext,
+} from "@/contexts/QuizConditionContextProvider";
 import { useDesktop } from "@/hooks/useDesktop";
 import type { Region } from "@/types/region";
 
 export const QuizConditionPanel: React.VoidFunctionComponent = () => {
   const isDesktop = useDesktop();
   const quizCondition = React.useContext(QuizConditionContext);
+  const setQuizCondition = React.useContext(SetQuizConditionContext);
 
   return (
     <div
@@ -72,8 +76,8 @@ export const QuizConditionPanel: React.VoidFunctionComponent = () => {
         {Object.keys(REGION).map((region: Region, i) => (
           <RegionConditionButton
             key={i}
-            include={quizCondition.value.includeRegion[region]}
-            onClick={() => quizCondition.changeIncludeRegion(region)}
+            include={quizCondition.includeRegion[region]}
+            onClick={() => setQuizCondition.changeIncludeRegion(region)}
           >
             {REGION[region]}
           </RegionConditionButton>
@@ -86,8 +90,8 @@ export const QuizConditionPanel: React.VoidFunctionComponent = () => {
         `}
       >
         <OtherConditionButton
-          include={quizCondition.value.includeMegaEvolution}
-          onClick={quizCondition.changeIncludeMegaEvolution}
+          include={quizCondition.includeMegaEvolution}
+          onClick={setQuizCondition.changeIncludeMegaEvolution}
         >
           メガシンカ・ゲンシカイキを含む
         </OtherConditionButton>
@@ -99,8 +103,8 @@ export const QuizConditionPanel: React.VoidFunctionComponent = () => {
         `}
       >
         <OtherConditionButton
-          include={quizCondition.value.includeSameStatus}
-          onClick={quizCondition.changeIncludeSameStatus}
+          include={quizCondition.includeSameStatus}
+          onClick={setQuizCondition.changeIncludeSameStatus}
         >
           同一種族値のポケモンを含む
         </OtherConditionButton>
@@ -112,8 +116,8 @@ export const QuizConditionPanel: React.VoidFunctionComponent = () => {
         `}
       >
         <OtherConditionButton
-          include={quizCondition.value.includeBeforeEvolution}
-          onClick={quizCondition.changeIncludeBeforeEvolution}
+          include={quizCondition.includeBeforeEvolution}
+          onClick={setQuizCondition.changeIncludeBeforeEvolution}
         >
           進化前のポケモンを含む
         </OtherConditionButton>
