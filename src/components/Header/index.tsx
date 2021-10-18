@@ -104,7 +104,7 @@ export const Header: React.VoidFunctionComponent = () => {
                   height={32}
                   src="/images/home.svg"
                   width={32}
-                ></img>
+                />
               )}
             </Button>
           </a>
