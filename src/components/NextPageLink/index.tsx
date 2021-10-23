@@ -2,11 +2,8 @@ import { css } from "@emotion/react";
 import Link from "next/link";
 import React from "react";
 import { Button } from "../Button";
-import { QuizContext } from "@/contexts/QuizContextProvider";
-import {
-  ResultContext,
-  SetResultContext,
-} from "@/contexts/ResultContextProvider";
+import { useUrl } from "./useUrl";
+import { SetResultContext } from "@/contexts/ResultContextProvider";
 
 type NextPageLinkProps = {
   className?: string;
@@ -16,20 +13,8 @@ type NextPageLinkProps = {
 export const NextPageLink: React.FunctionComponent<NextPageLinkProps> = (
   props,
 ) => {
-  const [url, setUrl] = React.useState("");
-  const quiz = React.useContext(QuizContext);
-  const result = React.useContext(ResultContext);
+  const url = useUrl();
   const setResult = React.useContext(SetResultContext);
-
-  React.useEffect(() => {
-    if (result.numQuiz < 10) {
-      if (quiz.length && quiz.every((pokemon) => !!pokemon)) {
-        setUrl(`/quiz/${quiz[result.numQuiz].id}`);
-      }
-    } else {
-      setUrl("/result");
-    }
-  }, [quiz, result]);
 
   return (
     <Link passHref href={url}>
@@ -39,7 +24,7 @@ export const NextPageLink: React.FunctionComponent<NextPageLinkProps> = (
           css`
             display: block;
           `,
-          url === "" &&
+          !url &&
             css`
               pointer-events: none;
             `,
