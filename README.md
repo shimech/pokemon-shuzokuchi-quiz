@@ -11,9 +11,3 @@
 ```shell
 npm run dev
 ```
-
-データベースのマイグレーション
-
-```shell
-npm run migrate
-```
