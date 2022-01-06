@@ -18,11 +18,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: yarn install
+        run: npm install
       - name: Build and Export
         run: |
-          yarn run build
-          yarn run export
+          npm run build
+          npm run export
       - name: Deploy to staging
         run: |
-          yarn run deploy --token=${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_SHUZOKUCHI_QUIZ_STG }}
+          npm run deploy --token=${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_SHUZOKUCHI_QUIZ_STG }}
