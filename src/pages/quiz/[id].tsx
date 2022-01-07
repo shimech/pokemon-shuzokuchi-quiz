@@ -13,12 +13,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-export const getStaticProps: GetStaticProps<QuizPageProps, { id: string }> =
-  async ({ params: { id } }) => {
-    const pokemons = await fetchPokemons();
-    const pokemon = pokemons.find((pokemon) => pokemon.id === id);
-    return { props: { pokemon } };
-  };
+export const getStaticProps: GetStaticProps<
+  QuizPageProps,
+  { id: string }
+> = async ({ params: { id } }) => {
+  const pokemons = await fetchPokemons();
+  const pokemon = pokemons.find((pokemon) => pokemon.id === id);
+  return { props: { pokemon } };
+};
 
 const QuizPage = ({ pokemon }: QuizPageProps): JSX.Element => (
   <Quiz pokemon={pokemon} />

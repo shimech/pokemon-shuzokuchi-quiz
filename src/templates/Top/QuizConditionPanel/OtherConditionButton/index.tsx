@@ -8,48 +8,49 @@ type OtherConditionButtonProps = {
   onClick?: VoidFunction;
 };
 
-export const OtherConditionButton: React.FunctionComponent<OtherConditionButtonProps> =
-  (props) => {
-    const isDesktop = useDesktop();
+export const OtherConditionButton: React.FunctionComponent<
+  OtherConditionButtonProps
+> = (props) => {
+  const isDesktop = useDesktop();
 
-    return (
-      <Button
-        css={(theme) => [
-          css`
+  return (
+    <Button
+      css={(theme) => [
+        css`
+          background-color: ${theme.colors.black};
+          height: 4rem;
+          width: 100%;
+          &:hover {
             background-color: ${theme.colors.black};
-            height: 4rem;
-            width: 100%;
-            &:hover {
-              background-color: ${theme.colors.black};
-              opacity: 0.8;
-            }
+            opacity: 0.8;
+          }
+          & > span {
+            color: ${theme.colors.white};
+            font-family: Kosugi Maru, sans-serif;
+            font-size: 1.8rem;
+          }
+        `,
+        !isDesktop &&
+          css`
+            height: 2.8rem;
             & > span {
-              color: ${theme.colors.white};
-              font-family: Kosugi Maru, sans-serif;
-              font-size: 1.8rem;
+              font-size: 1.2rem;
             }
           `,
-          !isDesktop &&
-            css`
-              height: 2.8rem;
-              & > span {
-                font-size: 1.2rem;
-              }
-            `,
-          !props.include &&
-            css`
+        !props.include &&
+          css`
+            background-color: ${theme.colors.gray};
+            & > span {
+              color: ${theme.colors.darkGray};
+            }
+            &:hover {
               background-color: ${theme.colors.gray};
-              & > span {
-                color: ${theme.colors.darkGray};
-              }
-              &:hover {
-                background-color: ${theme.colors.gray};
-              }
-            `,
-        ]}
-        onClick={props.onClick}
-      >
-        {props.children}
-      </Button>
-    );
-  };
+            }
+          `,
+      ]}
+      onClick={props.onClick}
+    >
+      {props.children}
+    </Button>
+  );
+};
