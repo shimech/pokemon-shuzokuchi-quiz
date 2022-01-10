@@ -1,4 +1,4 @@
-import { useResult } from "@/hooks/useResult";
+import { useResult } from "./useResult";
 import type { Result } from "@/types/Result";
 
 export const useResultContextProvider = (initialValue: Result) => {
