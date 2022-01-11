@@ -1,1 +1,0 @@
-export { useQuizCondition } from "./useQuizCondition";

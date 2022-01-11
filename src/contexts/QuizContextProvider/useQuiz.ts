@@ -1,7 +1,7 @@
 import React from "react";
-import { usePokemon } from "../usePokemon";
 import { NUM_QUIZ_ALL } from "@/constants/numQuizAll";
 import { REGION } from "@/constants/region";
+import { usePokemon } from "@/hooks/usePokemon";
 import type { Pokemon } from "@/types/Pokemon";
 import type { Quiz } from "@/types/Quiz";
 import type { QuizCondition } from "@/types/QuizCondition";

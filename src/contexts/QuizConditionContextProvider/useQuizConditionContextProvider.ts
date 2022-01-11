@@ -1,4 +1,4 @@
-import { useQuizCondition } from "@/hooks/useQuizCondition";
+import { useQuizCondition } from "./useQuizCondition";
 import type { QuizCondition } from "@/types/QuizCondition";
 
 export const useQuizConditionContextProvider = (

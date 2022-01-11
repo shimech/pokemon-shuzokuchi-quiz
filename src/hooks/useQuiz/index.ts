@@ -1,1 +1,0 @@
-export { useQuiz } from "./useQuiz";

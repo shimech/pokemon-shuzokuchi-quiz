@@ -1,6 +1,6 @@
 import React from "react";
 import { QuizConditionContext } from "../QuizConditionContextProvider";
-import { useQuiz } from "@/hooks/useQuiz";
+import { useQuiz } from "./useQuiz";
 
 export const useQuizContextProvider = () => {
   const quizCondition = React.useContext(QuizConditionContext);
