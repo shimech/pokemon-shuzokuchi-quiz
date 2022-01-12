@@ -16,7 +16,6 @@ export const Header: React.VoidFunctionComponent = () => {
           display: flex;
           height: ${theme.header.height}px;
           padding: 0 48px;
-          width: 100vw;
         `,
         !isDesktop &&
           css`
@@ -25,11 +24,19 @@ export const Header: React.VoidFunctionComponent = () => {
       ]}
     >
       <div
-        css={css`
-          height: 32px;
-          margin-right: 20px;
-          width: 32px;
-        `}
+        css={[
+          css`
+            align-items: center;
+            display: flex;
+            height: 100%;
+            margin-right: 20px;
+            width: 32px;
+          `,
+          !isDesktop &&
+            css`
+              margin-right: auto;
+            `,
+        ]}
       >
         <img alt="" height={32} src="/images/monster-ball.png" width={32} />
       </div>
@@ -43,7 +50,7 @@ export const Header: React.VoidFunctionComponent = () => {
           `,
           !isDesktop &&
             css`
-              font-size: 1rem;
+              font-size: 1.1rem;
             `,
         ]}
       >
@@ -72,7 +79,6 @@ export const Header: React.VoidFunctionComponent = () => {
           >
             <Button
               css={(theme) => css`
-                border-radius: 0;
                 height: 100%;
                 min-width: 48px;
                 padding: 0;
