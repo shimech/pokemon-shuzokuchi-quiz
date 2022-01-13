@@ -13,7 +13,7 @@ export const Main: React.FunctionComponent<MainProps> = (props) => (
         display: flex;
         justify-content: center;
         min-height: calc(
-          99.9vh - ${theme.header.height}px - ${theme.footer.height}px
+          100vh - ${theme.header.height}px - ${theme.footer.height}px
         );
       `
     }
