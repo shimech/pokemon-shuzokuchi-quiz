@@ -2,8 +2,9 @@ import React from "react";
 import { QuizContext } from "@/contexts/QuizContextProvider";
 import { ResultContext } from "@/contexts/ResultContextProvider";
 
-export const useUrl = (): string => {
+export const useUrl = () => {
   const [url, setUrl] = React.useState("#");
+  const [isValidUrl, setValidUrl] = React.useState(false);
   const quiz = React.useContext(QuizContext);
   const result = React.useContext(ResultContext);
 
@@ -17,5 +18,12 @@ export const useUrl = (): string => {
     }
   }, [quiz, result]);
 
-  return url;
+  React.useEffect(() => {
+    if (!url || url === "#") {
+      setValidUrl(false);
+    }
+    setValidUrl(true);
+  });
+
+  return { url, isValidUrl };
 };

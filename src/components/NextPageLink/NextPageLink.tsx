@@ -12,7 +12,7 @@ type NextPageLinkProps = {
 export const NextPageLink: React.FunctionComponent<NextPageLinkProps> = (
   props,
 ) => {
-  const { url, handleLinkClick } = useNextPageLink();
+  const { url, isValidUrl, handleLinkClick } = useNextPageLink();
 
   return (
     <Link passHref href={url}>
@@ -22,7 +22,7 @@ export const NextPageLink: React.FunctionComponent<NextPageLinkProps> = (
           css`
             display: block;
           `,
-          !url &&
+          !isValidUrl &&
             css`
               pointer-events: none;
             `,

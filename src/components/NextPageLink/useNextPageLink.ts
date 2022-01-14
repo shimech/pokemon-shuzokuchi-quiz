@@ -3,7 +3,7 @@ import { useUrl } from "./useUrl";
 import { SetResultContext } from "@/contexts/ResultContextProvider";
 
 export const useNextPageLink = (onClick?: VoidFunction) => {
-  const url = useUrl();
+  const { url, isValidUrl } = useUrl();
   const setResult = React.useContext(SetResultContext);
 
   const handleLinkClick = () => {
@@ -13,5 +13,5 @@ export const useNextPageLink = (onClick?: VoidFunction) => {
     }
   };
 
-  return { url, handleLinkClick };
+  return { url, isValidUrl, handleLinkClick };
 };
