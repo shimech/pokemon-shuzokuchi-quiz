@@ -18,6 +18,7 @@ export const Footer: React.VoidFunctionComponent = () => {
           span,
           a {
             color: ${theme.colors.white};
+            font-family: Otomanopee One, sans-serif;
             font-size: 1.4rem;
           }
         `
