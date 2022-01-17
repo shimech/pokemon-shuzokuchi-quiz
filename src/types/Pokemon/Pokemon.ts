@@ -1,3 +1,5 @@
+import type { Status } from "../Status";
+
 export type Pokemon = {
   readonly id: string;
   readonly no: number;
@@ -7,15 +9,7 @@ export type Pokemon = {
     readonly normal: string[];
     readonly special: string;
   };
-  readonly status: {
-    readonly hitpoint: number;
-    readonly attack: number;
-    readonly block: number;
-    readonly contact: number;
-    readonly defense: number;
-    readonly speed: number;
-    readonly total: number;
-  };
+  readonly status: Status;
   readonly isFinal: boolean;
   readonly region: string;
   readonly isMegaEvolution: boolean;
