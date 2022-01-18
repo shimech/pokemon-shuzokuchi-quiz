@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import { useTheme } from "@emotion/react";
 import React from "react";
 import {
   Radar,
@@ -9,6 +8,7 @@ import {
   PolarRadiusAxis,
   ResponsiveContainer,
 } from "recharts";
+import { useStatusChart } from "./useStatusChart";
 import type { Status } from "@/types/Status";
 
 const FULL_MARK = 150;
@@ -21,7 +21,7 @@ type StatusChartProps = {
 export const StatusChart: React.VoidFunctionComponent<StatusChartProps> = (
   props,
 ) => {
-  const theme = useTheme();
+  const { isDesktop, theme } = useStatusChart();
   const data = [
     {
       status: `HP: ${props.hitpoint}`,
@@ -68,26 +68,44 @@ export const StatusChart: React.VoidFunctionComponent<StatusChartProps> = (
       `}
     >
       <p
-        css={css`
-          font-size: 3vw;
-        `}
+        css={[
+          css`
+            font-size: 3vw;
+          `,
+          !isDesktop &&
+            css`
+              font-size: 2rem;
+            `,
+        ]}
       >
         {props.total}
       </p>
       <div
-        css={css`
-          align-items: flex-start;
-          display: flex;
-          flex-grow: 1;
-          height: calc(50vw - 56px);
-          justify-content: center;
-          width: 100%;
-          * {
-            font-size: 1.2vw;
-          }
-        `}
+        css={[
+          css`
+            align-items: flex-start;
+            display: flex;
+            flex-grow: 1;
+            height: calc(50vw - 56px);
+            justify-content: center;
+            width: 100%;
+            * {
+              font-size: 1.2vw;
+            }
+          `,
+          !isDesktop &&
+            css`
+              height: calc(100vw - 48px);
+              * {
+                font-size: 1rem;
+              }
+            `,
+        ]}
       >
-        <ResponsiveContainer height="80%" width="80%">
+        <ResponsiveContainer
+          height={isDesktop ? "80%" : "100%"}
+          width={isDesktop ? "80%" : "100%"}
+        >
           <RadarChart data={data} outerRadius="70%">
             <PolarGrid />
             <PolarAngleAxis dataKey="status" />
