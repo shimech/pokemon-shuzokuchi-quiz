@@ -70,7 +70,7 @@ export const StatusChart: React.VoidFunctionComponent<StatusChartProps> = (
       <p
         css={[
           css`
-            font-size: 3vw;
+            font-size: 3.2rem;
           `,
           !isDesktop &&
             css`
@@ -86,16 +86,18 @@ export const StatusChart: React.VoidFunctionComponent<StatusChartProps> = (
             align-items: flex-start;
             display: flex;
             flex-grow: 1;
-            height: calc(50vw - 56px);
+            height: 640px;
             justify-content: center;
+            margin-top: -15%;
             width: 100%;
             * {
-              font-size: 1.2vw;
+              font-size: 1.6rem;
             }
           `,
           !isDesktop &&
             css`
-              height: calc(100vw - 48px);
+              height: 320px;
+              margin-top: -12%;
               * {
                 font-size: 1rem;
               }
@@ -103,10 +105,10 @@ export const StatusChart: React.VoidFunctionComponent<StatusChartProps> = (
         ]}
       >
         <ResponsiveContainer
-          height={isDesktop ? "80%" : "100%"}
-          width={isDesktop ? "80%" : "100%"}
+          height={isDesktop ? "100%" : "100%"}
+          width={isDesktop ? "100%" : "100%"}
         >
-          <RadarChart data={data} outerRadius="70%">
+          <RadarChart data={data} outerRadius="60%">
             <PolarGrid />
             <PolarAngleAxis dataKey="status" />
             <PolarRadiusAxis angle={90} domain={[0, FULL_MARK]} tickCount={4} />

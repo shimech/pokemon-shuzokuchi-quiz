@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import React from "react";
+import { HintPanel } from "./HintPanel";
 import { NumQuiz } from "./NumQuiz";
 import { StatusChart } from "./StatusChart";
 import { useQuiz } from "./useQuiz";
@@ -65,6 +66,12 @@ export const Quiz: React.VoidFunctionComponent<QuizProps> = (props) => {
               `
             }
           >
+            <HintPanel
+              css={css`
+                margin-bottom: 24px;
+              `}
+              pokemon={props.pokemon}
+            />
             {props.pokemon.name}
           </div>
         </div>
