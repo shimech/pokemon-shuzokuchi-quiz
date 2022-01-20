@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import React from "react";
+import { AnswerForm } from "./AnswerForm";
 import { HintPanel } from "./HintPanel";
 import { NumQuiz } from "./NumQuiz";
 import { StatusChart } from "./StatusChart";
@@ -72,7 +73,7 @@ export const Quiz: React.VoidFunctionComponent<QuizProps> = (props) => {
               `}
               pokemon={props.pokemon}
             />
-            {props.pokemon.name}
+            <AnswerForm />
           </div>
         </div>
         <NextPageLink>次へ</NextPageLink>
