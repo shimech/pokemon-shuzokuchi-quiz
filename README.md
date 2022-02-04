@@ -9,11 +9,11 @@
 ローカルサーバ起動
 
 ```shell
-yarn run dev
+npm run dev
 ```
 
 データベースのマイグレーション
 
 ```shell
-yarn run migrate
+npm run migrate
 ```

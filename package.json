@@ -50,9 +50,9 @@
   },
   "lint-staged": {
     "*.@(ts|tsx)": [
-      "yarn run lint",
-      "yarn run format",
-      "yarn run lint:fix"
+      "npm run lint",
+      "npm run format",
+      "npm run lint:fix"
     ]
   }
 }
