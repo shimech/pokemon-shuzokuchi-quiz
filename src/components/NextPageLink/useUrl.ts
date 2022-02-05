@@ -3,7 +3,7 @@ import { QuizContext } from "@/contexts/QuizContextProvider";
 import { ResultContext } from "@/contexts/ResultContextProvider";
 
 export const useUrl = (): string => {
-  const [url, setUrl] = React.useState("");
+  const [url, setUrl] = React.useState("#");
   const quiz = React.useContext(QuizContext);
   const result = React.useContext(ResultContext);
 

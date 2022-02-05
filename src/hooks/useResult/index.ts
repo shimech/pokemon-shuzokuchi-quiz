@@ -1,0 +1,1 @@
+export { useResult } from "./useResult";
