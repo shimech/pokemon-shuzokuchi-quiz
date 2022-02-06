@@ -15,7 +15,6 @@ export const Footer: React.VoidFunctionComponent = () => {
           display: flex;
           height: ${theme.footer.height}px;
           justify-content: center;
-          width: 100vw;
           span,
           a {
             color: ${theme.colors.white};
