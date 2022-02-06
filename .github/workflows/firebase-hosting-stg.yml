@@ -25,4 +25,4 @@ jobs:
           npm run export
       - name: Deploy to staging
         run: |
-          npm run deploy --token=${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_SHUZOKUCHI_QUIZ_STG }}
+          npm run deploy -- --token=${{ secrets.FIREBASE_SERVICE_ACCOUNT_POKEMON_SHUZOKUCHI_QUIZ_STG }}
