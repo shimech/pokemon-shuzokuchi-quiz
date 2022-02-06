@@ -1,0 +1,1 @@
+export { NumQuiz } from "./NumQuiz";

@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import React from "react";
-import { NumQuiz } from "./NumQuiz/NumQuiz";
-import { StatusChart } from "./StatusChart/StatusChart";
+import { NumQuiz } from "./NumQuiz";
+import { StatusChart } from "./StatusChart";
 import { useQuiz } from "./useQuiz";
 import { Main } from "@/components/Main";
 import { NextPageLink } from "@/components/NextPageLink";
