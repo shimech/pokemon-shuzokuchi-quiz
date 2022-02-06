@@ -7,7 +7,7 @@ import { Main } from "@/components/Main";
 export const Top: React.VoidFunctionComponent = () => (
   <Main
     css={css`
-      padding: 20px 0;
+      padding: 24px 0 40px;
     `}
   >
     <div
@@ -16,13 +16,11 @@ export const Top: React.VoidFunctionComponent = () => (
         flex-direction: column;
       `}
     >
-      <div
+      <QuizConditionPanel
         css={css`
-          margin-bottom: 16px;
+          margin-bottom: 24px;
         `}
-      >
-        <QuizConditionPanel />
-      </div>
+      />
       <QuizStartLink />
     </div>
   </Main>

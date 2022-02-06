@@ -1,12 +1,17 @@
 import { css } from "@emotion/react";
 import React from "react";
-import { OtherConditionButton } from "./OtherConditionButton";
-import { RegionConditionButton } from "./RegionConditionButton";
+import { ConditionButton } from "./ConditionButton";
 import { useQuizConditionPanel } from "./useQuizConditionPanel";
 import { REGION } from "@/constants/region";
 import type { Region } from "@/types/Region";
 
-export const QuizConditionPanel: React.VoidFunctionComponent = () => {
+type QuizConditionPanelProps = {
+  className?: string;
+};
+
+export const QuizConditionPanel: React.VoidFunctionComponent<
+  QuizConditionPanelProps
+> = (props) => {
   const {
     isDesktop,
     quizCondition,
@@ -18,6 +23,7 @@ export const QuizConditionPanel: React.VoidFunctionComponent = () => {
 
   return (
     <div
+      className={props.className}
       css={css`
         align-items: center;
         display: flex;
@@ -33,27 +39,26 @@ export const QuizConditionPanel: React.VoidFunctionComponent = () => {
             display: flex;
             height: 4.8rem;
             justify-content: center;
-            margin-bottom: 20px;
-            width: 220px;
+            margin-bottom: 16px;
+            width: 21.6rem;
           `,
           !isDesktop &&
             css`
               border-left: 2px solid ${theme.colors.black};
               border-right: 2px solid ${theme.colors.black};
-              height: 2.4rem;
-              width: 96px;
+              height: 3.6rem;
+              width: 13.6rem;
             `,
         ]}
       >
         <h2
           css={[
             css`
-              font-family: Kosugi Maru, sans-serif;
               font-size: 3.2rem;
             `,
             !isDesktop &&
               css`
-                font-size: 1.6rem;
+                font-size: 2.4rem;
               `,
           ]}
         >
@@ -70,18 +75,18 @@ export const QuizConditionPanel: React.VoidFunctionComponent = () => {
           `,
           !isDesktop &&
             css`
-              grid-template-columns: 80px 80px 80px 80px;
+              grid-template-columns: 96px 96px 96px;
             `,
         ]}
       >
         {Object.keys(REGION).map((region: Region, i) => (
-          <RegionConditionButton
+          <ConditionButton
             key={i}
             include={quizCondition.includeRegion[region]}
             onClick={handleRegionClick(region)}
           >
             {REGION[region]}
-          </RegionConditionButton>
+          </ConditionButton>
         ))}
       </div>
       <div
@@ -90,12 +95,12 @@ export const QuizConditionPanel: React.VoidFunctionComponent = () => {
           width: 100%;
         `}
       >
-        <OtherConditionButton
+        <ConditionButton
           include={quizCondition.includeMegaEvolution}
           onClick={handleMegaEvolutionClick}
         >
           メガシンカ・ゲンシカイキを含む
-        </OtherConditionButton>
+        </ConditionButton>
       </div>
       <div
         css={css`
@@ -103,12 +108,12 @@ export const QuizConditionPanel: React.VoidFunctionComponent = () => {
           width: 100%;
         `}
       >
-        <OtherConditionButton
+        <ConditionButton
           include={quizCondition.includeSameStatus}
           onClick={handleSameStatusClick}
         >
           同一種族値のポケモンを含む
-        </OtherConditionButton>
+        </ConditionButton>
       </div>
       <div
         css={css`
@@ -116,12 +121,12 @@ export const QuizConditionPanel: React.VoidFunctionComponent = () => {
           width: 100%;
         `}
       >
-        <OtherConditionButton
+        <ConditionButton
           include={quizCondition.includeBeforeEvolution}
           onClick={handleBeforeEvolutionClick}
         >
           進化前のポケモンを含む
-        </OtherConditionButton>
+        </ConditionButton>
       </div>
     </div>
   );

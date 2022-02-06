@@ -36,7 +36,8 @@ export const NextPageLink: React.FunctionComponent<NextPageLinkProps> = (
               height: 100%;
               transition: background-color ${theme.transition}ms;
               width: 100%;
-              &:hover {
+              &:hover,
+              &:active {
                 background-color: ${theme.colors.blue};
               }
               & > span {

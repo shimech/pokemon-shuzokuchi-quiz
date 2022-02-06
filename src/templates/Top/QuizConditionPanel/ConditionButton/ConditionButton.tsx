@@ -1,17 +1,17 @@
 import { css } from "@emotion/react";
 import React from "react";
-import { useOtherConditionButton } from "./useOtherConditionButton";
+import { useRegionConditionButton } from "./useConditionButton";
 import { Button } from "@/components/Button";
 
-type OtherConditionButtonProps = {
+type ConditionButtonProps = {
   include: boolean;
   onClick?: VoidFunction;
 };
 
-export const OtherConditionButton: React.FunctionComponent<
-  OtherConditionButtonProps
-> = (props) => {
-  const { isDesktop } = useOtherConditionButton();
+export const ConditionButton: React.FunctionComponent<ConditionButtonProps> = (
+  props,
+) => {
+  const { isDesktop } = useRegionConditionButton();
 
   return (
     <Button
@@ -26,13 +26,12 @@ export const OtherConditionButton: React.FunctionComponent<
           }
           & > span {
             color: ${theme.colors.white};
-            font-family: Kosugi Maru, sans-serif;
             font-size: 1.8rem;
           }
         `,
         !isDesktop &&
           css`
-            height: 2.8rem;
+            height: 3.2rem;
             & > span {
               font-size: 1.2rem;
             }
