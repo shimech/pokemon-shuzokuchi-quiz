@@ -17,7 +17,7 @@ export const useNextPageLink = (onClick?: VoidFunction) => {
 
   const handleLinkClick = () => {
     setDisabled(true);
-    setResult.increment("numQuiz");
+    setResult.increment("quizCount");
     if (onClick) {
       onClick();
     }

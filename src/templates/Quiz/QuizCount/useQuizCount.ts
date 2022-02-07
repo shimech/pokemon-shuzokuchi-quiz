@@ -3,16 +3,16 @@ import React from "react";
 import { ResultContext } from "@/contexts/ResultContextProvider";
 import { useDesktop } from "@/hooks/useDesktop";
 
-export const useNumQuiz = () => {
+export const useQuizCount = () => {
   const isDesktop = useDesktop();
-  const { numQuiz } = React.useContext(ResultContext);
+  const { quizCount } = React.useContext(ResultContext);
   const router = useRouter();
 
   React.useEffect(() => {
-    if (numQuiz === 0) {
+    if (quizCount === 0) {
       router.push("/");
     }
-  }, [numQuiz]);
+  }, [quizCount]);
 
-  return { isDesktop, numQuiz };
+  return { isDesktop, quizCount };
 };

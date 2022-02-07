@@ -1,5 +1,5 @@
 import React from "react";
-import { NUM_QUIZ_ALL } from "@/constants/numQuizAll";
+import { ALL_QUIZ_COUNT } from "@/constants/allQuizCount";
 import { REGION } from "@/constants/region";
 import { usePokemon } from "@/hooks/usePokemon";
 import type { Pokemon } from "@/types/Pokemon";
@@ -36,7 +36,7 @@ const selectRandomQuiz = (
   }
 
   const quiz: Quiz = [];
-  for (let i = 0; i < NUM_QUIZ_ALL; i++) {
+  for (let i = 0; i < ALL_QUIZ_COUNT; i++) {
     const index = Math.floor(Math.random() * candidates.length);
     const pokemon = candidates.splice(index, 1)[0];
     quiz.push(pokemon);

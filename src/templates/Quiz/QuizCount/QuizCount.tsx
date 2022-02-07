@@ -1,10 +1,10 @@
 import { css } from "@emotion/react";
 import React from "react";
-import { useNumQuiz } from "./useNumQuiz";
-import { NUM_QUIZ_ALL } from "@/constants/numQuizAll";
+import { useQuizCount } from "./useQuizCount";
+import { ALL_QUIZ_COUNT } from "@/constants/allQuizCount";
 
-export const NumQuiz: React.VoidFunctionComponent = () => {
-  const { isDesktop, numQuiz } = useNumQuiz();
+export const QuizCount: React.VoidFunctionComponent = () => {
+  const { isDesktop, quizCount } = useQuizCount();
 
   return (
     <div
@@ -47,9 +47,9 @@ export const NumQuiz: React.VoidFunctionComponent = () => {
             `,
         ]}
       >
-        {numQuiz}
+        {quizCount}
       </strong>
-      /{NUM_QUIZ_ALL}
+      /{ALL_QUIZ_COUNT}
     </div>
   );
 };

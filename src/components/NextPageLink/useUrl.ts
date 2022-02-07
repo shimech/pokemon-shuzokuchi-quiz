@@ -9,9 +9,9 @@ export const useUrl = () => {
   const result = React.useContext(ResultContext);
 
   React.useEffect(() => {
-    if (result.numQuiz < 10) {
+    if (result.quizCount < 10) {
       if (quiz.length && quiz.every((pokemon) => !!pokemon)) {
-        setUrl(`/quiz/${quiz[result.numQuiz].id}`);
+        setUrl(`/quiz/${quiz[result.quizCount].id}`);
       }
     } else {
       setUrl("/result");

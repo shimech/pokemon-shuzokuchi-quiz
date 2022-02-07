@@ -3,9 +3,9 @@ import { useResultContextProvider } from "./useResultContextProvider";
 import type { Result } from "@/types/Result";
 
 const initialValue: Result = {
-  numQuiz: 0,
-  numCorrect: 0,
-  numHint: 0,
+  quizCount: 0,
+  correctCount: 0,
+  hintCount: 0,
 };
 
 export const ResultContext = React.createContext(initialValue);

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const useFooter = (): number => {
+export const useFooter = () => {
   const [year, setYear] = React.useState(0);
 
   React.useEffect(() => {

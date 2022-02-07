@@ -1,5 +1,5 @@
 export type Result = {
-  numQuiz: number;
-  numCorrect: number;
-  numHint: number;
+  quizCount: number;
+  correctCount: number;
+  hintCount: number;
 };

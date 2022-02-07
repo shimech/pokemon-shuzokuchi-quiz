@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import React from "react";
 import { AnswerForm } from "./AnswerForm";
 import { HintPanel } from "./HintPanel";
-import { NumQuiz } from "./NumQuiz";
+import { QuizCount } from "./QuizCount";
 import { StatusChart } from "./StatusChart";
 import { useQuiz } from "./useQuiz";
 import { Main } from "@/components/Main";
@@ -34,7 +34,7 @@ export const Quiz: React.VoidFunctionComponent<QuizProps> = (props) => {
             margin-bottom: 8px;
           `}
         >
-          <NumQuiz />
+          <QuizCount />
         </div>
         <div
           css={[

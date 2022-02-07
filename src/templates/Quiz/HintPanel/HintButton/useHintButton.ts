@@ -9,7 +9,7 @@ export const useHintButton = () => {
 
   const handleHintButtonClick = () => {
     setOpen(true);
-    setResultContext.increment("numHint");
+    setResultContext.increment("hintCount");
   };
 
   return { open, handleHintButtonClick, isDesktop };
