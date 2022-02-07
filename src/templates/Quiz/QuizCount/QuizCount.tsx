@@ -3,11 +3,18 @@ import React from "react";
 import { useQuizCount } from "./useQuizCount";
 import { ALL_QUIZ_COUNT } from "@/constants/allQuizCount";
 
-export const QuizCount: React.VoidFunctionComponent = () => {
+type QuizCountProps = {
+  className?: string;
+};
+
+export const QuizCount: React.VoidFunctionComponent<QuizCountProps> = (
+  props,
+) => {
   const { isDesktop, quizCount } = useQuizCount();
 
   return (
     <div
+      className={props.className}
       css={(theme) => [
         css`
           background-color: ${theme.colors.black};

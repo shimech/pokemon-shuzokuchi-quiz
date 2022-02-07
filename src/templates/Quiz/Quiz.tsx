@@ -4,9 +4,9 @@ import { AnswerForm } from "./AnswerForm";
 import { HintPanel } from "./HintPanel";
 import { QuizCount } from "./QuizCount";
 import { StatusChart } from "./StatusChart";
+import { TwitterLink } from "./TwitterLink";
 import { useQuiz } from "./useQuiz";
 import { Main } from "@/components/Main";
-import { NextPageLink } from "@/components/NextPageLink";
 import type { Pokemon } from "@/types/Pokemon";
 
 export type QuizProps = { pokemon: Pokemon };
@@ -31,10 +31,15 @@ export const Quiz: React.VoidFunctionComponent<QuizProps> = (props) => {
         <div
           css={css`
             display: flex;
-            margin-bottom: 8px;
+            margin-bottom: 32px;
           `}
         >
-          <QuizCount />
+          <QuizCount
+            css={css`
+              margin-right: auto;
+            `}
+          />
+          <TwitterLink status={props.pokemon.status} />
         </div>
         <div
           css={[
@@ -68,15 +73,20 @@ export const Quiz: React.VoidFunctionComponent<QuizProps> = (props) => {
             }
           >
             <HintPanel
-              css={css`
-                margin-bottom: 24px;
-              `}
+              css={[
+                css`
+                  margin-bottom: 56px;
+                `,
+                !isDesktop &&
+                  css`
+                    margin-bottom: 32px;
+                  `,
+              ]}
               pokemon={props.pokemon}
             />
             <AnswerForm />
           </div>
         </div>
-        <NextPageLink>次へ</NextPageLink>
       </div>
     </Main>
   );
