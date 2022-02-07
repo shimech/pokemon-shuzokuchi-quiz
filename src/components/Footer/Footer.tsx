@@ -36,7 +36,7 @@ export const Footer: React.VoidFunctionComponent = () => {
       <Link passHref href="https://twitter.com/poke_kiyomaro">
         <a
           css={(theme) => css`
-            transition: color ${theme.transition}ms;
+            transition: color ${theme.duration}ms;
             &:hover {
               color: ${theme.colors.blue};
             }

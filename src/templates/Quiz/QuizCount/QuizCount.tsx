@@ -16,7 +16,7 @@ export const QuizCount: React.VoidFunctionComponent = () => {
           font-family: Otomanopee One, sans-serif;
           line-height: 1;
           padding: 12px 24px;
-          transition: box-shadow ${theme.transition}ms;
+          transition: box-shadow ${theme.duration}ms;
           &:hover {
             box-shadow: 4px 4px 4px ${theme.colors.blue};
           }

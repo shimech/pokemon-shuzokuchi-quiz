@@ -40,6 +40,7 @@ export const HintButton: React.VoidFunctionComponent<HintButtonProps> = (
           & > span > p {
             color: ${theme.colors.white};
             font-size: 1.6rem;
+            margin: 2px 0;
           }
         `,
         open &&

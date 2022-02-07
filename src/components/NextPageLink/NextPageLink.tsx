@@ -38,7 +38,7 @@ export const NextPageLink: React.FunctionComponent<NextPageLinkProps> = (
             css`
               background-color: ${theme.colors.black};
               height: 100%;
-              transition: background-color ${theme.transition}ms;
+              transition: background-color ${theme.duration}ms;
               width: 100%;
               &:hover,
               &:active {

@@ -83,7 +83,7 @@ export const Header: React.VoidFunctionComponent = () => {
                 min-width: 48px;
                 padding: 0;
                 text-align: center;
-                transition: background-color ${theme.transition}ms;
+                transition: background-color ${theme.duration}ms;
                 width: 100%;
                 &:hover {
                   background-color: ${theme.colors.blue};
