@@ -59,7 +59,7 @@ export const AnswerForm: React.VoidFunctionComponent = () => {
           `
         }
       >
-        回答
+        解答
       </Button>
     </form>
   );
