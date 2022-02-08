@@ -2,7 +2,6 @@ import { css } from "@emotion/react";
 import React from "react";
 import { TwitterShareButton, TwitterIcon } from "react-share";
 import { useTwitterLink } from "./useTwitterLink";
-import { Button } from "@/components/Button";
 import { HASHTAGS } from "@/constants/hashtags";
 import { PRODUCTION_URL } from "@/constants/productionUrl";
 import type { Status } from "@/types/Status";
@@ -17,39 +16,46 @@ export const TwitterLink: React.VoidFunctionComponent<TwitterLinkProps> = (
   const { isDesktop, title } = useTwitterLink(props.status);
 
   return (
-    <TwitterShareButton hashtags={HASHTAGS} title={title} url={PRODUCTION_URL}>
-      <Button
-        css={(theme) => [
+    <TwitterShareButton
+      css={(theme) => [
+        css`
+          align-items: center;
+          border-radius: 18px;
+          display: flex;
+          height: 36px;
+          transition: background-color ${theme.duration}ms;
+          &:hover,
+          &:active {
+            background-color: rgba(0, 0, 0, 0.04) !important;
+          }
+        `,
+        !isDesktop &&
           css`
-            align-items: center;
-            display: flex;
-            border-radius: 18px;
-            transition: background-color ${theme.duration}ms;
+            border-radius: 12px;
+            height: 24px;
+          `,
+      ]}
+      hashtags={HASHTAGS}
+      title={title}
+      url={PRODUCTION_URL}
+    >
+      <TwitterIcon round size={isDesktop ? 36 : 24} />
+      <span
+        css={[
+          css`
+            color: rgb(0, 172, 237);
+            font-size: 1.6rem;
+            margin: 0 12px 0 6px;
           `,
           !isDesktop &&
             css`
-              border-radius: 12px;
+              font-size: 1.2rem;
+              margin: 0 8px 0 4px;
             `,
         ]}
       >
-        <TwitterIcon round size={isDesktop ? 36 : 24} />
-        <span
-          css={[
-            css`
-              color: rgb(0, 172, 237);
-              font-size: 1.6rem;
-              margin: 0 12px 0 6px;
-            `,
-            !isDesktop &&
-              css`
-                font-size: 1.2rem;
-                margin: 0 8px 0 4px;
-              `,
-          ]}
-        >
-          この問題をシェア
-        </span>
-      </Button>
+        この問題をシェア
+      </span>
     </TwitterShareButton>
   );
 };
