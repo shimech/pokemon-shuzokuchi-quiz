@@ -57,15 +57,18 @@ export const AnswerForm: React.VoidFunctionComponent = () => {
             height: 100%;
             transition: background-color ${theme.duration}ms;
             min-width: 6rem;
+            &:hover,
+            &:active {
+              background-color: rgba(0, 0, 0, 0.04);
+            }
             & > span {
               color: ${theme.colors.white};
               font-size: 1.6rem;
               transition: color ${theme.duration}ms;
             }
-            &:hover {
-              & > span {
-                color: ${theme.colors.blue};
-              }
+            &:hover > span,
+            &:active > span {
+              color: ${theme.colors.blue};
             }
           `
         }
