@@ -30,6 +30,7 @@ export const Quiz: React.VoidFunctionComponent<QuizProps> = (props) => {
       >
         <div
           css={css`
+            align-items: center;
             display: flex;
             margin-bottom: 32px;
           `}

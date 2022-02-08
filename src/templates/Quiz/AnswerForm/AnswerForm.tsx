@@ -45,7 +45,7 @@ export const AnswerForm: React.VoidFunctionComponent = () => {
             border-radius: 4px;
             height: 100%;
             transition: background-color ${theme.duration}ms;
-            width: 6rem;
+            min-width: 6rem;
             & > span {
               color: ${theme.colors.white};
               font-size: 1.6rem;
