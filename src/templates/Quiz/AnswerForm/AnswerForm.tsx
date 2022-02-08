@@ -11,6 +11,7 @@ export const AnswerForm: React.VoidFunctionComponent = () => {
       css={css`
         display: flex;
         height: 4rem;
+        max-width: 100%;
       `}
       onSubmit={handleSubmit}
     >
