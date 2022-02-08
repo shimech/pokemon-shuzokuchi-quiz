@@ -21,6 +21,8 @@ export const TwitterLink: React.VoidFunctionComponent<TwitterLinkProps> = (
       <Button
         css={(theme) => [
           css`
+            align-items: center;
+            display: flex;
             border-radius: 18px;
             transition: background-color ${theme.duration}ms;
           `,
