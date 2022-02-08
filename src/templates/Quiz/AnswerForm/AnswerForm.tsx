@@ -4,20 +4,26 @@ import { useAnswerForm } from "./useAnswerForm";
 import { Button } from "@/components/Button";
 
 export const AnswerForm: React.VoidFunctionComponent = () => {
-  const { answer, handleInputChange, handleSubmit } = useAnswerForm();
+  const { isDesktop, answer, handleInputChange, handleSubmit } =
+    useAnswerForm();
 
   return (
     <form
-      css={css`
-        display: flex;
-        height: 4rem;
-        max-width: 100%;
-      `}
+      css={[
+        css`
+          display: flex;
+          height: 4rem;
+        `,
+        !isDesktop &&
+          css`
+            max-width: calc(100vw - 30px);
+          `,
+      ]}
       onSubmit={handleSubmit}
     >
       <input
         autoComplete="off"
-        css={(theme) =>
+        css={(theme) => [
           css`
             background-color: #fff;
             border: none;
@@ -31,8 +37,12 @@ export const AnswerForm: React.VoidFunctionComponent = () => {
             &:focus {
               outline: 3px solid ${theme.colors.blue};
             }
-          `
-        }
+          `,
+          !isDesktop &&
+            css`
+              font-size: 1.4rem;
+            `,
+        ]}
         name="answer"
         placeholder="ポケモンの名前を入力"
         type="text"

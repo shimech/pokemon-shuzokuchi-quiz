@@ -1,6 +1,8 @@
 import React from "react";
+import { useDesktop } from "@/hooks/useDesktop";
 
 export const useAnswerForm = () => {
+  const isDesktop = useDesktop();
   const [answer, setAnswer] = React.useState("");
   const handleInputChange: React.ChangeEventHandler<HTMLInputElement> = (
     event,
@@ -10,5 +12,5 @@ export const useAnswerForm = () => {
     setAnswer("");
   };
 
-  return { answer, handleInputChange, handleSubmit };
+  return { isDesktop, answer, handleInputChange, handleSubmit };
 };
