@@ -4,6 +4,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { PokemonsContextProvider } from "@/contexts/PokemonsContextProvider";
 import { QuizConditionContextProvider } from "@/contexts/QuizConditionContextProvider";
 import { QuizContextProvider } from "@/contexts/QuizContextProvider";
 import { ResultContextProvider } from "@/contexts/ResultContextProvider";
@@ -39,14 +40,16 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
     </Head>
     <ThemeProvider theme={theme}>
       <StylesProvider injectFirst>
-        <QuizConditionContextProvider>
-          <QuizContextProvider>
-            <ResultContextProvider>
-              <Header />
-              <Component {...pageProps} />
-            </ResultContextProvider>
-          </QuizContextProvider>
-        </QuizConditionContextProvider>
+        <PokemonsContextProvider>
+          <QuizConditionContextProvider>
+            <QuizContextProvider>
+              <ResultContextProvider>
+                <Header />
+                <Component {...pageProps} />
+              </ResultContextProvider>
+            </QuizContextProvider>
+          </QuizConditionContextProvider>
+        </PokemonsContextProvider>
         <Footer />
       </StylesProvider>
     </ThemeProvider>

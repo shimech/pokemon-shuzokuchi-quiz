@@ -1,7 +1,7 @@
 import React from "react";
+import { PokemonsContext } from "../PokemonsContextProvider";
 import { ALL_QUIZ_COUNT } from "@/constants/allQuizCount";
 import { REGION } from "@/constants/region";
-import { usePokemon } from "@/hooks/usePokemon";
 import type { Pokemon } from "@/types/Pokemon";
 import type { Quiz } from "@/types/Quiz";
 import type { QuizCondition } from "@/types/QuizCondition";
@@ -47,7 +47,7 @@ const selectRandomQuiz = (
 
 export const useQuiz = (quizCondition: QuizCondition) => {
   const [quiz, setQuiz] = React.useState<Quiz>([]);
-  const pokemons = usePokemon();
+  const pokemons = React.useContext(PokemonsContext);
 
   React.useEffect(() => {
     const quiz = selectRandomQuiz(pokemons, quizCondition);

@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import { fetchPokemons } from "@/hooks/usePokemon";
+import { fetchPokemons } from "@/contexts/PokemonsContextProvider";
 import { Quiz, QuizProps } from "@/templates/Quiz";
 
 type QuizPageProps = QuizProps;

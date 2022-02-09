@@ -1,15 +1,8 @@
 import React from "react";
+import { fetchPokemons } from "./fetchPokemons";
 import type { Pokemon } from "@/types/Pokemon";
 
-export const fetchPokemons = async (): Promise<Pokemon[]> => {
-  const response = await fetch(
-    "https://raw.githubusercontent.com/shimech/pokemon-shuzokuchi-quiz-neo/main/public/api/pokemons.json",
-  );
-  const pokemons: Pokemon[] = await response.json();
-  return pokemons;
-};
-
-export const usePokemon = () => {
+export const usePokemons = () => {
   const [pokemons, setPokemons] = React.useState<Pokemon[]>([]);
 
   React.useEffect(() => {

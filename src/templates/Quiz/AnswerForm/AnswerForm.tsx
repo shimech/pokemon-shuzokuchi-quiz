@@ -1,18 +1,25 @@
 import { css } from "@emotion/react";
 import React from "react";
+import { Input } from "./Input";
+import { Suggestion } from "./Suggestion";
 import { useAnswerForm } from "./useAnswerForm";
 import { Button } from "@/components/Button";
 
 export const AnswerForm: React.VoidFunctionComponent = () => {
-  const { isDesktop, answer, handleInputChange, handleSubmit } =
-    useAnswerForm();
+  const {
+    isDesktop,
+    answer,
+    isSuggestionShow,
+    handleInputChange,
+    handleSuggestionClick,
+    handleSubmit,
+  } = useAnswerForm();
 
   return (
     <form
       css={[
         css`
           display: flex;
-          height: 4rem;
         `,
         !isDesktop &&
           css`
@@ -21,40 +28,30 @@ export const AnswerForm: React.VoidFunctionComponent = () => {
       ]}
       onSubmit={handleSubmit}
     >
-      <input
-        autoComplete="off"
-        css={(theme) => [
-          css`
-            background-color: #fff;
-            border: none;
-            border-radius: 4px;
-            flex-grow: 1;
-            font-size: 2rem;
-            margin-right: 8px;
-            outline: none;
-            padding-left: 8px;
-            transition: outline 100ms;
-            &:focus {
-              outline: 3px solid ${theme.colors.blue};
-            }
-          `,
-          !isDesktop &&
-            css`
-              font-size: 1.4rem;
-            `,
-        ]}
-        name="answer"
-        placeholder="ポケモンの名前を入力"
-        type="text"
-        value={answer}
-        onChange={handleInputChange}
-      />
+      <div
+        css={css`
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          margin-right: 8px;
+        `}
+      >
+        <Input answer={answer} onChange={handleInputChange} />
+        <Suggestion
+          answer={answer}
+          css={css`
+            margin-top: 8px;
+          `}
+          show={isSuggestionShow}
+          onClick={handleSuggestionClick}
+        />
+      </div>
       <Button
         css={(theme) =>
           css`
             background-color: ${theme.colors.blue};
             border-radius: 4px;
-            height: 100%;
+            height: 4rem;
             transition: background-color ${theme.duration}ms;
             min-width: 6rem;
             &:hover,
