@@ -25,6 +25,10 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
         href="https://fonts.googleapis.com/css?family=Otomanopee+One"
         rel="stylesheet"
       />
+      <meta
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0"
+        name="viewport"
+      />
       <meta content="ポケモン種族値クイズに挑戦しよう！" name="description" />
       <meta content="ポケモン種族値クイズ" property="og:title" />
       <meta
