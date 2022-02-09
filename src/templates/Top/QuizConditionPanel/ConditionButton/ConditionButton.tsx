@@ -24,7 +24,7 @@ export const ConditionButton: React.FunctionComponent<ConditionButtonProps> = (
             background-color: ${theme.colors.black};
             opacity: 0.8;
           }
-          & > span {
+          & > span.MuiButton-label {
             color: ${theme.colors.white};
             font-size: 1.8rem;
           }
@@ -32,14 +32,14 @@ export const ConditionButton: React.FunctionComponent<ConditionButtonProps> = (
         !isDesktop &&
           css`
             height: 3.2rem;
-            & > span {
+            & > span.MuiButton-label {
               font-size: 1.2rem;
             }
           `,
         !props.include &&
           css`
             background-color: ${theme.colors.gray};
-            & > span {
+            & > span.MuiButton-label {
               color: ${theme.colors.darkGray};
             }
             &:hover {

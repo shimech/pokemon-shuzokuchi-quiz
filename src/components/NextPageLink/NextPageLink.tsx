@@ -44,7 +44,7 @@ export const NextPageLink: React.FunctionComponent<NextPageLinkProps> = (
               &:active {
                 background-color: ${theme.colors.blue};
               }
-              & > span {
+              & > span.MuiButton-label {
                 color: ${theme.colors.white};
                 font-weight: bold;
               }

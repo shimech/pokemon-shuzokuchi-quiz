@@ -42,14 +42,14 @@ export const Suggestion: React.VoidFunctionComponent<SuggestionProps> = (
                   height: 4rem;
                   padding-left: 8px;
                   width: 100%;
-                  & > span {
+                  & > span.MuiButton-label {
                     font-size: 1.6rem;
                     justify-content: flex-start;
                   }
                 `,
                 !isDesktop &&
                   css`
-                    & > span {
+                    & > span.MuiButton-label {
                       font-size: 1.2rem;
                     }
                   `,

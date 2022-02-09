@@ -33,11 +33,11 @@ export const HintButton: React.VoidFunctionComponent<HintButtonProps> = (
             background-color: ${theme.colors.black};
             opacity: 0.8;
           }
-          & > span {
+          & > span.MuiButton-label {
             flex-direction: column;
             font-size: 1.8rem;
           }
-          & > span > p {
+          & > span.MuiButton-label > p {
             color: ${theme.colors.white};
             font-size: 1.6rem;
             margin: 2px 0;
@@ -46,7 +46,7 @@ export const HintButton: React.VoidFunctionComponent<HintButtonProps> = (
         open &&
           css`
             background-color: ${theme.colors.gray};
-            & > span > p {
+            & > span.MuiButton-label > p {
               color: ${theme.colors.darkGray};
             }
             &:hover {
@@ -56,7 +56,7 @@ export const HintButton: React.VoidFunctionComponent<HintButtonProps> = (
         !isDesktop &&
           css`
             height: 96px;
-            & > span > p {
+            & > span.MuiButton-label > p {
               font-size: 1rem;
             }
           `,

@@ -11,17 +11,17 @@ export const QuizStartLink: React.VoidFunctionComponent = () => {
       css={[
         css`
           height: 4rem;
-          & > button {
+          & > button.MuiButton-root {
             border-radius: 2rem;
           }
-          & > button > span {
+          & > button.MuiButton-root > span.MuiButton-label {
             font-size: 2rem;
           }
         `,
         !isDesktop &&
           css`
             height: 3.2rem;
-            & > button > span {
+            & > button.MuiButton-root > span.MuiButton-label {
               font-size: 1.6rem;
             }
           `,

@@ -58,13 +58,13 @@ export const AnswerForm: React.VoidFunctionComponent = () => {
             &:active {
               background-color: rgba(0, 0, 0, 0.04);
             }
-            & > span {
+            & > span.MuiButton-label {
               color: ${theme.colors.white};
               font-size: 1.6rem;
               transition: color ${theme.duration}ms;
             }
-            &:hover > span,
-            &:active > span {
+            &:hover > span.MuiButton-label,
+            &:active > span.MuiButton-label {
               color: ${theme.colors.blue};
             }
           `

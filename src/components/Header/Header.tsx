@@ -88,7 +88,7 @@ export const Header: React.VoidFunctionComponent = () => {
                 &:hover {
                   background-color: ${theme.colors.blue};
                 }
-                & > span {
+                & > span.MuiButton-label {
                   color: ${theme.colors.white};
                   font-family: pokemon-font;
                   font-size: 2rem;
