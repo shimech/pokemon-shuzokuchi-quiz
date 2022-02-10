@@ -40,7 +40,8 @@ export const HintButton: React.VoidFunctionComponent<HintButtonProps> = (
           & > span.MuiButton-label > p {
             color: ${theme.colors.white};
             font-size: 1.6rem;
-            margin: 2px 0;
+            line-height: 1;
+            margin: 8px 0;
           }
         `,
         open &&
