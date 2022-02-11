@@ -23,6 +23,6 @@ jobs:
         run: |
           npm run build
           npm run export
-      - name: Deploy to staging
+      - name: Deploy to Production
         run: |
           npm run deploy:ci:prd -- --token ${{ secrets.FIREBASE_TOKEN }}
