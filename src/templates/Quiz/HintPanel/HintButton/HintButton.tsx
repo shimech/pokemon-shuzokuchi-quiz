@@ -28,6 +28,7 @@ export const HintButton: React.VoidFunctionComponent<HintButtonProps> = (
           background-color: ${theme.colors.black};
           border-radius: 8px;
           height: 192px;
+          transition: opacity ${theme.duration}ms;
           width: 100%;
           &:hover {
             background-color: ${theme.colors.black};
