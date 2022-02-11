@@ -2,12 +2,5 @@
 
 ## リンク
 
+- [Production](https://pokemon-shuzokuchi-quiz.firebaseapp.com/)
 - [Staging](https://pokemon-shuzokuchi-quiz-stg.firebaseapp.com/)
-
-## コマンド一覧
-
-ローカルサーバ起動
-
-```shell
-npm run dev
-```
