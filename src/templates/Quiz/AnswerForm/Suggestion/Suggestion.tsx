@@ -17,52 +17,57 @@ export const Suggestion: React.VoidFunctionComponent<SuggestionProps> = (
 ) => {
   const { isDesktop, suggestions } = useSuggestion(props.answer);
 
-  if (props.show && suggestions.length > 0) {
-    return (
-      <ul
-        className={props.className}
-        css={css`
-          max-height: ${4 * MAX_SUGGESTION}rem;
-          overflow-y: scroll;
-          width: 100%;
-        `}
-      >
-        {suggestions.map((suggestion, i) => (
-          <li
-            key={i}
-            css={css`
-              background-color: #fff;
-              min-height: 4rem;
-              width: 100%;
-            `}
-          >
-            <Button
-              css={[
-                css`
-                  height: 4rem;
-                  justify-content: flex-start;
-                  padding-left: 8px;
-                  width: 100%;
-                  & > span.MuiButton-label {
-                    font-size: 1.6rem;
-                  }
-                `,
-                !isDesktop &&
+  return (
+    <div
+      className={props.className}
+      css={css`
+        height: ${4 * MAX_SUGGESTION}rem;
+        width: 100%;
+      `}
+    >
+      {props.show && suggestions.length > 0 && (
+        <ul
+          css={css`
+            height: 100%;
+            overflow-y: scroll;
+            width: 100%;
+          `}
+        >
+          {suggestions.map((suggestion, i) => (
+            <li
+              key={i}
+              css={css`
+                background-color: #fff;
+                min-height: 4rem;
+                width: 100%;
+              `}
+            >
+              <Button
+                css={[
                   css`
+                    height: 4rem;
+                    justify-content: flex-start;
+                    padding-left: 8px;
+                    width: 100%;
                     & > span.MuiButton-label {
-                      font-size: 1.2rem;
+                      font-size: 1.6rem;
                     }
                   `,
-              ]}
-              onClick={() => props.onClick(suggestion)}
-            >
-              {suggestion}
-            </Button>
-          </li>
-        ))}
-      </ul>
-    );
-  } else {
-    return null;
-  }
+                  !isDesktop &&
+                    css`
+                      & > span.MuiButton-label {
+                        font-size: 1.2rem;
+                      }
+                    `,
+                ]}
+                onClick={() => props.onClick(suggestion)}
+              >
+                {suggestion}
+              </Button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
 };
