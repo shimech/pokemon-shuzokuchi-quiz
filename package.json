@@ -1,58 +1,53 @@
 {
   "name": "pokemon-shuzokuchi-quiz-neo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "migrate": "sh ./bin/migrate.sh",
     "prepare": "husky install",
     "lint": "eslint ./src/**/*.{ts,tsx}",
     "lint:fix": "eslint ./src/**/*.{ts,tsx} --fix",
     "format": "prettier --write \"./src/**/*.ts\" \"./src/**/*.tsx\"",
-    "deploy": "firebase deploy"
+    "deploy:prd": "npm run build && npm run export && firebase use production && firebase deploy",
+    "deploy:stg": "npm run build && npm run export && firebase use staging && firebase deploy"
   },
   "dependencies": {
-    "@emotion/react": "^11.4.1",
+    "@emotion/react": "^11.7.1",
     "@material-ui/core": "^4.12.3",
     "@types/react-autosuggest": "^10.1.5",
-    "next": "11.0.1",
+    "next": "^12.0.10",
     "react": "17.0.2",
-    "react-autosuggest": "^10.1.0",
     "react-dom": "17.0.2",
-    "recharts": "^2.0.9"
+    "react-share": "^4.4.0",
+    "recharts": "^2.1.8"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.0",
+    "@babel/core": "^7.17.0",
     "@emotion/babel-preset-css-prop": "^11.2.0",
-    "@types/node": "^15.14.0",
-    "@types/react": "^17.0.13",
-    "@types/react-redux": "^7.1.16",
-    "@types/redux-logger": "^3.0.8",
-    "@typescript-eslint/eslint-plugin": "^4.29.3",
-    "@typescript-eslint/parser": "^4.29.3",
-    "dotenv": "^10.0.0",
-    "eslint": "^7.32.0",
-    "eslint-config-next": "^11.0.1",
+    "@types/node": "^17.0.16",
+    "@types/react": "^17.0.39",
+    "@types/recharts": "^1.8.23",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.8.0",
+    "eslint-config-next": "^12.0.10",
     "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-react": "^7.24.0",
-    "firebase-tools": "^9.14.0",
-    "husky": "^7.0.0",
-    "lint-staged": "^11.0.0",
-    "prettier": "2.3.2",
-    "stylelint": "^13.13.1",
-    "stylelint-order": "^4.1.0",
-    "stylelint-prettier": "^1.2.0",
-    "typescript": "^4.4.2"
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-react": "^7.28.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.3",
+    "prettier": "2.5.1",
+    "typescript": "^4.5.5"
   },
   "lint-staged": {
     "*.@(ts|tsx)": [
-      "yarn run lint",
-      "yarn run format",
-      "yarn run lint:fix"
+      "npm run lint",
+      "npm run format",
+      "npm run lint:fix"
     ]
   }
 }

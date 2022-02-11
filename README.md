@@ -9,11 +9,5 @@
 ローカルサーバ起動
 
 ```shell
-yarn run dev
-```
-
-データベースのマイグレーション
-
-```shell
-yarn run migrate
+npm run dev
 ```

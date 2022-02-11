@@ -4,12 +4,13 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import "@/styles/reset.css";
-import "@/styles/pokemon-font/pokemon-font.css";
+import { PokemonsContextProvider } from "@/contexts/PokemonsContextProvider";
 import { QuizConditionContextProvider } from "@/contexts/QuizConditionContextProvider";
 import { QuizContextProvider } from "@/contexts/QuizContextProvider";
 import { ResultContextProvider } from "@/contexts/ResultContextProvider";
 import { theme } from "@/styles/theme";
+import "@/styles/reset.css";
+import "@/styles/pokemon-font/pokemon-font.css";
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
   <>
@@ -23,6 +24,10 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
       <link
         href="https://fonts.googleapis.com/css?family=Otomanopee+One"
         rel="stylesheet"
+      />
+      <meta
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0"
+        name="viewport"
       />
       <meta content="ポケモン種族値クイズに挑戦しよう！" name="description" />
       <meta content="ポケモン種族値クイズ" property="og:title" />
@@ -39,14 +44,16 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
     </Head>
     <ThemeProvider theme={theme}>
       <StylesProvider injectFirst>
-        <QuizConditionContextProvider>
-          <QuizContextProvider>
-            <ResultContextProvider>
-              <Header />
-              <Component {...pageProps} />
-            </ResultContextProvider>
-          </QuizContextProvider>
-        </QuizConditionContextProvider>
+        <PokemonsContextProvider>
+          <QuizConditionContextProvider>
+            <QuizContextProvider>
+              <ResultContextProvider>
+                <Header />
+                <Component {...pageProps} />
+              </ResultContextProvider>
+            </QuizContextProvider>
+          </QuizConditionContextProvider>
+        </PokemonsContextProvider>
         <Footer />
       </StylesProvider>
     </ThemeProvider>

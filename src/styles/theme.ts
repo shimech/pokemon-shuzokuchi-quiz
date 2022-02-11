@@ -11,7 +11,7 @@ export const theme: Theme = {
     blue: "#0077b6",
     purple: "#8338ec",
   },
-  transition: 500,
+  duration: 500,
   header: {
     height: 48,
   },

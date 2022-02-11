@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import { fetchPokemons } from "@/hooks/usePokemon";
+import { fetchPokemons } from "@/contexts/PokemonsContextProvider";
 import { Quiz, QuizProps } from "@/templates/Quiz";
 
 type QuizPageProps = QuizProps;
@@ -13,15 +13,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-export const getStaticProps: GetStaticProps<QuizPageProps, { id: string }> =
-  async ({ params: { id } }) => {
-    const pokemons = await fetchPokemons();
-    const pokemon = pokemons.find((pokemon) => pokemon.id === id);
-    return { props: { pokemon } };
-  };
+export const getStaticProps: GetStaticProps<
+  QuizPageProps,
+  { id: string }
+> = async ({ params: { id } }) => {
+  const pokemons = await fetchPokemons();
+  const pokemon = pokemons.find((pokemon) => pokemon.id === id);
+  return { props: { pokemon } };
+};
 
-const QuizPage = ({ pokemon }: QuizPageProps): JSX.Element => (
-  <Quiz pokemon={pokemon} />
-);
+const QuizPage = (props: QuizPageProps): JSX.Element => <Quiz {...props} />;
 
 export default QuizPage;
