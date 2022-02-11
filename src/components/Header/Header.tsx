@@ -5,7 +5,7 @@ import { Button } from "../Button";
 import { useHeader } from "./useHeader";
 
 export const Header: React.VoidFunctionComponent = () => {
-  const { isDesktop, handleHomeLinkClick } = useHeader();
+  const { isDesktop, handleTopLinkClick } = useHeader();
 
   return (
     <header
@@ -75,7 +75,7 @@ export const Header: React.VoidFunctionComponent = () => {
               height: 100%;
               width: 100%;
             `}
-            onClick={handleHomeLinkClick}
+            onClick={handleTopLinkClick}
           >
             <Button
               css={(theme) => css`

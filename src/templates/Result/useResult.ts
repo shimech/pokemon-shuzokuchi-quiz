@@ -15,7 +15,7 @@ export const useResult = () => {
 
   React.useEffect(() => {
     if (result.quizCount < ALL_QUIZ_COUNT) {
-      router.push("/");
+      // router.push("/");
     }
   }, [result]);
 

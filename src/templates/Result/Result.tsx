@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import React from "react";
+import { TopLink } from "./TopLink";
 import { useResult } from "./useResult";
 import { Main } from "@/components/Main";
 import { TwitterLink } from "@/components/TwitterLink";
@@ -57,6 +58,7 @@ export const Result: React.VoidFunctionComponent = () => {
         css={css`
           border-radius: 20px;
           height: 40px;
+          margin-bottom: 48px;
           & > span {
             margin: 0 16px 0 8px;
           }
@@ -66,6 +68,7 @@ export const Result: React.VoidFunctionComponent = () => {
       >
         結果をシェアする
       </TwitterLink>
+      <TopLink />
     </Main>
   );
 };
