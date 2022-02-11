@@ -23,6 +23,9 @@ jobs:
         run: |
           npm run build
           npm run export
+      - name: Install firebase-tools
+        run: npm install -g firebase-tools
       - name: Deploy to Production
         run: |
-          npm run deploy:ci:prd -- --token=${{ secrets.FIREBASE_TOKEN }}
+          firebase use production
+          firebase deploy --token=${{ secrets.FIREBASE_TOKEN }}
