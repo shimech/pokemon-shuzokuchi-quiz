@@ -37,7 +37,7 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
       />
       <meta content="summary" name="twitter:card" />
       <meta
-        content="https://pokemon-shuzokuchi-quiz.firebaseapp.com/img/thumbnail.png"
+        content="https://pokemon-shuzokuchi-quiz.firebaseapp.com/images/thumbnail.png"
         name="twitter:image"
       />
       <meta content="@poke_kiyomaro" name="twitter:site" />
