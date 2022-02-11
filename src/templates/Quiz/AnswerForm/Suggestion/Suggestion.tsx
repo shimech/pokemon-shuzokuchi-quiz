@@ -43,12 +43,16 @@ export const Suggestion: React.VoidFunctionComponent<SuggestionProps> = (
               `}
             >
               <Button
-                css={[
+                css={(theme) => [
                   css`
                     height: 4rem;
                     justify-content: flex-start;
                     padding-left: 8px;
+                    transition: background-color ${theme.duration}ms;
                     width: 100%;
+                    &:hover {
+                      background-color: rgba(0, 0, 0, 0.04);
+                    }
                     & > span.MuiButton-label {
                       font-size: 1.6rem;
                     }
