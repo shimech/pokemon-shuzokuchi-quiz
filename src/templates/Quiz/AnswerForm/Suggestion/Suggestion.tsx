@@ -29,7 +29,7 @@ export const Suggestion: React.VoidFunctionComponent<SuggestionProps> = (
         <ul
           css={css`
             height: 100%;
-            overflow-y: scroll;
+            overflow-y: auto;
             width: 100%;
           `}
         >
