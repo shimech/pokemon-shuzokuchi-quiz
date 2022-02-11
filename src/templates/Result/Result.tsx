@@ -48,11 +48,17 @@ export const Result: React.VoidFunctionComponent = () => {
         点！
       </p>
       <p
-        css={css`
-          margin-bottom: 40px;
-        `}
+        css={[
+          css`
+            margin-bottom: 40px;
+          `,
+          !isDesktop &&
+            css`
+              margin-bottom: 32px;
+            `,
+        ]}
       >
-        ヒント使用回数:{" "}
+        ヒント使用回数:
         <span
           css={css`
             font-family: Otomanopee One, sans-serif;
@@ -64,15 +70,27 @@ export const Result: React.VoidFunctionComponent = () => {
         回
       </p>
       <TwitterLink
-        css={css`
-          border-radius: 20px;
-          height: 40px;
-          margin-bottom: 48px;
-          & > span {
-            margin: 0 16px 0 8px;
-          }
-        `}
-        iconSize={40}
+        css={[
+          css`
+            border-radius: 20px;
+            height: 40px;
+            margin-bottom: 48px;
+            & > span {
+              margin: 0 16px 0 8px;
+            }
+          `,
+          !isDesktop &&
+            css`
+              border-radius: 12px;
+              height: 24px;
+              margin-bottom: 32px;
+              & > span {
+                font-size: 1.6rem;
+                margin: 0 12px 0 6px;
+              }
+            `,
+        ]}
+        iconSize={isDesktop ? 40 : 24}
         title={title}
       >
         結果をシェアする

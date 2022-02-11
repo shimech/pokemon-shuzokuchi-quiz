@@ -33,8 +33,8 @@ export const TwitterLink: React.VoidFunctionComponent<TwitterLinkProps> = (
             border-radius: 12px;
             height: 24px;
             & > span {
-              font-size: 1.6rem;
-              margin: 0 12px 0 6px;
+              font-size: 1.2rem;
+              margin: 0 8px 0 4px;
             }
           `,
       ]}
