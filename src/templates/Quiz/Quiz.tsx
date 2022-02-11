@@ -40,7 +40,10 @@ export const Quiz: React.VoidFunctionComponent<QuizProps> = (props) => {
               margin-right: auto;
             `}
           />
-          <TwitterLink status={props.pokemon.status} />
+          <TwitterLink
+            iconSize={isDesktop ? 36 : 24}
+            status={props.pokemon.status}
+          />
         </div>
         <div
           css={[

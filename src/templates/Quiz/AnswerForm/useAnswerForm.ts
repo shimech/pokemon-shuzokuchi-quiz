@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import React from "react";
+import { SetResultContext } from "@/contexts/ResultContextProvider";
 import { useDesktop } from "@/hooks/useDesktop";
 
 export const useAnswerForm = (pokemonName: string) => {
@@ -7,6 +8,7 @@ export const useAnswerForm = (pokemonName: string) => {
   const [answer, setAnswer] = React.useState("");
   const [isSuggestionShow, setSuggestionShow] = React.useState(false);
   const [isCorrect, setCorrect] = React.useState(false);
+  const setResult = React.useContext(SetResultContext);
   const [isResultModalOpen, setResultModalOpen] = React.useState(false);
   const [isLoading, setLoading] = React.useState(false);
   const router = useRouter();
@@ -25,7 +27,11 @@ export const useAnswerForm = (pokemonName: string) => {
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
-    setCorrect(answer === pokemonName);
+    const isCorrect = answer === pokemonName;
+    setCorrect(isCorrect);
+    if (isCorrect) {
+      setResult.increment("correctCount");
+    }
     setResultModalOpen(true);
   };
 
