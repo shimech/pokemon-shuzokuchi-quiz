@@ -5,7 +5,7 @@ import { useTopLink } from "./useTopLink";
 import { Button } from "@/components/Button";
 
 export const TopLink: React.VoidFunctionComponent = () => {
-  const { isDesktop, handleTopLinkClick } = useTopLink();
+  const { isDesktop } = useTopLink();
 
   return (
     <Link passHref href="/">
@@ -22,7 +22,6 @@ export const TopLink: React.VoidFunctionComponent = () => {
               width: 240px;
             `,
         ]}
-        onClick={handleTopLinkClick}
       >
         <Button
           css={(theme) => [

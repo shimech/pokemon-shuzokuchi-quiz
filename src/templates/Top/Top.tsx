@@ -2,26 +2,31 @@ import { css } from "@emotion/react";
 import React from "react";
 import { QuizConditionPanel } from "./QuizConditionPanel";
 import { QuizStartLink } from "./QuizStartLink";
+import { useTop } from "./useTop";
 import { Main } from "@/components/Main";
 
-export const Top: React.VoidFunctionComponent = () => (
-  <Main
-    css={css`
-      padding: 24px 0 40px;
-    `}
-  >
-    <div
+export const Top: React.VoidFunctionComponent = () => {
+  useTop();
+
+  return (
+    <Main
       css={css`
-        display: flex;
-        flex-direction: column;
+        padding: 24px 0 40px;
       `}
     >
-      <QuizConditionPanel
+      <div
         css={css`
-          margin-bottom: 24px;
+          display: flex;
+          flex-direction: column;
         `}
-      />
-      <QuizStartLink />
-    </div>
-  </Main>
-);
+      >
+        <QuizConditionPanel
+          css={css`
+            margin-bottom: 24px;
+          `}
+        />
+        <QuizStartLink />
+      </div>
+    </Main>
+  );
+};
