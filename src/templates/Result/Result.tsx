@@ -52,7 +52,16 @@ export const Result: React.VoidFunctionComponent = () => {
           margin-bottom: 40px;
         `}
       >
-        ヒント使用回数: {hintCount}回
+        ヒント使用回数:{" "}
+        <span
+          css={css`
+            font-family: Otomanopee One, sans-serif;
+            margin-right: 4px;
+          `}
+        >
+          {hintCount}
+        </span>
+        回
       </p>
       <TwitterLink
         css={css`

@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import React from "react";
 import { ALL_QUIZ_COUNT } from "@/constants/allQuizCount";
 import { ResultContext } from "@/contexts/ResultContextProvider";
@@ -11,13 +10,6 @@ export const useResult = () => {
   const result = React.useContext(ResultContext);
   const [score, setScore] = React.useState(0);
   const [title, setTitle] = React.useState("");
-  const router = useRouter();
-
-  React.useEffect(() => {
-    if (result.quizCount < ALL_QUIZ_COUNT) {
-      // router.push("/");
-    }
-  }, [result]);
 
   React.useEffect(() => {
     setScore(result.correctCount * (MAX_SCORE / ALL_QUIZ_COUNT));

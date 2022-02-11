@@ -54,7 +54,7 @@ export const QuizCount: React.VoidFunctionComponent<QuizCountProps> = (
             `,
         ]}
       >
-        {quizCount}
+        {Math.min(quizCount, ALL_QUIZ_COUNT)}
       </strong>
       /{ALL_QUIZ_COUNT}
     </div>

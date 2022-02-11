@@ -10,7 +10,7 @@ export const useQuizCount = () => {
 
   React.useEffect(() => {
     if (quizCount === 0) {
-      router.push("/");
+      router.push("/error");
     }
   }, [quizCount]);
 
