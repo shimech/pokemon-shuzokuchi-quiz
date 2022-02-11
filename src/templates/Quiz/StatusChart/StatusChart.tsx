@@ -44,13 +44,13 @@ export const StatusChart: React.VoidFunctionComponent<StatusChartProps> = (
       fullMark: FULL_MARK,
     },
     {
-      status: `とくこう: ${props.contact}`,
-      value: props.contact,
+      status: `とくぼう: ${props.defense}`,
+      value: props.defense,
       fullMark: FULL_MARK,
     },
     {
-      status: `とくぼう: ${props.defense}`,
-      value: props.defense,
+      status: `とくこう: ${props.contact}`,
+      value: props.contact,
       fullMark: FULL_MARK,
     },
   ];

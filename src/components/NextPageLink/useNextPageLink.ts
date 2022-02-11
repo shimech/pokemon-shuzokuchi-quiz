@@ -15,10 +15,7 @@ export const useNextPageLink = (onClick?: VoidFunction) => {
     setDisabled(false);
   }, [router.query]);
 
-  const handleLinkClick: React.MouseEventHandler<HTMLAnchorElement> = (
-    event,
-  ) => {
-    event.preventDefault();
+  const handleClick: React.MouseEventHandler<HTMLButtonElement> = () => {
     setDisabled(true);
     setResult.increment("quizCount");
     if (onClick) {
@@ -27,5 +24,5 @@ export const useNextPageLink = (onClick?: VoidFunction) => {
     router.push(url);
   };
 
-  return { disabled, url, isValidUrl, handleLinkClick };
+  return { disabled, url, isValidUrl, handleClick };
 };

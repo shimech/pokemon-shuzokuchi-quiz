@@ -116,12 +116,10 @@ export const ResultModal: React.VoidFunctionComponent<ResultModalProps> = (
         <NextPageLink
           css={[
             css`
+              border-radius: 2rem;
               height: 4rem;
               width: 320px;
-              & > button.MuiButton-root {
-                border-radius: 2rem;
-              }
-              & > button.MuiButton-root > span.MuiButton-label {
+              & > span.MuiButton-label {
                 font-size: 2rem;
               }
             `,
@@ -129,7 +127,7 @@ export const ResultModal: React.VoidFunctionComponent<ResultModalProps> = (
               css`
                 height: 2.8rem;
                 width: 160px;
-                & > button.MuiButton-root > span.MuiButton-label {
+                & > span.MuiButton-label {
                   font-size: 1.4rem;
                 }
               `,

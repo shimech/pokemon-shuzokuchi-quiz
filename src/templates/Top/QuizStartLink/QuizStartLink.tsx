@@ -10,18 +10,16 @@ export const QuizStartLink: React.VoidFunctionComponent = () => {
     <NextPageLink
       css={[
         css`
+          border-radius: 2rem;
           height: 4rem;
-          & > button.MuiButton-root {
-            border-radius: 2rem;
-          }
-          & > button.MuiButton-root > span.MuiButton-label {
+          & > span.MuiButton-label {
             font-size: 2rem;
           }
         `,
         !isDesktop &&
           css`
             height: 3.2rem;
-            & > button.MuiButton-root > span.MuiButton-label {
+            & > span.MuiButton-label {
               font-size: 1.6rem;
             }
           `,
