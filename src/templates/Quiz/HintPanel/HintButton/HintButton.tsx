@@ -63,6 +63,7 @@ export const HintButton: React.VoidFunctionComponent<HintButtonProps> = (
             }
           `,
       ]}
+      disabled={open}
       onClick={handleHintButtonClick}
     >
       {open ? props.texts.content : props.texts.category}
