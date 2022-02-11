@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "pokemon-shuzokuchi-quiz-stg"
+    "production": "pokemon-shuzokuchi-quiz",
+    "staging": "pokemon-shuzokuchi-quiz-stg"
   }
 }

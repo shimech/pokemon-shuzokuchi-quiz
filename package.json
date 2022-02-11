@@ -11,7 +11,10 @@
     "lint": "eslint ./src/**/*.{ts,tsx}",
     "lint:fix": "eslint ./src/**/*.{ts,tsx} --fix",
     "format": "prettier --write \"./src/**/*.ts\" \"./src/**/*.tsx\"",
-    "deploy": "firebase deploy"
+    "deploy:prd": "npm run build && npm run export && firebase use production && firebase deploy",
+    "deploy:stg": "npm run build && npm run export && firebase use staging && firebase deploy",
+    "deploy:ci:prd": "firebase use production && firebase deploy",
+    "deploy:ci:stg": "firebase use staging && firebase deploy"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",

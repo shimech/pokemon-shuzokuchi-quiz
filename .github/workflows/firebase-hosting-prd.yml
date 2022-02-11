@@ -1,4 +1,4 @@
-name: Deploy to Firebase Hosting (STG)
+name: Deploy to Firebase Hosting
 
 on:
   push:
@@ -25,4 +25,4 @@ jobs:
           npm run export
       - name: Deploy to staging
         run: |
-          npm run deploy:ci:stg -- --token ${{ secrets.FIREBASE_TOKEN }}
+          npm run deploy:ci:prd -- --token ${{ secrets.FIREBASE_TOKEN }}
