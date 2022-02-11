@@ -85,7 +85,7 @@ export const Quiz: React.VoidFunctionComponent<QuizProps> = (props) => {
               ]}
               pokemon={props.pokemon}
             />
-            <AnswerForm />
+            <AnswerForm pokemonName={props.pokemon.name} />
           </div>
         </div>
       </div>

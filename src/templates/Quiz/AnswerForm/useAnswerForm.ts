@@ -1,10 +1,15 @@
+import { useRouter } from "next/router";
 import React from "react";
 import { useDesktop } from "@/hooks/useDesktop";
 
-export const useAnswerForm = () => {
+export const useAnswerForm = (pokemonName: string) => {
   const isDesktop = useDesktop();
   const [answer, setAnswer] = React.useState("");
   const [isSuggestionShow, setSuggestionShow] = React.useState(false);
+  const [isCorrect, setCorrect] = React.useState(false);
+  const [isResultModalOpen, setResultModalOpen] = React.useState(false);
+  const [isLoading, setLoading] = React.useState(false);
+  const router = useRouter();
 
   const handleInputChange: React.ChangeEventHandler<HTMLInputElement> = (
     event,
@@ -20,15 +25,30 @@ export const useAnswerForm = () => {
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
-    setAnswer("");
+    setCorrect(answer === pokemonName);
+    setResultModalOpen(true);
   };
+
+  const toNextQuiz = () => {
+    setAnswer("");
+    setResultModalOpen(false);
+    setLoading(true);
+  };
+
+  React.useEffect(() => {
+    setLoading(false);
+  }, [router.query]);
 
   return {
     isDesktop,
     answer,
     isSuggestionShow,
+    isCorrect,
+    isResultModalOpen,
+    isLoading,
     handleInputChange,
     handleSuggestionClick,
     handleSubmit,
+    toNextQuiz,
   };
 };

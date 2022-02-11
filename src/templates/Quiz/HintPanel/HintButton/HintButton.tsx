@@ -34,6 +34,7 @@ export const HintButton: React.VoidFunctionComponent<HintButtonProps> = (
             opacity: 0.8;
           }
           & > span.MuiButton-label {
+            display: flex;
             flex-direction: column;
             font-size: 1.8rem;
           }
