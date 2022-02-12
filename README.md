@@ -2,5 +2,5 @@
 
 ## リンク
 
-- [Production](https://pokemon-shuzokuchi-quiz.firebaseapp.com/)
+- [Production](https://pokemon-shuzokuchi-quiz.kiyomaro.app)
 - [Staging](https://pokemon-shuzokuchi-quiz-stg.firebaseapp.com/)
