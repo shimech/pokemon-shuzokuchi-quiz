@@ -4,7 +4,7 @@ import { useUrl } from "./useUrl";
 import { SetResultContext } from "@/contexts/ResultContextProvider";
 import { sleep } from "@/utils/sleep";
 
-const SLEEP_MS = 50;
+const SLEEP_MS = 100;
 
 export const useNextPageLink = (
   dependencies: boolean[],
