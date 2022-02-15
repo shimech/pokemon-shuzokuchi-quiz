@@ -2,19 +2,18 @@ import { css } from "@emotion/react";
 import { Dialog, DialogProps } from "@material-ui/core";
 import React from "react";
 import { useResultModal } from "./useResultModal";
-import { NextPageLink } from "@/components/NextPageLink";
+import { NextPageLink, NextPageLinkProps } from "@/components/NextPageLink";
 
 type ResultModalProps = {
   answer: string;
   correct: boolean;
   pokemonName: string;
-  toNextQuiz: VoidFunction;
-} & DialogProps;
+} & NextPageLinkProps &
+  DialogProps;
 
 export const ResultModal: React.VoidFunctionComponent<ResultModalProps> = (
   props,
 ) => {
-  const { answer, correct, pokemonName, toNextQuiz, ...dialogProps } = props;
   const { isDesktop } = useResultModal();
 
   return (
@@ -24,7 +23,7 @@ export const ResultModal: React.VoidFunctionComponent<ResultModalProps> = (
           border-radius: 16px;
         }
       `}
-      {...dialogProps}
+      open={props.open}
     >
       <div
         css={[
@@ -45,7 +44,7 @@ export const ResultModal: React.VoidFunctionComponent<ResultModalProps> = (
         <p
           css={(theme) => [
             css`
-              color: ${correct ? theme.colors.red : theme.colors.blue};
+              color: ${props.correct ? theme.colors.red : theme.colors.blue};
               font-size: 3.2rem;
               margin-bottom: 16px;
             `,
@@ -55,7 +54,7 @@ export const ResultModal: React.VoidFunctionComponent<ResultModalProps> = (
               `,
           ]}
         >
-          {correct ? "せいかい！" : "ざんねん..."}
+          {props.correct ? "せいかい！" : "ざんねん..."}
         </p>
         <div
           css={[
@@ -63,7 +62,7 @@ export const ResultModal: React.VoidFunctionComponent<ResultModalProps> = (
               align-items: center;
               background-blend-mode: lighten;
               background-color: rgba(255, 255, 255, 0.7);
-              background-image: url(/images/${correct
+              background-image: url(/images/${props.correct
                 ? "correct"
                 : "incorrect"}.svg);
               background-repeat: no-repeat;
@@ -94,10 +93,10 @@ export const ResultModal: React.VoidFunctionComponent<ResultModalProps> = (
                 `,
             ]}
           >
-            {pokemonName}
+            {props.pokemonName}
           </p>
         </div>
-        {!correct && (
+        {!props.correct && (
           <p
             css={[
               css`
@@ -110,7 +109,7 @@ export const ResultModal: React.VoidFunctionComponent<ResultModalProps> = (
                 `,
             ]}
           >
-            あなたのこたえ: {answer}
+            あなたのこたえ: {props.answer}
           </p>
         )}
         <NextPageLink
@@ -132,7 +131,8 @@ export const ResultModal: React.VoidFunctionComponent<ResultModalProps> = (
                 }
               `,
           ]}
-          onClick={toNextQuiz}
+          dependencies={props.dependencies}
+          onClick={props.onClick}
         >
           次の問題へ
         </NextPageLink>
