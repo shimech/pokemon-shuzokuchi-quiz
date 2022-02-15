@@ -36,9 +36,9 @@ export const useAnswerForm = (pokemonName: string) => {
   };
 
   const toNextQuiz = () => {
-    setAnswer("");
     setResultModalOpen(false);
     setLoading(true);
+    setAnswer("");
   };
 
   React.useEffect(() => {
