@@ -3,15 +3,19 @@ import React from "react";
 import { Button } from "../Button";
 import { useNextPageLink } from "./useNextPageLink";
 
-type NextPageLinkProps = {
+export type NextPageLinkProps = {
   className?: string;
+  dependencies?: React.DependencyList;
   onClick?: VoidFunction;
 };
 
 export const NextPageLink: React.FunctionComponent<NextPageLinkProps> = (
   props,
 ) => {
-  const { disabled, isValidUrl, handleClick } = useNextPageLink(props.onClick);
+  const { disabled, isValidUrl, handleClick } = useNextPageLink(
+    props.dependencies || [],
+    props.onClick,
+  );
 
   return (
     <Button
