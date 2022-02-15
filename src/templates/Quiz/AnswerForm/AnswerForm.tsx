@@ -94,7 +94,7 @@ export const AnswerForm: React.VoidFunctionComponent<AnswerFormProps> = (
       <ResultModal
         answer={answer}
         correct={isCorrect}
-        dependencies={[isResultModalOpen]}
+        dependencies={[!isResultModalOpen]}
         open={isResultModalOpen}
         pokemonName={props.pokemonName}
         onClick={toNextQuiz}

@@ -4,7 +4,7 @@ import { useUrl } from "./useUrl";
 import { SetResultContext } from "@/contexts/ResultContextProvider";
 
 export const useNextPageLink = (
-  dependencies: React.DependencyList,
+  dependencies: boolean[],
   onClick?: VoidFunction,
 ) => {
   const [disabled, setDisabled] = React.useState(false);
@@ -14,7 +14,7 @@ export const useNextPageLink = (
   const router = useRouter();
 
   React.useEffect(() => {
-    if (isRedirectable) {
+    if (isRedirectable && dependencies.every((dependency) => dependency)) {
       router.push(url);
     }
   }, [isRedirectable, ...dependencies]);
