@@ -5,7 +5,7 @@ import { useNextPageLink } from "./useNextPageLink";
 
 export type NextPageLinkProps = {
   className?: string;
-  dependencies?: React.DependencyList;
+  dependencies?: boolean[];
   onClick?: VoidFunction;
 };
 
