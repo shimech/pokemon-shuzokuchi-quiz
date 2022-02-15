@@ -2,9 +2,12 @@ import { useRouter } from "next/router";
 import React from "react";
 import { useUrl } from "./useUrl";
 import { SetResultContext } from "@/contexts/ResultContextProvider";
+import { sleep } from "@/utils/sleep";
+
+const SLEEP_MS = 100;
 
 export const useNextPageLink = (
-  dependencies: React.DependencyList,
+  dependencies: boolean[],
   onClick?: VoidFunction,
 ) => {
   const [disabled, setDisabled] = React.useState(false);
@@ -14,8 +17,13 @@ export const useNextPageLink = (
   const router = useRouter();
 
   React.useEffect(() => {
-    if (isRedirectable) {
+    const toNextPage = async () => {
+      await sleep(SLEEP_MS);
       router.push(url);
+    };
+
+    if (isRedirectable && dependencies.every((dependency) => dependency)) {
+      toNextPage();
     }
   }, [isRedirectable, ...dependencies]);
 
