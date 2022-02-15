@@ -17,9 +17,13 @@ export const useNextPageLink = (
   const router = useRouter();
 
   React.useEffect(() => {
-    if (isRedirectable && dependencies.every((dependency) => dependency)) {
-      sleep(SLEEP_MS);
+    const toNextPage = async () => {
+      await sleep(SLEEP_MS);
       router.push(url);
+    };
+
+    if (isRedirectable && dependencies.every((dependency) => dependency)) {
+      toNextPage();
     }
   }, [isRedirectable, ...dependencies]);
 
