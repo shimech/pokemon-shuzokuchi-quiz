@@ -1,10 +1,9 @@
 name: Deploy to Firebase Hosting (STG)
 
 on:
-  pull_request:
+  push:
     branches:
       - develop
-    types: [closed]
 
 jobs:
   build-and-deploy:
@@ -12,21 +11,27 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node-version: [16.13.2]
+    env:
+      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
     steps:
       - uses: actions/checkout@v2
+
       - uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version-file: ./.node-version
+
       - name: Install dependencies
         run: npm install
+
       - name: Build and Export
         run: |
           npm run build
           npm run export
+
       - name: Install firebase-tools
         run: npm install -g firebase-tools
+
       - name: Deploy to Staging
         run: |
-          firebase use staging --token ${{ secrets.FIREBASE_TOKEN }}
-          firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
+          firebase use pokemon-shuzokuchi-quiz
+          firebase deploy --only hosting:staging

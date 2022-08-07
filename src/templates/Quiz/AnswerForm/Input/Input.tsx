@@ -7,7 +7,7 @@ type InputProps = {
   onChange: React.ChangeEventHandler<HTMLInputElement>;
 };
 
-export const Input: React.VoidFunctionComponent<InputProps> = (props) => {
+export const Input = (props: InputProps) => {
   const { isDesktop } = useInput();
 
   return (
@@ -15,14 +15,15 @@ export const Input: React.VoidFunctionComponent<InputProps> = (props) => {
       autoComplete="off"
       css={(theme) => [
         css`
+          min-height: 4rem;
+          padding-left: 8px;
+          font-size: 2rem;
           background-color: #fff;
           border: none;
           border-radius: 4px;
-          font-size: 2rem;
-          min-height: 4rem;
           outline: none;
-          padding-left: 8px;
           transition: outline 100ms;
+
           &:focus {
             outline: 3px solid ${theme.colors.blue};
           }

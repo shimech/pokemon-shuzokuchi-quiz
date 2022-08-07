@@ -21,5 +21,5 @@ export const use404 = () => {
     }
   }, [count]);
 
-  return count;
+  return { count };
 };

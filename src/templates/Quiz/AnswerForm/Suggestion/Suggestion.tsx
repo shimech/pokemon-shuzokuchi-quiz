@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import React from "react";
 import { useSuggestion } from "./useSuggestion";
 import { Button } from "@/components/Button";
 
@@ -12,56 +11,52 @@ type SuggestionProps = {
   onClick: (name: string) => void;
 };
 
-export const Suggestion: React.VoidFunctionComponent<SuggestionProps> = (
-  props,
-) => {
+export const Suggestion = (props: SuggestionProps) => {
   const { isDesktop, suggestions } = useSuggestion(props.answer);
 
   return (
     <div
       className={props.className}
       css={css`
-        height: ${4 * MAX_SUGGESTION}rem;
         width: 100%;
+        height: ${4 * MAX_SUGGESTION}rem;
       `}
     >
       {props.show && suggestions.length > 0 && (
         <ul
           css={css`
+            width: 100%;
             height: 100%;
             overflow-y: auto;
-            width: 100%;
           `}
         >
           {suggestions.map((suggestion, i) => (
             <li
               key={i}
               css={css`
-                background-color: #fff;
-                min-height: 4rem;
                 width: 100%;
+                min-height: 4rem;
+                background-color: #fff;
               `}
             >
               <Button
                 css={(theme) => [
                   css`
-                    height: 4rem;
                     justify-content: flex-start;
-                    padding-left: 8px;
-                    transition: background-color ${theme.duration}ms;
                     width: 100%;
+                    height: 4rem;
+                    padding-left: 8px;
+                    font-size: 1.6rem;
+                    color: ${theme.colors.black};
+                    transition: background-color ${theme.duration}ms;
+
                     &:hover {
-                      background-color: rgba(0, 0, 0, 0.04);
-                    }
-                    & > span.MuiButton-label {
-                      font-size: 1.6rem;
+                      background-color: rgb(0 0 0 / 4%);
                     }
                   `,
                   !isDesktop &&
                     css`
-                      & > span.MuiButton-label {
-                        font-size: 1.2rem;
-                      }
+                      font-size: 1.2rem;
                     `,
                 ]}
                 onClick={() => props.onClick(suggestion)}

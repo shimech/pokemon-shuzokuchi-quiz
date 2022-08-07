@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import React from "react";
 import { CircularProgress } from "./CircularProgress";
 import { Input } from "./Input";
 import { ResultModal } from "./ResultModal";
@@ -11,9 +10,7 @@ type AnswerFormProps = {
   pokemonName: string;
 };
 
-export const AnswerForm: React.VoidFunctionComponent<AnswerFormProps> = (
-  props,
-) => {
+export const AnswerForm = (props: AnswerFormProps) => {
   const {
     isDesktop,
     answer,
@@ -62,26 +59,24 @@ export const AnswerForm: React.VoidFunctionComponent<AnswerFormProps> = (
         <Button
           css={(theme) =>
             css`
+              min-width: 6rem;
+              height: 4rem;
+              font-size: 1.6rem;
+              color: ${theme.colors.white};
               background-color: ${theme.colors.blue};
               border-radius: 4px;
-              height: 4rem;
               transition: background-color ${theme.duration}ms;
-              min-width: 6rem;
+              transition: color ${theme.duration}ms;
+
               &:disabled {
+                color: ${theme.colors.white};
                 opacity: 0.7;
               }
+
               &:hover,
               &:active {
-                background-color: rgba(0, 0, 0, 0.04);
-              }
-              & > span.MuiButton-label {
-                color: ${theme.colors.white};
-                font-size: 1.6rem;
-                transition: color ${theme.duration}ms;
-              }
-              &:hover > span.MuiButton-label,
-              &:active > span.MuiButton-label {
                 color: ${theme.colors.blue};
+                background-color: rgb(0 0 0 / 4%);
               }
             `
           }

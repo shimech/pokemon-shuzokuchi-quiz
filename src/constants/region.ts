@@ -1,4 +1,4 @@
-import { Region } from "@/types/Region";
+import type { Region } from "@/types/Region";
 
 export const REGION: { [key in Region]: string } = {
   kanto: "カントー",

@@ -1,18 +1,17 @@
 import { css } from "@emotion/react";
-import React from "react";
 import { TopLink } from "./TopLink";
 import { useResult } from "./useResult";
 import { Main } from "@/components/Main";
 import { TwitterLink } from "@/components/TwitterLink";
 
-export const Result: React.VoidFunctionComponent = () => {
+export const Result = () => {
   const { isDesktop, hintCount, score, title } = useResult();
 
   return (
     <Main
       css={css`
-        align-items: center;
         flex-direction: column;
+        align-items: center;
         justify-content: flex-start;
         padding: 24px 0 40px;
       `}
@@ -20,8 +19,8 @@ export const Result: React.VoidFunctionComponent = () => {
       <p
         css={[
           css`
-            font-size: 3.2rem;
             margin-bottom: 24px;
+            font-size: 3.2rem;
           `,
           !isDesktop &&
             css`
@@ -33,9 +32,9 @@ export const Result: React.VoidFunctionComponent = () => {
         <strong
           css={[
             css`
-              font-family: Otomanopee One, sans-serif;
-              font-size: 4rem;
               margin: 0 8px;
+              font-family: "Otomanopee One", sans-serif;
+              font-size: 4rem;
             `,
             !isDesktop &&
               css`
@@ -61,8 +60,8 @@ export const Result: React.VoidFunctionComponent = () => {
         ヒント使用回数:
         <span
           css={css`
-            font-family: Otomanopee One, sans-serif;
             margin-right: 4px;
+            font-family: "Otomanopee One", sans-serif;
           `}
         >
           {hintCount}
@@ -72,21 +71,23 @@ export const Result: React.VoidFunctionComponent = () => {
       <TwitterLink
         css={[
           css`
-            border-radius: 20px;
             height: 40px;
             margin-bottom: 48px;
+            border-radius: 20px;
+
             & > span {
               margin: 0 16px 0 8px;
             }
           `,
           !isDesktop &&
             css`
-              border-radius: 12px;
               height: 24px;
               margin-bottom: 32px;
+              border-radius: 12px;
+
               & > span {
-                font-size: 1.6rem;
                 margin: 0 12px 0 6px;
+                font-size: 1.6rem;
               }
             `,
         ]}

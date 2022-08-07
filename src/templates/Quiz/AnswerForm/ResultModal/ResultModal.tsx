@@ -1,6 +1,5 @@
 import { css } from "@emotion/react";
-import { Dialog, DialogProps } from "@material-ui/core";
-import React from "react";
+import { Dialog, DialogProps } from "@mui/material";
 import { useResultModal } from "./useResultModal";
 import { NextPageLink, NextPageLinkProps } from "@/components/NextPageLink";
 
@@ -11,10 +10,11 @@ type ResultModalProps = {
 } & NextPageLinkProps &
   DialogProps;
 
-export const ResultModal: React.VoidFunctionComponent<ResultModalProps> = (
-  props,
-) => {
+export const ResultModal = (props: ResultModalProps) => {
   const { isDesktop } = useResultModal();
+  const backgroundImageUrl = `/images/${
+    props.correct ? "correct" : "incorrect"
+  }.svg`;
 
   return (
     <Dialog
@@ -28,25 +28,25 @@ export const ResultModal: React.VoidFunctionComponent<ResultModalProps> = (
       <div
         css={[
           css`
-            align-items: center;
             display: flex;
             flex-direction: column;
-            padding: 16px;
+            align-items: center;
             width: 480px;
+            padding: 16px;
           `,
           !isDesktop &&
             css`
-              padding: 8px;
               width: 240px;
+              padding: 8px;
             `,
         ]}
       >
         <p
           css={(theme) => [
             css`
-              color: ${props.correct ? theme.colors.red : theme.colors.blue};
-              font-size: 3.2rem;
               margin-bottom: 16px;
+              font-size: 3.2rem;
+              color: ${props.correct ? theme.colors.red : theme.colors.blue};
             `,
             !isDesktop &&
               css`
@@ -59,26 +59,24 @@ export const ResultModal: React.VoidFunctionComponent<ResultModalProps> = (
         <div
           css={[
             css`
-              align-items: center;
-              background-blend-mode: lighten;
-              background-color: rgba(255, 255, 255, 0.7);
-              background-image: url(/images/${props.correct
-                ? "correct"
-                : "incorrect"}.svg);
-              background-repeat: no-repeat;
-              background-size: 320px 320px;
               display: flex;
               flex-direction: column;
-              height: 320px;
+              align-items: center;
               justify-content: center;
-              margin-bottom: 16px;
               width: 320px;
+              height: 320px;
+              margin-bottom: 16px;
+              background-color: rgb(255 255 255 / 70%);
+              background-image: url(${backgroundImageUrl});
+              background-repeat: no-repeat;
+              background-size: 320px 320px;
+              background-blend-mode: lighten;
             `,
             !isDesktop &&
               css`
-                background-size: 160px 160px;
-                height: 160px;
                 width: 160px;
+                height: 160px;
+                background-size: 160px 160px;
               `,
           ]}
         >
@@ -100,8 +98,8 @@ export const ResultModal: React.VoidFunctionComponent<ResultModalProps> = (
           <p
             css={[
               css`
-                font-size: 1.8rem;
                 margin-bottom: 16px;
+                font-size: 1.8rem;
               `,
               !isDesktop &&
                 css`
@@ -115,20 +113,16 @@ export const ResultModal: React.VoidFunctionComponent<ResultModalProps> = (
         <NextPageLink
           css={[
             css`
-              border-radius: 2rem;
-              height: 4rem;
               width: 320px;
-              & > span.MuiButton-label {
-                font-size: 2rem;
-              }
+              height: 4rem;
+              font-size: 2rem;
+              border-radius: 2rem;
             `,
             !isDesktop &&
               css`
-                height: 2.8rem;
                 width: 160px;
-                & > span.MuiButton-label {
-                  font-size: 1.4rem;
-                }
+                height: 2.8rem;
+                font-size: 1.4rem;
               `,
           ]}
           dependencies={props.dependencies}

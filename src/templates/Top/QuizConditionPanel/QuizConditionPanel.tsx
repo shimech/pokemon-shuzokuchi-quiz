@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import React from "react";
 import { ConditionButton } from "./ConditionButton";
 import { useQuizConditionPanel } from "./useQuizConditionPanel";
 import { REGION } from "@/constants/region";
@@ -9,9 +8,7 @@ type QuizConditionPanelProps = {
   className?: string;
 };
 
-export const QuizConditionPanel: React.VoidFunctionComponent<
-  QuizConditionPanelProps
-> = (props) => {
+export const QuizConditionPanel = (props: QuizConditionPanelProps) => {
   const {
     isDesktop,
     quizCondition,
@@ -25,29 +22,29 @@ export const QuizConditionPanel: React.VoidFunctionComponent<
     <div
       className={props.className}
       css={css`
-        align-items: center;
         display: flex;
         flex-direction: column;
+        align-items: center;
       `}
     >
       <div
         css={(theme) => [
           css`
-            align-items: center;
-            border-left: 4px solid ${theme.colors.black};
-            border-right: 4px solid ${theme.colors.black};
             display: flex;
-            height: 4.8rem;
+            align-items: center;
             justify-content: center;
-            margin-bottom: 16px;
             width: 21.6rem;
+            height: 4.8rem;
+            margin-bottom: 16px;
+            border-right: 4px solid ${theme.colors.black};
+            border-left: 4px solid ${theme.colors.black};
           `,
           !isDesktop &&
             css`
-              border-left: 2px solid ${theme.colors.black};
-              border-right: 2px solid ${theme.colors.black};
-              height: 3.6rem;
               width: 13.6rem;
+              height: 3.6rem;
+              border-right: 2px solid ${theme.colors.black};
+              border-left: 2px solid ${theme.colors.black};
             `,
         ]}
       >
@@ -69,8 +66,8 @@ export const QuizConditionPanel: React.VoidFunctionComponent<
         css={[
           css`
             display: grid;
-            grid-gap: 8px;
             grid-template-columns: 120px 120px 120px 120px;
+            grid-gap: 8px;
             margin-bottom: 8px;
           `,
           !isDesktop &&
@@ -91,8 +88,8 @@ export const QuizConditionPanel: React.VoidFunctionComponent<
       </div>
       <div
         css={css`
-          margin-bottom: 8px;
           width: 100%;
+          margin-bottom: 8px;
         `}
       >
         <ConditionButton
@@ -104,8 +101,8 @@ export const QuizConditionPanel: React.VoidFunctionComponent<
       </div>
       <div
         css={css`
-          margin-bottom: 8px;
           width: 100%;
+          margin-bottom: 8px;
         `}
       >
         <ConditionButton
@@ -117,8 +114,8 @@ export const QuizConditionPanel: React.VoidFunctionComponent<
       </div>
       <div
         css={css`
-          margin-bottom: 8px;
           width: 100%;
+          margin-bottom: 8px;
         `}
       >
         <ConditionButton

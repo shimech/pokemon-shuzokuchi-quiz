@@ -1,0 +1,9 @@
+{
+  "./src/**/*.css": ["npm run stylelint:fix", "npm run format"],
+  "./src/**/*.ts": ["npm run eslint:fix", "npm run format"],
+  "./src/**/*.tsx": [
+    "npm run eslint:fix",
+    "npm run stylelint:fix",
+    "npm run format"
+  ]
+}

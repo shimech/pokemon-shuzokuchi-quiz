@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import React from "react";
 import { AnswerForm } from "./AnswerForm";
 import { HintPanel } from "./HintPanel";
 import { QuizCount } from "./QuizCount";
@@ -11,7 +10,7 @@ import type { Pokemon } from "@/types/Pokemon";
 
 export type QuizProps = { pokemon: Pokemon };
 
-export const Quiz: React.VoidFunctionComponent<QuizProps> = (props) => {
+export const Quiz = (props: QuizProps) => {
   const { isDesktop } = useQuiz();
 
   return (
@@ -24,14 +23,14 @@ export const Quiz: React.VoidFunctionComponent<QuizProps> = (props) => {
         css={css`
           display: flex;
           flex-direction: column;
-          margin: 0 24px;
           width: 100%;
+          margin: 0 24px;
         `}
       >
         <div
           css={css`
-            align-items: center;
             display: flex;
+            align-items: center;
             margin-bottom: 32px;
           `}
         >
@@ -60,8 +59,8 @@ export const Quiz: React.VoidFunctionComponent<QuizProps> = (props) => {
             css={
               isDesktop &&
               css`
-                margin-right: 32px;
                 width: 50%;
+                margin-right: 32px;
               `
             }
             name={props.pokemon.name}
@@ -71,8 +70,8 @@ export const Quiz: React.VoidFunctionComponent<QuizProps> = (props) => {
             css={
               isDesktop &&
               css`
-                margin-left: 32px;
                 width: 50%;
+                margin-left: 32px;
               `
             }
           >

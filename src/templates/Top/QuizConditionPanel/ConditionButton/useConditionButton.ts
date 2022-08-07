@@ -1,6 +1,6 @@
 import { useDesktop } from "@/hooks/useDesktop";
 
-export const useRegionConditionButton = () => {
+export const useConditionButton = () => {
   const isDesktop = useDesktop();
 
   return { isDesktop };

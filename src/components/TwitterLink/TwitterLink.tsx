@@ -1,28 +1,27 @@
 import { css } from "@emotion/react";
-import React from "react";
 import { TwitterShareButton, TwitterIcon } from "react-share";
 import { HASHTAGS } from "@/constants/hashtags";
 import { PRODUCTION_URL } from "@/constants/productionUrl";
+import type { WithChildren } from "@/types/WithChildren";
 
-export type TwitterLinkProps = {
+export type TwitterLinkProps = WithChildren<{
   className?: string;
   iconSize: number;
   title: string;
-};
+}>;
 
-export const TwitterLink: React.FunctionComponent<TwitterLinkProps> = (
-  props,
-) => (
+export const TwitterLink = (props: TwitterLinkProps) => (
   <TwitterShareButton
     className={props.className}
     css={(theme) =>
       css`
-        align-items: center;
         display: flex;
+        align-items: center;
         transition: background-color ${theme.duration}ms;
+
         &:hover,
         &:active {
-          background-color: rgba(0, 0, 0, 0.04) !important;
+          background-color: rgb(0 0 0 / 4%) !important;
         }
       `
     }
@@ -33,7 +32,7 @@ export const TwitterLink: React.FunctionComponent<TwitterLinkProps> = (
     <TwitterIcon round size={props.iconSize} />
     <span
       css={css`
-        color: rgb(0, 172, 237);
+        color: rgb(0 172 237);
       `}
     >
       {props.children}

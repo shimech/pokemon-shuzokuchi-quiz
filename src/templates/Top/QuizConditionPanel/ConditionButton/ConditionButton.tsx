@@ -1,47 +1,41 @@
 import { css } from "@emotion/react";
-import React from "react";
-import { useRegionConditionButton } from "./useConditionButton";
+import { useConditionButton } from "./useConditionButton";
 import { Button } from "@/components/Button";
+import type { WithChildren } from "@/types/WithChildren";
 
-type ConditionButtonProps = {
+type ConditionButtonProps = WithChildren<{
   include: boolean;
   onClick?: VoidFunction;
-};
+}>;
 
-export const ConditionButton: React.FunctionComponent<ConditionButtonProps> = (
-  props,
-) => {
-  const { isDesktop } = useRegionConditionButton();
+export const ConditionButton = (props: ConditionButtonProps) => {
+  const { isDesktop } = useConditionButton();
 
   return (
     <Button
       css={(theme) => [
         css`
-          background-color: ${theme.colors.black};
-          height: 4rem;
           width: 100%;
+          height: 4rem;
+          font-size: 1.8rem;
+          color: ${theme.colors.white};
+          background-color: ${theme.colors.black};
+
           &:hover {
             background-color: ${theme.colors.black};
             opacity: 0.8;
-          }
-          & > span.MuiButton-label {
-            color: ${theme.colors.white};
-            font-size: 1.8rem;
           }
         `,
         !isDesktop &&
           css`
             height: 3.2rem;
-            & > span.MuiButton-label {
-              font-size: 1.2rem;
-            }
+            font-size: 1.2rem;
           `,
         !props.include &&
           css`
+            color: ${theme.colors.darkGray};
             background-color: ${theme.colors.gray};
-            & > span.MuiButton-label {
-              color: ${theme.colors.darkGray};
-            }
+
             &:hover {
               background-color: ${theme.colors.gray};
             }

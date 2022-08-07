@@ -35,7 +35,7 @@
     "no-empty-function": 0,
     "@typescript-eslint/ban-ts-comment": 0,
     "sort-imports": 0,
-    "import/order": [2, { "alphabetize": { "order": "asc" } }],
+    "import/order": ["error", { "alphabetize": { "order": "asc" } }],
     "react/jsx-sort-props": [
       "error",
       {

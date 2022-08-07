@@ -1,1 +1,1 @@
-export const PRODUCTION_URL = "https://pokemon-shuzokuchi-quiz.firebaseapp.com";
+export const PRODUCTION_URL = "https://pokemon-shuzokuchi-quiz.kiyomaro.app";

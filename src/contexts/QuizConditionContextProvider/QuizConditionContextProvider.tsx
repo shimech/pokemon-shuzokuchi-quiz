@@ -2,6 +2,7 @@ import React from "react";
 import { useQuizConditionContextProvider } from "./useQuizConditionContextProvider";
 import type { QuizCondition } from "@/types/QuizCondition";
 import type { Region } from "@/types/Region";
+import type { WithChildren } from "@/types/WithChildren";
 
 const initialValue: QuizCondition = {
   includeRegion: {
@@ -35,8 +36,10 @@ export const SetQuizConditionContext = React.createContext<{
   reset: () => {},
 });
 
-export const QuizConditionContextProvider: React.FunctionComponent = (
-  props,
+type QuizConditionContextProviderProps = WithChildren;
+
+export const QuizConditionContextProvider = (
+  props: QuizConditionContextProviderProps,
 ) => {
   const { quizCondition, setQuizCondition } =
     useQuizConditionContextProvider(initialValue);

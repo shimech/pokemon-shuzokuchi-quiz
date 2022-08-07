@@ -1,12 +1,12 @@
 import { css } from "@emotion/react";
-import React from "react";
 import { useMain } from "./useMain";
+import type { WithChildren } from "@/types/WithChildren";
 
-type MainProps = {
+type MainProps = WithChildren<{
   className?: string;
-};
+}>;
 
-export const Main: React.FunctionComponent<MainProps> = (props) => {
+export const Main = (props: MainProps) => {
   const { isDesktop } = useMain();
 
   return (
@@ -16,11 +16,11 @@ export const Main: React.FunctionComponent<MainProps> = (props) => {
         css`
           display: flex;
           justify-content: center;
-          margin: 0 auto;
           max-width: 1280px;
           min-height: calc(
             100vh - ${theme.header.height}px - ${theme.footer.height}px
           );
+          margin: 0 auto;
         `,
         !isDesktop &&
           css`

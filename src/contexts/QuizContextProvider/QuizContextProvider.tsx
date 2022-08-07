@@ -1,10 +1,13 @@
 import React from "react";
 import { useQuizContextProvider } from "./useQuizContextProvider";
 import type { Quiz } from "@/types/Quiz";
+import type { WithChildren } from "@/types/WithChildren";
 
 export const QuizContext = React.createContext<Quiz>([]);
 
-export const QuizContextProvider: React.FunctionComponent = (props) => {
+type QuizContextProviderProps = WithChildren;
+
+export const QuizContextProvider = (props: QuizContextProviderProps) => {
   const { quiz } = useQuizContextProvider();
 
   return (

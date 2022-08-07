@@ -1,6 +1,13 @@
-import { Theme } from "@emotion/react";
+import type { Theme as EmotionTheme } from "@emotion/react";
+import { createTheme } from "@mui/material/styles";
 
-export const theme: Theme = {
+export const muiTheme = createTheme({
+  typography: {
+    fontFamily: ["Kosugi Maru", "Otomanopee One", "sans-serif"].join(","),
+  },
+});
+
+export const emotionTheme: EmotionTheme = {
   breakpoint: 768,
   colors: {
     black: "#003049",

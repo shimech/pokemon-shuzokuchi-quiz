@@ -7,5 +7,5 @@ export const useCircularProgress = () => {
     setBody(document.body);
   }, []);
 
-  return body;
+  return { body };
 };

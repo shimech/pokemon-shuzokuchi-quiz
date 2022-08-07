@@ -1,10 +1,26 @@
 {
-  "hosting": {
-    "public": "out",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+  "hosting": [
+    {
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "public": "out",
+      "redirects": [
+        {
+          "destination": "https://pokemon-shuzokuchi-quiz.kiyomaro.app/:path",
+          "source": "/:path*",
+          "type": 301
+        },
+        {
+          "destination": "https://pokemon-shuzokuchi-quiz.kiyomaro.app/",
+          "source": "/",
+          "type": 301
+        }
+      ],
+      "target": "production"
+    },
+    {
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "public": "out",
+      "target": "staging"
+    }
+  ]
 }

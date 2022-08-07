@@ -1,10 +1,9 @@
 import { css } from "@emotion/react";
 import Link from "next/link";
-import React from "react";
 import { useTopLink } from "./useTopLink";
 import { Button } from "@/components/Button";
 
-export const TopLink: React.VoidFunctionComponent = () => {
+export const TopLink = () => {
   const { isDesktop } = useTopLink();
 
   return (
@@ -13,40 +12,37 @@ export const TopLink: React.VoidFunctionComponent = () => {
         css={[
           css`
             display: block;
-            height: 4rem;
             width: 320px;
+            height: 4rem;
           `,
           !isDesktop &&
             css`
-              height: 3.2rem;
               width: 240px;
+              height: 3.2rem;
             `,
         ]}
       >
         <Button
           css={(theme) => [
             css`
-              background-color: ${theme.colors.black};
-              border-radius: 2rem;
+              width: 100%;
               height: 100%;
               padding: 0;
+              font-size: 2rem;
+              color: ${theme.colors.white};
               text-align: center;
+              background-color: ${theme.colors.black};
+              border-radius: 2rem;
               transition: background-color ${theme.duration}ms;
-              width: 100%;
+
               &:hover {
                 background-color: ${theme.colors.blue};
-              }
-              & > span.MuiButton-label {
-                color: ${theme.colors.white};
-                font-size: 2rem;
               }
             `,
             !isDesktop &&
               css`
+                font-size: 1.6rem;
                 border-radius: 1.6rem;
-                & > span.MuiButton-label {
-                  font-size: 1.6rem;
-                }
               `,
           ]}
         >
