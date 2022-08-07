@@ -32,4 +32,5 @@ jobs:
 
       - name: Deploy to Production
         run: |
+          firebase use pokemon-shuzokuchi-quiz
           firebase deploy --only hosting:production --token ${{ secrets.FIREBASE_TOKEN }}

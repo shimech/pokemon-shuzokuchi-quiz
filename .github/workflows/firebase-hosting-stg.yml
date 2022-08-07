@@ -31,4 +31,5 @@ jobs:
 
       - name: Deploy to Staging
         run: |
+          firebase use pokemon-shuzokuchi-quiz
           firebase deploy --only hosting:staging --token ${{ secrets.FIREBASE_TOKEN }}
