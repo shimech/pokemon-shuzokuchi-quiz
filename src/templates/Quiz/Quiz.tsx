@@ -1,8 +1,7 @@
 import { css } from "@emotion/react";
 import { AnswerForm } from "./AnswerForm";
 import { CircularProgress } from "./CircularProgress";
-import { HintPanel } from "./HintPanel";
-import { HintButtonOpensContextProvider } from "./HintPanel/HintButtonOpensContextProvider";
+import { HintPanel, HintButtonOpensContextProvider } from "./HintPanel";
 import { LoadingContextProvider } from "./LoadingContextProvider";
 import { QuizCount } from "./QuizCount";
 import { StatusChart } from "./StatusChart";

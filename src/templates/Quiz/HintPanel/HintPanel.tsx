@@ -1,6 +1,5 @@
 import { css } from "@emotion/react";
-import type { HintButtonTexts } from "./HintButton";
-import { HintButton } from "./HintButton";
+import { HintButton, type HintButtonTexts } from "./HintButton";
 import { useHintPanel } from "./useHintPanel";
 import type { Hint } from "@/types/Hint";
 import type { Pokemon } from "@/types/Pokemon";

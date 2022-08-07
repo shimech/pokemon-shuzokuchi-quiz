@@ -1,5 +1,5 @@
 import React from "react";
-import { SetHintButtonOpensContext } from "../HintPanel/HintButtonOpensContextProvider";
+import { SetHintButtonOpensContext } from "../HintPanel";
 import { SetLoadingContext } from "../LoadingContextProvider";
 import { SetResultContext } from "@/contexts/ResultContextProvider";
 import { useDesktop } from "@/hooks/useDesktop";
