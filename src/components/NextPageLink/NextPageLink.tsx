@@ -31,6 +31,10 @@ export const NextPageLink = (props: NextPageLinkProps) => {
           &:active {
             background-color: ${theme.colors.blue};
           }
+
+          &:disabled {
+            color: ${theme.colors.white};
+          }
         `,
         (disabled || !isValidUrl) &&
           css`
