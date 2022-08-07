@@ -1,33 +1,33 @@
 import { css } from "@emotion/react";
 import Link from "next/link";
-import React from "react";
 import { useFooter } from "./useFooter";
 
-export const Footer: React.VoidFunctionComponent = () => {
-  const year = useFooter();
+export const Footer = () => {
+  const { year } = useFooter();
 
   return (
     <footer
       css={(theme) =>
         css`
-          align-items: center;
-          background-color: ${theme.colors.black};
           display: flex;
-          height: ${theme.footer.height}px;
+          align-items: center;
           justify-content: center;
+          height: ${theme.footer.height}px;
+          background-color: ${theme.colors.black};
+
           span,
           a {
-            color: ${theme.colors.white};
-            font-family: Otomanopee One, sans-serif;
+            font-family: "Otomanopee One", sans-serif;
             font-size: 1.4rem;
+            color: ${theme.colors.white};
           }
         `
       }
     >
       <div
         css={css`
-          align-items: center;
           display: flex;
+          align-items: center;
           margin-right: 14px;
         `}
       >
@@ -37,6 +37,7 @@ export const Footer: React.VoidFunctionComponent = () => {
         <a
           css={(theme) => css`
             transition: color ${theme.duration}ms;
+
             &:hover {
               color: ${theme.colors.blue};
             }

@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import React from "react";
 import { HintButton, HintButtonTexts } from "./HintButton";
 import { useHintPanel } from "./useHintPanel";
 import type { Hint } from "@/types/Hint";
@@ -44,9 +43,7 @@ type HintPanelProps = {
   pokemon: Pokemon;
 };
 
-export const HintPanel: React.VoidFunctionComponent<HintPanelProps> = (
-  props,
-) => {
+export const HintPanel = (props: HintPanelProps) => {
   const { isDesktop } = useHintPanel();
 
   return (
@@ -54,13 +51,13 @@ export const HintPanel: React.VoidFunctionComponent<HintPanelProps> = (
       className={props.className}
       css={(theme) => [
         css`
-          align-items: center;
-          border: 2px solid ${theme.colors.black};
-          border-radius: 8px;
+          position: relative;
           display: flex;
           flex-direction: column;
+          align-items: center;
           padding: 32px 16px 16px;
-          position: relative;
+          border: 2px solid ${theme.colors.black};
+          border-radius: 8px;
         `,
         !isDesktop &&
           css`
@@ -71,11 +68,11 @@ export const HintPanel: React.VoidFunctionComponent<HintPanelProps> = (
       <div
         css={[
           css`
-            align-items: center;
-            display: flex;
-            justify-content: center;
             position: absolute;
             top: -1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
           `,
           !isDesktop &&
             css`
@@ -86,9 +83,9 @@ export const HintPanel: React.VoidFunctionComponent<HintPanelProps> = (
         <p
           css={(theme) => [
             css`
-              background-color: ${theme.colors.white};
-              font-size: 2.4rem;
               padding: 0 8px;
+              font-size: 2.4rem;
+              background-color: ${theme.colors.white};
             `,
             !isDesktop &&
               css`
@@ -101,8 +98,8 @@ export const HintPanel: React.VoidFunctionComponent<HintPanelProps> = (
       </div>
       <ul
         css={css`
-          align-items: center;
           display: flex;
+          align-items: center;
           justify-content: center;
           width: 100%;
         `}
@@ -112,8 +109,8 @@ export const HintPanel: React.VoidFunctionComponent<HintPanelProps> = (
             key={i}
             css={[
               css`
-                margin: 0 8px;
                 width: 100%;
+                margin: 0 8px;
               `,
               !isDesktop &&
                 css`

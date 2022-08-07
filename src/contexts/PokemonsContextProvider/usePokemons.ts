@@ -6,11 +6,10 @@ export const usePokemons = () => {
   const [pokemons, setPokemons] = React.useState<Pokemon[]>([]);
 
   React.useEffect(() => {
-    const fetchAndSetPokemons = async () => {
+    (async () => {
       const pokemons = await fetchPokemons();
       setPokemons(pokemons);
-    };
-    fetchAndSetPokemons();
+    })();
   }, []);
 
   return pokemons;

@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import React from "react";
 import { useTwitterLink } from "./useTwitterLink";
 import {
   TwitterLink as TwitterLinkBase,
@@ -11,9 +10,7 @@ type TwitterLinkProps = {
   status: Status;
 } & Omit<TwitterLinkPropsBase, "title">;
 
-export const TwitterLink: React.VoidFunctionComponent<TwitterLinkProps> = (
-  props,
-) => {
+export const TwitterLink = (props: TwitterLinkProps) => {
   const { status, ...twitterLinkProps } = props;
   const { isDesktop, title } = useTwitterLink(status);
 
@@ -21,20 +18,22 @@ export const TwitterLink: React.VoidFunctionComponent<TwitterLinkProps> = (
     <TwitterLinkBase
       css={[
         css`
-          border-radius: 18px;
           height: 36px;
+          border-radius: 18px;
+
           & > span {
-            font-size: 1.6rem;
             margin: 0 12px 0 6px;
+            font-size: 1.6rem;
           }
         `,
         !isDesktop &&
           css`
-            border-radius: 12px;
             height: 24px;
+            border-radius: 12px;
+
             & > span {
-              font-size: 1.2rem;
               margin: 0 8px 0 4px;
+              font-size: 1.2rem;
             }
           `,
       ]}

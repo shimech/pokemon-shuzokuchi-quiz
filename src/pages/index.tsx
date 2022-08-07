@@ -1,5 +1,5 @@
 import { Top } from "@/templates/Top";
 
-const TopPage = (): JSX.Element => <Top />;
+const TopPage = () => <Top />;
 
 export default TopPage;

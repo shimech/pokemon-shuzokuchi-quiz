@@ -1,11 +1,10 @@
 import { css } from "@emotion/react";
-import React from "react";
 import { QuizConditionPanel } from "./QuizConditionPanel";
 import { QuizStartLink } from "./QuizStartLink";
 import { useTop } from "./useTop";
 import { Main } from "@/components/Main";
 
-export const Top: React.VoidFunctionComponent = () => {
+export const Top = () => {
   useTop();
 
   return (

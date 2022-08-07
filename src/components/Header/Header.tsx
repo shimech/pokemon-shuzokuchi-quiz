@@ -1,21 +1,20 @@
 import { css } from "@emotion/react";
 import Link from "next/link";
-import React from "react";
 import { Button } from "../Button";
 import { useHeader } from "./useHeader";
 
-export const Header: React.VoidFunctionComponent = () => {
+export const Header = () => {
   const { isDesktop } = useHeader();
 
   return (
     <header
       css={[
         (theme) => css`
-          align-items: center;
-          background-color: ${theme.colors.black};
           display: flex;
+          align-items: center;
           height: ${theme.header.height}px;
           padding: 0 48px;
+          background-color: ${theme.colors.black};
         `,
         !isDesktop &&
           css`
@@ -26,11 +25,11 @@ export const Header: React.VoidFunctionComponent = () => {
       <div
         css={[
           css`
-            align-items: center;
             display: flex;
+            align-items: center;
+            width: 32px;
             height: 100%;
             margin-right: 20px;
-            width: 32px;
           `,
           !isDesktop &&
             css`
@@ -43,10 +42,10 @@ export const Header: React.VoidFunctionComponent = () => {
       <h1
         css={[
           (theme) => css`
-            color: ${theme.colors.white};
+            margin-right: auto;
             font-family: pokemon-font;
             font-size: 2rem;
-            margin-right: auto;
+            color: ${theme.colors.white};
           `,
           !isDesktop &&
             css`
@@ -59,8 +58,8 @@ export const Header: React.VoidFunctionComponent = () => {
       <div
         css={[
           css`
-            height: 100%;
             width: 120px;
+            height: 100%;
           `,
           !isDesktop &&
             css`
@@ -72,25 +71,24 @@ export const Header: React.VoidFunctionComponent = () => {
           <a
             css={css`
               display: block;
-              height: 100%;
               width: 100%;
+              height: 100%;
             `}
           >
             <Button
               css={(theme) => css`
-                height: 100%;
+                width: 100%;
                 min-width: 48px;
+                height: 100%;
                 padding: 0;
+                font-family: pokemon-font;
+                font-size: 2rem;
+                color: ${theme.colors.white};
                 text-align: center;
                 transition: background-color ${theme.duration}ms;
-                width: 100%;
+
                 &:hover {
                   background-color: ${theme.colors.blue};
-                }
-                & > span.MuiButton-label {
-                  color: ${theme.colors.white};
-                  font-family: pokemon-font;
-                  font-size: 2rem;
                 }
               `}
             >

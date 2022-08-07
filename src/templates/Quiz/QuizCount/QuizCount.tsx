@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import React from "react";
 import { useQuizCount } from "./useQuizCount";
 import { ALL_QUIZ_COUNT } from "@/constants/allQuizCount";
 
@@ -7,9 +6,7 @@ type QuizCountProps = {
   className?: string;
 };
 
-export const QuizCount: React.VoidFunctionComponent<QuizCountProps> = (
-  props,
-) => {
+export const QuizCount = (props: QuizCountProps) => {
   const { isDesktop, quizCount } = useQuizCount();
 
   return (
@@ -17,21 +14,23 @@ export const QuizCount: React.VoidFunctionComponent<QuizCountProps> = (
       className={props.className}
       css={(theme) => [
         css`
+          padding: 12px 24px;
+          font-family: "Otomanopee One", sans-serif;
+          line-height: 1;
+          color: ${theme.colors.white};
           background-color: ${theme.colors.black};
           border-radius: 8px;
-          color: ${theme.colors.white};
-          font-family: Otomanopee One, sans-serif;
-          line-height: 1;
-          padding: 12px 24px;
           transition: box-shadow ${theme.duration}ms;
+
           &:hover {
             box-shadow: 4px 4px 4px ${theme.colors.blue};
           }
         `,
         !isDesktop &&
           css`
-            font-size: 1.4rem;
             padding: 8px 16px;
+            font-size: 1.4rem;
+
             &:hover,
             &:active {
               box-shadow: 2px 2px 2px ${theme.colors.blue};
@@ -42,11 +41,11 @@ export const QuizCount: React.VoidFunctionComponent<QuizCountProps> = (
       <strong
         css={[
           (theme) => css`
-            color: ${theme.colors.white};
+            margin-right: 4px;
             font-family: inherit;
             font-size: 2.4rem;
             line-height: inherit;
-            margin-right: 4px;
+            color: ${theme.colors.white};
           `,
           !isDesktop &&
             css`

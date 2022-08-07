@@ -23,7 +23,7 @@ export const useUrl = () => {
       setValidUrl(false);
     }
     setValidUrl(true);
-  });
+  }, []);
 
   return { url, isValidUrl };
 };

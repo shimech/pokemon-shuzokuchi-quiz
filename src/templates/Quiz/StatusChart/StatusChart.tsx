@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import React from "react";
 import {
   Radar,
   RadarChart,
@@ -18,9 +17,7 @@ type StatusChartProps = {
   name: string;
 } & Status;
 
-export const StatusChart: React.VoidFunctionComponent<StatusChartProps> = (
-  props,
-) => {
+export const StatusChart = (props: StatusChartProps) => {
   const { isDesktop, theme } = useStatusChart();
   const data = [
     {
@@ -59,11 +56,12 @@ export const StatusChart: React.VoidFunctionComponent<StatusChartProps> = (
     <div
       className={props.className}
       css={css`
-        align-items: center;
         display: flex;
         flex-direction: column;
+        align-items: center;
+
         * {
-          font-family: Otomanopee One, sans-serif;
+          font-family: "Otomanopee One", sans-serif;
         }
       `}
     >
@@ -83,13 +81,14 @@ export const StatusChart: React.VoidFunctionComponent<StatusChartProps> = (
       <div
         css={[
           css`
-            align-items: flex-start;
             display: flex;
             flex-grow: 1;
-            height: 640px;
+            align-items: flex-start;
             justify-content: center;
-            margin-top: -15%;
             width: 100%;
+            height: 640px;
+            margin-top: -15%;
+
             * {
               font-size: 1.6rem;
             }
@@ -98,6 +97,7 @@ export const StatusChart: React.VoidFunctionComponent<StatusChartProps> = (
             css`
               height: 320px;
               margin-top: -12%;
+
               * {
                 font-size: 1rem;
               }

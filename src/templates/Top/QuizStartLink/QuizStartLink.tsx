@@ -1,27 +1,22 @@
 import { css } from "@emotion/react";
-import React from "react";
 import { useQuizStartLink } from "./useQuizStartLink";
-import { NextPageLink } from "@/components/NextPageLink/NextPageLink";
+import { NextPageLink } from "@/components/NextPageLink";
 
-export const QuizStartLink: React.VoidFunctionComponent = () => {
+export const QuizStartLink = () => {
   const { isDesktop } = useQuizStartLink();
 
   return (
     <NextPageLink
       css={[
         css`
-          border-radius: 2rem;
           height: 4rem;
-          & > span.MuiButton-label {
-            font-size: 2rem;
-          }
+          font-size: 2rem;
+          border-radius: 2rem;
         `,
         !isDesktop &&
           css`
             height: 3.2rem;
-            & > span.MuiButton-label {
-              font-size: 1.6rem;
-            }
+            font-size: 1.6rem;
           `,
       ]}
     >

@@ -12,7 +12,6 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node-version: [16.13.2]
     steps:
       - uses: actions/checkout@v2
 
@@ -33,5 +32,4 @@ jobs:
 
       - name: Deploy to Staging
         run: |
-          firebase use staging --token ${{ secrets.FIREBASE_TOKEN }}
-          firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
+          firebase deploy --only hosting:staging --token ${{ secrets.FIREBASE_TOKEN }}

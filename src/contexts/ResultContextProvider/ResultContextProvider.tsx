@@ -1,6 +1,7 @@
 import React from "react";
 import { useResultContextProvider } from "./useResultContextProvider";
 import type { Result } from "@/types/Result";
+import type { WithChildren } from "@/types/WithChildren";
 
 const initialValue: Result = {
   quizCount: 0,
@@ -15,7 +16,9 @@ export const SetResultContext = React.createContext<{
   reset: VoidFunction;
 }>({ increment: () => {}, reset: () => {} });
 
-export const ResultContextProvider: React.FunctionComponent = (props) => {
+type ResultContextProviderProps = WithChildren;
+
+export const ResultContextProvider = (props: ResultContextProviderProps) => {
   const { result, setResult } = useResultContextProvider(initialValue);
 
   return (

@@ -1,5 +1,5 @@
-import { ThemeProvider } from "@emotion/react";
-import { StylesProvider } from "@material-ui/styles";
+import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
+import { ThemeProvider as MUIThemeProvider } from "@mui/material/styles";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Footer } from "@/components/Footer";
@@ -8,11 +8,11 @@ import { PokemonsContextProvider } from "@/contexts/PokemonsContextProvider";
 import { QuizConditionContextProvider } from "@/contexts/QuizConditionContextProvider";
 import { QuizContextProvider } from "@/contexts/QuizContextProvider";
 import { ResultContextProvider } from "@/contexts/ResultContextProvider";
-import { theme } from "@/styles/theme";
+import { muiTheme, emotionTheme } from "@/styles/theme";
 import "@/styles/reset.css";
 import "@/styles/pokemon-font/pokemon-font.css";
 
-const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
+const MyApp = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
       <title>ポケモン種族値クイズ</title>
@@ -42,8 +42,8 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
       />
       <meta content="@poke_kiyomaro" name="twitter:site" />
     </Head>
-    <ThemeProvider theme={theme}>
-      <StylesProvider injectFirst>
+    <MUIThemeProvider theme={muiTheme}>
+      <EmotionThemeProvider theme={emotionTheme}>
         <PokemonsContextProvider>
           <QuizConditionContextProvider>
             <QuizContextProvider>
@@ -55,8 +55,8 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
           </QuizConditionContextProvider>
         </PokemonsContextProvider>
         <Footer />
-      </StylesProvider>
-    </ThemeProvider>
+      </EmotionThemeProvider>
+    </MUIThemeProvider>
   </>
 );
 

@@ -1,7 +1,29 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
-  "plugins": ["stylelint-order"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-prettier",
+    "stylelint-config-standard-scss",
+    "stylelint-config-recess-order"
+  ],
+  "overrides": [
+    {
+      "customSyntax": "@stylelint/postcss-css-in-js",
+      "files": ["./src/**/*.tsx"]
+    }
+  ],
+  "plugins": ["stylelint-prettier"],
   "rules": {
-    "order/properties-alphabetical-order": true
+    "declaration-colon-newline-after": null,
+    "font-family-no-missing-generic-family-keyword": [
+      true,
+      {
+        "ignoreFontFamilies": ["pokemon-font"]
+      }
+    ],
+    "no-empty-first-line": null,
+    "no-eol-whitespace": null,
+    "no-missing-end-of-source-newline": null,
+    "selector-class-pattern": null,
+    "value-keyword-case": null
   }
 }
