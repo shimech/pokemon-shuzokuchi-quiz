@@ -12,6 +12,8 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
+    env:
+      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
     steps:
       - uses: actions/checkout@v2
 
@@ -33,4 +35,4 @@ jobs:
       - name: Deploy to Production
         run: |
           firebase use pokemon-shuzokuchi-quiz
-          firebase deploy --only hosting:production --token ${{ secrets.FIREBASE_TOKEN }}
+          firebase deploy --only hosting:production

@@ -11,6 +11,8 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
+    env:
+      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
     steps:
       - uses: actions/checkout@v2
 
@@ -31,5 +33,5 @@ jobs:
 
       - name: Deploy to Staging
         run: |
-          firebase use pokemon-shuzokuchi-quiz --token ${{ secrets.FIREBASE_TOKEN }}
-          firebase deploy --only hosting:staging --token ${{ secrets.FIREBASE_TOKEN }}
+          firebase use pokemon-shuzokuchi-quiz
+          firebase deploy --only hosting:staging
