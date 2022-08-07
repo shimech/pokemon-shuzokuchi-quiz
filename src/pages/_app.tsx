@@ -41,6 +41,10 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
         name="twitter:image"
       />
       <meta content="@poke_kiyomaro" name="twitter:site" />
+      <link
+        href="https://pokemon-shuzokuchi-quiz.kiyomaro.app"
+        rel="canonical"
+      />
     </Head>
     <MUIThemeProvider theme={muiTheme}>
       <EmotionThemeProvider theme={emotionTheme}>
