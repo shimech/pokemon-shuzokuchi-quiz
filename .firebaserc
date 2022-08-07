@@ -1,9 +1,13 @@
 {
+  "etags": {},
   "projects": {},
   "targets": {
     "pokemon-shuzokuchi-quiz": {
       "hosting": {
         "production": [
+          "pokemon-shuzokuchi-quiz-neo"
+        ],
+        "production-old": [
           "pokemon-shuzokuchi-quiz"
         ],
         "staging": [
@@ -11,6 +15,5 @@
         ]
       }
     }
-  },
-  "etags": {}
+  }
 }

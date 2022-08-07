@@ -3,6 +3,12 @@
     {
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "public": "out",
+      "target": "production"
+    },
+    {
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "public": "out",
+      "target": "production-old",
       "redirects": [
         {
           "destination": "https://pokemon-shuzokuchi-quiz.kiyomaro.app/:path",
@@ -14,8 +20,7 @@
           "source": "/",
           "type": 301
         }
-      ],
-      "target": "production"
+      ]
     },
     {
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
