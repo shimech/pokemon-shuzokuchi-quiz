@@ -12,7 +12,7 @@ import { muiTheme, emotionTheme } from "@/styles/theme";
 import "@/styles/reset.css";
 import "@/styles/pokemon-font/pokemon-font.css";
 
-const MyApp = ({ Component, pageProps }: AppProps) => (
+const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
   <>
     <Head>
       <title>ポケモン種族値クイズ</title>
