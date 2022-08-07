@@ -7,7 +7,7 @@ const MAX_SUGGESTION = 5;
 type SuggestionProps = {
   answer: string;
   className?: string;
-  show: boolean;
+  open: boolean;
   onClick: (name: string) => void;
 };
 
@@ -22,7 +22,7 @@ export const Suggestion = (props: SuggestionProps) => {
         height: ${4 * MAX_SUGGESTION}rem;
       `}
     >
-      {props.show && suggestions.length > 0 && (
+      {props.open && suggestions.length > 0 && (
         <ul
           css={css`
             width: 100%;

@@ -1,46 +1,49 @@
 import { useRouter } from "next/router";
 import React from "react";
-import { useUrl } from "./useUrl";
-import { SetResultContext } from "@/contexts/ResultContextProvider";
+import { QuizContext } from "@/contexts/QuizContextProvider";
+import {
+  SetResultContext,
+  ResultContext,
+} from "@/contexts/ResultContextProvider";
+import type { Quiz } from "@/types/Quiz";
 import { sleep } from "@/utils/sleep";
 
 const SLEEP_MS = 150;
 
+const buildNextPagePath = (quizCount: number, quiz: Quiz) => {
+  if (quizCount < 10) {
+    return quiz.length ? `/quiz/${quiz[quizCount].id}` : null;
+  } else {
+    return "/result";
+  }
+};
+
 export const useNextPageLink = (
-  dependencies: boolean[],
-  onClick?: VoidFunction,
+  beforeTransition?: VoidFunction,
+  afterTransition?: VoidFunction,
 ) => {
+  const quiz = React.useContext(QuizContext);
+  const { quizCount } = React.useContext(ResultContext);
+  const nextPagePath = buildNextPagePath(quizCount, quiz);
+  const isValidPath = !!nextPagePath;
   const [disabled, setDisabled] = React.useState(false);
-  const [isRedirectable, setRedirectable] = React.useState(false);
-  const { url, isValidUrl } = useUrl();
-  const setResult = React.useContext(SetResultContext);
+  const { increment } = React.useContext(SetResultContext);
   const router = useRouter();
 
-  React.useEffect(() => {
-    const toNextPage = async () => {
-      await sleep(SLEEP_MS);
-      router.push(url);
-    };
-
-    if (isRedirectable && dependencies.every((dependency) => dependency)) {
-      toNextPage();
-    }
-  }, [isRedirectable, ...dependencies]);
-
-  // TODO: ダブルクリック防止の実装が微妙。
-  // パスが変わったらリンクを有効にする、というロジックで暫定実装している。
-  React.useEffect(() => {
-    setDisabled(false);
-  }, [router.query]);
+  const toNextPage = async () => {
+    await sleep(SLEEP_MS);
+    await router.push(nextPagePath);
+  };
 
   const handleClick: React.MouseEventHandler<HTMLButtonElement> = async () => {
     setDisabled(true);
-    setResult.increment("quizCount");
-    if (onClick) {
-      onClick();
-    }
-    setRedirectable(true);
+    increment("quizCount");
+    beforeTransition?.();
+
+    await toNextPage();
+
+    afterTransition?.();
   };
 
-  return { disabled, url, isValidUrl, handleClick };
+  return { disabled, handleClick, isValidPath, nextPagePath };
 };

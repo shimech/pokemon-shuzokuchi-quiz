@@ -9,10 +9,10 @@ export const useQuizCount = () => {
   const router = useRouter();
 
   React.useEffect(() => {
-    if (quizCount === 0) {
+    if (quizCount <= 0) {
       router.push("/error");
     }
-  }, [quizCount]);
+  }, [router, quizCount]);
 
   return { isDesktop, quizCount };
 };

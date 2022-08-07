@@ -1,6 +1,7 @@
-import { GetStaticPaths, GetStaticProps } from "next";
+import type { GetStaticPaths, GetStaticProps } from "next";
 import { fetchPokemons } from "@/contexts/PokemonsContextProvider";
-import { Quiz, QuizProps } from "@/templates/Quiz";
+import type { QuizProps } from "@/templates/Quiz";
+import { Quiz } from "@/templates/Quiz";
 
 type QuizPageProps = QuizProps;
 
@@ -10,7 +11,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const paths: { params: { id: string } }[] = ids.map((id) => ({
     params: { id },
   }));
-  return { paths, fallback: false };
+  return { fallback: false, paths };
 };
 
 export const getStaticProps: GetStaticProps<

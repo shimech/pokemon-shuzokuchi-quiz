@@ -4,9 +4,9 @@ import type { Result } from "@/types/Result";
 import type { WithChildren } from "@/types/WithChildren";
 
 const initialValue: Result = {
-  quizCount: 0,
   correctCount: 0,
   hintCount: 0,
+  quizCount: 0,
 };
 
 export const ResultContext = React.createContext(initialValue);

@@ -50,6 +50,9 @@ export const useQuiz = (quizCondition: QuizCondition) => {
   const pokemons = React.useContext(PokemonsContext);
 
   React.useEffect(() => {
+    if (!pokemons.length) {
+      return;
+    }
     const quiz = selectRandomQuiz(pokemons, quizCondition);
     setQuiz(quiz);
   }, [pokemons, quizCondition]);

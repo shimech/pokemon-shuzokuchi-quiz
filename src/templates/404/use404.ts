@@ -19,7 +19,7 @@ export const use404 = () => {
     if (count <= 0) {
       router.push("/");
     }
-  }, [count]);
+  }, [router, count]);
 
   return { count };
 };

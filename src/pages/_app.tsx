@@ -11,7 +11,7 @@ import { muiTheme, emotionTheme } from "@/styles/theme";
 import "@/styles/reset.css";
 import "@/styles/pokemon-font/pokemon-font.css";
 
-const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
+const App = ({ Component, pageProps }: AppProps): JSX.Element => (
   <MUIThemeProvider theme={muiTheme}>
     <EmotionThemeProvider theme={emotionTheme}>
       <PokemonsContextProvider>
@@ -29,4 +29,4 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
   </MUIThemeProvider>
 );
 
-export default MyApp;
+export default App;

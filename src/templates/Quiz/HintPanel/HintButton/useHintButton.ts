@@ -1,22 +1,22 @@
-import { useRouter } from "next/router";
 import React from "react";
+import {
+  HintButtonOpensContext,
+  SetHintButtonOpensContext,
+} from "../HintButtonOpensContextProvider";
 import { SetResultContext } from "@/contexts/ResultContextProvider";
 import { useDesktop } from "@/hooks/useDesktop";
+import type { Hint } from "@/types/Hint";
 
-export const useHintButton = () => {
-  const [open, setOpen] = React.useState(false);
-  const setResultContext = React.useContext(SetResultContext);
+export const useHintButton = (hint: Hint) => {
+  const { [hint]: isOpen } = React.useContext(HintButtonOpensContext);
+  const { open } = React.useContext(SetHintButtonOpensContext);
+  const { increment } = React.useContext(SetResultContext);
   const isDesktop = useDesktop();
-  const router = useRouter();
-
-  React.useEffect(() => {
-    setOpen(false);
-  }, [router.query?.id]);
 
   const handleHintButtonClick = () => {
-    setOpen(true);
-    setResultContext.increment("hintCount");
+    open(hint);
+    increment("hintCount");
   };
 
-  return { open, handleHintButtonClick, isDesktop };
+  return { handleHintButtonClick, isDesktop, isOpen };
 };

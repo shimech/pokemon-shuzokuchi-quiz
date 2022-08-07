@@ -11,18 +11,18 @@ export const emotionTheme: EmotionTheme = {
   breakpoint: 768,
   colors: {
     black: "#003049",
-    white: "#fefae0",
-    gray: "#ced4da",
-    darkGray: "#6c757d",
-    red: "#e63946",
     blue: "#0077b6",
+    darkGray: "#6c757d",
+    gray: "#ced4da",
     purple: "#8338ec",
+    red: "#e63946",
+    white: "#fefae0",
   },
   duration: 500,
-  header: {
-    height: 48,
-  },
   footer: {
     height: 28,
+  },
+  header: {
+    height: 48,
   },
 };

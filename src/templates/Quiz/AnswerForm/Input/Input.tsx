@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import React from "react";
+import type React from "react";
 import { useInput } from "./useInput";
 
 type InputProps = {

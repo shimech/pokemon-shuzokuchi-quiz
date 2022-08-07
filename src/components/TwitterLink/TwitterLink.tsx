@@ -29,7 +29,7 @@ export const TwitterLink = (props: TwitterLinkProps) => (
     title={props.title}
     url={PRODUCTION_URL}
   >
-    <TwitterIcon round size={props.iconSize} />
+    <TwitterIcon size={props.iconSize} round />
     <span
       css={css`
         color: rgb(0 172 237);

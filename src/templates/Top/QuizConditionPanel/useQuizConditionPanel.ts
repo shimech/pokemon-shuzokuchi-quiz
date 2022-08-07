@@ -4,7 +4,7 @@ import {
   SetQuizConditionContext,
 } from "@/contexts/QuizConditionContextProvider";
 import { useDesktop } from "@/hooks/useDesktop";
-import { Region } from "@/types/Region";
+import type { Region } from "@/types/Region";
 
 export const useQuizConditionPanel = () => {
   const isDesktop = useDesktop();
@@ -21,11 +21,11 @@ export const useQuizConditionPanel = () => {
     setQuizCondition.changeIncludeBeforeEvolution();
 
   return {
+    handleBeforeEvolutionClick,
+    handleMegaEvolutionClick,
+    handleRegionClick,
+    handleSameStatusClick,
     isDesktop,
     quizCondition,
-    handleRegionClick,
-    handleMegaEvolutionClick,
-    handleSameStatusClick,
-    handleBeforeEvolutionClick,
   };
 };

@@ -21,34 +21,34 @@ export const StatusChart = (props: StatusChartProps) => {
   const { isDesktop, theme } = useStatusChart();
   const data = [
     {
+      fullMark: FULL_MARK,
       status: `HP: ${props.hitpoint}`,
       value: props.hitpoint,
-      fullMark: FULL_MARK,
     },
     {
+      fullMark: FULL_MARK,
       status: `こうげき: ${props.attack}`,
       value: props.attack,
-      fullMark: FULL_MARK,
     },
     {
+      fullMark: FULL_MARK,
       status: `ぼうぎょ: ${props.block}`,
       value: props.block,
-      fullMark: FULL_MARK,
     },
     {
+      fullMark: FULL_MARK,
       status: `すばやさ: ${props.speed}`,
       value: props.speed,
-      fullMark: FULL_MARK,
     },
     {
+      fullMark: FULL_MARK,
       status: `とくぼう: ${props.defense}`,
       value: props.defense,
-      fullMark: FULL_MARK,
     },
     {
+      fullMark: FULL_MARK,
       status: `とくこう: ${props.contact}`,
       value: props.contact,
-      fullMark: FULL_MARK,
     },
   ];
 

@@ -1,7 +1,8 @@
 import { css } from "@emotion/react";
-import { Dialog, DialogProps } from "@mui/material";
+import { Dialog, type DialogProps } from "@mui/material";
 import { useResultModal } from "./useResultModal";
-import { NextPageLink, NextPageLinkProps } from "@/components/NextPageLink";
+import type { NextPageLinkProps } from "@/components/NextPageLink";
+import { NextPageLink } from "@/components/NextPageLink";
 
 type ResultModalProps = {
   answer: string;
@@ -111,6 +112,8 @@ export const ResultModal = (props: ResultModalProps) => {
           </p>
         )}
         <NextPageLink
+          afterTransition={props.afterTransition}
+          beforeTransition={props.beforeTransition}
           css={[
             css`
               width: 320px;
@@ -125,8 +128,6 @@ export const ResultModal = (props: ResultModalProps) => {
                 font-size: 1.4rem;
               `,
           ]}
-          dependencies={props.dependencies}
-          onClick={props.onClick}
         >
           次の問題へ
         </NextPageLink>

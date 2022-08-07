@@ -67,7 +67,7 @@ export const Header = () => {
             `,
         ]}
       >
-        <Link passHref href="/">
+        <Link href="/" passHref>
           <a
             css={css`
               display: block;

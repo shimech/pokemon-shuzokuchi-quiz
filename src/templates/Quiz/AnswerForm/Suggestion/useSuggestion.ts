@@ -5,24 +5,18 @@ import { useDesktop } from "@/hooks/useDesktop";
 export const useSuggestion = (answer: string) => {
   const isDesktop = useDesktop();
   const pokemons = React.useContext(PokemonsContext);
-  const [pokemonNames, setPokemonNames] = React.useState<string[]>([]);
   const [suggestions, setSuggestions] = React.useState<string[]>([]);
-
-  React.useEffect(() => {
-    setPokemonNames(pokemons.map((pokemon) => pokemon.name));
-  }, [pokemons]);
 
   React.useEffect(() => {
     if (!answer) {
       setSuggestions([]);
       return;
     }
+    const pokemonNames = pokemons.map((pokemon) => pokemon.name);
     setSuggestions(
-      pokemonNames.filter(
-        (pokemonName) => pokemonName.includes(answer) && pokemonName !== answer,
-      ),
+      pokemonNames.filter((pokemonName) => pokemonName.includes(answer)),
     );
-  }, [answer, pokemonNames]);
+  }, [answer, pokemons]);
 
   return { isDesktop, suggestions };
 };
