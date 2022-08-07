@@ -1,6 +1,9 @@
 import { css } from "@emotion/react";
 import { AnswerForm } from "./AnswerForm";
+import { CircularProgress } from "./CircularProgress";
 import { HintPanel } from "./HintPanel";
+import { HintButtonOpensContextProvider } from "./HintPanel/HintButtonOpensContextProvider";
+import { LoadingContextProvider } from "./LoadingContextProvider";
 import { QuizCount } from "./QuizCount";
 import { StatusChart } from "./StatusChart";
 import { TwitterLink } from "./TwitterLink";
@@ -14,83 +17,88 @@ export const Quiz = (props: QuizProps) => {
   const { isDesktop } = useQuiz();
 
   return (
-    <Main
-      css={css`
-        padding: 24px 0 40px;
-      `}
-    >
-      <div
+    <LoadingContextProvider>
+      <Main
         css={css`
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          margin: 0 24px;
+          padding: 24px 0 40px;
         `}
       >
         <div
           css={css`
             display: flex;
-            align-items: center;
-            margin-bottom: 32px;
+            flex-direction: column;
+            width: 100%;
+            margin: 0 24px;
           `}
         >
-          <QuizCount
-            css={css`
-              margin-right: auto;
-            `}
-          />
-          <TwitterLink
-            iconSize={isDesktop ? 36 : 24}
-            status={props.pokemon.status}
-          />
-        </div>
-        <div
-          css={[
-            css`
-              display: flex;
-            `,
-            !isDesktop &&
-              css`
-                flex-direction: column;
-              `,
-          ]}
-        >
-          <StatusChart
-            css={
-              isDesktop &&
-              css`
-                width: 50%;
-                margin-right: 32px;
-              `
-            }
-            name={props.pokemon.name}
-            {...props.pokemon.status}
-          />
           <div
-            css={
-              isDesktop &&
-              css`
-                width: 50%;
-                margin-left: 32px;
-              `
-            }
+            css={css`
+              display: flex;
+              align-items: center;
+              margin-bottom: 32px;
+            `}
           >
-            <HintPanel
-              css={[
-                css`
-                  margin-bottom: 56px;
-                `,
-                !isDesktop &&
-                  css`
-                    margin-bottom: 32px;
-                  `,
-              ]}
-              pokemon={props.pokemon}
+            <QuizCount
+              css={css`
+                margin-right: auto;
+              `}
             />
-            <AnswerForm pokemonName={props.pokemon.name} />
+            <TwitterLink
+              iconSize={isDesktop ? 36 : 24}
+              status={props.pokemon.status}
+            />
+          </div>
+          <div
+            css={[
+              css`
+                display: flex;
+              `,
+              !isDesktop &&
+                css`
+                  flex-direction: column;
+                `,
+            ]}
+          >
+            <StatusChart
+              css={
+                isDesktop &&
+                css`
+                  width: 50%;
+                  margin-right: 32px;
+                `
+              }
+              name={props.pokemon.name}
+              {...props.pokemon.status}
+            />
+            <div
+              css={
+                isDesktop &&
+                css`
+                  width: 50%;
+                  margin-left: 32px;
+                `
+              }
+            >
+              <HintButtonOpensContextProvider>
+                <HintPanel
+                  css={[
+                    css`
+                      margin-bottom: 56px;
+                    `,
+                    !isDesktop &&
+                      css`
+                        margin-bottom: 32px;
+                      `,
+                  ]}
+                  pokemon={props.pokemon}
+                />
+                <AnswerForm pokemonName={props.pokemon.name} />
+              </HintButtonOpensContextProvider>
+            </div>
           </div>
         </div>
-      </div>
-    </Main>
+      </Main>
+      <CircularProgress />
+    </LoadingContextProvider>
   );
 };

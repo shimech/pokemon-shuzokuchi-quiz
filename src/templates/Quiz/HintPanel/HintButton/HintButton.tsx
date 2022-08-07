@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import React from "react";
+import type React from "react";
 import { useHintButton } from "./useHintButton";
 import { Button } from "@/components/Button";
 import type { Hint } from "@/types/Hint";
@@ -16,7 +16,9 @@ type HintButtonProps = {
 };
 
 export const HintButton = (props: HintButtonProps) => {
-  const { open, handleHintButtonClick, isDesktop } = useHintButton();
+  const { isOpen, handleHintButtonClick, isDesktop } = useHintButton(
+    props.hint,
+  );
 
   return (
     <Button
@@ -44,7 +46,7 @@ export const HintButton = (props: HintButtonProps) => {
             color: ${theme.colors.white};
           }
         `,
-        open &&
+        isOpen &&
           css`
             background-color: ${theme.colors.gray};
 
@@ -65,10 +67,10 @@ export const HintButton = (props: HintButtonProps) => {
             }
           `,
       ]}
-      disabled={open}
+      disabled={isOpen}
       onClick={handleHintButtonClick}
     >
-      {open ? props.texts.content : props.texts.category}
+      {isOpen ? props.texts.content : props.texts.category}
     </Button>
   );
 };

@@ -1,28 +1,29 @@
-import { useRouter } from "next/router";
 import React from "react";
+import { SetHintButtonOpensContext } from "../HintPanel/HintButtonOpensContextProvider";
+import { SetLoadingContext } from "../LoadingContextProvider";
 import { SetResultContext } from "@/contexts/ResultContextProvider";
 import { useDesktop } from "@/hooks/useDesktop";
 
 export const useAnswerForm = (pokemonName: string) => {
   const isDesktop = useDesktop();
   const [answer, setAnswer] = React.useState("");
-  const [isSuggestionShow, setSuggestionShow] = React.useState(false);
   const [isCorrect, setCorrect] = React.useState(false);
-  const setResult = React.useContext(SetResultContext);
+  const [isSuggestionOpen, setSuggestionOpen] = React.useState(false);
   const [isResultModalOpen, setResultModalOpen] = React.useState(false);
-  const [isLoading, setLoading] = React.useState(false);
-  const router = useRouter();
+  const { increment } = React.useContext(SetResultContext);
+  const { reset } = React.useContext(SetHintButtonOpensContext);
+  const setLoading = React.useContext(SetLoadingContext);
 
   const handleInputChange: React.ChangeEventHandler<HTMLInputElement> = (
     event,
   ) => {
     setAnswer(event.target.value);
-    setSuggestionShow(true);
+    setSuggestionOpen(true);
   };
 
   const handleSuggestionClick = (name: string) => {
     setAnswer(name);
-    setSuggestionShow(false);
+    setSuggestionOpen(false);
   };
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
@@ -30,31 +31,32 @@ export const useAnswerForm = (pokemonName: string) => {
     const isCorrect = answer === pokemonName;
     setCorrect(isCorrect);
     if (isCorrect) {
-      setResult.increment("correctCount");
+      increment("correctCount");
     }
     setResultModalOpen(true);
   };
 
-  const toNextQuiz = () => {
+  const beforeTransition = () => {
     setResultModalOpen(false);
     setLoading(true);
-    setAnswer("");
+    reset();
   };
 
-  React.useEffect(() => {
+  const afterTransition = () => {
+    setAnswer("");
     setLoading(false);
-  }, [router.query]);
+  };
 
   return {
-    isDesktop,
+    afterTransition,
     answer,
-    isSuggestionShow,
-    isCorrect,
-    isResultModalOpen,
-    isLoading,
+    beforeTransition,
     handleInputChange,
-    handleSuggestionClick,
     handleSubmit,
-    toNextQuiz,
+    handleSuggestionClick,
+    isCorrect,
+    isDesktop,
+    isResultModalOpen,
+    isSuggestionOpen,
   };
 };

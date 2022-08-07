@@ -5,19 +5,19 @@ import type { Region } from "@/types/Region";
 import type { WithChildren } from "@/types/WithChildren";
 
 const initialValue: QuizCondition = {
+  includeBeforeEvolution: false,
+  includeMegaEvolution: false,
   includeRegion: {
-    kanto: true,
-    johto: true,
-    hoenn: true,
-    sinnoh: true,
-    unova: true,
-    kalos: true,
     alola: true,
     galar: true,
+    hoenn: true,
+    johto: true,
+    kalos: true,
+    kanto: true,
+    sinnoh: true,
+    unova: true,
   },
-  includeMegaEvolution: false,
   includeSameStatus: false,
-  includeBeforeEvolution: false,
 };
 
 export const QuizConditionContext =
@@ -29,10 +29,10 @@ export const SetQuizConditionContext = React.createContext<{
   changeIncludeBeforeEvolution: VoidFunction;
   reset: VoidFunction;
 }>({
-  changeIncludeRegion: () => {},
-  changeIncludeMegaEvolution: () => {},
-  changeIncludeSameStatus: () => {},
   changeIncludeBeforeEvolution: () => {},
+  changeIncludeMegaEvolution: () => {},
+  changeIncludeRegion: () => {},
+  changeIncludeSameStatus: () => {},
   reset: () => {},
 });
 

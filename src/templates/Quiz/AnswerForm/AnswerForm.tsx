@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import { CircularProgress } from "./CircularProgress";
 import { Input } from "./Input";
 import { ResultModal } from "./ResultModal";
 import { Suggestion } from "./Suggestion";
@@ -14,14 +13,14 @@ export const AnswerForm = (props: AnswerFormProps) => {
   const {
     isDesktop,
     answer,
-    isSuggestionShow,
+    isSuggestionOpen,
     isCorrect,
     isResultModalOpen,
-    isLoading,
     handleInputChange,
     handleSuggestionClick,
     handleSubmit,
-    toNextQuiz,
+    beforeTransition,
+    afterTransition,
   } = useAnswerForm(props.pokemonName);
 
   return (
@@ -52,7 +51,7 @@ export const AnswerForm = (props: AnswerFormProps) => {
             css={css`
               margin-top: 8px;
             `}
-            show={isSuggestionShow}
+            open={isSuggestionOpen}
             onClick={handleSuggestionClick}
           />
         </div>
@@ -87,14 +86,13 @@ export const AnswerForm = (props: AnswerFormProps) => {
         </Button>
       </form>
       <ResultModal
+        afterTransition={afterTransition}
         answer={answer}
+        beforeTransition={beforeTransition}
         correct={isCorrect}
-        dependencies={[!isResultModalOpen]}
         open={isResultModalOpen}
         pokemonName={props.pokemonName}
-        onClick={toNextQuiz}
       />
-      <CircularProgress open={isLoading} />
     </>
   );
 };

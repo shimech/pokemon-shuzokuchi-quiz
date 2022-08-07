@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
-import { HintButton, HintButtonTexts } from "./HintButton";
+import type { HintButtonTexts } from "./HintButton";
+import { HintButton } from "./HintButton";
 import { useHintPanel } from "./useHintPanel";
 import type { Hint } from "@/types/Hint";
 import type { Pokemon } from "@/types/Pokemon";
@@ -11,16 +12,6 @@ const children = (pokemon: Pokemon): { [key in Hint]: HintButtonTexts } => {
   const abilities = [...pokemon.ability.normal, pokemon.ability.special];
 
   return {
-    type: {
-      category: <p>タイプ</p>,
-      content: (
-        <>
-          {types.map((type, i) => (
-            <p key={i}>{type || "-"}</p>
-          ))}
-        </>
-      ),
-    },
     ability: {
       category: <p>とくせい</p>,
       content: (
@@ -34,6 +25,16 @@ const children = (pokemon: Pokemon): { [key in Hint]: HintButtonTexts } => {
     region: {
       category: <p>地方</p>,
       content: <p>{pokemon.region}</p>,
+    },
+    type: {
+      category: <p>タイプ</p>,
+      content: (
+        <>
+          {types.map((type, i) => (
+            <p key={i}>{type || "-"}</p>
+          ))}
+        </>
+      ),
     },
   };
 };

@@ -8,55 +8,66 @@ const noRegionInclude = (includeRegion: { [key in Region]: boolean }) =>
 export const useQuizCondition = (initialValue: QuizCondition) => {
   const [quizCondition, setQuizCondition] = React.useState(initialValue);
 
-  const changeIncludeRegion = (region: Region) =>
-    setQuizCondition((prevQuizCondition) => {
-      const nextIncludeRegion = {
-        ...prevQuizCondition.includeRegion,
-        [region]: !prevQuizCondition.includeRegion[region],
-      };
+  const changeIncludeRegion = React.useCallback(
+    (region: Region) =>
+      setQuizCondition((prevQuizCondition) => {
+        const nextIncludeRegion = {
+          ...prevQuizCondition.includeRegion,
+          [region]: !prevQuizCondition.includeRegion[region],
+        };
 
-      if (noRegionInclude(nextIncludeRegion)) {
-        Object.keys(nextIncludeRegion).forEach(
-          (region) => (nextIncludeRegion[region] = true),
-        );
-      }
+        if (noRegionInclude(nextIncludeRegion)) {
+          Object.keys(nextIncludeRegion).forEach(
+            (region) => (nextIncludeRegion[region] = true),
+          );
+        }
 
-      return {
-        ...prevQuizCondition,
-        includeRegion: nextIncludeRegion,
-      };
-    });
+        return {
+          ...prevQuizCondition,
+          includeRegion: nextIncludeRegion,
+        };
+      }),
+    [setQuizCondition],
+  );
 
-  const changeIncludeMegaEvolution = () =>
-    setQuizCondition((prevQuizCondition) => {
-      return {
+  const changeIncludeMegaEvolution = React.useCallback(
+    () =>
+      setQuizCondition((prevQuizCondition) => ({
         ...prevQuizCondition,
         includeMegaEvolution: !prevQuizCondition.includeMegaEvolution,
-      };
-    });
+      })),
+    [setQuizCondition],
+  );
 
-  const changeIncludeSameStatus = () =>
-    setQuizCondition((prevQuizCondition) => {
-      return {
+  const changeIncludeSameStatus = React.useCallback(
+    () =>
+      setQuizCondition((prevQuizCondition) => ({
         ...prevQuizCondition,
         includeSameStatus: !prevQuizCondition.includeSameStatus,
-      };
-    });
+      })),
+    [setQuizCondition],
+  );
 
-  const changeIncludeBeforeEvolution = () =>
-    setQuizCondition((prevQuizCondition) => {
-      return {
+  const changeIncludeBeforeEvolution = React.useCallback(
+    () =>
+      setQuizCondition((prevQuizCondition) => ({
         ...prevQuizCondition,
         includeBeforeEvolution: !prevQuizCondition.includeBeforeEvolution,
-      };
-    });
+      })),
+    [setQuizCondition],
+  );
+
+  const reset = React.useCallback(
+    () => setQuizCondition({ ...initialValue }),
+    [setQuizCondition, initialValue],
+  );
 
   return {
-    quizCondition,
-    changeIncludeRegion,
-    changeIncludeMegaEvolution,
-    changeIncludeSameStatus,
     changeIncludeBeforeEvolution,
-    reset: () => setQuizCondition({ ...initialValue }),
+    changeIncludeMegaEvolution,
+    changeIncludeRegion,
+    changeIncludeSameStatus,
+    quizCondition,
+    reset,
   };
 };

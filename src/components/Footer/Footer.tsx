@@ -33,7 +33,7 @@ export const Footer = () => {
       >
         <span>© {year}</span>
       </div>
-      <Link passHref href="https://twitter.com/poke_kiyomaro">
+      <Link href="https://twitter.com/poke_kiyomaro" passHref>
         <a
           css={(theme) => css`
             transition: color ${theme.duration}ms;

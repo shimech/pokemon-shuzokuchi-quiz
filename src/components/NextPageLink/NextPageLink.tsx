@@ -5,14 +5,14 @@ import type { WithChildren } from "@/types/WithChildren";
 
 export type NextPageLinkProps = WithChildren<{
   className?: string;
-  dependencies?: boolean[];
-  onClick?: VoidFunction;
+  beforeTransition?: VoidFunction;
+  afterTransition?: VoidFunction;
 }>;
 
 export const NextPageLink = (props: NextPageLinkProps) => {
-  const { disabled, isValidUrl, handleClick } = useNextPageLink(
-    props.dependencies || [],
-    props.onClick,
+  const { disabled, isValidPath, handleClick } = useNextPageLink(
+    props.beforeTransition,
+    props.afterTransition,
   );
 
   return (
@@ -36,7 +36,7 @@ export const NextPageLink = (props: NextPageLinkProps) => {
             color: ${theme.colors.white};
           }
         `,
-        (disabled || !isValidUrl) &&
+        (disabled || !isValidPath) &&
           css`
             cursor: wait;
             opacity: 0.7;

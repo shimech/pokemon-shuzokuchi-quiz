@@ -7,7 +7,7 @@ export const TopLink = () => {
   const { isDesktop } = useTopLink();
 
   return (
-    <Link passHref href="/">
+    <Link href="/" passHref>
       <a
         css={[
           css`

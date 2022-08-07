@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import { useTwitterLink } from "./useTwitterLink";
 import {
   TwitterLink as TwitterLinkBase,
-  TwitterLinkProps as TwitterLinkPropsBase,
+  type TwitterLinkProps as TwitterLinkPropsBase,
 } from "@/components/TwitterLink";
 import type { Status } from "@/types/Status";
 

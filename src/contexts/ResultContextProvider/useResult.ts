@@ -4,13 +4,19 @@ import type { Result } from "@/types/Result";
 export const useResult = (initialValue: Result) => {
   const [result, setResult] = React.useState(initialValue);
 
-  const increment = (key: keyof Result) =>
-    setResult((prevResult) => {
-      return {
+  const increment = React.useCallback(
+    (key: keyof Result) =>
+      setResult((prevResult) => ({
         ...prevResult,
         [key]: prevResult[key] + 1,
-      };
-    });
+      })),
+    [setResult],
+  );
 
-  return { result, increment, reset: () => setResult({ ...initialValue }) };
+  const reset = React.useCallback(
+    () => setResult({ ...initialValue }),
+    [setResult, initialValue],
+  );
+
+  return { increment, reset, result };
 };
