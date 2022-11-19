@@ -1,6 +1,7 @@
 import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
 import { ThemeProvider as MUIThemeProvider } from "@mui/material/styles";
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { PokemonsContextProvider } from "@/contexts/PokemonsContextProvider";
@@ -12,21 +13,30 @@ import "@/styles/reset.css";
 import "@/styles/pokemon-font/pokemon-font.css";
 
 const App = ({ Component, pageProps }: AppProps): JSX.Element => (
-  <MUIThemeProvider theme={muiTheme}>
-    <EmotionThemeProvider theme={emotionTheme}>
-      <PokemonsContextProvider>
-        <QuizConditionContextProvider>
-          <QuizContextProvider>
-            <ResultContextProvider>
-              <Header />
-              <Component {...pageProps} />
-            </ResultContextProvider>
-          </QuizContextProvider>
-        </QuizConditionContextProvider>
-      </PokemonsContextProvider>
-      <Footer />
-    </EmotionThemeProvider>
-  </MUIThemeProvider>
+  <>
+    <Head>
+      <title>ポケモン種族値クイズ</title>
+      <meta
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0"
+        name="viewport"
+      />
+    </Head>
+    <MUIThemeProvider theme={muiTheme}>
+      <EmotionThemeProvider theme={emotionTheme}>
+        <PokemonsContextProvider>
+          <QuizConditionContextProvider>
+            <QuizContextProvider>
+              <ResultContextProvider>
+                <Header />
+                <Component {...pageProps} />
+              </ResultContextProvider>
+            </QuizContextProvider>
+          </QuizConditionContextProvider>
+        </PokemonsContextProvider>
+        <Footer />
+      </EmotionThemeProvider>
+    </MUIThemeProvider>
+  </>
 );
 
 export default App;

@@ -6,4 +6,6 @@ export type Region =
   | "unova"
   | "kalos"
   | "alola"
-  | "galar";
+  | "galar"
+  | "hisui"
+  | "paldea";
