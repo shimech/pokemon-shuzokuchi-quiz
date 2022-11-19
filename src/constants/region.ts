@@ -10,4 +10,6 @@ export const REGION: { [key in Region]: string } = {
   kalos: "カロス",
   alola: "アローラ",
   galar: "ガラル",
+  hisui: "ヒスイ",
+  paldea: "パルデア",
 };

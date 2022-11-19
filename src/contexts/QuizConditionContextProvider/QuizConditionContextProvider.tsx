@@ -10,10 +10,12 @@ const initialValue: QuizCondition = {
   includeRegion: {
     alola: true,
     galar: true,
+    hisui: true,
     hoenn: true,
     johto: true,
     kalos: true,
     kanto: true,
+    paldea: true,
     sinnoh: true,
     unova: true,
   },
