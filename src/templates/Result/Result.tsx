@@ -5,7 +5,7 @@ import { Main } from "@/components/Main";
 import { TwitterLink } from "@/components/TwitterLink";
 
 export const Result = () => {
-  const { isDesktop, hintCount, score, title } = useResult();
+  const { isDesktop, hintCount, score, time, title } = useResult();
 
   return (
     <Main
@@ -49,18 +49,18 @@ export const Result = () => {
       <p
         css={[
           css`
-            margin-bottom: 40px;
+            margin-bottom: 20px;
           `,
           !isDesktop &&
             css`
-              margin-bottom: 32px;
+              margin-bottom: 16px;
             `,
         ]}
       >
         ヒント使用回数:
         <span
           css={css`
-            margin-right: 4px;
+            margin: 0 4px;
             font-family: "Otomanopee One", sans-serif;
           `}
         >
@@ -68,6 +68,39 @@ export const Result = () => {
         </span>
         回
       </p>
+      {time && (
+        <p
+          css={[
+            css`
+              margin-bottom: 40px;
+            `,
+            !isDesktop &&
+              css`
+                margin-bottom: 32px;
+              `,
+          ]}
+        >
+          解答時間:
+          <span
+            css={css`
+              margin: 0 4px;
+              font-family: "Otomanopee One", sans-serif;
+            `}
+          >
+            {time.minute}
+          </span>
+          分
+          <span
+            css={css`
+              margin: 4px;
+              font-family: "Otomanopee One", sans-serif;
+            `}
+          >
+            {time.second}
+          </span>
+          秒
+        </p>
+      )}
       <TwitterLink
         css={[
           css`
