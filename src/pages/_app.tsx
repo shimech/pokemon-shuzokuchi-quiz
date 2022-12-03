@@ -8,6 +8,7 @@ import { PokemonsContextProvider } from "@/contexts/PokemonsContextProvider";
 import { QuizConditionContextProvider } from "@/contexts/QuizConditionContextProvider";
 import { QuizContextProvider } from "@/contexts/QuizContextProvider";
 import { ResultContextProvider } from "@/contexts/ResultContextProvider";
+import { TimerContextProvider } from "@/contexts/TimerContextProvider";
 import { muiTheme, emotionTheme } from "@/styles/theme";
 import "@/styles/reset.css";
 import "@/styles/pokemon-font/pokemon-font.css";
@@ -28,7 +29,9 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => (
             <QuizContextProvider>
               <ResultContextProvider>
                 <Header />
-                <Component {...pageProps} />
+                <TimerContextProvider>
+                  <Component {...pageProps} />
+                </TimerContextProvider>
               </ResultContextProvider>
             </QuizContextProvider>
           </QuizConditionContextProvider>
