@@ -49,11 +49,11 @@ export const Result = () => {
       <p
         css={[
           css`
-            margin-bottom: 40px;
+            margin-bottom: 20px;
           `,
           !isDesktop &&
             css`
-              margin-bottom: 32px;
+              margin-bottom: 16px;
             `,
         ]}
       >
