@@ -3,6 +3,7 @@ import { HintButtonOpensReducerContext } from "../HintPanel";
 import { SetLoadingContext } from "../LoadingContextProvider";
 import { ResultReducerContext } from "@/contexts/ResultContextProvider";
 import { useDesktop } from "@/hooks/useDesktop";
+import { hiragana2Katakana } from "@/utils/hiragana2Katakana";
 
 export const useAnswerForm = (pokemonName: string) => {
   const isDesktop = useDesktop();
@@ -31,7 +32,7 @@ export const useAnswerForm = (pokemonName: string) => {
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
-    const isCorrect = answer === pokemonName;
+    const isCorrect = [answer, hiragana2Katakana(answer)].includes(pokemonName);
     setCorrect(isCorrect);
     if (isCorrect) {
       resultReducer.increment("correctCount");
