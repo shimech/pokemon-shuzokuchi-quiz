@@ -1,11 +1,13 @@
 import React from "react";
-import { SetTimerContext } from "@/contexts/TimerContextProvider";
+import { TimerReducerContext } from "@/contexts/TimerContextProvider";
 import { useDesktop } from "@/hooks/useDesktop";
 
 export const useQuizStartLink = () => {
   const isDesktop = useDesktop();
 
-  const { start } = React.useContext(SetTimerContext);
+  const timerReducer = React.useContext(TimerReducerContext);
 
-  return { isDesktop, start };
+  const afterTransition = () => timerReducer.start();
+
+  return { afterTransition, isDesktop };
 };

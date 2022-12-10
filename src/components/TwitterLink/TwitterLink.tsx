@@ -2,15 +2,15 @@ import { css } from "@emotion/react";
 import { TwitterShareButton, TwitterIcon } from "react-share";
 import { HASHTAGS } from "@/constants/hashtags";
 import { PRODUCTION_URL } from "@/constants/productionUrl";
-import type { WithChildren } from "@/types/WithChildren";
+import type { PropsWithChildren } from "@/types/PropsWithChildren";
 
-export type TwitterLinkProps = WithChildren<{
+export type TwitterLinkProps = {
   className?: string;
   iconSize: number;
   title: string;
-}>;
+};
 
-export const TwitterLink = (props: TwitterLinkProps) => (
+export const TwitterLink = (props: PropsWithChildren<TwitterLinkProps>) => (
   <TwitterShareButton
     className={props.className}
     css={(theme) =>

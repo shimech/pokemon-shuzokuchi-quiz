@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import { QuizContext } from "@/contexts/QuizContextProvider";
 import {
-  SetResultContext,
+  ResultReducerContext,
   ResultContext,
 } from "@/contexts/ResultContextProvider";
 import type { Quiz } from "@/types/Quiz";
@@ -27,7 +27,7 @@ export const useNextPageLink = (
   const nextPagePath = buildNextPagePath(quizCount, quiz);
   const isValidPath = !!nextPagePath;
   const [disabled, setDisabled] = React.useState(false);
-  const { increment } = React.useContext(SetResultContext);
+  const resultReducer = React.useContext(ResultReducerContext);
   const router = useRouter();
 
   const toNextPage = async () => {
@@ -37,7 +37,8 @@ export const useNextPageLink = (
 
   const handleClick: React.MouseEventHandler<HTMLButtonElement> = async () => {
     setDisabled(true);
-    increment("quizCount");
+    resultReducer.increment("quizCount");
+
     beforeTransition?.();
 
     await toNextPage();

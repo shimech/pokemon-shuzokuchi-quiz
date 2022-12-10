@@ -3,11 +3,11 @@ import { useQuizStartLink } from "./useQuizStartLink";
 import { NextPageLink } from "@/components/NextPageLink";
 
 export const QuizStartLink = () => {
-  const { isDesktop, start } = useQuizStartLink();
+  const { isDesktop, afterTransition } = useQuizStartLink();
 
   return (
     <NextPageLink
-      afterTransition={start}
+      afterTransition={afterTransition}
       css={[
         css`
           height: 4rem;

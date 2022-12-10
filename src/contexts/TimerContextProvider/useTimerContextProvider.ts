@@ -1,5 +1,5 @@
 import React from "react";
-import type { Time } from "./TimerContextProvider";
+import type { Time, TimerReducer } from "./TimerContextProvider";
 
 const ONE_SECOND_MS = 1000;
 const ONE_MINUTE_MS = 60 * ONE_SECOND_MS;
@@ -19,6 +19,11 @@ export const useTimerContextProvider = () => {
     [setEndTime],
   );
 
+  const timerReducer: TimerReducer = React.useMemo(
+    () => ({ end, start }),
+    [start, end],
+  );
+
   React.useEffect(
     () =>
       setTime(() => {
@@ -36,5 +41,5 @@ export const useTimerContextProvider = () => {
     [startTime, endTime],
   );
 
-  return { end, start, time };
+  return { time, timerReducer };
 };

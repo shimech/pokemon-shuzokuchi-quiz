@@ -1,5 +1,5 @@
 export {
   QuizConditionContext,
-  SetQuizConditionContext,
+  QuizConditionReducerContext,
   QuizConditionContextProvider,
 } from "./QuizConditionContextProvider";

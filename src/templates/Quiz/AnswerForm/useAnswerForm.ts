@@ -1,17 +1,20 @@
 import React from "react";
-import { SetHintButtonOpensContext } from "../HintPanel";
+import { HintButtonOpensReducerContext } from "../HintPanel";
 import { SetLoadingContext } from "../LoadingContextProvider";
-import { SetResultContext } from "@/contexts/ResultContextProvider";
+import { ResultReducerContext } from "@/contexts/ResultContextProvider";
 import { useDesktop } from "@/hooks/useDesktop";
 
 export const useAnswerForm = (pokemonName: string) => {
   const isDesktop = useDesktop();
+
   const [answer, setAnswer] = React.useState("");
   const [isCorrect, setCorrect] = React.useState(false);
   const [isSuggestionOpen, setSuggestionOpen] = React.useState(false);
   const [isResultModalOpen, setResultModalOpen] = React.useState(false);
-  const { increment } = React.useContext(SetResultContext);
-  const { reset } = React.useContext(SetHintButtonOpensContext);
+  const resultReducer = React.useContext(ResultReducerContext);
+  const hintButtonOpensReducer = React.useContext(
+    HintButtonOpensReducerContext,
+  );
   const setLoading = React.useContext(SetLoadingContext);
 
   const handleInputChange: React.ChangeEventHandler<HTMLInputElement> = (
@@ -31,7 +34,7 @@ export const useAnswerForm = (pokemonName: string) => {
     const isCorrect = answer === pokemonName;
     setCorrect(isCorrect);
     if (isCorrect) {
-      increment("correctCount");
+      resultReducer.increment("correctCount");
     }
     setResultModalOpen(true);
   };
@@ -39,7 +42,7 @@ export const useAnswerForm = (pokemonName: string) => {
   const beforeTransition = () => {
     setResultModalOpen(false);
     setLoading(true);
-    reset();
+    hintButtonOpensReducer.reset();
   };
 
   const afterTransition = () => {

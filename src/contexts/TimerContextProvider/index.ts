@@ -1,5 +1,5 @@
 export {
   TimerContext,
-  SetTimerContext,
+  TimerReducerContext,
   TimerContextProvider,
 } from "./TimerContextProvider";

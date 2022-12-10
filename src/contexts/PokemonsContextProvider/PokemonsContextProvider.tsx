@@ -1,15 +1,11 @@
 import React from "react";
 import { usePokemons } from "./usePokemons";
 import type { Pokemon } from "@/types/Pokemon";
-import type { WithChildren } from "@/types/WithChildren";
+import type { PropsWithChildren } from "@/types/PropsWithChildren";
 
 export const PokemonsContext = React.createContext<Pokemon[]>([]);
 
-type PokemonsContextProviderProps = WithChildren;
-
-export const PokemonsContextProvider = (
-  props: PokemonsContextProviderProps,
-) => {
+export const PokemonsContextProvider = (props: PropsWithChildren) => {
   const pokemons = usePokemons();
 
   return (
