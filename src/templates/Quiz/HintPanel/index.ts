@@ -2,5 +2,5 @@ export { HintPanel } from "./HintPanel";
 export {
   HintButtonOpensContext,
   HintButtonOpensContextProvider,
-  SetHintButtonOpensContext,
+  HintButtonOpensReducerContext,
 } from "./HintButtonOpensContextProvider";

@@ -1,14 +1,16 @@
 import { css } from "@emotion/react";
 import { useConditionButton } from "./useConditionButton";
 import { Button } from "@/components/Button";
-import type { WithChildren } from "@/types/WithChildren";
+import type { PropsWithChildren } from "@/types/PropsWithChildren";
 
-type ConditionButtonProps = WithChildren<{
+type ConditionButtonProps = {
   include: boolean;
   onClick?: VoidFunction;
-}>;
+};
 
-export const ConditionButton = (props: ConditionButtonProps) => {
+export const ConditionButton = (
+  props: PropsWithChildren<ConditionButtonProps>,
+) => {
   const { isDesktop } = useConditionButton();
 
   return (

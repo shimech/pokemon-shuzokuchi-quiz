@@ -1,7 +1,7 @@
 import React from "react";
 import {
   QuizConditionContext,
-  SetQuizConditionContext,
+  QuizConditionReducerContext,
 } from "@/contexts/QuizConditionContextProvider";
 import { useDesktop } from "@/hooks/useDesktop";
 import type { Region } from "@/types/Region";
@@ -9,16 +9,16 @@ import type { Region } from "@/types/Region";
 export const useQuizConditionPanel = () => {
   const isDesktop = useDesktop();
   const quizCondition = React.useContext(QuizConditionContext);
-  const setQuizCondition = React.useContext(SetQuizConditionContext);
+  const quizConditionReducer = React.useContext(QuizConditionReducerContext);
 
   const handleRegionClick = (region: Region) => () =>
-    setQuizCondition.changeIncludeRegion(region);
+    quizConditionReducer.changeIncludeRegion(region);
   const handleMegaEvolutionClick = () =>
-    setQuizCondition.changeIncludeMegaEvolution();
+    quizConditionReducer.changeIncludeMegaEvolution();
   const handleSameStatusClick = () =>
-    setQuizCondition.changeIncludeSameStatus();
+    quizConditionReducer.changeIncludeSameStatus();
   const handleBeforeEvolutionClick = () =>
-    setQuizCondition.changeIncludeBeforeEvolution();
+    quizConditionReducer.changeIncludeBeforeEvolution();
 
   return {
     handleBeforeEvolutionClick,

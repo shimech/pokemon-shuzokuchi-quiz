@@ -1,51 +1,35 @@
 import React from "react";
+import { useHintButtonOpensContextProvider } from "./useHintButtonOpensContextProvider";
 import type { Hint } from "@/types/Hint";
-import type { WithChildren } from "@/types/WithChildren";
+import type { PropsWithChildren } from "@/types/PropsWithChildren";
 
-type HintButtonOpens = { [key in Hint]: boolean };
+export type HintButtonOpens = { [key in Hint]: boolean };
 
-const initialValue: HintButtonOpens = {
+export type HintButtonOpensReducer = {
+  open: (hint: Hint) => void;
+  reset: () => void;
+};
+
+const defaultValue: HintButtonOpens = {
   ability: false,
   region: false,
   type: false,
 };
 
-export const HintButtonOpensContext = React.createContext(initialValue);
+export const HintButtonOpensContext = React.createContext(defaultValue);
 
-export const SetHintButtonOpensContext = React.createContext<{
-  open: (hint: Hint) => void;
-  reset: () => void;
-}>({
-  open: () => {},
-  reset: () => {},
-});
+export const HintButtonOpensReducerContext =
+  React.createContext<HintButtonOpensReducer>(null);
 
-type HintButtonOpensContextProviderProps = WithChildren;
-
-export const HintButtonOpensContextProvider = (
-  props: HintButtonOpensContextProviderProps,
-) => {
-  const [isHintButtonOpens, setHintButtonOpens] = React.useState(initialValue);
-
-  const open = React.useCallback(
-    (hint: Hint) =>
-      setHintButtonOpens((prevHintButtonOpens) => ({
-        ...prevHintButtonOpens,
-        [hint]: true,
-      })),
-    [setHintButtonOpens],
-  );
-
-  const reset = React.useCallback(
-    () => setHintButtonOpens({ ...initialValue }),
-    [setHintButtonOpens],
-  );
+export const HintButtonOpensContextProvider = (props: PropsWithChildren) => {
+  const { isHintButtonOpens, hintButtonOpensReducer } =
+    useHintButtonOpensContextProvider(defaultValue);
 
   return (
     <HintButtonOpensContext.Provider value={isHintButtonOpens}>
-      <SetHintButtonOpensContext.Provider value={{ open, reset }}>
+      <HintButtonOpensReducerContext.Provider value={hintButtonOpensReducer}>
         {props.children}
-      </SetHintButtonOpensContext.Provider>
+      </HintButtonOpensReducerContext.Provider>
     </HintButtonOpensContext.Provider>
   );
 };

@@ -1,12 +1,12 @@
 import { css } from "@emotion/react";
 import { useMain } from "./useMain";
-import type { WithChildren } from "@/types/WithChildren";
+import type { PropsWithChildren } from "@/types/PropsWithChildren";
 
-type MainProps = WithChildren<{
+type MainProps = {
   className?: string;
-}>;
+};
 
-export const Main = (props: MainProps) => {
+export const Main = (props: PropsWithChildren<MainProps>) => {
   const { isDesktop } = useMain();
 
   return (

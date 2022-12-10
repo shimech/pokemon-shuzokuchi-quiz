@@ -1,10 +1,18 @@
 import React from "react";
 import { useQuizConditionContextProvider } from "./useQuizConditionContextProvider";
+import type { PropsWithChildren } from "@/types/PropsWithChildren";
 import type { QuizCondition } from "@/types/QuizCondition";
 import type { Region } from "@/types/Region";
-import type { WithChildren } from "@/types/WithChildren";
 
-const initialValue: QuizCondition = {
+export type QuizConditionReducer = {
+  changeIncludeRegion: (region: Region) => void;
+  changeIncludeMegaEvolution: VoidFunction;
+  changeIncludeSameStatus: VoidFunction;
+  changeIncludeBeforeEvolution: VoidFunction;
+  reset: VoidFunction;
+};
+
+const defaultValue: QuizCondition = {
   includeBeforeEvolution: false,
   includeMegaEvolution: false,
   includeRegion: {
@@ -23,34 +31,19 @@ const initialValue: QuizCondition = {
 };
 
 export const QuizConditionContext =
-  React.createContext<QuizCondition>(initialValue);
-export const SetQuizConditionContext = React.createContext<{
-  changeIncludeRegion: (region: Region) => void;
-  changeIncludeMegaEvolution: VoidFunction;
-  changeIncludeSameStatus: VoidFunction;
-  changeIncludeBeforeEvolution: VoidFunction;
-  reset: VoidFunction;
-}>({
-  changeIncludeBeforeEvolution: () => {},
-  changeIncludeMegaEvolution: () => {},
-  changeIncludeRegion: () => {},
-  changeIncludeSameStatus: () => {},
-  reset: () => {},
-});
+  React.createContext<QuizCondition>(defaultValue);
+export const QuizConditionReducerContext =
+  React.createContext<QuizConditionReducer>(null);
 
-type QuizConditionContextProviderProps = WithChildren;
-
-export const QuizConditionContextProvider = (
-  props: QuizConditionContextProviderProps,
-) => {
-  const { quizCondition, setQuizCondition } =
-    useQuizConditionContextProvider(initialValue);
+export const QuizConditionContextProvider = (props: PropsWithChildren) => {
+  const { quizCondition, quizConditionReducer } =
+    useQuizConditionContextProvider(defaultValue);
 
   return (
     <QuizConditionContext.Provider value={quizCondition}>
-      <SetQuizConditionContext.Provider value={setQuizCondition}>
+      <QuizConditionReducerContext.Provider value={quizConditionReducer}>
         {props.children}
-      </SetQuizConditionContext.Provider>
+      </QuizConditionReducerContext.Provider>
     </QuizConditionContext.Provider>
   );
 };

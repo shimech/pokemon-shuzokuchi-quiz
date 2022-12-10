@@ -1,15 +1,15 @@
 import { css } from "@emotion/react";
 import { Button } from "../Button";
 import { useNextPageLink } from "./useNextPageLink";
-import type { WithChildren } from "@/types/WithChildren";
+import type { PropsWithChildren } from "@/types/PropsWithChildren";
 
-export type NextPageLinkProps = WithChildren<{
+export type NextPageLinkProps = {
   className?: string;
   beforeTransition?: VoidFunction;
   afterTransition?: VoidFunction;
-}>;
+};
 
-export const NextPageLink = (props: NextPageLinkProps) => {
+export const NextPageLink = (props: PropsWithChildren<NextPageLinkProps>) => {
   const { disabled, isValidPath, handleClick } = useNextPageLink(
     props.beforeTransition,
     props.afterTransition,

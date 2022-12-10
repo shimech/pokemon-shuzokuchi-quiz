@@ -1,5 +1,5 @@
 export {
   ResultContext,
-  SetResultContext,
+  ResultReducerContext,
   ResultContextProvider,
 } from "./ResultContextProvider";

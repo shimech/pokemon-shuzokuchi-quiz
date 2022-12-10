@@ -1,31 +1,31 @@
 import React from "react";
 import { useResultContextProvider } from "./useResultContextProvider";
+import type { PropsWithChildren } from "@/types/PropsWithChildren";
 import type { Result } from "@/types/Result";
-import type { WithChildren } from "@/types/WithChildren";
 
-const initialValue: Result = {
+export type ResultReducer = {
+  increment: (key: keyof Result) => void;
+  reset: VoidFunction;
+};
+
+const defaultValue: Result = {
   correctCount: 0,
   hintCount: 0,
   quizCount: 0,
 };
 
-export const ResultContext = React.createContext(initialValue);
+export const ResultContext = React.createContext(defaultValue);
 
-export const SetResultContext = React.createContext<{
-  increment: (key: keyof Result) => void;
-  reset: VoidFunction;
-}>({ increment: () => {}, reset: () => {} });
+export const ResultReducerContext = React.createContext<ResultReducer>(null);
 
-type ResultContextProviderProps = WithChildren;
-
-export const ResultContextProvider = (props: ResultContextProviderProps) => {
-  const { result, setResult } = useResultContextProvider(initialValue);
+export const ResultContextProvider = (props: PropsWithChildren) => {
+  const { result, resultReducer } = useResultContextProvider(defaultValue);
 
   return (
     <ResultContext.Provider value={result}>
-      <SetResultContext.Provider value={setResult}>
+      <ResultReducerContext.Provider value={resultReducer}>
         {props.children}
-      </SetResultContext.Provider>
+      </ResultReducerContext.Provider>
     </ResultContext.Provider>
   );
 };
