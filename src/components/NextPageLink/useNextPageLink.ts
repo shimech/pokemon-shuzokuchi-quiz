@@ -8,7 +8,7 @@ import {
 import type { Quiz } from "@/types/Quiz";
 import { sleep } from "@/utils/sleep";
 
-const SLEEP_MS = 150;
+const SLEEP_MS = 300;
 
 const buildNextPagePath = (quizCount: number, quiz: Quiz) => {
   if (quizCount < 10) {
