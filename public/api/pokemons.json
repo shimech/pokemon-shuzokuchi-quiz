@@ -30756,10 +30756,10 @@
     },
     "status": {
       "hitpoint": 70,
-      "attack": 130,
+      "attack": 135,
       "block": 95,
       "contact": 45,
-      "defense": 75,
+      "defense": 70,
       "speed": 85,
       "total": 500
     },
