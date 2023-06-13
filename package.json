@@ -12,7 +12,7 @@
     "eslint:fix": "npm run eslint -- --fix",
     "stylelint": "stylelint \"./src/**/*.{css,tsx}\"",
     "stylelint:fix": "npm run stylelint -- --fix",
-    "format": "prettier --write \"./src/**/*.(ts|tsx)\"",
+    "format": "prettier --write \"./src/**/*.{css,ts,tsx}\"",
     "deploy:prd": "npm run build && npm run export && firebase deploy --only hosting:production",
     "deploy:stg": "npm run build && npm run export && firebase deploy --only hosting:staging"
   },
