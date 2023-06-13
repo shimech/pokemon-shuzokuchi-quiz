@@ -19938,12 +19938,12 @@
       "special": ""
     },
     "status": {
-      "hitpoint": 60,
-      "attack": 105,
+      "hitpoint": 55,
+      "attack": 100,
       "block": 60,
-      "contact": 120,
+      "contact": 125,
       "defense": 60,
-      "speed": 105,
+      "speed": 110,
       "total": 510
     },
     "isFinal": true,
@@ -30756,10 +30756,10 @@
     },
     "status": {
       "hitpoint": 70,
-      "attack": 130,
+      "attack": 135,
       "block": 95,
       "contact": 45,
-      "defense": 75,
+      "defense": 70,
       "speed": 85,
       "total": 500
     },
