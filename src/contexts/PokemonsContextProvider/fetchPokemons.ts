@@ -2,7 +2,7 @@ import type { Pokemon } from "@/types/Pokemon";
 
 const URL =
   process.env.NODE_ENV === "production"
-    ? "https://raw.githubusercontent.com/shimech/pokemon-shuzokuchi-quiz-neo/main/public/api/pokemons.json"
+    ? "https://raw.githubusercontent.com/shimech/pokemon-shuzokuchi-quiz/main/public/api/pokemons.json"
     : "http://localhost:3000/api/pokemons.json";
 
 export const fetchPokemons = async () => {
