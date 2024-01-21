@@ -9928,7 +9928,7 @@
     "ability": {
       "normal": [
         "ようりょくそ",
-        "はやおき"
+        "かぜのり"
       ],
       "special": "わるいてぐせ"
     },
@@ -13990,7 +13990,7 @@
         "げきりゅう",
         ""
       ],
-      "special": "まけんき"
+      "special": "かちき"
     },
     "status": {
       "hitpoint": 53,
@@ -14019,7 +14019,7 @@
         "げきりゅう",
         ""
       ],
-      "special": "まけんき"
+      "special": "かちき"
     },
     "status": {
       "hitpoint": 64,
@@ -14048,7 +14048,7 @@
         "げきりゅう",
         ""
       ],
-      "special": "まけんき"
+      "special": "かちき"
     },
     "status": {
       "hitpoint": 84,
@@ -19949,7 +19949,7 @@
     "isFinal": true,
     "region": "ヒスイ",
     "isMegaEvolution": false,
-    "isSameStatus": true
+    "isSameStatus": false
   },
   {
     "id": "9f5f23bfaab21779b4b26db2713b1658",
@@ -19978,7 +19978,7 @@
     "isFinal": true,
     "region": "イッシュ",
     "isMegaEvolution": false,
-    "isSameStatus": true
+    "isSameStatus": false
   },
   {
     "id": "d1e1254124f8a9f7769a9624afc7fef5",
@@ -22359,38 +22359,9 @@
     "isSameStatus": false
   },
   {
-    "id": "119c0b073730c63825233fc9aaa0b75b",
+    "id": "f95782b9c90d48d24326555a63e21499",
     "no": 647,
-    "name": "ケルディオ(いつものすがた)",
-    "type": [
-      "みず",
-      "かくとう"
-    ],
-    "ability": {
-      "normal": [
-        "せいぎのこころ",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 91,
-      "attack": 72,
-      "block": 90,
-      "contact": 129,
-      "defense": 90,
-      "speed": 108,
-      "total": 580
-    },
-    "isFinal": true,
-    "region": "イッシュ",
-    "isMegaEvolution": false,
-    "isSameStatus": true
-  },
-  {
-    "id": "7b09769dd9199abd3fdf11cd8d9ad5ed",
-    "no": 647,
-    "name": "ケルディオ(かくごのすがた)",
+    "name": "ケルディオ",
     "type": [
       "みず",
       "かくとう"
@@ -29229,7 +29200,7 @@
     "isFinal": false,
     "region": "ガラル",
     "isMegaEvolution": false,
-    "isSameStatus": false
+    "isSameStatus": true
   },
   {
     "id": "1dc7b0a0150d69539bbd98ccca26ded2",
@@ -30154,7 +30125,7 @@
       "speed": 85,
       "total": 535
     },
-    "isFinal": true,
+    "isFinal": false,
     "region": "ガラル",
     "isMegaEvolution": false,
     "isSameStatus": false
@@ -30404,7 +30375,7 @@
         "せいしんりょく",
         ""
       ],
-      "special": "ノーガード"
+      "special": ""
     },
     "status": {
       "hitpoint": 60,
@@ -30765,6 +30736,35 @@
     },
     "isFinal": true,
     "region": "ヒスイ",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "ea936c187a5f267ad94ef2d9e3bcd55e",
+    "no": 901,
+    "name": "ガチグマ(アカツキ)",
+    "type": [
+      "じめん",
+      "ノーマル"
+    ],
+    "ability": {
+      "normal": [
+        "しんがん",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 113,
+      "attack": 70,
+      "block": 120,
+      "contact": 135,
+      "defense": 65,
+      "speed": 52,
+      "total": 555
+    },
+    "isFinal": true,
+    "region": "パルデア",
     "isMegaEvolution": false,
     "isSameStatus": false
   },
@@ -31320,66 +31320,8 @@
     "isSameStatus": false
   },
   {
-    "id": "9278239844b113564f05b54164525367",
-    "no": 917,
-    "name": "ノココッチ(ふたふしフォルム)",
-    "type": [
-      "ノーマル",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "てんのめぐみ",
-        "にげあし"
-      ],
-      "special": "びびり"
-    },
-    "status": {
-      "hitpoint": 125,
-      "attack": 100,
-      "block": 80,
-      "contact": 85,
-      "defense": 75,
-      "speed": 55,
-      "total": 520
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": true
-  },
-  {
-    "id": "87e2571c3ffbc6db8fdb3adba8df7c2f",
-    "no": 917,
-    "name": "ノココッチ(みつふしフォルム)",
-    "type": [
-      "ノーマル",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "てんのめぐみ",
-        "にげあし"
-      ],
-      "special": "びびり"
-    },
-    "status": {
-      "hitpoint": 125,
-      "attack": 100,
-      "block": 80,
-      "contact": 85,
-      "defense": 75,
-      "speed": 55,
-      "total": 520
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": true
-  },
-  {
     "id": "370b076a175c039956b2b65513160dd2",
-    "no": 918,
+    "no": 917,
     "name": "タマンチュラ",
     "type": [
       "むし",
@@ -31408,7 +31350,7 @@
   },
   {
     "id": "045682470afd3baff3e0db0c8bb149d7",
-    "no": 919,
+    "no": 918,
     "name": "ワナイダー",
     "type": [
       "むし",
@@ -31437,7 +31379,7 @@
   },
   {
     "id": "85fb967c90fba8c39740852ce43a2892",
-    "no": 920,
+    "no": 919,
     "name": "マメバッタ",
     "type": [
       "むし",
@@ -31466,7 +31408,7 @@
   },
   {
     "id": "50c71c6435aeda531e20b86526e52e42",
-    "no": 921,
+    "no": 920,
     "name": "エクスレッグ",
     "type": [
       "むし",
@@ -31494,1052 +31436,8 @@
     "isSameStatus": false
   },
   {
-    "id": "8b27dfc23dd3a04b6e15b4b43fb9522c",
-    "no": 922,
-    "name": "シガロコ",
-    "type": [
-      "むし",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "ふくがん",
-        ""
-      ],
-      "special": "だっぴ"
-    },
-    "status": {
-      "hitpoint": 41,
-      "attack": 50,
-      "block": 60,
-      "contact": 31,
-      "defense": 58,
-      "speed": 30,
-      "total": 270
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "035dc181b53e8736d60c5ba0e195ff12",
-    "no": 923,
-    "name": "ベラカス",
-    "type": [
-      "むし",
-      "エスパー"
-    ],
-    "ability": {
-      "normal": [
-        "シンクロ",
-        ""
-      ],
-      "special": "テレパシー"
-    },
-    "status": {
-      "hitpoint": 75,
-      "attack": 50,
-      "block": 85,
-      "contact": 115,
-      "defense": 100,
-      "speed": 45,
-      "total": 470
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "60b8497e564de111260bd86c9afbaa88",
-    "no": 924,
-    "name": "ボチ",
-    "type": [
-      "ゴースト",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "ものひろい",
-        ""
-      ],
-      "special": "もふもふ"
-    },
-    "status": {
-      "hitpoint": 50,
-      "attack": 61,
-      "block": 60,
-      "contact": 30,
-      "defense": 55,
-      "speed": 34,
-      "total": 290
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "189317cc17a6de2e8fc717e5136c7b39",
-    "no": 925,
-    "name": "ハカドッグ",
-    "type": [
-      "ゴースト",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "すなかき",
-        ""
-      ],
-      "special": "もふもふ"
-    },
-    "status": {
-      "hitpoint": 72,
-      "attack": 101,
-      "block": 100,
-      "contact": 50,
-      "defense": 97,
-      "speed": 68,
-      "total": 488
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "b5436989aa57c706a564448708c7dea8",
-    "no": 926,
-    "name": "ヒラヒナ",
-    "type": [
-      "エスパー",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "きけんよち",
-        "おみとおし"
-      ],
-      "special": "かそく"
-    },
-    "status": {
-      "hitpoint": 30,
-      "attack": 35,
-      "block": 30,
-      "contact": 55,
-      "defense": 30,
-      "speed": 75,
-      "total": 255
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "981511adac2e40d639ac073c40f5b5c5",
-    "no": 927,
-    "name": "クエスパトラ",
-    "type": [
-      "エスパー",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "びんじょう",
-        "おみとおし"
-      ],
-      "special": "かそく"
-    },
-    "status": {
-      "hitpoint": 95,
-      "attack": 60,
-      "block": 60,
-      "contact": 101,
-      "defense": 60,
-      "speed": 105,
-      "total": 481
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "53a5c922f3946a665fee5f169e893f78",
-    "no": 928,
-    "name": "リキキリン",
-    "type": [
-      "ノーマル",
-      "エスパー"
-    ],
-    "ability": {
-      "normal": [
-        "はんすう",
-        "テイルアーマー"
-      ],
-      "special": "そうしょく"
-    },
-    "status": {
-      "hitpoint": 120,
-      "attack": 90,
-      "block": 70,
-      "contact": 110,
-      "defense": 70,
-      "speed": 60,
-      "total": 520
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "8ce85bb06b0369eb776e4e9582b368f1",
-    "no": 929,
-    "name": "ウミディグダ",
-    "type": [
-      "みず",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "ぬめぬめ",
-        "びびり"
-      ],
-      "special": "すながくれ"
-    },
-    "status": {
-      "hitpoint": 10,
-      "attack": 55,
-      "block": 25,
-      "contact": 35,
-      "defense": 25,
-      "speed": 95,
-      "total": 245
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "9699411cc90fd86a931b02d9028f80c5",
-    "no": 930,
-    "name": "ウミトリオ",
-    "type": [
-      "みず",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "ぬめぬめ",
-        "びびり"
-      ],
-      "special": "すながくれ"
-    },
-    "status": {
-      "hitpoint": 35,
-      "attack": 100,
-      "block": 50,
-      "contact": 50,
-      "defense": 70,
-      "speed": 120,
-      "total": 425
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": true
-  },
-  {
-    "id": "4c915dc7c9d4421c8b22b64f55b7e134",
-    "no": 931,
-    "name": "ヘイラッシャ",
-    "type": [
-      "みず",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "てんねん",
-        "どんかん"
-      ],
-      "special": "みずのベール"
-    },
-    "status": {
-      "hitpoint": 150,
-      "attack": 100,
-      "block": 115,
-      "contact": 65,
-      "defense": 65,
-      "speed": 35,
-      "total": 530
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "4f6bb14792b285228888a13e67e280e7",
-    "no": 932,
-    "name": "ミガルーサ",
-    "type": [
-      "みず",
-      "エスパー"
-    ],
-    "ability": {
-      "normal": [
-        "かたやぶり",
-        ""
-      ],
-      "special": "きれあじ"
-    },
-    "status": {
-      "hitpoint": 90,
-      "attack": 102,
-      "block": 73,
-      "contact": 78,
-      "defense": 65,
-      "speed": 70,
-      "total": 478
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "4af785d7ee0560d28dd3d81217fb4dfd",
-    "no": 933,
-    "name": "ナミイルカ",
-    "type": [
-      "みず",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "みずのベール",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 70,
-      "attack": 45,
-      "block": 40,
-      "contact": 45,
-      "defense": 40,
-      "speed": 75,
-      "total": 315
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "08ad715be6830e49014ae3fa112ee228",
-    "no": 934,
-    "name": "イルカマン(ナイーブフォルム)",
-    "type": [
-      "みず",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "マイティチェンジ",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 100,
-      "attack": 70,
-      "block": 72,
-      "contact": 53,
-      "defense": 62,
-      "speed": 100,
-      "total": 457
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "1c8855d13f27f3d83c33cc674b3d41db",
-    "no": 934,
-    "name": "イルカマン(マイティフォルム)",
-    "type": [
-      "みず",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "マイティチェンジ",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 100,
-      "attack": 160,
-      "block": 97,
-      "contact": 106,
-      "defense": 87,
-      "speed": 100,
-      "total": 650
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "606b64b737b621bd69b0f2e59053bd57",
-    "no": 935,
-    "name": "ミニーブ",
-    "type": [
-      "くさ",
-      "ノーマル"
-    ],
-    "ability": {
-      "normal": [
-        "はやおき",
-        ""
-      ],
-      "special": "しゅうかく"
-    },
-    "status": {
-      "hitpoint": 41,
-      "attack": 35,
-      "block": 45,
-      "contact": 58,
-      "defense": 51,
-      "speed": 30,
-      "total": 260
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "cb3c900b3b876a5fbeb7763bb4ed1444",
-    "no": 936,
-    "name": "オリーニョ",
-    "type": [
-      "くさ",
-      "ノーマル"
-    ],
-    "ability": {
-      "normal": [
-        "はやおき",
-        ""
-      ],
-      "special": "しゅうかく"
-    },
-    "status": {
-      "hitpoint": 52,
-      "attack": 53,
-      "block": 60,
-      "contact": 78,
-      "defense": 78,
-      "speed": 33,
-      "total": 354
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "57a1dbdbf204dc303a1e5aadec40569f",
-    "no": 937,
-    "name": "オリーヴァ",
-    "type": [
-      "くさ",
-      "ノーマル"
-    ],
-    "ability": {
-      "normal": [
-        "こぼれダネ",
-        ""
-      ],
-      "special": "しゅうかく"
-    },
-    "status": {
-      "hitpoint": 78,
-      "attack": 69,
-      "block": 90,
-      "contact": 125,
-      "defense": 109,
-      "speed": 39,
-      "total": 510
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "65da4d6fcd77d43362c68db1bf577728",
-    "no": 938,
-    "name": "カプサイジ",
-    "type": [
-      "くさ",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "ようりょくそ",
-        "ふみん"
-      ],
-      "special": "ぶきよう"
-    },
-    "status": {
-      "hitpoint": 50,
-      "attack": 62,
-      "block": 40,
-      "contact": 62,
-      "defense": 40,
-      "speed": 50,
-      "total": 304
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "b9d5bb41210291ea3dc32bf92127e85a",
-    "no": 939,
-    "name": "スコヴィラン",
-    "type": [
-      "くさ",
-      "ほのお"
-    ],
-    "ability": {
-      "normal": [
-        "ようりょくそ",
-        "ふみん"
-      ],
-      "special": "ムラっけ"
-    },
-    "status": {
-      "hitpoint": 65,
-      "attack": 108,
-      "block": 65,
-      "contact": 108,
-      "defense": 65,
-      "speed": 75,
-      "total": 486
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "ec7a4ed2dcf1816baed251b0bb79caf2",
-    "no": 940,
-    "name": "ズピカ",
-    "type": [
-      "でんき",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "マイペース",
-        "せいでんき"
-      ],
-      "special": "しめりけ"
-    },
-    "status": {
-      "hitpoint": 61,
-      "attack": 31,
-      "block": 41,
-      "contact": 59,
-      "defense": 35,
-      "speed": 45,
-      "total": 272
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "1e7a1eb89c88a17c3731a4ef0520aede",
-    "no": 941,
-    "name": "ハラバリー",
-    "type": [
-      "でんき",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "でんきにかえる",
-        "せいでんき"
-      ],
-      "special": "しめりけ"
-    },
-    "status": {
-      "hitpoint": 109,
-      "attack": 64,
-      "block": 91,
-      "contact": 103,
-      "defense": 83,
-      "speed": 45,
-      "total": 495
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "8ce8f269a3af2510803310dd98db30ba",
-    "no": 942,
-    "name": "ブロロン",
-    "type": [
-      "はがね",
-      "どく"
-    ],
-    "ability": {
-      "normal": [
-        "ぼうじん",
-        ""
-      ],
-      "special": "スロースタート"
-    },
-    "status": {
-      "hitpoint": 45,
-      "attack": 70,
-      "block": 63,
-      "contact": 30,
-      "defense": 45,
-      "speed": 47,
-      "total": 300
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "392a41fcd1debe62ea15975777cce1b6",
-    "no": 943,
-    "name": "ブロロローム",
-    "type": [
-      "はがね",
-      "どく"
-    ],
-    "ability": {
-      "normal": [
-        "ぼうじん",
-        ""
-      ],
-      "special": "フィルター"
-    },
-    "status": {
-      "hitpoint": 80,
-      "attack": 119,
-      "block": 90,
-      "contact": 54,
-      "defense": 67,
-      "speed": 90,
-      "total": 500
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "6bd69497d9d911fda37594ae20dd65b3",
-    "no": 944,
-    "name": "ミミズズ",
-    "type": [
-      "はがね",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "どしょく",
-        ""
-      ],
-      "special": "すながくれ"
-    },
-    "status": {
-      "hitpoint": 70,
-      "attack": 85,
-      "block": 145,
-      "contact": 60,
-      "defense": 55,
-      "speed": 65,
-      "total": 480
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "c75d794f798cc2a7c8ad9681180df43e",
-    "no": 945,
-    "name": "ワッカネズミ",
-    "type": [
-      "ノーマル",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "にげあし",
-        "ものひろい"
-      ],
-      "special": "マイペース"
-    },
-    "status": {
-      "hitpoint": 50,
-      "attack": 50,
-      "block": 45,
-      "contact": 40,
-      "defense": 45,
-      "speed": 75,
-      "total": 305
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "9304667bd2d1688540c1ccf8cbfe02af",
-    "no": 946,
-    "name": "イッカネズミ(3びきかぞく)",
-    "type": [
-      "ノーマル",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "フレンドガード",
-        "ほおぶくろ"
-      ],
-      "special": "テクニシャン"
-    },
-    "status": {
-      "hitpoint": 74,
-      "attack": 75,
-      "block": 70,
-      "contact": 65,
-      "defense": 75,
-      "speed": 111,
-      "total": 470
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": true
-  },
-  {
-    "id": "c0b8a5eb8da6387ecfb2e16a051ee51c",
-    "no": 946,
-    "name": "イッカネズミ(4ひきかぞく)",
-    "type": [
-      "ノーマル",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "フレンドガード",
-        "ほおぶくろ"
-      ],
-      "special": "テクニシャン"
-    },
-    "status": {
-      "hitpoint": 74,
-      "attack": 75,
-      "block": 70,
-      "contact": 65,
-      "defense": 75,
-      "speed": 111,
-      "total": 470
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": true
-  },
-  {
-    "id": "b61599338464eff82aaecdc9814aa1b1",
-    "no": 947,
-    "name": "アルクジラ",
-    "type": [
-      "こおり",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "あついしぼう",
-        "ゆきがくれ"
-      ],
-      "special": "ちからずく"
-    },
-    "status": {
-      "hitpoint": 108,
-      "attack": 68,
-      "block": 45,
-      "contact": 30,
-      "defense": 40,
-      "speed": 43,
-      "total": 334
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "42c74236d12db8f898e63bcf936cfd24",
-    "no": 948,
-    "name": "ハルクジラ",
-    "type": [
-      "こおり",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "あついしぼう",
-        "ゆきかき"
-      ],
-      "special": "ちからずく"
-    },
-    "status": {
-      "hitpoint": 170,
-      "attack": 113,
-      "block": 65,
-      "contact": 45,
-      "defense": 55,
-      "speed": 73,
-      "total": 521
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "1e7929b4efd341c65d7ff08e23639d95",
-    "no": 949,
-    "name": "セビエ",
-    "type": [
-      "ドラゴン",
-      "こおり"
-    ],
-    "ability": {
-      "normal": [
-        "ねつこうかん",
-        ""
-      ],
-      "special": "アイスボディ"
-    },
-    "status": {
-      "hitpoint": 65,
-      "attack": 75,
-      "block": 45,
-      "contact": 35,
-      "defense": 45,
-      "speed": 55,
-      "total": 320
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "776cb5c6447ca3cb31432b1ae4b6a346",
-    "no": 950,
-    "name": "セゴール",
-    "type": [
-      "ドラゴン",
-      "こおり"
-    ],
-    "ability": {
-      "normal": [
-        "ねつこうかん",
-        ""
-      ],
-      "special": "アイスボディ"
-    },
-    "status": {
-      "hitpoint": 90,
-      "attack": 95,
-      "block": 66,
-      "contact": 45,
-      "defense": 65,
-      "speed": 62,
-      "total": 423
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "caebf63778107b8ad4556d76d5f96c8a",
-    "no": 951,
-    "name": "セグレイブ",
-    "type": [
-      "ドラゴン",
-      "こおり"
-    ],
-    "ability": {
-      "normal": [
-        "ねつこうかん",
-        ""
-      ],
-      "special": "アイスボディ"
-    },
-    "status": {
-      "hitpoint": 115,
-      "attack": 145,
-      "block": 92,
-      "contact": 75,
-      "defense": 86,
-      "speed": 87,
-      "total": 600
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "9759c2228db64d84f74c2a1dd455359f",
-    "no": 952,
-    "name": "シャリタツ(そったすがた)",
-    "type": [
-      "ドラゴン",
-      "みず"
-    ],
-    "ability": {
-      "normal": [
-        "しれいとう",
-        ""
-      ],
-      "special": "よびみず"
-    },
-    "status": {
-      "hitpoint": 68,
-      "attack": 50,
-      "block": 60,
-      "contact": 120,
-      "defense": 95,
-      "speed": 82,
-      "total": 475
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": true
-  },
-  {
-    "id": "6acdd78ec72905b741b065eb2c90ddfb",
-    "no": 952,
-    "name": "シャリタツ(たれたすがた)",
-    "type": [
-      "ドラゴン",
-      "みず"
-    ],
-    "ability": {
-      "normal": [
-        "しれいとう",
-        ""
-      ],
-      "special": "よびみず"
-    },
-    "status": {
-      "hitpoint": 68,
-      "attack": 50,
-      "block": 60,
-      "contact": 120,
-      "defense": 95,
-      "speed": 82,
-      "total": 475
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": true
-  },
-  {
-    "id": "ba2178bf95fc44e5419134dcff31bde1",
-    "no": 952,
-    "name": "シャリタツ(のびたすがた)",
-    "type": [
-      "ドラゴン",
-      "みず"
-    ],
-    "ability": {
-      "normal": [
-        "しれいとう",
-        ""
-      ],
-      "special": "よびみず"
-    },
-    "status": {
-      "hitpoint": 68,
-      "attack": 50,
-      "block": 60,
-      "contact": 120,
-      "defense": 95,
-      "speed": 82,
-      "total": 475
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": true
-  },
-  {
-    "id": "ac8ee1e70521c2157bd98974c4fe39d8",
-    "no": 953,
-    "name": "モトトカゲ",
-    "type": [
-      "ドラゴン",
-      "ノーマル"
-    ],
-    "ability": {
-      "normal": [
-        "だっぴ",
-        ""
-      ],
-      "special": "さいせいりょく"
-    },
-    "status": {
-      "hitpoint": 70,
-      "attack": 95,
-      "block": 65,
-      "contact": 85,
-      "defense": 65,
-      "speed": 121,
-      "total": 501
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
     "id": "39bfcf744d00937f0d6d08394e6a4368",
-    "no": 954,
+    "no": 921,
     "name": "パモ",
     "type": [
       "でんき",
@@ -32568,7 +31466,7 @@
   },
   {
     "id": "3900ea0ec1ac8389549dbfc310db27be",
-    "no": 955,
+    "no": 922,
     "name": "パモット",
     "type": [
       "でんき",
@@ -32597,7 +31495,7 @@
   },
   {
     "id": "ffe382bc892a819c84ddc5abeafdd841",
-    "no": 956,
+    "no": 923,
     "name": "パーモット",
     "type": [
       "でんき",
@@ -32625,434 +31523,28 @@
     "isSameStatus": false
   },
   {
-    "id": "e328a19acf4c92a954016fcbc2fadbc7",
-    "no": 957,
-    "name": "カイデン",
-    "type": [
-      "でんき",
-      "ひこう"
-    ],
-    "ability": {
-      "normal": [
-        "ふうりょくでんき",
-        "ちくでん"
-      ],
-      "special": "かちき"
-    },
-    "status": {
-      "hitpoint": 40,
-      "attack": 40,
-      "block": 35,
-      "contact": 55,
-      "defense": 40,
-      "speed": 70,
-      "total": 280
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "42570bc68d069bb13fa8dc957cd03f96",
-    "no": 958,
-    "name": "タイカイデン",
-    "type": [
-      "でんき",
-      "ひこう"
-    ],
-    "ability": {
-      "normal": [
-        "ふうりょくでんき",
-        "ちくでん"
-      ],
-      "special": "かちき"
-    },
-    "status": {
-      "hitpoint": 70,
-      "attack": 70,
-      "block": 60,
-      "contact": 105,
-      "defense": 60,
-      "speed": 125,
-      "total": 490
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "64be169b1256e9293acb5ca613018f5f",
-    "no": 959,
-    "name": "オトシドリ",
-    "type": [
-      "ひこう",
-      "あく"
-    ],
-    "ability": {
-      "normal": [
-        "はとむね",
-        "するどいめ"
-      ],
-      "special": "いわはこび"
-    },
-    "status": {
-      "hitpoint": 70,
-      "attack": 103,
-      "block": 85,
-      "contact": 60,
-      "defense": 85,
-      "speed": 82,
-      "total": 485
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "55c89753883d1b296687e02e07e2bd65",
-    "no": 960,
-    "name": "イキリンコ(イエローフェザー)",
+    "id": "c75d794f798cc2a7c8ad9681180df43e",
+    "no": 924,
+    "name": "ワッカネズミ",
     "type": [
       "ノーマル",
-      "ひこう"
-    ],
-    "ability": {
-      "normal": [
-        "いかく",
-        "はりきり"
-      ],
-      "special": "こんじょう"
-    },
-    "status": {
-      "hitpoint": 82,
-      "attack": 96,
-      "block": 51,
-      "contact": 45,
-      "defense": 51,
-      "speed": 92,
-      "total": 417
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": true
-  },
-  {
-    "id": "31b33ced1de357130417b5903c60a408",
-    "no": 960,
-    "name": "イキリンコ(グリーンフェザー)",
-    "type": [
-      "ノーマル",
-      "ひこう"
-    ],
-    "ability": {
-      "normal": [
-        "いかく",
-        "はりきり"
-      ],
-      "special": "こんじょう"
-    },
-    "status": {
-      "hitpoint": 82,
-      "attack": 96,
-      "block": 51,
-      "contact": 45,
-      "defense": 51,
-      "speed": 92,
-      "total": 417
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": true
-  },
-  {
-    "id": "92aed9f1f5ec36ddf22e85104e465aff",
-    "no": 960,
-    "name": "イキリンコ(ブルーフェザー)",
-    "type": [
-      "ノーマル",
-      "ひこう"
-    ],
-    "ability": {
-      "normal": [
-        "いかく",
-        "はりきり"
-      ],
-      "special": "こんじょう"
-    },
-    "status": {
-      "hitpoint": 82,
-      "attack": 96,
-      "block": 51,
-      "contact": 45,
-      "defense": 51,
-      "speed": 92,
-      "total": 417
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": true
-  },
-  {
-    "id": "d260cb7df5f1e00ea46af33aac7cd95d",
-    "no": 960,
-    "name": "イキリンコ(ホワイトフェザー)",
-    "type": [
-      "ノーマル",
-      "ひこう"
-    ],
-    "ability": {
-      "normal": [
-        "いかく",
-        "はりきり"
-      ],
-      "special": "こんじょう"
-    },
-    "status": {
-      "hitpoint": 82,
-      "attack": 96,
-      "block": 51,
-      "contact": 45,
-      "defense": 51,
-      "speed": 92,
-      "total": 417
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": true
-  },
-  {
-    "id": "41ed3419abb8fc1d54abee7eb2ffc6cc",
-    "no": 961,
-    "name": "カラミンゴ",
-    "type": [
-      "ひこう",
-      "かくとう"
-    ],
-    "ability": {
-      "normal": [
-        "きもったま",
-        "ちどりあし"
-      ],
-      "special": "きょうえん"
-    },
-    "status": {
-      "hitpoint": 82,
-      "attack": 115,
-      "block": 74,
-      "contact": 75,
-      "defense": 64,
-      "speed": 90,
-      "total": 500
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "dd36e1180b89e6ebeb48d2362a21053e",
-    "no": 962,
-    "name": "ガケガニ",
-    "type": [
-      "いわ",
       ""
     ],
     "ability": {
       "normal": [
-        "いかりのこうら",
-        "シェルアーマー"
+        "にげあし",
+        "ものひろい"
       ],
-      "special": "さいせいりょく"
+      "special": "マイペース"
     },
     "status": {
-      "hitpoint": 70,
-      "attack": 100,
-      "block": 115,
-      "contact": 35,
-      "defense": 55,
-      "speed": 75,
-      "total": 450
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "b06c4944aea806471b9049d32f8fc95c",
-    "no": 963,
-    "name": "コジオ",
-    "type": [
-      "いわ",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "きよめのしお",
-        "がんじょう"
-      ],
-      "special": "クリアボディ"
-    },
-    "status": {
-      "hitpoint": 55,
-      "attack": 55,
-      "block": 75,
-      "contact": 35,
-      "defense": 35,
-      "speed": 25,
-      "total": 280
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "ce1ca4bcdcc885381d409dcacac83646",
-    "no": 964,
-    "name": "ジオヅム",
-    "type": [
-      "いわ",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "きよめのしお",
-        "がんじょう"
-      ],
-      "special": "クリアボディ"
-    },
-    "status": {
-      "hitpoint": 60,
-      "attack": 60,
-      "block": 100,
-      "contact": 35,
-      "defense": 65,
-      "speed": 35,
-      "total": 355
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "2432be2f58536a0adf486079bb88be9e",
-    "no": 965,
-    "name": "キョジオーン",
-    "type": [
-      "いわ",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "きよめのしお",
-        "がんじょう"
-      ],
-      "special": "クリアボディ"
-    },
-    "status": {
-      "hitpoint": 100,
-      "attack": 100,
-      "block": 130,
-      "contact": 45,
-      "defense": 90,
-      "speed": 35,
-      "total": 500
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "140c6eef7cf7eaafcd657d7ba14df385",
-    "no": 966,
-    "name": "キラーメ",
-    "type": [
-      "いわ",
-      "どく"
-    ],
-    "ability": {
-      "normal": [
-        "どくげしょう",
-        ""
-      ],
-      "special": "ふしょく"
-    },
-    "status": {
-      "hitpoint": 48,
-      "attack": 35,
-      "block": 42,
-      "contact": 105,
-      "defense": 60,
-      "speed": 60,
-      "total": 350
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "b0bb8b5765a1759af79300bf09bed56a",
-    "no": 967,
-    "name": "キラフロル",
-    "type": [
-      "いわ",
-      "どく"
-    ],
-    "ability": {
-      "normal": [
-        "どくげしょう",
-        ""
-      ],
-      "special": "ふしょく"
-    },
-    "status": {
-      "hitpoint": 83,
-      "attack": 55,
-      "block": 90,
-      "contact": 130,
-      "defense": 81,
-      "speed": 86,
-      "total": 525
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "6bd0c00f3e096282745d3bb630195458",
-    "no": 968,
-    "name": "シルシュルー",
-    "type": [
-      "どく",
-      "ノーマル"
-    ],
-    "ability": {
-      "normal": [
-        "かるわざ",
-        "わるいてぐせ"
-      ],
-      "special": "いたずらごころ"
-    },
-    "status": {
-      "hitpoint": 40,
-      "attack": 65,
-      "block": 35,
+      "hitpoint": 50,
+      "attack": 50,
+      "block": 45,
       "contact": 40,
-      "defense": 35,
+      "defense": 45,
       "speed": 75,
-      "total": 290
+      "total": 305
     },
     "isFinal": false,
     "region": "パルデア",
@@ -33060,37 +31552,37 @@
     "isSameStatus": false
   },
   {
-    "id": "2d692679d41b96a92ef149388569a5f6",
-    "no": 969,
-    "name": "タギングル",
+    "id": "e6821f8b8c886341938ba9c55bcd5317",
+    "no": 925,
+    "name": "イッカネズミ",
     "type": [
-      "どく",
-      "ノーマル"
+      "ノーマル",
+      ""
     ],
     "ability": {
       "normal": [
-        "かるわざ",
-        "どくしゅ"
+        "フレンドガード",
+        "ほおぶくろ"
       ],
-      "special": "いたずらごころ"
+      "special": "テクニシャン"
     },
     "status": {
-      "hitpoint": 63,
-      "attack": 95,
-      "block": 65,
-      "contact": 80,
-      "defense": 72,
-      "speed": 110,
-      "total": 485
+      "hitpoint": 74,
+      "attack": 75,
+      "block": 70,
+      "contact": 65,
+      "defense": 75,
+      "speed": 111,
+      "total": 470
     },
     "isFinal": true,
     "region": "パルデア",
     "isMegaEvolution": false,
-    "isSameStatus": false
+    "isSameStatus": true
   },
   {
     "id": "06c2f72e1c3038d59d47c4da4df1d552",
-    "no": 970,
+    "no": 926,
     "name": "パピモッチ",
     "type": [
       "フェアリー",
@@ -33119,7 +31611,7 @@
   },
   {
     "id": "672145650c98dc2c2dc640313694653e",
-    "no": 971,
+    "no": 927,
     "name": "バウッツェル",
     "type": [
       "フェアリー",
@@ -33147,28 +31639,28 @@
     "isSameStatus": false
   },
   {
-    "id": "0e06785a6f84a0130a780ebccb87b227",
-    "no": 972,
-    "name": "オラチフ",
+    "id": "606b64b737b621bd69b0f2e59053bd57",
+    "no": 928,
+    "name": "ミニーブ",
     "type": [
-      "あく",
-      ""
+      "くさ",
+      "ノーマル"
     ],
     "ability": {
       "normal": [
-        "いかく",
-        "にげあし"
+        "はやおき",
+        ""
       ],
-      "special": "はりこみ"
+      "special": "しゅうかく"
     },
     "status": {
-      "hitpoint": 60,
-      "attack": 78,
-      "block": 60,
-      "contact": 40,
+      "hitpoint": 41,
+      "attack": 35,
+      "block": 45,
+      "contact": 58,
       "defense": 51,
-      "speed": 51,
-      "total": 340
+      "speed": 30,
+      "total": 260
     },
     "isFinal": false,
     "region": "パルデア",
@@ -33176,434 +31668,57 @@
     "isSameStatus": false
   },
   {
-    "id": "e24420fc84f3750de059896e67f80219",
-    "no": 973,
-    "name": "マフィティフ",
-    "type": [
-      "あく",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "いかく",
-        "ばんけん"
-      ],
-      "special": "はりこみ"
-    },
-    "status": {
-      "hitpoint": 80,
-      "attack": 120,
-      "block": 90,
-      "contact": 60,
-      "defense": 70,
-      "speed": 85,
-      "total": 505
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "74a469f7ae519e05443713d382e1a34c",
-    "no": 974,
-    "name": "アノクサ",
+    "id": "cb3c900b3b876a5fbeb7763bb4ed1444",
+    "no": 929,
+    "name": "オリーニョ",
     "type": [
       "くさ",
-      "ゴースト"
+      "ノーマル"
     ],
     "ability": {
       "normal": [
-        "かぜのり",
+        "はやおき",
         ""
       ],
-      "special": "すりぬけ"
+      "special": "しゅうかく"
     },
     "status": {
-      "hitpoint": 40,
-      "attack": 65,
-      "block": 30,
-      "contact": 45,
-      "defense": 35,
-      "speed": 60,
-      "total": 275
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "d1d71c79bc857794b699c829227ebc8e",
-    "no": 975,
-    "name": "アノホラグサ",
-    "type": [
-      "くさ",
-      "ゴースト"
-    ],
-    "ability": {
-      "normal": [
-        "かぜのり",
-        ""
-      ],
-      "special": "すりぬけ"
-    },
-    "status": {
-      "hitpoint": 55,
-      "attack": 115,
-      "block": 70,
-      "contact": 80,
-      "defense": 70,
-      "speed": 90,
-      "total": 480
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "9a528ae5d0e59a1417a0c2b811458dc1",
-    "no": 976,
-    "name": "コレクレー(はこフォルム)",
-    "type": [
-      "ゴースト",
-      ""
-    ],
-    "ability": {
-      "normal": [
-        "びびり",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 45,
-      "attack": 30,
-      "block": 70,
-      "contact": 75,
-      "defense": 70,
-      "speed": 10,
-      "total": 300
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "936e01fb4e5c43919a9a867c9192404c",
-    "no": 977,
-    "name": "サーフゴー",
-    "type": [
-      "はがね",
-      "ゴースト"
-    ],
-    "ability": {
-      "normal": [
-        "おうごんのからだ",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 87,
-      "attack": 60,
-      "block": 95,
-      "contact": 133,
-      "defense": 91,
-      "speed": 84,
-      "total": 550
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "66da6e74bab00299c5f5cc34065d8cd5",
-    "no": 978,
-    "name": "イダイナキバ",
-    "type": [
-      "じめん",
-      "かくとう"
-    ],
-    "ability": {
-      "normal": [
-        "こだいかっせい",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 115,
-      "attack": 131,
-      "block": 131,
-      "contact": 53,
-      "defense": 53,
-      "speed": 87,
-      "total": 570
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "d1b5be9bb1a4123a76ec618b883f157a",
-    "no": 979,
-    "name": "アラブルタケ",
-    "type": [
-      "くさ",
-      "あく"
-    ],
-    "ability": {
-      "normal": [
-        "こだいかっせい",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 111,
-      "attack": 127,
-      "block": 99,
-      "contact": 79,
-      "defense": 99,
-      "speed": 55,
-      "total": 570
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "d920b7a6abdda8326198e5a2e7a069e1",
-    "no": 981,
-    "name": "スナノケガワ",
-    "type": [
-      "でんき",
-      "じめん"
-    ],
-    "ability": {
-      "normal": [
-        "こだいかっせい",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 85,
-      "attack": 81,
-      "block": 97,
-      "contact": 121,
-      "defense": 85,
-      "speed": 101,
-      "total": 570
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "73d6b746800818c96bcd3ae5259c40e5",
-    "no": 982,
-    "name": "サケブシッポ",
-    "type": [
-      "フェアリー",
-      "エスパー"
-    ],
-    "ability": {
-      "normal": [
-        "こだいかっせい",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 115,
-      "attack": 65,
-      "block": 99,
-      "contact": 65,
-      "defense": 115,
-      "speed": 111,
-      "total": 570
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "d48f283786da8f1fa0a664a5aa829c9e",
-    "no": 983,
-    "name": "ハバタクカミ",
-    "type": [
-      "ゴースト",
-      "フェアリー"
-    ],
-    "ability": {
-      "normal": [
-        "こだいかっせい",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 55,
-      "attack": 55,
-      "block": 55,
-      "contact": 135,
-      "defense": 135,
-      "speed": 135,
-      "total": 570
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "885f144bb7c8dea4a5290e57f5f06a04",
-    "no": 984,
-    "name": "チヲハウハネ",
-    "type": [
-      "むし",
-      "かくとう"
-    ],
-    "ability": {
-      "normal": [
-        "こだいかっせい",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 85,
-      "attack": 135,
-      "block": 79,
-      "contact": 85,
-      "defense": 105,
-      "speed": 81,
-      "total": 570
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "b7a8c189cb09e9262c3edbc0d7fdd112",
-    "no": 985,
-    "name": "トドロクツキ",
-    "type": [
-      "ドラゴン",
-      "あく"
-    ],
-    "ability": {
-      "normal": [
-        "こだいかっせい",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 105,
-      "attack": 139,
-      "block": 71,
-      "contact": 55,
-      "defense": 101,
-      "speed": 119,
-      "total": 590
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "87c2d35b78146152fcd8c2eea8d7989f",
-    "no": 986,
-    "name": "テツノワダチ",
-    "type": [
-      "じめん",
-      "はがね"
-    ],
-    "ability": {
-      "normal": [
-        "クォークチャージ",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 90,
-      "attack": 112,
-      "block": 120,
-      "contact": 72,
-      "defense": 70,
-      "speed": 106,
-      "total": 570
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "59659c7763d1681c3c51730207063dab",
-    "no": 988,
-    "name": "テツノドクガ",
-    "type": [
-      "ほのお",
-      "どく"
-    ],
-    "ability": {
-      "normal": [
-        "クォークチャージ",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 80,
-      "attack": 70,
+      "hitpoint": 52,
+      "attack": 53,
       "block": 60,
-      "contact": 140,
-      "defense": 110,
-      "speed": 110,
-      "total": 570
+      "contact": 78,
+      "defense": 78,
+      "speed": 33,
+      "total": 354
     },
-    "isFinal": true,
+    "isFinal": false,
     "region": "パルデア",
     "isMegaEvolution": false,
     "isSameStatus": false
   },
   {
-    "id": "3f5668704e2c218b087d69c1b03391c2",
-    "no": 989,
-    "name": "テツノカイナ",
+    "id": "57a1dbdbf204dc303a1e5aadec40569f",
+    "no": 930,
+    "name": "オリーヴァ",
     "type": [
-      "かくとう",
-      "でんき"
+      "くさ",
+      "ノーマル"
     ],
     "ability": {
       "normal": [
-        "クォークチャージ",
+        "こぼれダネ",
         ""
       ],
-      "special": ""
+      "special": "しゅうかく"
     },
     "status": {
-      "hitpoint": 154,
-      "attack": 140,
-      "block": 108,
-      "contact": 50,
-      "defense": 68,
-      "speed": 50,
-      "total": 570
+      "hitpoint": 78,
+      "attack": 69,
+      "block": 90,
+      "contact": 125,
+      "defense": 109,
+      "speed": 39,
+      "total": 510
     },
     "isFinal": true,
     "region": "パルデア",
@@ -33611,347 +31726,57 @@
     "isSameStatus": false
   },
   {
-    "id": "5cb1f4cc1e2cf511b948d2df3e1d952a",
-    "no": 990,
-    "name": "テツノコウベ",
+    "id": "cc40f2252622233f333c832c7d6d2aa5",
+    "no": 931,
+    "name": "イキリンコ",
     "type": [
-      "あく",
+      "ノーマル",
       "ひこう"
     ],
     "ability": {
       "normal": [
-        "クォークチャージ",
-        ""
+        "いかく",
+        "はりきり"
       ],
-      "special": ""
+      "special": "こんじょう"
     },
     "status": {
-      "hitpoint": 94,
-      "attack": 80,
-      "block": 86,
-      "contact": 122,
-      "defense": 80,
-      "speed": 108,
-      "total": 570
+      "hitpoint": 82,
+      "attack": 96,
+      "block": 51,
+      "contact": 45,
+      "defense": 51,
+      "speed": 92,
+      "total": 417
     },
     "isFinal": true,
     "region": "パルデア",
     "isMegaEvolution": false,
-    "isSameStatus": false
+    "isSameStatus": true
   },
   {
-    "id": "94498e0db5071c4ad99e5d543ca5cf83",
-    "no": 991,
-    "name": "テツノイバラ",
+    "id": "b06c4944aea806471b9049d32f8fc95c",
+    "no": 932,
+    "name": "コジオ",
     "type": [
       "いわ",
-      "でんき"
+      ""
     ],
     "ability": {
       "normal": [
-        "クォークチャージ",
-        ""
+        "きよめのしお",
+        "がんじょう"
       ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 100,
-      "attack": 134,
-      "block": 110,
-      "contact": 70,
-      "defense": 84,
-      "speed": 72,
-      "total": 570
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "4b2fdc18cfa19f278f2d707100ebe9c7",
-    "no": 992,
-    "name": "テツノツツミ",
-    "type": [
-      "こおり",
-      "みず"
-    ],
-    "ability": {
-      "normal": [
-        "クォークチャージ",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 56,
-      "attack": 80,
-      "block": 114,
-      "contact": 124,
-      "defense": 60,
-      "speed": 136,
-      "total": 570
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "166646b484648affe0fd8b119a6c30c9",
-    "no": 993,
-    "name": "テツノブジン",
-    "type": [
-      "フェアリー",
-      "かくとう"
-    ],
-    "ability": {
-      "normal": [
-        "クォークチャージ",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 74,
-      "attack": 130,
-      "block": 90,
-      "contact": 120,
-      "defense": 60,
-      "speed": 116,
-      "total": 590
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "5000dead50bacf7ff43bff6acd5660d4",
-    "no": 994,
-    "name": "ディンルー",
-    "type": [
-      "あく",
-      "じめん"
-    ],
-    "ability": {
-      "normal": [
-        "わざわいのうつわ",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 155,
-      "attack": 110,
-      "block": 125,
-      "contact": 55,
-      "defense": 80,
-      "speed": 45,
-      "total": 570
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "bb3e4759df31e641e34e362b90487c64",
-    "no": 995,
-    "name": "パオジアン",
-    "type": [
-      "あく",
-      "こおり"
-    ],
-    "ability": {
-      "normal": [
-        "わざわいのつるぎ",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 80,
-      "attack": 120,
-      "block": 80,
-      "contact": 90,
-      "defense": 65,
-      "speed": 135,
-      "total": 570
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "dd7b62f5f84b4d3816c3a9538a460047",
-    "no": 996,
-    "name": "チオンジェン",
-    "type": [
-      "あく",
-      "くさ"
-    ],
-    "ability": {
-      "normal": [
-        "わざわいのおふだ",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 85,
-      "attack": 85,
-      "block": 100,
-      "contact": 95,
-      "defense": 135,
-      "speed": 70,
-      "total": 570
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "b02ebb00426342fcf006134f890f271d",
-    "no": 997,
-    "name": "イーユイ",
-    "type": [
-      "あく",
-      "ほのお"
-    ],
-    "ability": {
-      "normal": [
-        "わざわいのたま",
-        ""
-      ],
-      "special": ""
+      "special": "クリアボディ"
     },
     "status": {
       "hitpoint": 55,
-      "attack": 80,
-      "block": 80,
-      "contact": 135,
-      "defense": 120,
-      "speed": 100,
-      "total": 570
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "fd45c29b42ce67ebc3701774e507974c",
-    "no": 998,
-    "name": "コライドン",
-    "type": [
-      "かくとう",
-      "ドラゴン"
-    ],
-    "ability": {
-      "normal": [
-        "ひひいろのこどう",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 100,
-      "attack": 135,
-      "block": 115,
-      "contact": 85,
-      "defense": 100,
-      "speed": 135,
-      "total": 670
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "34934ba31c778b66c9f5f2562f358f96",
-    "no": 999,
-    "name": "ミライドン",
-    "type": [
-      "でんき",
-      "ドラゴン"
-    ],
-    "ability": {
-      "normal": [
-        "ハドロンエンジン",
-        ""
-      ],
-      "special": ""
-    },
-    "status": {
-      "hitpoint": 100,
-      "attack": 85,
-      "block": 100,
-      "contact": 135,
-      "defense": 115,
-      "speed": 135,
-      "total": 670
-    },
-    "isFinal": true,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "3629fd39d9eac1af5c765c337fe99bc0",
-    "no": 1000,
-    "name": "カヌチャン",
-    "type": [
-      "フェアリー",
-      "はがね"
-    ],
-    "ability": {
-      "normal": [
-        "かたやぶり",
-        "マイペース"
-      ],
-      "special": "わるいてぐせ"
-    },
-    "status": {
-      "hitpoint": 50,
-      "attack": 45,
-      "block": 45,
-      "contact": 35,
-      "defense": 64,
-      "speed": 58,
-      "total": 297
-    },
-    "isFinal": false,
-    "region": "パルデア",
-    "isMegaEvolution": false,
-    "isSameStatus": false
-  },
-  {
-    "id": "5b1d2b2d6b3905bdc9ed2ef4191b35a9",
-    "no": 1001,
-    "name": "ナカヌチャン",
-    "type": [
-      "フェアリー",
-      "はがね"
-    ],
-    "ability": {
-      "normal": [
-        "かたやぶり",
-        "マイペース"
-      ],
-      "special": "わるいてぐせ"
-    },
-    "status": {
-      "hitpoint": 65,
       "attack": 55,
-      "block": 55,
-      "contact": 45,
-      "defense": 82,
-      "speed": 78,
-      "total": 380
+      "block": 75,
+      "contact": 35,
+      "defense": 35,
+      "speed": 25,
+      "total": 280
     },
     "isFinal": false,
     "region": "パルデア",
@@ -33959,28 +31784,57 @@
     "isSameStatus": false
   },
   {
-    "id": "c2a3d41fd2e6330377e53eed99fa4da8",
-    "no": 1002,
-    "name": "デカヌチャン",
+    "id": "ce1ca4bcdcc885381d409dcacac83646",
+    "no": 933,
+    "name": "ジオヅム",
     "type": [
-      "フェアリー",
-      "はがね"
+      "いわ",
+      ""
     ],
     "ability": {
       "normal": [
-        "かたやぶり",
-        "マイペース"
+        "きよめのしお",
+        "がんじょう"
       ],
-      "special": "わるいてぐせ"
+      "special": "クリアボディ"
     },
     "status": {
-      "hitpoint": 85,
-      "attack": 75,
-      "block": 77,
-      "contact": 70,
-      "defense": 105,
-      "speed": 94,
-      "total": 506
+      "hitpoint": 60,
+      "attack": 60,
+      "block": 100,
+      "contact": 35,
+      "defense": 65,
+      "speed": 35,
+      "total": 355
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "2432be2f58536a0adf486079bb88be9e",
+    "no": 934,
+    "name": "キョジオーン",
+    "type": [
+      "いわ",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "きよめのしお",
+        "がんじょう"
+      ],
+      "special": "クリアボディ"
+    },
+    "status": {
+      "hitpoint": 100,
+      "attack": 100,
+      "block": 130,
+      "contact": 45,
+      "defense": 90,
+      "speed": 35,
+      "total": 500
     },
     "isFinal": true,
     "region": "パルデア",
@@ -33989,7 +31843,7 @@
   },
   {
     "id": "75f0f9716df8d677f22710bdb434fe58",
-    "no": 1003,
+    "no": 935,
     "name": "カルボウ",
     "type": [
       "ほのお",
@@ -34018,7 +31872,7 @@
   },
   {
     "id": "bd6688c08431fe899681a01b8faf2da3",
-    "no": 1004,
+    "no": 936,
     "name": "グレンアルマ",
     "type": [
       "ほのお",
@@ -34047,7 +31901,7 @@
   },
   {
     "id": "8c30ca987dfffb5f768677f711b73571",
-    "no": 1005,
+    "no": 937,
     "name": "ソウブレイズ",
     "type": [
       "ほのお",
@@ -34075,8 +31929,298 @@
     "isSameStatus": false
   },
   {
+    "id": "ec7a4ed2dcf1816baed251b0bb79caf2",
+    "no": 938,
+    "name": "ズピカ",
+    "type": [
+      "でんき",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "マイペース",
+        "せいでんき"
+      ],
+      "special": "しめりけ"
+    },
+    "status": {
+      "hitpoint": 61,
+      "attack": 31,
+      "block": 41,
+      "contact": 59,
+      "defense": 35,
+      "speed": 45,
+      "total": 272
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "1e7a1eb89c88a17c3731a4ef0520aede",
+    "no": 939,
+    "name": "ハラバリー",
+    "type": [
+      "でんき",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "でんきにかえる",
+        "せいでんき"
+      ],
+      "special": "しめりけ"
+    },
+    "status": {
+      "hitpoint": 109,
+      "attack": 64,
+      "block": 91,
+      "contact": 103,
+      "defense": 83,
+      "speed": 45,
+      "total": 495
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "e328a19acf4c92a954016fcbc2fadbc7",
+    "no": 940,
+    "name": "カイデン",
+    "type": [
+      "でんき",
+      "ひこう"
+    ],
+    "ability": {
+      "normal": [
+        "ふうりょくでんき",
+        "ちくでん"
+      ],
+      "special": "かちき"
+    },
+    "status": {
+      "hitpoint": 40,
+      "attack": 40,
+      "block": 35,
+      "contact": 55,
+      "defense": 40,
+      "speed": 70,
+      "total": 280
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "42570bc68d069bb13fa8dc957cd03f96",
+    "no": 941,
+    "name": "タイカイデン",
+    "type": [
+      "でんき",
+      "ひこう"
+    ],
+    "ability": {
+      "normal": [
+        "ふうりょくでんき",
+        "ちくでん"
+      ],
+      "special": "かちき"
+    },
+    "status": {
+      "hitpoint": 70,
+      "attack": 70,
+      "block": 60,
+      "contact": 105,
+      "defense": 60,
+      "speed": 125,
+      "total": 490
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "0e06785a6f84a0130a780ebccb87b227",
+    "no": 942,
+    "name": "オラチフ",
+    "type": [
+      "あく",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "いかく",
+        "にげあし"
+      ],
+      "special": "はりこみ"
+    },
+    "status": {
+      "hitpoint": 60,
+      "attack": 78,
+      "block": 60,
+      "contact": 40,
+      "defense": 51,
+      "speed": 51,
+      "total": 340
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "e24420fc84f3750de059896e67f80219",
+    "no": 943,
+    "name": "マフィティフ",
+    "type": [
+      "あく",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "いかく",
+        "ばんけん"
+      ],
+      "special": "はりこみ"
+    },
+    "status": {
+      "hitpoint": 80,
+      "attack": 120,
+      "block": 90,
+      "contact": 60,
+      "defense": 70,
+      "speed": 85,
+      "total": 505
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "6bd0c00f3e096282745d3bb630195458",
+    "no": 944,
+    "name": "シルシュルー",
+    "type": [
+      "どく",
+      "ノーマル"
+    ],
+    "ability": {
+      "normal": [
+        "かるわざ",
+        "わるいてぐせ"
+      ],
+      "special": "いたずらごころ"
+    },
+    "status": {
+      "hitpoint": 40,
+      "attack": 65,
+      "block": 35,
+      "contact": 40,
+      "defense": 35,
+      "speed": 75,
+      "total": 290
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "2d692679d41b96a92ef149388569a5f6",
+    "no": 945,
+    "name": "タギングル",
+    "type": [
+      "どく",
+      "ノーマル"
+    ],
+    "ability": {
+      "normal": [
+        "かるわざ",
+        "どくしゅ"
+      ],
+      "special": "いたずらごころ"
+    },
+    "status": {
+      "hitpoint": 63,
+      "attack": 95,
+      "block": 65,
+      "contact": 80,
+      "defense": 72,
+      "speed": 110,
+      "total": 485
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "74a469f7ae519e05443713d382e1a34c",
+    "no": 946,
+    "name": "アノクサ",
+    "type": [
+      "くさ",
+      "ゴースト"
+    ],
+    "ability": {
+      "normal": [
+        "かぜのり",
+        ""
+      ],
+      "special": "すりぬけ"
+    },
+    "status": {
+      "hitpoint": 40,
+      "attack": 65,
+      "block": 30,
+      "contact": 45,
+      "defense": 35,
+      "speed": 60,
+      "total": 275
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "d1d71c79bc857794b699c829227ebc8e",
+    "no": 947,
+    "name": "アノホラグサ",
+    "type": [
+      "くさ",
+      "ゴースト"
+    ],
+    "ability": {
+      "normal": [
+        "かぜのり",
+        ""
+      ],
+      "special": "すりぬけ"
+    },
+    "status": {
+      "hitpoint": 55,
+      "attack": 115,
+      "block": 70,
+      "contact": 80,
+      "defense": 70,
+      "speed": 90,
+      "total": 480
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
     "id": "6716befa25c11ac491e69fc55a3ca46f",
-    "no": 1006,
+    "no": 948,
     "name": "ノノクラゲ",
     "type": [
       "じめん",
@@ -34105,7 +32249,7 @@
   },
   {
     "id": "74c8a26fbcae3fc6877210a6b3151211",
-    "no": 1007,
+    "no": 949,
     "name": "リククラゲ",
     "type": [
       "じめん",
@@ -34133,28 +32277,898 @@
     "isSameStatus": true
   },
   {
-    "id": "9f24d86bc0a9d7bb4578d81c97d9d1a5",
-    "no": 1008,
-    "name": "ドドゲザン",
+    "id": "dd36e1180b89e6ebeb48d2362a21053e",
+    "no": 950,
+    "name": "ガケガニ",
     "type": [
-      "あく",
+      "いわ",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "いかりのこうら",
+        "シェルアーマー"
+      ],
+      "special": "さいせいりょく"
+    },
+    "status": {
+      "hitpoint": 70,
+      "attack": 100,
+      "block": 115,
+      "contact": 35,
+      "defense": 55,
+      "speed": 75,
+      "total": 450
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "65da4d6fcd77d43362c68db1bf577728",
+    "no": 951,
+    "name": "カプサイジ",
+    "type": [
+      "くさ",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "ようりょくそ",
+        "ふみん"
+      ],
+      "special": "ぶきよう"
+    },
+    "status": {
+      "hitpoint": 50,
+      "attack": 62,
+      "block": 40,
+      "contact": 62,
+      "defense": 40,
+      "speed": 50,
+      "total": 304
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "b9d5bb41210291ea3dc32bf92127e85a",
+    "no": 952,
+    "name": "スコヴィラン",
+    "type": [
+      "くさ",
+      "ほのお"
+    ],
+    "ability": {
+      "normal": [
+        "ようりょくそ",
+        "ふみん"
+      ],
+      "special": "ムラっけ"
+    },
+    "status": {
+      "hitpoint": 65,
+      "attack": 108,
+      "block": 65,
+      "contact": 108,
+      "defense": 65,
+      "speed": 75,
+      "total": 486
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "8b27dfc23dd3a04b6e15b4b43fb9522c",
+    "no": 953,
+    "name": "シガロコ",
+    "type": [
+      "むし",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "ふくがん",
+        ""
+      ],
+      "special": "だっぴ"
+    },
+    "status": {
+      "hitpoint": 41,
+      "attack": 50,
+      "block": 60,
+      "contact": 31,
+      "defense": 58,
+      "speed": 30,
+      "total": 270
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "035dc181b53e8736d60c5ba0e195ff12",
+    "no": 954,
+    "name": "ベラカス",
+    "type": [
+      "むし",
+      "エスパー"
+    ],
+    "ability": {
+      "normal": [
+        "シンクロ",
+        ""
+      ],
+      "special": "テレパシー"
+    },
+    "status": {
+      "hitpoint": 75,
+      "attack": 50,
+      "block": 85,
+      "contact": 115,
+      "defense": 100,
+      "speed": 45,
+      "total": 470
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "b5436989aa57c706a564448708c7dea8",
+    "no": 955,
+    "name": "ヒラヒナ",
+    "type": [
+      "エスパー",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "きけんよち",
+        "おみとおし"
+      ],
+      "special": "かそく"
+    },
+    "status": {
+      "hitpoint": 30,
+      "attack": 35,
+      "block": 30,
+      "contact": 55,
+      "defense": 30,
+      "speed": 75,
+      "total": 255
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "981511adac2e40d639ac073c40f5b5c5",
+    "no": 956,
+    "name": "クエスパトラ",
+    "type": [
+      "エスパー",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "びんじょう",
+        "おみとおし"
+      ],
+      "special": "かそく"
+    },
+    "status": {
+      "hitpoint": 95,
+      "attack": 60,
+      "block": 60,
+      "contact": 101,
+      "defense": 60,
+      "speed": 105,
+      "total": 481
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "3629fd39d9eac1af5c765c337fe99bc0",
+    "no": 957,
+    "name": "カヌチャン",
+    "type": [
+      "フェアリー",
       "はがね"
     ],
     "ability": {
       "normal": [
-        "まけんき",
-        "そうだいしょう"
+        "かたやぶり",
+        "マイペース"
       ],
-      "special": "プレッシャー"
+      "special": "わるいてぐせ"
+    },
+    "status": {
+      "hitpoint": 50,
+      "attack": 45,
+      "block": 45,
+      "contact": 35,
+      "defense": 64,
+      "speed": 58,
+      "total": 297
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "5b1d2b2d6b3905bdc9ed2ef4191b35a9",
+    "no": 958,
+    "name": "ナカヌチャン",
+    "type": [
+      "フェアリー",
+      "はがね"
+    ],
+    "ability": {
+      "normal": [
+        "かたやぶり",
+        "マイペース"
+      ],
+      "special": "わるいてぐせ"
+    },
+    "status": {
+      "hitpoint": 65,
+      "attack": 55,
+      "block": 55,
+      "contact": 45,
+      "defense": 82,
+      "speed": 78,
+      "total": 380
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "c2a3d41fd2e6330377e53eed99fa4da8",
+    "no": 959,
+    "name": "デカヌチャン",
+    "type": [
+      "フェアリー",
+      "はがね"
+    ],
+    "ability": {
+      "normal": [
+        "かたやぶり",
+        "マイペース"
+      ],
+      "special": "わるいてぐせ"
+    },
+    "status": {
+      "hitpoint": 85,
+      "attack": 75,
+      "block": 77,
+      "contact": 70,
+      "defense": 105,
+      "speed": 94,
+      "total": 506
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "8ce85bb06b0369eb776e4e9582b368f1",
+    "no": 960,
+    "name": "ウミディグダ",
+    "type": [
+      "みず",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "ぬめぬめ",
+        "びびり"
+      ],
+      "special": "すながくれ"
+    },
+    "status": {
+      "hitpoint": 10,
+      "attack": 55,
+      "block": 25,
+      "contact": 35,
+      "defense": 25,
+      "speed": 95,
+      "total": 245
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "9699411cc90fd86a931b02d9028f80c5",
+    "no": 961,
+    "name": "ウミトリオ",
+    "type": [
+      "みず",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "ぬめぬめ",
+        "びびり"
+      ],
+      "special": "すながくれ"
+    },
+    "status": {
+      "hitpoint": 35,
+      "attack": 100,
+      "block": 50,
+      "contact": 50,
+      "defense": 70,
+      "speed": 120,
+      "total": 425
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": true
+  },
+  {
+    "id": "64be169b1256e9293acb5ca613018f5f",
+    "no": 962,
+    "name": "オトシドリ",
+    "type": [
+      "ひこう",
+      "あく"
+    ],
+    "ability": {
+      "normal": [
+        "はとむね",
+        "するどいめ"
+      ],
+      "special": "いわはこび"
+    },
+    "status": {
+      "hitpoint": 70,
+      "attack": 103,
+      "block": 85,
+      "contact": 60,
+      "defense": 85,
+      "speed": 82,
+      "total": 485
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "4af785d7ee0560d28dd3d81217fb4dfd",
+    "no": 963,
+    "name": "ナミイルカ",
+    "type": [
+      "みず",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "みずのベール",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 70,
+      "attack": 45,
+      "block": 40,
+      "contact": 45,
+      "defense": 40,
+      "speed": 75,
+      "total": 315
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "08ad715be6830e49014ae3fa112ee228",
+    "no": 964,
+    "name": "イルカマン(ナイーブフォルム)",
+    "type": [
+      "みず",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "マイティチェンジ",
+        ""
+      ],
+      "special": ""
     },
     "status": {
       "hitpoint": 100,
-      "attack": 135,
-      "block": 120,
+      "attack": 70,
+      "block": 72,
+      "contact": 53,
+      "defense": 62,
+      "speed": 100,
+      "total": 457
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "1c8855d13f27f3d83c33cc674b3d41db",
+    "no": 964,
+    "name": "イルカマン(マイティフォルム)",
+    "type": [
+      "みず",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "マイティチェンジ",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 100,
+      "attack": 160,
+      "block": 97,
+      "contact": 106,
+      "defense": 87,
+      "speed": 100,
+      "total": 650
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "8ce8f269a3af2510803310dd98db30ba",
+    "no": 965,
+    "name": "ブロロン",
+    "type": [
+      "はがね",
+      "どく"
+    ],
+    "ability": {
+      "normal": [
+        "ぼうじん",
+        ""
+      ],
+      "special": "スロースタート"
+    },
+    "status": {
+      "hitpoint": 45,
+      "attack": 70,
+      "block": 63,
+      "contact": 30,
+      "defense": 45,
+      "speed": 47,
+      "total": 300
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "392a41fcd1debe62ea15975777cce1b6",
+    "no": 966,
+    "name": "ブロロローム",
+    "type": [
+      "はがね",
+      "どく"
+    ],
+    "ability": {
+      "normal": [
+        "ぼうじん",
+        ""
+      ],
+      "special": "フィルター"
+    },
+    "status": {
+      "hitpoint": 80,
+      "attack": 119,
+      "block": 90,
+      "contact": 54,
+      "defense": 67,
+      "speed": 90,
+      "total": 500
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "ac8ee1e70521c2157bd98974c4fe39d8",
+    "no": 967,
+    "name": "モトトカゲ",
+    "type": [
+      "ドラゴン",
+      "ノーマル"
+    ],
+    "ability": {
+      "normal": [
+        "だっぴ",
+        ""
+      ],
+      "special": "さいせいりょく"
+    },
+    "status": {
+      "hitpoint": 70,
+      "attack": 95,
+      "block": 65,
+      "contact": 85,
+      "defense": 65,
+      "speed": 121,
+      "total": 501
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "6bd69497d9d911fda37594ae20dd65b3",
+    "no": 968,
+    "name": "ミミズズ",
+    "type": [
+      "はがね",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "どしょく",
+        ""
+      ],
+      "special": "すながくれ"
+    },
+    "status": {
+      "hitpoint": 70,
+      "attack": 85,
+      "block": 145,
       "contact": 60,
-      "defense": 85,
-      "speed": 50,
-      "total": 550
+      "defense": 55,
+      "speed": 65,
+      "total": 480
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "140c6eef7cf7eaafcd657d7ba14df385",
+    "no": 969,
+    "name": "キラーメ",
+    "type": [
+      "いわ",
+      "どく"
+    ],
+    "ability": {
+      "normal": [
+        "どくげしょう",
+        ""
+      ],
+      "special": "ふしょく"
+    },
+    "status": {
+      "hitpoint": 48,
+      "attack": 35,
+      "block": 42,
+      "contact": 105,
+      "defense": 60,
+      "speed": 60,
+      "total": 350
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "b0bb8b5765a1759af79300bf09bed56a",
+    "no": 970,
+    "name": "キラフロル",
+    "type": [
+      "いわ",
+      "どく"
+    ],
+    "ability": {
+      "normal": [
+        "どくげしょう",
+        ""
+      ],
+      "special": "ふしょく"
+    },
+    "status": {
+      "hitpoint": 83,
+      "attack": 55,
+      "block": 90,
+      "contact": 130,
+      "defense": 81,
+      "speed": 86,
+      "total": 525
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "60b8497e564de111260bd86c9afbaa88",
+    "no": 971,
+    "name": "ボチ",
+    "type": [
+      "ゴースト",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "ものひろい",
+        ""
+      ],
+      "special": "もふもふ"
+    },
+    "status": {
+      "hitpoint": 50,
+      "attack": 61,
+      "block": 60,
+      "contact": 30,
+      "defense": 55,
+      "speed": 34,
+      "total": 290
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "189317cc17a6de2e8fc717e5136c7b39",
+    "no": 972,
+    "name": "ハカドッグ",
+    "type": [
+      "ゴースト",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "すなかき",
+        ""
+      ],
+      "special": "もふもふ"
+    },
+    "status": {
+      "hitpoint": 72,
+      "attack": 101,
+      "block": 100,
+      "contact": 50,
+      "defense": 97,
+      "speed": 68,
+      "total": 488
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "41ed3419abb8fc1d54abee7eb2ffc6cc",
+    "no": 973,
+    "name": "カラミンゴ",
+    "type": [
+      "ひこう",
+      "かくとう"
+    ],
+    "ability": {
+      "normal": [
+        "きもったま",
+        "ちどりあし"
+      ],
+      "special": "きょうえん"
+    },
+    "status": {
+      "hitpoint": 82,
+      "attack": 115,
+      "block": 74,
+      "contact": 75,
+      "defense": 64,
+      "speed": 90,
+      "total": 500
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "b61599338464eff82aaecdc9814aa1b1",
+    "no": 974,
+    "name": "アルクジラ",
+    "type": [
+      "こおり",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "あついしぼう",
+        "ゆきがくれ"
+      ],
+      "special": "ちからずく"
+    },
+    "status": {
+      "hitpoint": 108,
+      "attack": 68,
+      "block": 45,
+      "contact": 30,
+      "defense": 40,
+      "speed": 43,
+      "total": 334
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "42c74236d12db8f898e63bcf936cfd24",
+    "no": 975,
+    "name": "ハルクジラ",
+    "type": [
+      "こおり",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "あついしぼう",
+        "ゆきかき"
+      ],
+      "special": "ちからずく"
+    },
+    "status": {
+      "hitpoint": 170,
+      "attack": 113,
+      "block": 65,
+      "contact": 45,
+      "defense": 55,
+      "speed": 73,
+      "total": 521
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "4f6bb14792b285228888a13e67e280e7",
+    "no": 976,
+    "name": "ミガルーサ",
+    "type": [
+      "みず",
+      "エスパー"
+    ],
+    "ability": {
+      "normal": [
+        "かたやぶり",
+        ""
+      ],
+      "special": "きれあじ"
+    },
+    "status": {
+      "hitpoint": 90,
+      "attack": 102,
+      "block": 73,
+      "contact": 78,
+      "defense": 65,
+      "speed": 70,
+      "total": 478
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "4c915dc7c9d4421c8b22b64f55b7e134",
+    "no": 977,
+    "name": "ヘイラッシャ",
+    "type": [
+      "みず",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "てんねん",
+        "どんかん"
+      ],
+      "special": "みずのベール"
+    },
+    "status": {
+      "hitpoint": 150,
+      "attack": 100,
+      "block": 115,
+      "contact": 65,
+      "defense": 65,
+      "speed": 35,
+      "total": 530
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "e70e3a162ab1ff78298592499d6983bc",
+    "no": 978,
+    "name": "シャリタツ",
+    "type": [
+      "ドラゴン",
+      "みず"
+    ],
+    "ability": {
+      "normal": [
+        "しれいとう",
+        ""
+      ],
+      "special": "よびみず"
+    },
+    "status": {
+      "hitpoint": 68,
+      "attack": 50,
+      "block": 60,
+      "contact": 120,
+      "defense": 95,
+      "speed": 82,
+      "total": 475
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": true
+  },
+  {
+    "id": "ff1343cce6ab1afdafb8669b17364a01",
+    "no": 979,
+    "name": "コノヨザル",
+    "type": [
+      "かくとう",
+      "ゴースト"
+    ],
+    "ability": {
+      "normal": [
+        "やるき",
+        "せいしんりょく"
+      ],
+      "special": "まけんき"
+    },
+    "status": {
+      "hitpoint": 110,
+      "attack": 115,
+      "block": 80,
+      "contact": 50,
+      "defense": 90,
+      "speed": 90,
+      "total": 535
     },
     "isFinal": true,
     "region": "パルデア",
@@ -34163,7 +33177,7 @@
   },
   {
     "id": "886e1398a39f9b844380ffc9db2d5e5c",
-    "no": 1009,
+    "no": 980,
     "name": "ドオー",
     "type": [
       "どく",
@@ -34191,28 +33205,1449 @@
     "isSameStatus": false
   },
   {
-    "id": "ff1343cce6ab1afdafb8669b17364a01",
-    "no": 1010,
-    "name": "コノヨザル",
+    "id": "53a5c922f3946a665fee5f169e893f78",
+    "no": 981,
+    "name": "リキキリン",
+    "type": [
+      "ノーマル",
+      "エスパー"
+    ],
+    "ability": {
+      "normal": [
+        "はんすう",
+        "テイルアーマー"
+      ],
+      "special": "そうしょく"
+    },
+    "status": {
+      "hitpoint": 120,
+      "attack": 90,
+      "block": 70,
+      "contact": 110,
+      "defense": 70,
+      "speed": 60,
+      "total": 520
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "6ea45c1415db066135def46bc3cb9b8c",
+    "no": 982,
+    "name": "ノココッチ",
+    "type": [
+      "ノーマル",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "てんのめぐみ",
+        "にげあし"
+      ],
+      "special": "びびり"
+    },
+    "status": {
+      "hitpoint": 125,
+      "attack": 100,
+      "block": 80,
+      "contact": 85,
+      "defense": 75,
+      "speed": 55,
+      "total": 520
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": true
+  },
+  {
+    "id": "9f24d86bc0a9d7bb4578d81c97d9d1a5",
+    "no": 983,
+    "name": "ドドゲザン",
+    "type": [
+      "あく",
+      "はがね"
+    ],
+    "ability": {
+      "normal": [
+        "まけんき",
+        "そうだいしょう"
+      ],
+      "special": "プレッシャー"
+    },
+    "status": {
+      "hitpoint": 100,
+      "attack": 135,
+      "block": 120,
+      "contact": 60,
+      "defense": 85,
+      "speed": 50,
+      "total": 550
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "66da6e74bab00299c5f5cc34065d8cd5",
+    "no": 984,
+    "name": "イダイナキバ",
+    "type": [
+      "じめん",
+      "かくとう"
+    ],
+    "ability": {
+      "normal": [
+        "こだいかっせい",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 115,
+      "attack": 131,
+      "block": 131,
+      "contact": 53,
+      "defense": 53,
+      "speed": 87,
+      "total": 570
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "73d6b746800818c96bcd3ae5259c40e5",
+    "no": 985,
+    "name": "サケブシッポ",
+    "type": [
+      "フェアリー",
+      "エスパー"
+    ],
+    "ability": {
+      "normal": [
+        "こだいかっせい",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 115,
+      "attack": 65,
+      "block": 99,
+      "contact": 65,
+      "defense": 115,
+      "speed": 111,
+      "total": 570
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "d1b5be9bb1a4123a76ec618b883f157a",
+    "no": 986,
+    "name": "アラブルタケ",
+    "type": [
+      "くさ",
+      "あく"
+    ],
+    "ability": {
+      "normal": [
+        "こだいかっせい",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 111,
+      "attack": 127,
+      "block": 99,
+      "contact": 79,
+      "defense": 99,
+      "speed": 55,
+      "total": 570
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "d48f283786da8f1fa0a664a5aa829c9e",
+    "no": 987,
+    "name": "ハバタクカミ",
+    "type": [
+      "ゴースト",
+      "フェアリー"
+    ],
+    "ability": {
+      "normal": [
+        "こだいかっせい",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 55,
+      "attack": 55,
+      "block": 55,
+      "contact": 135,
+      "defense": 135,
+      "speed": 135,
+      "total": 570
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "885f144bb7c8dea4a5290e57f5f06a04",
+    "no": 988,
+    "name": "チヲハウハネ",
+    "type": [
+      "むし",
+      "かくとう"
+    ],
+    "ability": {
+      "normal": [
+        "こだいかっせい",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 85,
+      "attack": 135,
+      "block": 79,
+      "contact": 85,
+      "defense": 105,
+      "speed": 81,
+      "total": 570
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "d920b7a6abdda8326198e5a2e7a069e1",
+    "no": 989,
+    "name": "スナノケガワ",
+    "type": [
+      "でんき",
+      "じめん"
+    ],
+    "ability": {
+      "normal": [
+        "こだいかっせい",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 85,
+      "attack": 81,
+      "block": 97,
+      "contact": 121,
+      "defense": 85,
+      "speed": 101,
+      "total": 570
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "87c2d35b78146152fcd8c2eea8d7989f",
+    "no": 990,
+    "name": "テツノワダチ",
+    "type": [
+      "じめん",
+      "はがね"
+    ],
+    "ability": {
+      "normal": [
+        "クォークチャージ",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 90,
+      "attack": 112,
+      "block": 120,
+      "contact": 72,
+      "defense": 70,
+      "speed": 106,
+      "total": 570
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "4b2fdc18cfa19f278f2d707100ebe9c7",
+    "no": 991,
+    "name": "テツノツツミ",
+    "type": [
+      "こおり",
+      "みず"
+    ],
+    "ability": {
+      "normal": [
+        "クォークチャージ",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 56,
+      "attack": 80,
+      "block": 114,
+      "contact": 124,
+      "defense": 60,
+      "speed": 136,
+      "total": 570
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "3f5668704e2c218b087d69c1b03391c2",
+    "no": 992,
+    "name": "テツノカイナ",
     "type": [
       "かくとう",
+      "でんき"
+    ],
+    "ability": {
+      "normal": [
+        "クォークチャージ",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 154,
+      "attack": 140,
+      "block": 108,
+      "contact": 50,
+      "defense": 68,
+      "speed": 50,
+      "total": 570
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "5cb1f4cc1e2cf511b948d2df3e1d952a",
+    "no": 993,
+    "name": "テツノコウベ",
+    "type": [
+      "あく",
+      "ひこう"
+    ],
+    "ability": {
+      "normal": [
+        "クォークチャージ",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 94,
+      "attack": 80,
+      "block": 86,
+      "contact": 122,
+      "defense": 80,
+      "speed": 108,
+      "total": 570
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "59659c7763d1681c3c51730207063dab",
+    "no": 994,
+    "name": "テツノドクガ",
+    "type": [
+      "ほのお",
+      "どく"
+    ],
+    "ability": {
+      "normal": [
+        "クォークチャージ",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 80,
+      "attack": 70,
+      "block": 60,
+      "contact": 140,
+      "defense": 110,
+      "speed": 110,
+      "total": 570
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "94498e0db5071c4ad99e5d543ca5cf83",
+    "no": 995,
+    "name": "テツノイバラ",
+    "type": [
+      "いわ",
+      "でんき"
+    ],
+    "ability": {
+      "normal": [
+        "クォークチャージ",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 100,
+      "attack": 134,
+      "block": 110,
+      "contact": 70,
+      "defense": 84,
+      "speed": 72,
+      "total": 570
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "1e7929b4efd341c65d7ff08e23639d95",
+    "no": 996,
+    "name": "セビエ",
+    "type": [
+      "ドラゴン",
+      "こおり"
+    ],
+    "ability": {
+      "normal": [
+        "ねつこうかん",
+        ""
+      ],
+      "special": "アイスボディ"
+    },
+    "status": {
+      "hitpoint": 65,
+      "attack": 75,
+      "block": 45,
+      "contact": 35,
+      "defense": 45,
+      "speed": 55,
+      "total": 320
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "776cb5c6447ca3cb31432b1ae4b6a346",
+    "no": 997,
+    "name": "セゴール",
+    "type": [
+      "ドラゴン",
+      "こおり"
+    ],
+    "ability": {
+      "normal": [
+        "ねつこうかん",
+        ""
+      ],
+      "special": "アイスボディ"
+    },
+    "status": {
+      "hitpoint": 90,
+      "attack": 95,
+      "block": 66,
+      "contact": 45,
+      "defense": 65,
+      "speed": 62,
+      "total": 423
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "caebf63778107b8ad4556d76d5f96c8a",
+    "no": 998,
+    "name": "セグレイブ",
+    "type": [
+      "ドラゴン",
+      "こおり"
+    ],
+    "ability": {
+      "normal": [
+        "ねつこうかん",
+        ""
+      ],
+      "special": "アイスボディ"
+    },
+    "status": {
+      "hitpoint": 115,
+      "attack": 145,
+      "block": 92,
+      "contact": 75,
+      "defense": 86,
+      "speed": 87,
+      "total": 600
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "9a528ae5d0e59a1417a0c2b811458dc1",
+    "no": 999,
+    "name": "コレクレー(はこフォルム)",
+    "type": [
+      "ゴースト",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "びびり",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 45,
+      "attack": 30,
+      "block": 70,
+      "contact": 75,
+      "defense": 70,
+      "speed": 10,
+      "total": 300
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "936e01fb4e5c43919a9a867c9192404c",
+    "no": 1000,
+    "name": "サーフゴー",
+    "type": [
+      "はがね",
       "ゴースト"
     ],
     "ability": {
       "normal": [
-        "やるき",
-        "せいしんりょく"
+        "おうごんのからだ",
+        ""
       ],
-      "special": "まけんき"
+      "special": ""
     },
     "status": {
-      "hitpoint": 110,
-      "attack": 115,
+      "hitpoint": 87,
+      "attack": 60,
+      "block": 95,
+      "contact": 133,
+      "defense": 91,
+      "speed": 84,
+      "total": 550
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "dd7b62f5f84b4d3816c3a9538a460047",
+    "no": 1001,
+    "name": "チオンジェン",
+    "type": [
+      "あく",
+      "くさ"
+    ],
+    "ability": {
+      "normal": [
+        "わざわいのおふだ",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 85,
+      "attack": 85,
+      "block": 100,
+      "contact": 95,
+      "defense": 135,
+      "speed": 70,
+      "total": 570
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "bb3e4759df31e641e34e362b90487c64",
+    "no": 1002,
+    "name": "パオジアン",
+    "type": [
+      "あく",
+      "こおり"
+    ],
+    "ability": {
+      "normal": [
+        "わざわいのつるぎ",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 80,
+      "attack": 120,
       "block": 80,
-      "contact": 50,
+      "contact": 90,
+      "defense": 65,
+      "speed": 135,
+      "total": 570
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "5000dead50bacf7ff43bff6acd5660d4",
+    "no": 1003,
+    "name": "ディンルー",
+    "type": [
+      "あく",
+      "じめん"
+    ],
+    "ability": {
+      "normal": [
+        "わざわいのうつわ",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 155,
+      "attack": 110,
+      "block": 125,
+      "contact": 55,
+      "defense": 80,
+      "speed": 45,
+      "total": 570
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "b02ebb00426342fcf006134f890f271d",
+    "no": 1004,
+    "name": "イーユイ",
+    "type": [
+      "あく",
+      "ほのお"
+    ],
+    "ability": {
+      "normal": [
+        "わざわいのたま",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 55,
+      "attack": 80,
+      "block": 80,
+      "contact": 135,
+      "defense": 120,
+      "speed": 100,
+      "total": 570
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "b7a8c189cb09e9262c3edbc0d7fdd112",
+    "no": 1005,
+    "name": "トドロクツキ",
+    "type": [
+      "ドラゴン",
+      "あく"
+    ],
+    "ability": {
+      "normal": [
+        "こだいかっせい",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 105,
+      "attack": 139,
+      "block": 71,
+      "contact": 55,
+      "defense": 101,
+      "speed": 119,
+      "total": 590
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "166646b484648affe0fd8b119a6c30c9",
+    "no": 1006,
+    "name": "テツノブジン",
+    "type": [
+      "フェアリー",
+      "かくとう"
+    ],
+    "ability": {
+      "normal": [
+        "クォークチャージ",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 74,
+      "attack": 130,
+      "block": 90,
+      "contact": 120,
+      "defense": 60,
+      "speed": 116,
+      "total": 590
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "fd45c29b42ce67ebc3701774e507974c",
+    "no": 1007,
+    "name": "コライドン",
+    "type": [
+      "かくとう",
+      "ドラゴン"
+    ],
+    "ability": {
+      "normal": [
+        "ひひいろのこどう",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 100,
+      "attack": 135,
+      "block": 115,
+      "contact": 85,
+      "defense": 100,
+      "speed": 135,
+      "total": 670
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "34934ba31c778b66c9f5f2562f358f96",
+    "no": 1008,
+    "name": "ミライドン",
+    "type": [
+      "でんき",
+      "ドラゴン"
+    ],
+    "ability": {
+      "normal": [
+        "ハドロンエンジン",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 100,
+      "attack": 85,
+      "block": 100,
+      "contact": 135,
+      "defense": 115,
+      "speed": 135,
+      "total": 670
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "885862865a1b173cb764416767f3423d",
+    "no": 1009,
+    "name": "ウネルミナモ",
+    "type": [
+      "みず",
+      "ドラゴン"
+    ],
+    "ability": {
+      "normal": [
+        "こだいかっせい",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 99,
+      "attack": 83,
+      "block": 91,
+      "contact": 125,
+      "defense": 83,
+      "speed": 109,
+      "total": 590
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "d137bf750209d36f71cc77ae4e3dce4e",
+    "no": 1010,
+    "name": "テツノイサハ",
+    "type": [
+      "くさ",
+      "エスパー"
+    ],
+    "ability": {
+      "normal": [
+        "クォークチャージ",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 90,
+      "attack": 130,
+      "block": 88,
+      "contact": 70,
+      "defense": 108,
+      "speed": 104,
+      "total": 590
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "5a7b25de9e10690dac9d95647530973a",
+    "no": 1011,
+    "name": "カミッチュ",
+    "type": [
+      "くさ",
+      "ドラゴン"
+    ],
+    "ability": {
+      "normal": [
+        "かんろなミツ",
+        "くいしんぼう"
+      ],
+      "special": "ねんちゃく"
+    },
+    "status": {
+      "hitpoint": 80,
+      "attack": 80,
+      "block": 110,
+      "contact": 95,
+      "defense": 80,
+      "speed": 40,
+      "total": 485
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "c54884f63a2f2564237c4a5c2cc2dfb3",
+    "no": 1012,
+    "name": "チャデス",
+    "type": [
+      "くさ",
+      "ゴースト"
+    ],
+    "ability": {
+      "normal": [
+        "おもてなし",
+        ""
+      ],
+      "special": "たいねつ"
+    },
+    "status": {
+      "hitpoint": 40,
+      "attack": 45,
+      "block": 45,
+      "contact": 74,
+      "defense": 54,
+      "speed": 50,
+      "total": 308
+    },
+    "isFinal": false,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": true
+  },
+  {
+    "id": "5f67fd5b569e65a724e049d8c4f79eeb",
+    "no": 1013,
+    "name": "ヤバソチャ",
+    "type": [
+      "くさ",
+      "ゴースト"
+    ],
+    "ability": {
+      "normal": [
+        "おもてなし",
+        ""
+      ],
+      "special": "たいねつ"
+    },
+    "status": {
+      "hitpoint": 71,
+      "attack": 60,
+      "block": 106,
+      "contact": 121,
+      "defense": 80,
+      "speed": 70,
+      "total": 508
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "91e37317f11b78a9c3967a55af640bf8",
+    "no": 1014,
+    "name": "イイネイヌ",
+    "type": [
+      "どく",
+      "かくとう"
+    ],
+    "ability": {
+      "normal": [
+        "どくのくさり",
+        ""
+      ],
+      "special": "ばんけん"
+    },
+    "status": {
+      "hitpoint": 88,
+      "attack": 128,
+      "block": 115,
+      "contact": 58,
+      "defense": 86,
+      "speed": 80,
+      "total": 555
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "0d3162f85aa1fab1ccf795f3a3c97955",
+    "no": 1015,
+    "name": "マシマシラ",
+    "type": [
+      "どく",
+      "エスパー"
+    ],
+    "ability": {
+      "normal": [
+        "どくのくさり",
+        ""
+      ],
+      "special": "おみとおし"
+    },
+    "status": {
+      "hitpoint": 88,
+      "attack": 75,
+      "block": 66,
+      "contact": 130,
       "defense": 90,
-      "speed": 90,
-      "total": 535
+      "speed": 106,
+      "total": 555
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "d0f85ee766778d24201e76966541ed60",
+    "no": 1016,
+    "name": "キチキギス",
+    "type": [
+      "どく",
+      "フェアリー"
+    ],
+    "ability": {
+      "normal": [
+        "どくのくさり",
+        ""
+      ],
+      "special": "テクニシャン"
+    },
+    "status": {
+      "hitpoint": 88,
+      "attack": 91,
+      "block": 82,
+      "contact": 70,
+      "defense": 125,
+      "speed": 99,
+      "total": 555
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "3a1e2669ae980f61fbb09a8fbb450f15",
+    "no": 1017,
+    "name": "オーガポン(いしずえのめん)",
+    "type": [
+      "くさ",
+      "いわ"
+    ],
+    "ability": {
+      "normal": [
+        "がんじょう",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 80,
+      "attack": 120,
+      "block": 84,
+      "contact": 60,
+      "defense": 96,
+      "speed": 110,
+      "total": 550
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": true
+  },
+  {
+    "id": "180b73ab7d11684872d3da40d9c69b3f",
+    "no": 1017,
+    "name": "オーガポン(いどのめん)",
+    "type": [
+      "くさ",
+      "みず"
+    ],
+    "ability": {
+      "normal": [
+        "ちょすい",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 80,
+      "attack": 120,
+      "block": 84,
+      "contact": 60,
+      "defense": 96,
+      "speed": 110,
+      "total": 550
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": true
+  },
+  {
+    "id": "5122e0c8e10438922f439d36deacf2b6",
+    "no": 1017,
+    "name": "オーガポン(かまどのめん)",
+    "type": [
+      "くさ",
+      "ほのお"
+    ],
+    "ability": {
+      "normal": [
+        "かたやぶり",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 80,
+      "attack": 120,
+      "block": 84,
+      "contact": 60,
+      "defense": 96,
+      "speed": 110,
+      "total": 550
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": true
+  },
+  {
+    "id": "81091f2bc7a01ced1cb4f8a2cc89cd76",
+    "no": 1017,
+    "name": "オーガポン(みどりのめん)",
+    "type": [
+      "くさ",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "まけんき",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 80,
+      "attack": 120,
+      "block": 84,
+      "contact": 60,
+      "defense": 96,
+      "speed": 110,
+      "total": 550
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": true
+  },
+  {
+    "id": "78a7d18defff00ecd167cdf9bbd61d6f",
+    "no": 1018,
+    "name": "ブリジュラス",
+    "type": [
+      "はがね",
+      "ドラゴン"
+    ],
+    "ability": {
+      "normal": [
+        "じきゅうりょく",
+        "がんじょう"
+      ],
+      "special": "すじがねいり"
+    },
+    "status": {
+      "hitpoint": 90,
+      "attack": 105,
+      "block": 130,
+      "contact": 125,
+      "defense": 65,
+      "speed": 85,
+      "total": 600
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "fc4a84c3b3f962108568fb1227f46d71",
+    "no": 1019,
+    "name": "カミツオロチ",
+    "type": [
+      "くさ",
+      "ドラゴン"
+    ],
+    "ability": {
+      "normal": [
+        "かんろなミツ",
+        "さいせいりょく"
+      ],
+      "special": "ねんちゃく"
+    },
+    "status": {
+      "hitpoint": 106,
+      "attack": 80,
+      "block": 110,
+      "contact": 120,
+      "defense": 80,
+      "speed": 44,
+      "total": 540
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "c422ef27146eae2fd31b118a229ac9c2",
+    "no": 1020,
+    "name": "ウガツホムラ",
+    "type": [
+      "ほのお",
+      "ドラゴン"
+    ],
+    "ability": {
+      "normal": [
+        "こだいかっせい",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 105,
+      "attack": 115,
+      "block": 121,
+      "contact": 65,
+      "defense": 93,
+      "speed": 91,
+      "total": 590
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "874c0d1109b3361cf7543c9b8aa771f2",
+    "no": 1021,
+    "name": "タケルライコ",
+    "type": [
+      "でんき",
+      "ドラゴン"
+    ],
+    "ability": {
+      "normal": [
+        "こだいかっせい",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 125,
+      "attack": 73,
+      "block": 91,
+      "contact": 137,
+      "defense": 89,
+      "speed": 75,
+      "total": 590
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "d91fed6b3acbbdbae36c32ae26366959",
+    "no": 1022,
+    "name": "テツノイワオ",
+    "type": [
+      "いわ",
+      "エスパー"
+    ],
+    "ability": {
+      "normal": [
+        "クォークチャージ",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 90,
+      "attack": 120,
+      "block": 80,
+      "contact": 68,
+      "defense": 108,
+      "speed": 124,
+      "total": 590
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "bcf1c0f8fbfce0de203a8ca0aad68a04",
+    "no": 1023,
+    "name": "テツノカシラ",
+    "type": [
+      "はがね",
+      "エスパー"
+    ],
+    "ability": {
+      "normal": [
+        "クォークチャージ",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 90,
+      "attack": 72,
+      "block": 100,
+      "contact": 122,
+      "defense": 108,
+      "speed": 98,
+      "total": 590
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "da23c3d5aa6ba6672ddca5068809854a",
+    "no": 1024,
+    "name": "テラパゴス(ステラフォルム)",
+    "type": [
+      "ノーマル",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "ゼロフォーミング",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 160,
+      "attack": 105,
+      "block": 110,
+      "contact": 130,
+      "defense": 110,
+      "speed": 85,
+      "total": 700
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "db340c398dbd703f9eced9be843eb654",
+    "no": 1024,
+    "name": "テラパゴス(テラスタルフォルム)",
+    "type": [
+      "ノーマル",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "テラスシェル",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 95,
+      "attack": 95,
+      "block": 110,
+      "contact": 105,
+      "defense": 110,
+      "speed": 85,
+      "total": 600
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "51b7cc40e96b3a208626f621a2a64a29",
+    "no": 1024,
+    "name": "テラパゴス",
+    "type": [
+      "ノーマル",
+      ""
+    ],
+    "ability": {
+      "normal": [
+        "テラスチェンジ",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 90,
+      "attack": 65,
+      "block": 85,
+      "contact": 65,
+      "defense": 85,
+      "speed": 60,
+      "total": 450
+    },
+    "isFinal": true,
+    "region": "パルデア",
+    "isMegaEvolution": false,
+    "isSameStatus": false
+  },
+  {
+    "id": "040c0f69a0e5ba85ada1db7e08639275",
+    "no": 1025,
+    "name": "モモワロウ",
+    "type": [
+      "どく",
+      "ゴースト"
+    ],
+    "ability": {
+      "normal": [
+        "どくくぐつ",
+        ""
+      ],
+      "special": ""
+    },
+    "status": {
+      "hitpoint": 88,
+      "attack": 88,
+      "block": 160,
+      "contact": 88,
+      "defense": 88,
+      "speed": 88,
+      "total": 600
     },
     "isFinal": true,
     "region": "パルデア",
